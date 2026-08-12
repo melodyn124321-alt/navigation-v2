@@ -2950,3 +2950,8 @@
 [INFO] [1786516116.778882928] [map_odom_tf_bridge_cpp]: locking map-frame chassis center for in-place rotation at (-4.8918, -0.2489)
 [INFO] [1786516116.878641207] [map_odom_tf_bridge_cpp]: released map-frame chassis-center lock after in-place rotation
 [WARN] [1786519666.811680269] [map_odom_tf_bridge_cpp]: waiting for fresh /relocalization_pose and /odom
+[INFO] [1786540763.168931083] [map_odom_tf_bridge_cpp]: locking map-frame chassis center for in-place rotation at (-6.9986, 0.3467)
+[INFO] [1786540763.268765605] [map_odom_tf_bridge_cpp]: released map-frame chassis-center lock after in-place rotation
+[INFO] [1786540765.568850818] [map_odom_tf_bridge_cpp]: locking map-frame chassis center for in-place rotation at (-7.0700, 0.3665)
+[WARN] [1786540766.443054339] [map_odom_tf_bridge_cpp]: waiting for fresh /relocalization_pose and /odom
+[INFO] [1786540766.468883937] [map_odom_tf_bridge_cpp]: released map-frame chassis-center lock after in-place rotation
