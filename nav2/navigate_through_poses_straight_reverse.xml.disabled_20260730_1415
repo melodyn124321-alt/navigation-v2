@@ -1,0 +1,50 @@
+<!--
+  Dedicated direct-reverse tree.
+
+  The aligned goal adapter selects this tree only after:
+    1. the direct map corridor has been checked,
+    2. the chassis has completed bounded, segmented pre-alignment, and
+    3. the requested mode is straight_reverse.
+
+  The final motion gate still blocks every negative velocity unless /plan is
+  fresh and repeatedly satisfies the independent straight-path geometry test.
+-->
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <RecoveryNode number_of_retries="0" name="StraightReverseWithoutSpinRecovery">
+      <PipelineSequence name="StraightReverseWithLowRateReplanning">
+        <RateController hz="0.5">
+          <RecoveryNode number_of_retries="1" name="ComputeStraightReversePath">
+            <ReactiveSequence>
+              <RemovePassedGoals
+                input_goals="{goals}" output_goals="{goals}" radius="0.05"/>
+              <ComputePathThroughPoses
+                goals="{goals}" path="{path}" planner_id="GridBasedReverse"/>
+            </ReactiveSequence>
+            <ClearEntireCostmap
+              name="ClearGlobalCostmap-Context"
+              service_name="global_costmap/clear_entirely_global_costmap"/>
+          </RecoveryNode>
+        </RateController>
+        <RecoveryNode number_of_retries="1" name="FollowStraightReversePath">
+          <FollowPath path="{path}" controller_id="FollowPath"/>
+          <ClearEntireCostmap
+            name="ClearLocalCostmap-Context"
+            service_name="local_costmap/clear_entirely_local_costmap"/>
+        </RecoveryNode>
+      </PipelineSequence>
+      <ReactiveFallback name="SafeRecoveryFallback">
+        <GoalUpdated/>
+        <Sequence name="ClearAndWaitOnly">
+          <ClearEntireCostmap
+            name="ClearLocalCostmap-Recovery"
+            service_name="local_costmap/clear_entirely_local_costmap"/>
+          <ClearEntireCostmap
+            name="ClearGlobalCostmap-Recovery"
+            service_name="global_costmap/clear_entirely_global_costmap"/>
+          <Wait wait_duration="2"/>
+        </Sequence>
+      </ReactiveFallback>
+    </RecoveryNode>
+  </BehaviorTree>
+</root>

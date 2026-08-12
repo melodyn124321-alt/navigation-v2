@@ -1,0 +1,437 @@
+bt_navigator:
+  ros__parameters:
+    use_sim_time: false
+    global_frame: map
+    robot_base_frame: base_link
+    odom_topic: /odom
+    bt_loop_duration: 10
+    default_server_timeout: 20
+    # The activation wrapper verifies the planner/controller actions before
+    # activating BT Navigator.  A 20 s internal wait only prolonged a first
+    # Fast DDS discovery miss; retry quickly with the same participant.
+    wait_for_service_timeout: 6000
+    # Recovery may clear costmaps and wait, but never spin or reverse the chassis.
+    default_nav_to_pose_bt_xml: /home/seeed/ros2/nav2/navigate_to_pose_no_spin.xml
+    default_nav_through_poses_bt_xml: /home/seeed/ros2/nav2/navigate_through_poses_no_spin.xml
+    plugin_lib_names:
+      - nav2_compute_path_to_pose_action_bt_node
+      - nav2_compute_path_through_poses_action_bt_node
+      - nav2_smooth_path_action_bt_node
+      - nav2_follow_path_action_bt_node
+      - nav2_spin_action_bt_node
+      - nav2_wait_action_bt_node
+      - nav2_assisted_teleop_action_bt_node
+      - nav2_back_up_action_bt_node
+      - nav2_drive_on_heading_bt_node
+      - nav2_clear_costmap_service_bt_node
+      - nav2_is_stuck_condition_bt_node
+      - nav2_goal_reached_condition_bt_node
+      - nav2_goal_updated_condition_bt_node
+      - nav2_globally_updated_goal_condition_bt_node
+      - nav2_is_path_valid_condition_bt_node
+      - nav2_initial_pose_received_condition_bt_node
+      - nav2_reinitialize_global_localization_service_bt_node
+      - nav2_rate_controller_bt_node
+      - nav2_distance_controller_bt_node
+      - nav2_speed_controller_bt_node
+      - nav2_truncate_path_action_bt_node
+      - nav2_truncate_path_local_action_bt_node
+      - nav2_goal_updater_node_bt_node
+      - nav2_recovery_node_bt_node
+      - nav2_pipeline_sequence_bt_node
+      - nav2_round_robin_node_bt_node
+      - nav2_transform_available_condition_bt_node
+      - nav2_time_expired_condition_bt_node
+      - nav2_path_expiring_timer_condition
+      - nav2_distance_traveled_condition_bt_node
+      - nav2_single_trigger_bt_node
+      - nav2_goal_updated_controller_bt_node
+      - nav2_is_battery_low_condition_bt_node
+      - nav2_navigate_through_poses_action_bt_node
+      - nav2_navigate_to_pose_action_bt_node
+      - nav2_remove_passed_goals_action_bt_node
+      - nav2_planner_selector_bt_node
+      - nav2_controller_selector_bt_node
+      - nav2_goal_checker_selector_bt_node
+      - nav2_controller_cancel_bt_node
+      - nav2_path_longer_on_approach_bt_node
+      - nav2_wait_cancel_bt_node
+      - nav2_spin_cancel_bt_node
+      - nav2_back_up_cancel_bt_node
+      - nav2_assisted_teleop_cancel_bt_node
+      - nav2_drive_on_heading_cancel_bt_node
+      - nav2_is_battery_charging_condition_bt_node
+
+bt_navigator_navigate_through_poses_rclcpp_node:
+  ros__parameters:
+    use_sim_time: false
+
+bt_navigator_navigate_to_pose_rclcpp_node:
+  ros__parameters:
+    use_sim_time: false
+
+controller_server:
+  ros__parameters:
+    use_sim_time: false
+    odom_topic: /odom
+    # The NDT + Fast-LIO workload cannot sustain the old 10 Hz control loop.
+    controller_frequency: 5.0
+    min_x_velocity_threshold: 0.001
+    min_y_velocity_threshold: 0.001
+    min_theta_velocity_threshold: 0.001
+    # A newly discovered TF publisher can leave one or two control iterations
+    # without a transform. Do not abort the whole goal during that transient;
+    # the external motion gate still stops immediately when commands go stale.
+    failure_tolerance: 5.0
+    progress_checker_plugin: progress_checker
+    goal_checker_plugins: [general_goal_checker]
+    controller_plugins: [FollowPath]
+
+    progress_checker:
+      plugin: nav2_controller::SimpleProgressChecker
+      # Keep Nav2's built-in checker permissive during sustained collision
+      # slowdown. The goal adapter independently cancels a genuinely stationary
+      # chassis after 45 s using action-feedback pose displacement.
+      required_movement_radius: 0.01
+      movement_time_allowance: 120.0
+
+    general_goal_checker:
+      stateful: false
+      plugin: nav2_controller::SimpleGoalChecker
+      xy_goal_tolerance: 0.08
+      # Smac Hybrid aligns the final path before arrival. Keep a small heading
+      # tolerance, while the controller remains forbidden from rotating in place.
+      yaw_goal_tolerance: 0.17
+
+    FollowPath:
+      plugin: nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController
+      desired_linear_vel: 0.08
+      lookahead_dist: 0.45
+      min_lookahead_dist: 0.25
+      max_lookahead_dist: 0.70
+      lookahead_time: 1.5
+      rotate_to_heading_angular_vel: 0.18
+      transform_tolerance: 0.8
+      use_velocity_scaled_lookahead_dist: false
+      min_approach_linear_velocity: 0.04
+      approach_velocity_scaling_dist: 0.6
+      use_collision_detection: true
+      max_allowed_time_to_collision_up_to_carrot: 1.0
+      use_regulated_linear_velocity_scaling: true
+      use_cost_regulated_linear_velocity_scaling: true
+      regulated_linear_scaling_min_radius: 0.60
+      regulated_linear_scaling_min_speed: 0.05
+      # DUBIN produces forward paths. Keep reversing enabled in the controller
+      # only as a guarded fallback; the final motion gate permits a negative
+      # command only when the published path is independently confirmed straight.
+      allow_reversing: true
+      use_rotate_to_heading: false
+      rotate_to_heading_min_angle: 0.785
+      max_angular_accel: 0.5
+
+local_costmap:
+  local_costmap:
+    ros__parameters:
+      use_sim_time: false
+      # Keep the rolling local costmap in the odometry frame. The live obstacle
+      # cloud is already expressed in base_link, so sensor updates use the
+      # high-rate odom->base_link transform instead of a map correction.
+      global_frame: odom
+      robot_base_frame: base_link
+      transform_tolerance: 0.5
+      initial_transform_timeout: 30.0
+      rolling_window: true
+      width: 6
+      height: 6
+      resolution: 0.05
+      # Chassis-only collision footprint with a small measured-edge margin.
+      footprint: "[[-0.38, 0.27], [0.38, 0.27], [0.38, -0.27], [-0.38, -0.27]]"
+      footprint_padding: 0.0
+      update_frequency: 5.0
+      publish_frequency: 2.0
+      plugins: [obstacle_layer, inflation_layer]
+      obstacle_layer:
+        plugin: nav2_costmap_2d::ObstacleLayer
+        enabled: true
+        # The planner must never reject its own current footprint as a lethal
+        # start cell. Collision Monitor still sees the un-cleared live cloud.
+        footprint_clearing_enabled: true
+        observation_sources: livox_cloud
+        livox_cloud:
+          topic: /nav_obstacle_cloud
+          data_type: PointCloud2
+          marking: true
+          clearing: true
+          max_obstacle_height: 1.60
+          # Live floor fit (2026-07-29): z=-0.0002 m, residual p99=0.0364 m.
+          # An 0.08 m cutoff rejects floor noise while retaining obstacles
+          # taller than the chassis' practical ground-clearance scale.
+          min_obstacle_height: 0.08
+          obstacle_max_range: 5.0
+          obstacle_min_range: 0.05
+          raytrace_max_range: 5.5
+          raytrace_min_range: 0.05
+          observation_persistence: 0.0
+          # Diagnostics only. Collision Monitor independently fails safe at
+          # 1.00 s when the live cloud is lost.
+          expected_update_rate: 1.50
+      # The two rear KS109 sensors are enforced by nav_motion_safety_gate for
+      # reverse commands. Do not make local-costmap currentness depend on their
+      # cross-participant TF discovery: that used to abort FollowPath before it
+      # could publish any velocity.
+      range_layer:
+        plugin: nav2_costmap_2d::RangeSensorLayer
+        enabled: false
+        topics:
+          - /ultrasonic/sensor_1/range
+          - /ultrasonic/sensor_2/range
+        input_sensor_type: VARIABLE
+        phi: 1.2
+        inflate_cone: 1.0
+        clear_threshold: 0.2
+        mark_threshold: 0.8
+        clear_on_max_reading: true
+        no_readings_timeout: 0.75
+      inflation_layer:
+        plugin: nav2_costmap_2d::InflationLayer
+        inflation_radius: 0.60
+        cost_scaling_factor: 4.0
+      always_send_full_costmap: true
+
+global_costmap:
+  global_costmap:
+    ros__parameters:
+      use_sim_time: false
+      update_frequency: 1.0
+      publish_frequency: 1.0
+      global_frame: map
+      robot_base_frame: base_link
+      transform_tolerance: 0.5
+      initial_transform_timeout: 30.0
+      footprint: "[[-0.38, 0.27], [0.38, 0.27], [0.38, -0.27], [-0.38, -0.27]]"
+      footprint_padding: 0.0
+      resolution: 0.05
+      track_unknown_space: true
+      plugins: [static_layer, obstacle_layer, inflation_layer]
+      static_layer:
+        plugin: nav2_costmap_2d::StaticLayer
+        map_subscribe_transient_local: true
+        subscribe_to_updates: true
+        # A robot can start over a mapping artifact. Clear only the cells under
+        # its current footprint; the live LiDAR obstacle layer still marks real objects.
+        footprint_clearing_enabled: true
+      obstacle_layer:
+        plugin: nav2_costmap_2d::ObstacleLayer
+        enabled: true
+        footprint_clearing_enabled: true
+        observation_sources: livox_cloud
+        livox_cloud:
+          topic: /nav_obstacle_cloud
+          data_type: PointCloud2
+          marking: true
+          clearing: true
+          max_obstacle_height: 1.60
+          min_obstacle_height: 0.08
+          obstacle_max_range: 5.0
+          obstacle_min_range: 0.05
+          raytrace_max_range: 5.5
+          raytrace_min_range: 0.05
+          observation_persistence: 0.0
+          expected_update_rate: 1.50
+      inflation_layer:
+        plugin: nav2_costmap_2d::InflationLayer
+        inflation_radius: 0.55
+        cost_scaling_factor: 4.0
+      always_send_full_costmap: true
+
+map_server:
+  ros__parameters:
+    use_sim_time: false
+    yaml_filename: /home/seeed/ros2/maps/replay/fastlio_map_manual_001_level_groundsafe_20260729_nav.yaml
+
+map_saver:
+  ros__parameters:
+    use_sim_time: false
+    save_map_timeout: 5.0
+    free_thresh_default: 0.25
+    occupied_thresh_default: 0.65
+    map_subscribe_transient_local: true
+
+planner_server:
+  ros__parameters:
+    use_sim_time: false
+    expected_planner_frequency: 2.0
+    # Normal navigation is forward-only.  A separate reversible planner is
+    # selected only by the goal adapter after it has verified a clear direct
+    # corridor and completed the bounded pre-alignment.
+    planner_plugins: [GridBased, GridBasedReverse]
+    GridBased:
+      plugin: nav2_smac_planner/SmacPlannerHybrid
+      downsample_costmap: false
+      downsampling_factor: 1
+      tolerance: 0.08
+      allow_unknown: false
+      max_iterations: 100000
+      max_on_approach_iterations: 1000
+      max_planning_time: 3.0
+      motion_model_for_search: DUBIN
+      angle_quantization_bins: 72
+      analytic_expansion_ratio: 3.5
+      analytic_expansion_max_length: 3.0
+      minimum_turning_radius: 0.45
+      reverse_penalty: 4.00
+      change_penalty: 2.00
+      non_straight_penalty: 2.50
+      cost_penalty: 2.0
+      retrospective_penalty: 0.015
+      # At 0.05 m/cell, 20 m expands to a 400-cell SE2 lookup table and takes
+      # minutes to configure on the seeed ARM CPU.  Five metres still covers
+      # more than ten minimum-turning radii for this chassis.
+      lookup_table_size: 5.0
+      cache_obstacle_heuristic: true
+      debug_visualizations: false
+      smooth_path: true
+    GridBasedReverse:
+      # This planner is never used by the normal or detour trees.  The aligned
+      # goal adapter selects it only for a clear, pre-aligned direct reverse.
+      # The final motion gate independently rejects a reverse command unless
+      # the published path is repeatedly classified as straight.
+      plugin: nav2_smac_planner/SmacPlannerHybrid
+      downsample_costmap: false
+      downsampling_factor: 1
+      tolerance: 0.08
+      allow_unknown: false
+      max_iterations: 100000
+      max_on_approach_iterations: 1000
+      max_planning_time: 3.0
+      motion_model_for_search: REEDS_SHEPP
+      angle_quantization_bins: 72
+      analytic_expansion_ratio: 3.5
+      analytic_expansion_max_length: 3.0
+      minimum_turning_radius: 0.45
+      reverse_penalty: 4.00
+      change_penalty: 2.00
+      non_straight_penalty: 2.50
+      cost_penalty: 2.0
+      retrospective_penalty: 0.015
+      lookup_table_size: 5.0
+      cache_obstacle_heuristic: true
+      debug_visualizations: false
+      smooth_path: true
+
+smoother_server:
+  ros__parameters:
+    use_sim_time: false
+    smoother_plugins: [simple_smoother]
+    simple_smoother:
+      plugin: nav2_smoother::SimpleSmoother
+      tolerance: 1.0e-10
+      max_its: 1000
+      do_refinement: true
+
+behavior_server:
+  ros__parameters:
+    use_sim_time: false
+    costmap_topic: local_costmap/costmap_raw
+    footprint_topic: local_costmap/published_footprint
+    cycle_frequency: 5.0
+    global_frame: map
+    robot_base_frame: base_link
+    transform_tolerance: 1.0
+    simulate_ahead_time: 1.0
+    max_rotational_vel: 0.12
+    min_rotational_vel: 0.08
+    rotational_acc_lim: 0.30
+    # Spin is exposed only to the goal adapter for a bounded pre-alignment.
+    # The no-spin BT XML still prevents autonomous recovery spins.
+    behavior_plugins: [spin, wait]
+    spin:
+      plugin: nav2_behaviors/Spin
+    wait:
+      plugin: nav2_behaviors/Wait
+
+waypoint_follower:
+  ros__parameters:
+    use_sim_time: false
+    loop_rate: 10
+    stop_on_failure: true
+    waypoint_task_executor_plugin: wait_at_waypoint
+    wait_at_waypoint:
+      plugin: nav2_waypoint_follower::WaitAtWaypoint
+      enabled: true
+      waypoint_pause_duration: 500
+
+velocity_smoother:
+  ros__parameters:
+    use_sim_time: false
+    smoothing_frequency: 10.0
+    scale_velocities: false
+    feedback: OPEN_LOOP
+    max_velocity: [0.08, 0.0, 0.18]
+    min_velocity: [-0.04, 0.0, -0.18]
+    max_accel: [0.10, 0.0, 0.20]
+    max_decel: [-0.15, 0.0, -0.25]
+    odom_topic: /odom
+    odom_duration: 0.2
+    deadband_velocity: [0.0, 0.0, 0.0]
+    velocity_timeout: 1.0
+
+collision_monitor:
+  ros__parameters:
+    use_sim_time: false
+    base_frame_id: base_link
+    odom_frame_id: odom
+    cmd_vel_in_topic: /cmd_vel_nav_smoothed
+    cmd_vel_out_topic: /cmd_vel_nav_collision_safe
+    transform_tolerance: 0.5
+    # Collision Monitor may receive a queued cloud about 1.36 s late under
+    # peak NDT load. Keep it conservative until 1.50 s; the final motion gate
+    # independently stops at 1.00 s, so stale data can never move the chassis.
+    source_timeout: 1.50
+    base_shift_correction: true
+    stop_pub_timeout: 1.0
+    polygons: [SlowZone, RotationStopZone]
+    SlowZone:
+      type: polygon
+      points: [1.55, 0.90, 1.55, -0.90, -0.85, -0.90, -0.85, 0.90]
+      action_type: slowdown
+      # Three points caused 10 Hz slowdown/normal chatter from sparse residual
+      # cloud returns. Ten points is still conservative while rejecting that
+      # noise; a real nearby surface contributes far more than ten points.
+      max_points: 10
+      slowdown_ratio: 0.50
+      visualize: true
+      polygon_pub_topic: /dynamic_obstacle_slow_zone
+      enabled: true
+    RotationStopZone:
+      type: polygon
+      # Chassis corner radius is about 0.466 m. This 0.60 m envelope keeps
+      # about 0.13 m rotational clearance without any front-box extension.
+      points: [0.600, 0.000, 0.554, 0.230, 0.424, 0.424, 0.230, 0.554, 0.000, 0.600, -0.230, 0.554, -0.424, 0.424, -0.554, 0.230, -0.600, 0.000, -0.554, -0.230, -0.424, -0.424, -0.230, -0.554, 0.000, -0.600, 0.230, -0.554, 0.424, -0.424, 0.554, -0.230]
+      action_type: stop
+      max_points: 3
+      visualize: true
+      polygon_pub_topic: /dynamic_obstacle_stop_zone
+      enabled: true
+    observation_sources: [livox_cloud]
+    livox_cloud:
+      type: pointcloud
+      topic: /nav_obstacle_cloud
+      min_height: 0.08
+      max_height: 1.60
+      enabled: true
+
+lifecycle_manager_navigation:
+  ros__parameters:
+    use_sim_time: false
+    autostart: true
+    bond_timeout: 4.0
+    node_names:
+      - planner_server
+      - controller_server
+      - smoother_server
+      - behavior_server
+      - bt_navigator
+      - waypoint_follower
+      - velocity_smoother
+      - collision_monitor
