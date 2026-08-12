@@ -1,0 +1,85 @@
+[0.050s] Invoking command in '/home/seeed/ros2/ws/build/ranger_base': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/ranger_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/ranger_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig PYTHONPATH=/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/ugv_sdk/share /usr/local/bin/cmake /home/seeed/ros2/ws/src/ranger_ros2/ranger_base -DCMAKE_BUILD_TYPE=RelWithDebInfo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/ranger_base
+[0.113s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.613s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.658s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.768s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.777s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.799s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.833s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.876s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.994s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.000s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.293s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.474s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.524s] -- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.583s] -- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.642s] -- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)
+[1.659s] -- Found tf2_ros: 0.25.20 (/opt/ros/humble/share/tf2_ros/cmake)
+[1.960s] -- Found ranger_msgs: 0.0.1 (/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake)
+[2.016s] -- Found tf2_geometry_msgs: 0.25.20 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[2.033s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[2.038s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.053s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.267s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.272s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.274s] -- Configured cppcheck include dirs: /home/seeed/ros2/ws/src/ranger_ros2/ranger_base/include
+[2.274s] -- Configured cppcheck exclude dirs and/or files: 
+[2.276s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.276s] -- Configured cpplint exclude dirs and/or files: 
+[2.278s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.279s] -- Added test 'lint_cmake' to check CMake code style
+[2.280s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.283s] -- Added test 'uncrustify' to check C / C++ code style
+[2.283s] -- Configured uncrustify additional arguments: 
+[2.285s] -- Added test 'xmllint' to check XML markup files
+[2.288s] -- Configuring done (2.2s)
+[2.345s] -- Generating done (0.0s)
+[2.361s] -- Build files have been written to: /home/seeed/ros2/ws/build/ranger_base
+[2.397s] Invoked command in '/home/seeed/ros2/ws/build/ranger_base' returned '0': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/ranger_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/ranger_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig PYTHONPATH=/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/ugv_sdk/share /usr/local/bin/cmake /home/seeed/ros2/ws/src/ranger_ros2/ranger_base -DCMAKE_BUILD_TYPE=RelWithDebInfo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/ranger_base
+[2.401s] Invoking command in '/home/seeed/ros2/ws/build/ranger_base': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/ranger_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/ranger_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig PYTHONPATH=/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/ugv_sdk/share /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/ranger_base -- -j6 -l6
+[2.565s] [ 33%] Building CXX object CMakeFiles/ranger_base_node.dir/src/ranger_base_node.cpp.o
+[19.044s] [ 66%] Building CXX object CMakeFiles/ranger_base_node.dir/src/ranger_messenger.cpp.o
+[37.359s] In file included from /home/seeed/ros2/ws/src/ranger_ros2/ranger_base/src/ranger_messenger.cpp:12:
+[37.359s] /home/seeed/ros2/ws/src/ranger_ros2/ranger_base/include/ranger_base/kinematics_model.hpp: In member function ‘void westonrobot::SpinningModel::operator()(const state_type&, westonrobot::SpinningModel::state_type&, double)’:
+[37.359s] /home/seeed/ros2/ws/src/ranger_ros2/ranger_base/include/ranger_base/kinematics_model.hpp:90:37: warning: unused parameter ‘x’ [-Wunused-parameter]
+[37.360s]    90 |   void operator()(const state_type& x, state_type& xd, double) {
+[37.360s]       |                   ~~~~~~~~~~~~~~~~~~^
+[37.527s] /home/seeed/ros2/ws/src/ranger_ros2/ranger_base/src/ranger_messenger.cpp: In member function ‘double westonrobot::RangerROSMessenger::CalculateSteeringAngle(geometry_msgs::msg::Twist, double&)’:
+[37.527s] /home/seeed/ros2/ws/src/ranger_ros2/ranger_base/src/ranger_messenger.cpp:529:13: warning: variable ‘w’ set but not used [-Wunused-but-set-variable]
+[37.527s]   529 |   double l, w, phi_i, x;
+[37.528s]       |             ^
+[37.528s] /home/seeed/ros2/ws/src/ranger_ros2/ranger_base/src/ranger_messenger.cpp:529:23: warning: variable ‘x’ set but not used [-Wunused-but-set-variable]
+[37.528s]   529 |   double l, w, phi_i, x;
+[37.528s]       |                       ^
+[61.485s] /home/seeed/ros2/ws/src/ranger_ros2/ranger_base/src/ranger_messenger.cpp: In member function ‘void westonrobot::RangerROSMessenger::TwistCmdCallback(geometry_msgs::msg::Twist_<std::allocator<void> >::SharedPtr)’:
+[61.485s] /home/seeed/ros2/ws/src/ranger_ros2/ranger_base/src/ranger_messenger.cpp:436:7: warning: ‘steer_cmd’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+[61.485s]   436 |       if (steer_cmd > robot_params_.max_steer_angle_ackermann) {
+[61.486s]       |       ^~
+[85.459s] [100%] Linking CXX executable ranger_base_node
+[86.423s] [100%] Built target ranger_base_node
+[86.435s] Invoked command in '/home/seeed/ros2/ws/build/ranger_base' returned '0': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/ranger_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/ranger_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig PYTHONPATH=/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/ugv_sdk/share /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/ranger_base -- -j6 -l6
+[86.445s] Invoking command in '/home/seeed/ros2/ws/build/ranger_base': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/ranger_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/ranger_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig PYTHONPATH=/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/ugv_sdk/share /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/ranger_base
+[86.450s] -- Install configuration: "RelWithDebInfo"
+[86.451s] -- Execute custom install script
+[86.452s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/lib/ranger_base/ranger_base_node
+[86.463s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ranger_base//launch/include/ranger_robot_base.launch.xml
+[86.473s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ranger_base//launch/ranger.launch.py
+[86.478s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ranger_base//launch/ranger_mini_v1.launch.py
+[86.482s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ranger_base//launch/ranger_mini_v2.launch.py
+[86.490s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ranger_base//launch/ranger_mini_v3.launch.py
+[86.497s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ament_index/resource_index/package_run_dependencies/ranger_base
+[86.501s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ament_index/resource_index/parent_prefix_path/ranger_base
+[86.512s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ranger_base/environment/ament_prefix_path.sh
+[86.517s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ranger_base/environment/ament_prefix_path.dsv
+[86.528s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ranger_base/environment/path.sh
+[86.536s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ranger_base/environment/path.dsv
+[86.542s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ranger_base/local_setup.bash
+[86.548s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ranger_base/local_setup.sh
+[86.555s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ranger_base/local_setup.zsh
+[86.560s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ranger_base/local_setup.dsv
+[86.573s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ranger_base/package.dsv
+[86.575s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ament_index/resource_index/packages/ranger_base
+[86.581s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ranger_base/cmake/ranger_baseConfig.cmake
+[86.592s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ranger_base/cmake/ranger_baseConfig-version.cmake
+[86.598s] -- Symlinking: /home/seeed/ros2/ws/install/ranger_base/share/ranger_base/package.xml
+[86.606s] Invoked command in '/home/seeed/ros2/ws/build/ranger_base' returned '0': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/ranger_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/ranger_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig PYTHONPATH=/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/ugv_sdk/share /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/ranger_base

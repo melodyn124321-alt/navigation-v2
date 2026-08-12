@@ -1,0 +1,103 @@
+[0.022s] Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/localization/pcd_ndt_localization -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/pcd_ndt_localization
+[0.041s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.490s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.524s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.599s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.607s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.624s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.652s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.690s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.796s] -- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.860s] CMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:146 (find_package):
+[0.861s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[0.861s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[0.861s]   cmake_policy command to set the policy and suppress this warning.
+[0.861s] 
+[0.861s]   CMake variable EIGEN_ROOT is set to:
+[0.861s] 
+[0.861s]     /usr/include/eigen3
+[0.862s] 
+[0.862s]   For compatibility, find_package is ignoring the variable, but code in a
+[0.862s]   .cmake module might still use it.
+[0.862s] Call Stack (most recent call first):
+[0.862s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:299 (find_eigen)
+[0.862s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[0.862s]   CMakeLists.txt:12 (find_package)
+[0.863s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.863s] 
+[0.872s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.901s] CMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:44 (find_package):
+[0.901s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[0.902s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[0.902s]   cmake_policy command to set the policy and suppress this warning.
+[0.902s] 
+[0.902s]   CMake variable FLANN_ROOT is set to:
+[0.902s] 
+[0.902s]     /usr
+[0.902s] 
+[0.903s]   For compatibility, find_package is ignoring the variable, but code in a
+[0.903s]   .cmake module might still use it.
+[0.903s] Call Stack (most recent call first):
+[0.903s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:256 (find_package)
+[0.903s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:301 (find_flann)
+[0.903s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[0.903s]   CMakeLists.txt:12 (find_package)
+[0.903s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.904s] 
+[0.953s] -- FLANN found (include: /usr/include, lib: /usr/lib/aarch64-linux-gnu/libflann_cpp.so)
+[0.980s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.993s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.994s] ** WARNING ** io features related to pcap will be disabled
+[0.994s] ** WARNING ** io features related to png will be disabled
+[1.972s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[3.084s] -- looking for PCL_COMMON
+[3.085s] -- looking for PCL_KDTREE
+[3.086s] -- looking for PCL_OCTREE
+[3.087s] -- looking for PCL_SEARCH
+[3.088s] -- looking for PCL_SAMPLE_CONSENSUS
+[3.089s] -- looking for PCL_FILTERS
+[3.090s] -- looking for PCL_IO
+[3.092s] -- looking for PCL_2D
+[3.092s] -- looking for PCL_FEATURES
+[3.094s] -- looking for PCL_REGISTRATION
+[3.097s] -- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)
+[3.187s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.190s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[3.458s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.682s] -- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)
+[3.693s] -- Found tf2_eigen: 0.25.20 (/opt/ros/humble/share/tf2_eigen/cmake)
+[3.914s] -- Found visualization_msgs: 4.9.1 (/opt/ros/humble/share/visualization_msgs/cmake)
+[4.193s] -- Configuring done (4.2s)
+[4.326s] -- Generating done (0.1s)
+[4.346s] -- Build files have been written to: /home/seeed/ros2/ws/build/pcd_ndt_localization
+[4.401s] Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/localization/pcd_ndt_localization -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/pcd_ndt_localization
+[4.403s] Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/pcd_ndt_localization -- -j6 -l6
+[4.492s] [ 25%] Linking CXX executable pcd_occupancy_grid_publisher
+[4.505s] [ 50%] Building CXX object CMakeFiles/pcd_ndt_localizer.dir/src/pcd_ndt_localizer.cpp.o
+[6.003s] [ 75%] Built target pcd_occupancy_grid_publisher
+[79.498s] [100%] Linking CXX executable pcd_ndt_localizer
+[86.160s] [100%] Built target pcd_ndt_localizer
+[86.170s] Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/pcd_ndt_localization -- -j6 -l6
+[86.180s] Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/pcd_ndt_localization
+[86.185s] -- Install configuration: ""
+[86.186s] -- Execute custom install script
+[86.187s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/lib/pcd_ndt_localization/pcd_ndt_localizer
+[86.187s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/lib/pcd_ndt_localization/pcd_occupancy_grid_publisher
+[86.188s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/config/ndt_localization.yaml
+[86.188s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/launch/localization.launch.py
+[86.189s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/ament_index/resource_index/package_run_dependencies/pcd_ndt_localization
+[86.190s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/ament_index/resource_index/parent_prefix_path/pcd_ndt_localization
+[86.190s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/ament_prefix_path.sh
+[86.191s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/ament_prefix_path.dsv
+[86.191s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/path.sh
+[86.191s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/path.dsv
+[86.192s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.bash
+[86.192s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.sh
+[86.192s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.zsh
+[86.193s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.dsv
+[86.193s] -- Symlinking: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.dsv
+[86.199s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/ament_index/resource_index/packages/pcd_ndt_localization
+[86.199s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/cmake/pcd_ndt_localizationConfig.cmake
+[86.199s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/cmake/pcd_ndt_localizationConfig-version.cmake
+[86.199s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.xml
+[86.203s] Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/pcd_ndt_localization

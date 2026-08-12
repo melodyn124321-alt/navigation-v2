@@ -1,0 +1,6 @@
+Invoking command in '/home/seeed/ros2/ws/build/nav_tf_bridge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/nav_tf_bridge -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/nav_tf_bridge
+Invoked command in '/home/seeed/ros2/ws/build/nav_tf_bridge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/nav_tf_bridge -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/nav_tf_bridge
+Invoking command in '/home/seeed/ros2/ws/build/nav_tf_bridge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/nav_tf_bridge -- -j6 -l6
+Invoked command in '/home/seeed/ros2/ws/build/nav_tf_bridge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/nav_tf_bridge -- -j6 -l6
+Invoking command in '/home/seeed/ros2/ws/build/nav_tf_bridge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/nav_tf_bridge
+Invoked command in '/home/seeed/ros2/ws/build/nav_tf_bridge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/nav_tf_bridge

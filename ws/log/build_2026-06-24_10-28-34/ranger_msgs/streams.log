@@ -1,0 +1,423 @@
+[0.052s] Invoking command in '/home/seeed/ros2/ws/build/ranger_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/ranger_ros2/ranger_msgs -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/ranger_msgs
+[0.286s] -- The C compiler identification is GNU 11.4.0
+[0.535s] -- The CXX compiler identification is GNU 11.4.0
+[0.617s] -- Detecting C compiler ABI info
+[0.800s] -- Detecting C compiler ABI info - done
+[0.826s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.827s] -- Detecting C compile features
+[0.828s] -- Detecting C compile features - done
+[0.849s] -- Detecting CXX compiler ABI info
+[1.090s] -- Detecting CXX compiler ABI info - done
+[1.119s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.120s] -- Detecting CXX compile features
+[1.121s] -- Detecting CXX compile features - done
+[1.127s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.545s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.109s] -- Found builtin_interfaces: 1.2.2 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[2.345s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.376s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.433s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.502s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.622s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.729s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[2.840s] -- Found std_msgs: 4.9.1 (/opt/ros/humble/share/std_msgs/cmake)
+[7.051s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[14.696s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[16.702s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[16.712s] [33mCMake Warning (dev) at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):
+[16.712s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[16.712s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[16.712s]   the cmake_policy command to set the policy and suppress this warning.
+[16.712s] 
+[16.712s] Call Stack (most recent call first):
+[16.713s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[16.713s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[16.713s]   CMakeLists.txt:28 (rosidl_generate_interfaces)
+[16.713s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[16.713s] [0m
+[16.831s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[16.839s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[16.845s] [33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:52 (find_package):
+[16.846s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[16.846s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[16.846s]   the cmake_policy command to set the policy and suppress this warning.
+[16.846s] 
+[16.846s] Call Stack (most recent call first):
+[16.847s]   /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[16.847s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[16.847s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[16.847s]   CMakeLists.txt:28 (rosidl_generate_interfaces)
+[16.847s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[16.848s] [0m
+[16.962s] [33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:140 (find_package):
+[16.962s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[16.963s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[16.963s]   the cmake_policy command to set the policy and suppress this warning.
+[16.963s] 
+[16.965s] Call Stack (most recent call first):
+[16.965s]   /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[16.965s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[16.966s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[16.966s]   CMakeLists.txt:28 (rosidl_generate_interfaces)
+[16.966s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[16.966s] [0m
+[16.986s] -- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[16.986s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[16.986s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[16.987s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+[17.104s] -- Found PythonExtra: .so  
+[18.517s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[18.673s] -- Added test 'copyright' to check source files copyright and LICENSE
+[18.692s] -- Added test 'lint_cmake' to check CMake code style
+[18.693s] -- Added test 'xmllint' to check XML markup files
+[18.705s] -- Configuring done (18.6s)
+[19.045s] -- Generating done (0.3s)
+[19.120s] -- Build files have been written to: /home/seeed/ros2/ws/build/ranger_msgs
+[19.208s] Invoked command in '/home/seeed/ros2/ws/build/ranger_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/ranger_ros2/ranger_msgs -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/ranger_msgs
+[19.209s] Invoking command in '/home/seeed/ros2/ws/build/ranger_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/ranger_msgs -- -j6 -l6
+[19.375s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[23.882s] [  2%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_generator_c.dir/rosidl_generator_c/ranger_msgs/msg/detail/actuator_state__functions.c.o[0m
+[24.236s] [  4%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_generator_c.dir/rosidl_generator_c/ranger_msgs/msg/detail/driver_state__functions.c.o[0m
+[24.559s] [  5%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_generator_c.dir/rosidl_generator_c/ranger_msgs/msg/detail/motion_state__functions.c.o[0m
+[24.957s] [  6%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_generator_c.dir/rosidl_generator_c/ranger_msgs/msg/detail/motor_state__functions.c.o[0m
+[25.202s] [  8%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_generator_c.dir/rosidl_generator_c/ranger_msgs/msg/detail/system_state__functions.c.o[0m
+[25.417s] [  9%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_generator_c.dir/rosidl_generator_c/ranger_msgs/msg/detail/actuator_state_array__functions.c.o[0m
+[25.600s] [ 11%] [32m[1mLinking C shared library libranger_msgs__rosidl_generator_c.so[0m
+[25.744s] [ 11%] Built target ranger_msgs__rosidl_generator_c
+[25.829s] [ 11%] Built target ament_cmake_python_copy_ranger_msgs
+[25.870s] [ 12%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[27.316s] [ 13%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ranger_msgs/msg/detail/actuator_state__type_support.c.o[0m
+[27.388s] [ 15%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ranger_msgs/msg/detail/actuator_state_array__type_support.c.o[0m
+[27.528s] [ 16%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ranger_msgs/msg/detail/driver_state__type_support.c.o[0m
+[27.640s] [ 18%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ranger_msgs/msg/detail/motion_state__type_support.c.o[0m
+[27.721s] [ 19%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ranger_msgs/msg/detail/motor_state__type_support.c.o[0m
+[27.789s] [ 20%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ranger_msgs/msg/detail/system_state__type_support.c.o[0m
+[27.859s] [ 22%] [32m[1mLinking C shared library libranger_msgs__rosidl_typesupport_introspection_c.so[0m
+[27.914s] [ 22%] Built target ranger_msgs__rosidl_typesupport_introspection_c
+[28.651s] running egg_info
+[28.654s] creating ranger_msgs.egg-info
+[28.655s] writing ranger_msgs.egg-info/PKG-INFO
+[28.655s] writing dependency_links to ranger_msgs.egg-info/dependency_links.txt
+[28.656s] writing top-level names to ranger_msgs.egg-info/top_level.txt
+[28.656s] writing manifest file 'ranger_msgs.egg-info/SOURCES.txt'
+[28.665s] reading manifest file 'ranger_msgs.egg-info/SOURCES.txt'
+[28.665s] writing manifest file 'ranger_msgs.egg-info/SOURCES.txt'
+[28.753s] [ 22%] Built target ament_cmake_python_build_ranger_msgs_egg
+[28.766s] [ 23%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[29.702s] [ 25%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ranger_msgs/msg/actuator_state__type_support.cpp.o[0m
+[29.784s] [ 26%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ranger_msgs/msg/driver_state__type_support.cpp.o[0m
+[29.841s] [ 27%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ranger_msgs/msg/motion_state__type_support.cpp.o[0m
+[29.908s] [ 29%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ranger_msgs/msg/motor_state__type_support.cpp.o[0m
+[29.969s] [ 30%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ranger_msgs/msg/system_state__type_support.cpp.o[0m
+[30.033s] [ 31%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ranger_msgs/msg/actuator_state_array__type_support.cpp.o[0m
+[30.093s] [ 33%] [32m[1mLinking CXX shared library libranger_msgs__rosidl_typesupport_c.so[0m
+[30.161s] [ 33%] Built target ranger_msgs__rosidl_typesupport_c
+[30.172s] [ 34%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[31.368s] [ 36%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ranger_msgs/msg/detail/actuator_state__type_support_c.cpp.o[0m
+[32.246s] [ 37%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ranger_msgs/msg/detail/motion_state__type_support_c.cpp.o[0m
+[33.105s] [ 38%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ranger_msgs/msg/detail/motor_state__type_support_c.cpp.o[0m
+[34.062s] [ 40%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ranger_msgs/msg/detail/system_state__type_support_c.cpp.o[0m
+[34.926s] [ 41%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ranger_msgs/msg/detail/driver_state__type_support_c.cpp.o[0m
+[35.793s] [ 43%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ranger_msgs/msg/detail/actuator_state_array__type_support_c.cpp.o[0m
+[36.644s] [ 44%] [32m[1mLinking CXX shared library libranger_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[36.846s] [ 44%] Built target ranger_msgs__rosidl_typesupport_fastrtps_c
+[36.882s] [ 45%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[37.840s] [ 45%] Built target ranger_msgs__rs
+[37.865s] [ 47%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[39.311s] [ 47%] Built target ranger_msgs__cpp
+[39.321s] [ 48%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[40.389s] [ 50%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ranger_msgs/msg/detail/actuator_state__type_support.cpp.o[0m
+[41.314s] [ 51%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ranger_msgs/msg/detail/motion_state__type_support.cpp.o[0m
+[42.230s] [ 52%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ranger_msgs/msg/detail/motor_state__type_support.cpp.o[0m
+[43.147s] [ 54%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ranger_msgs/msg/detail/system_state__type_support.cpp.o[0m
+[44.240s] [ 55%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ranger_msgs/msg/detail/driver_state__type_support.cpp.o[0m
+[45.192s] [ 56%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ranger_msgs/msg/detail/actuator_state_array__type_support.cpp.o[0m
+[46.270s] [ 58%] [32m[1mLinking CXX shared library libranger_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[46.436s] [ 58%] Built target ranger_msgs__rosidl_typesupport_introspection_cpp
+[46.442s] [ 59%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[47.722s] [ 61%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ranger_msgs/msg/detail/dds_fastrtps/actuator_state__type_support.cpp.o[0m
+[48.795s] [ 62%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ranger_msgs/msg/detail/dds_fastrtps/motor_state__type_support.cpp.o[0m
+[49.846s] [ 63%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ranger_msgs/msg/detail/dds_fastrtps/system_state__type_support.cpp.o[0m
+[50.892s] [ 65%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ranger_msgs/msg/detail/dds_fastrtps/motion_state__type_support.cpp.o[0m
+[51.902s] [ 66%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ranger_msgs/msg/detail/dds_fastrtps/driver_state__type_support.cpp.o[0m
+[52.897s] [ 68%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ranger_msgs/msg/detail/dds_fastrtps/actuator_state_array__type_support.cpp.o[0m
+[54.131s] [ 69%] [32m[1mLinking CXX shared library libranger_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[54.311s] [ 69%] Built target ranger_msgs__rosidl_typesupport_fastrtps_cpp
+[54.324s] [ 70%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[55.317s] [ 72%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ranger_msgs/msg/actuator_state__type_support.cpp.o[0m
+[55.931s] [ 73%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ranger_msgs/msg/system_state__type_support.cpp.o[0m
+[56.595s] [ 75%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ranger_msgs/msg/motor_state__type_support.cpp.o[0m
+[57.298s] [ 76%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ranger_msgs/msg/motion_state__type_support.cpp.o[0m
+[57.950s] [ 77%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ranger_msgs/msg/driver_state__type_support.cpp.o[0m
+[58.585s] [ 79%] [32mBuilding CXX object CMakeFiles/ranger_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ranger_msgs/msg/actuator_state_array__type_support.cpp.o[0m
+[59.288s] [ 80%] [32m[1mLinking CXX shared library libranger_msgs__rosidl_typesupport_cpp.so[0m
+[59.354s] [ 80%] Built target ranger_msgs__rosidl_typesupport_cpp
+[59.379s] [ 80%] Built target ranger_msgs
+[59.398s] [ 81%] [34m[1mGenerating Python code for ROS interfaces[0m
+[61.509s] [ 81%] Built target ranger_msgs__py
+[61.528s] [ 83%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_generator_py.dir/rosidl_generator_py/ranger_msgs/msg/_actuator_state_s.c.o[0m
+[61.777s] [ 84%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_generator_py.dir/rosidl_generator_py/ranger_msgs/msg/_system_state_s.c.o[0m
+[62.044s] [ 86%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_generator_py.dir/rosidl_generator_py/ranger_msgs/msg/_motor_state_s.c.o[0m
+[62.279s] [ 87%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_generator_py.dir/rosidl_generator_py/ranger_msgs/msg/_motion_state_s.c.o[0m
+[62.533s] [ 88%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_generator_py.dir/rosidl_generator_py/ranger_msgs/msg/_driver_state_s.c.o[0m
+[62.762s] [ 90%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_generator_py.dir/rosidl_generator_py/ranger_msgs/msg/_actuator_state_array_s.c.o[0m
+[62.989s] [ 91%] [32m[1mLinking C shared library rosidl_generator_py/ranger_msgs/libranger_msgs__rosidl_generator_py.so[0m
+[63.071s] [ 91%] Built target ranger_msgs__rosidl_generator_py
+[63.092s] [ 93%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/ranger_msgs/_ranger_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[63.384s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/ranger_msgs/ranger_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so[0m
+[63.443s] [ 94%] Built target ranger_msgs__rosidl_typesupport_fastrtps_c__pyext
+[63.461s] [ 95%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/ranger_msgs/_ranger_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[63.755s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/ranger_msgs/ranger_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so[0m
+[63.827s] [ 97%] Built target ranger_msgs__rosidl_typesupport_c__pyext
+[63.847s] [ 98%] [32mBuilding C object CMakeFiles/ranger_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/ranger_msgs/_ranger_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[64.108s] [100%] [32m[1mLinking C shared library rosidl_generator_py/ranger_msgs/ranger_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so[0m
+[64.169s] [100%] Built target ranger_msgs__rosidl_typesupport_introspection_c__pyext
+[64.188s] Invoked command in '/home/seeed/ros2/ws/build/ranger_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/ranger_msgs -- -j6 -l6
+[64.192s] Invoking command in '/home/seeed/ros2/ws/build/ranger_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/ranger_msgs
+[64.197s] -- Install configuration: ""
+[64.198s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ament_index/resource_index/rosidl_interfaces/ranger_msgs
+[64.198s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs
+[64.198s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg
+[64.199s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/motor_state.h
+[64.199s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/actuator_state_array.h
+[64.199s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/motion_state.h
+[64.200s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/actuator_state.h
+[64.200s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/driver_state.h
+[64.200s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/system_state.h
+[64.200s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail
+[64.201s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state__functions.c
+[64.201s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motion_state__functions.c
+[64.201s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state_array__functions.c
+[64.201s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state__functions.h
+[64.201s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/system_state__type_support.h
+[64.202s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/system_state__functions.c
+[64.202s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motor_state__struct.h
+[64.202s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motion_state__functions.h
+[64.202s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/driver_state__type_support.h
+[64.203s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motion_state__struct.h
+[64.203s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state__struct.h
+[64.203s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motor_state__type_support.h
+[64.203s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state_array__struct.h
+[64.203s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/driver_state__struct.h
+[64.204s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motor_state__functions.c
+[64.204s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/system_state__functions.h
+[64.204s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state_array__type_support.h
+[64.204s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motor_state__functions.h
+[64.205s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state__type_support.h
+[64.205s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state_array__functions.h
+[64.205s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/driver_state__functions.h
+[64.205s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/driver_state__functions.c
+[64.206s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/system_state__struct.h
+[64.206s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motion_state__type_support.h
+[64.206s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/rosidl_generator_c__visibility_control.h
+[64.207s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/environment/library_path.sh
+[64.207s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/environment/library_path.dsv
+[64.207s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/lib/libranger_msgs__rosidl_generator_c.so
+[64.209s] -- Set runtime path of "/home/seeed/ros2/ws/install/ranger_msgs/lib/libranger_msgs__rosidl_generator_c.so" to ""
+[64.209s] -- Up-to-date: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs
+[64.209s] -- Up-to-date: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg
+[64.209s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[64.210s] -- Up-to-date: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail
+[64.210s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motion_state__rosidl_typesupport_fastrtps_c.h
+[64.210s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state_array__rosidl_typesupport_fastrtps_c.h
+[64.211s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motor_state__rosidl_typesupport_fastrtps_c.h
+[64.211s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/driver_state__rosidl_typesupport_fastrtps_c.h
+[64.211s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state__rosidl_typesupport_fastrtps_c.h
+[64.211s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/system_state__rosidl_typesupport_fastrtps_c.h
+[64.212s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/lib/libranger_msgs__rosidl_typesupport_fastrtps_c.so
+[64.212s] -- Set runtime path of "/home/seeed/ros2/ws/install/ranger_msgs/lib/libranger_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[64.212s] -- Up-to-date: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs
+[64.212s] -- Up-to-date: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg
+[64.213s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/system_state.hpp
+[64.213s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/actuator_state_array.hpp
+[64.213s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/motor_state.hpp
+[64.213s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/actuator_state.hpp
+[64.213s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[64.214s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/driver_state.hpp
+[64.215s] -- Up-to-date: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail
+[64.215s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/driver_state__traits.hpp
+[64.215s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motor_state__type_support.hpp
+[64.215s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state_array__traits.hpp
+[64.216s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/driver_state__struct.hpp
+[64.216s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/system_state__traits.hpp
+[64.216s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state_array__builder.hpp
+[64.216s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motor_state__traits.hpp
+[64.217s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state__traits.hpp
+[64.217s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motion_state__builder.hpp
+[64.217s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/system_state__type_support.hpp
+[64.217s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state__struct.hpp
+[64.217s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motion_state__traits.hpp
+[64.217s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motor_state__builder.hpp
+[64.218s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/driver_state__type_support.hpp
+[64.218s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motor_state__struct.hpp
+[64.218s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/driver_state__builder.hpp
+[64.218s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/system_state__struct.hpp
+[64.219s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motion_state__type_support.hpp
+[64.219s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state__builder.hpp
+[64.220s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motion_state__struct.hpp
+[64.220s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/system_state__builder.hpp
+[64.221s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state_array__type_support.hpp
+[64.221s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state__type_support.hpp
+[64.221s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state_array__struct.hpp
+[64.222s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/motion_state.hpp
+[64.222s] -- Up-to-date: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs
+[64.222s] -- Up-to-date: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg
+[64.222s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[64.222s] -- Up-to-date: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail
+[64.223s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state_array__rosidl_typesupport_fastrtps_cpp.hpp
+[64.223s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motion_state__rosidl_typesupport_fastrtps_cpp.hpp
+[64.223s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/dds_fastrtps
+[64.223s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/system_state__rosidl_typesupport_fastrtps_cpp.hpp
+[64.223s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state__rosidl_typesupport_fastrtps_cpp.hpp
+[64.224s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motor_state__rosidl_typesupport_fastrtps_cpp.hpp
+[64.224s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/driver_state__rosidl_typesupport_fastrtps_cpp.hpp
+[64.224s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/lib/libranger_msgs__rosidl_typesupport_fastrtps_cpp.so
+[64.225s] -- Set runtime path of "/home/seeed/ros2/ws/install/ranger_msgs/lib/libranger_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[64.225s] -- Up-to-date: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs
+[64.225s] -- Up-to-date: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg
+[64.225s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[64.225s] -- Up-to-date: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail
+[64.225s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motor_state__type_support.c
+[64.226s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state__type_support.c
+[64.226s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state_array__type_support.c
+[64.226s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/driver_state__rosidl_typesupport_introspection_c.h
+[64.226s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/system_state__rosidl_typesupport_introspection_c.h
+[64.226s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state_array__rosidl_typesupport_introspection_c.h
+[64.227s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/driver_state__type_support.c
+[64.227s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/system_state__type_support.c
+[64.227s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motor_state__rosidl_typesupport_introspection_c.h
+[64.227s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motion_state__rosidl_typesupport_introspection_c.h
+[64.227s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motion_state__type_support.c
+[64.227s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state__rosidl_typesupport_introspection_c.h
+[64.228s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/lib/libranger_msgs__rosidl_typesupport_introspection_c.so
+[64.228s] -- Set runtime path of "/home/seeed/ros2/ws/install/ranger_msgs/lib/libranger_msgs__rosidl_typesupport_introspection_c.so" to ""
+[64.228s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/lib/libranger_msgs__rosidl_typesupport_c.so
+[64.229s] -- Set runtime path of "/home/seeed/ros2/ws/install/ranger_msgs/lib/libranger_msgs__rosidl_typesupport_c.so" to ""
+[64.229s] -- Up-to-date: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs
+[64.229s] -- Up-to-date: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg
+[64.229s] -- Up-to-date: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail
+[64.230s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/driver_state__type_support.cpp
+[64.230s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motor_state__rosidl_typesupport_introspection_cpp.hpp
+[64.230s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motion_state__type_support.cpp
+[64.230s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state_array__type_support.cpp
+[64.231s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/system_state__type_support.cpp
+[64.231s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state_array__rosidl_typesupport_introspection_cpp.hpp
+[64.231s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motor_state__type_support.cpp
+[64.232s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/driver_state__rosidl_typesupport_introspection_cpp.hpp
+[64.232s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state__type_support.cpp
+[64.232s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/actuator_state__rosidl_typesupport_introspection_cpp.hpp
+[64.233s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/motion_state__rosidl_typesupport_introspection_cpp.hpp
+[64.233s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/include/ranger_msgs/ranger_msgs/msg/detail/system_state__rosidl_typesupport_introspection_cpp.hpp
+[64.233s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/lib/libranger_msgs__rosidl_typesupport_introspection_cpp.so
+[64.234s] -- Set runtime path of "/home/seeed/ros2/ws/install/ranger_msgs/lib/libranger_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[64.234s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/lib/libranger_msgs__rosidl_typesupport_cpp.so
+[64.235s] -- Set runtime path of "/home/seeed/ros2/ws/install/ranger_msgs/lib/libranger_msgs__rosidl_typesupport_cpp.so" to ""
+[64.235s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/environment/pythonpath.sh
+[64.235s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/environment/pythonpath.dsv
+[64.236s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs-0.0.1-py3.10.egg-info
+[64.236s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs-0.0.1-py3.10.egg-info/SOURCES.txt
+[64.236s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs-0.0.1-py3.10.egg-info/PKG-INFO
+[64.236s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs-0.0.1-py3.10.egg-info/dependency_links.txt
+[64.237s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs-0.0.1-py3.10.egg-info/top_level.txt
+[64.237s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs
+[64.237s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/ranger_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[64.238s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/_ranger_msgs_s.ep.rosidl_typesupport_c.c
+[64.238s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/_ranger_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[64.238s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/ranger_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[64.239s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg
+[64.239s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_actuator_state_array.py
+[64.239s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_actuator_state.py
+[64.239s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_actuator_state_array_s.c
+[64.239s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_motor_state_s.c
+[64.240s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_driver_state_s.c
+[64.240s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_motion_state_s.c
+[64.240s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_actuator_state_s.c
+[64.240s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_motion_state.py
+[64.241s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_system_state.py
+[64.241s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_system_state_s.c
+[64.241s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_motor_state.py
+[64.241s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_driver_state.py
+[64.241s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/__init__.py
+[64.242s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/_ranger_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[64.242s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/ranger_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[64.242s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/libranger_msgs__rosidl_generator_py.so
+[64.243s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/__init__.py
+[64.340s] Listing '/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs'...
+[64.340s] Compiling '/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/__init__.py'...
+[64.340s] Listing '/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg'...
+[64.340s] Compiling '/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/__init__.py'...
+[64.341s] Compiling '/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_actuator_state.py'...
+[64.341s] Compiling '/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_actuator_state_array.py'...
+[64.341s] Compiling '/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_driver_state.py'...
+[64.341s] Compiling '/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_motion_state.py'...
+[64.341s] Compiling '/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_motor_state.py'...
+[64.341s] Compiling '/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/msg/_system_state.py'...
+[64.356s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/ranger_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[64.357s] -- Set runtime path of "/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/ranger_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""
+[64.357s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/ranger_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[64.358s] -- Set runtime path of "/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/ranger_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""
+[64.358s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/ranger_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[64.359s] -- Set runtime path of "/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages/ranger_msgs/ranger_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""
+[64.359s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/lib/libranger_msgs__rosidl_generator_py.so
+[64.360s] -- Set runtime path of "/home/seeed/ros2/ws/install/ranger_msgs/lib/libranger_msgs__rosidl_generator_py.so" to ""
+[64.360s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ament_index/resource_index/rust_packages/ranger_msgs
+[64.360s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/rust
+[64.361s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/rust/build.rs
+[64.361s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/rust/src
+[64.361s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/rust/src/msg.rs
+[64.361s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/rust/src/msg
+[64.361s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/rust/src/msg/rmw.rs
+[64.362s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/rust/src/lib.rs
+[64.362s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/rust/Cargo.toml
+[64.362s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/msg/ActuatorState.idl
+[64.363s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/msg/ActuatorStateArray.idl
+[64.364s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/msg/DriverState.idl
+[64.364s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/msg/MotionState.idl
+[64.364s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/msg/MotorState.idl
+[64.365s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/msg/SystemState.idl
+[64.365s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/msg/ActuatorState.msg
+[64.366s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/msg/ActuatorStateArray.msg
+[64.366s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/msg/DriverState.msg
+[64.366s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/msg/MotionState.msg
+[64.367s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/msg/MotorState.msg
+[64.369s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/msg/SystemState.msg
+[64.369s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ament_index/resource_index/package_run_dependencies/ranger_msgs
+[64.370s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ament_index/resource_index/parent_prefix_path/ranger_msgs
+[64.370s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/environment/ament_prefix_path.sh
+[64.370s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/environment/ament_prefix_path.dsv
+[64.370s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/environment/path.sh
+[64.371s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/environment/path.dsv
+[64.371s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/local_setup.bash
+[64.372s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/local_setup.sh
+[64.372s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/local_setup.zsh
+[64.373s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/local_setup.dsv
+[64.373s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/package.dsv
+[64.374s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ament_index/resource_index/packages/ranger_msgs
+[64.374s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/export_ranger_msgs__rosidl_generator_cExport.cmake
+[64.375s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/export_ranger_msgs__rosidl_generator_cExport-noconfig.cmake
+[64.375s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/export_ranger_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[64.375s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/export_ranger_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[64.376s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/export_ranger_msgs__rosidl_generator_cppExport.cmake
+[64.376s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/export_ranger_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[64.376s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/export_ranger_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[64.377s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/ranger_msgs__rosidl_typesupport_introspection_cExport.cmake
+[64.377s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/ranger_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[64.377s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/ranger_msgs__rosidl_typesupport_cExport.cmake
+[64.378s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/ranger_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[64.378s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/ranger_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[64.378s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/ranger_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[64.379s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/ranger_msgs__rosidl_typesupport_cppExport.cmake
+[64.379s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/ranger_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[64.380s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/export_ranger_msgs__rosidl_generator_pyExport.cmake
+[64.380s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/export_ranger_msgs__rosidl_generator_pyExport-noconfig.cmake
+[64.385s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/rosidl_cmake-extras.cmake
+[64.385s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[64.386s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[64.386s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[64.386s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[64.387s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[64.387s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[64.387s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/ranger_msgsConfig.cmake
+[64.387s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/cmake/ranger_msgsConfig-version.cmake
+[64.388s] -- Installing: /home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/package.xml
+[64.393s] Invoked command in '/home/seeed/ros2/ws/build/ranger_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/ranger_msgs

@@ -1,0 +1,201 @@
+[0.000000] (-) TimerEvent: {}
+[0.000413] (-) JobUnselected: {'identifier': 'livox_ros_driver2'}
+[0.000495] (-) JobUnselected: {'identifier': 'ranger_base'}
+[0.000549] (-) JobUnselected: {'identifier': 'ranger_bringup'}
+[0.000594] (-) JobUnselected: {'identifier': 'ranger_msgs'}
+[0.000636] (-) JobUnselected: {'identifier': 'ugv_sdk'}
+[0.000679] (-) JobUnselected: {'identifier': 'vikit_common'}
+[0.000719] (-) JobUnselected: {'identifier': 'vikit_ros'}
+[0.000768] (fast_lio) JobQueued: {'identifier': 'fast_lio', 'dependencies': OrderedDict([('livox_ros_driver2', '/home/seeed/ros2/ws/install/livox_ros_driver2')])}
+[0.000830] (fast_lio) JobStarted: {'identifier': 'fast_lio'}
+[0.021504] (fast_lio) JobProgress: {'identifier': 'fast_lio', 'progress': 'cmake'}
+[0.021708] (fast_lio) JobProgress: {'identifier': 'fast_lio', 'progress': 'build'}
+[0.021772] (fast_lio) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/seeed/ros2/ws/build/fast_lio', '--', '-j6', '-l6'], 'cwd': '/home/seeed/ros2/ws/build/fast_lio', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'seeed'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/seeed/ros2/ws/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/seeed'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/seeed/ros2'), ('TERM_PROGRAM_VERSION', '1.124.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('ROS_IP', '10.200.54.207'), ('MANAGERPID', '1982'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '2147'), ('BUNDLED_DEBUGPY_PATH', '/home/seeed/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4508'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'seeed'), ('JOURNAL_STREAM', '8:41751'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'seeed'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/seeed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/seeed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/seeed/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-arm64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/seeed:@/tmp/.ICE-unix/2121,unix/seeed:/tmp/.ICE-unix/2121'), ('INVOCATION_ID', '5e38cb2befe54eecb275096ff9b8e2f8'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/seeed/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-a3c51ba3dbd065a2.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/seeed/.config/Code/User/workspaceStorage/190332d50263244bdca43f592a8a4c4b/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('CLINE_ACTIVE', 'true'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-72b132ebe4.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/seeed/ros2/ws/build/fast_lio'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('COPILOT_DEBUG_NONCE', 'cea7df3035083e8d9fd2d26f80136695'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble')]), 'shell': False}
+[0.087230] (-) TimerEvent: {}
+[0.141971] (fast_lio) StdoutLine: {'line': b'[  0%] Built target ament_cmake_python_copy_fast_lio\n'}
+[0.148376] (fast_lio) StdoutLine: {'line': b'[  2%] Built target fast_lio__rs\n'}
+[0.163965] (fast_lio) StdoutLine: {'line': b'[ 11%] Built target fast_lio__rosidl_generator_c\n'}
+[0.167738] (fast_lio) StdoutLine: {'line': b'[ 13%] Built target fast_lio__cpp\n'}
+[0.187951] (-) TimerEvent: {}
+[0.224881] (fast_lio) StdoutLine: {'line': b'[ 22%] Built target fast_lio__rosidl_typesupport_fastrtps_c\n'}
+[0.255982] (fast_lio) StdoutLine: {'line': b'[ 30%] Built target fast_lio__rosidl_typesupport_c\n'}
+[0.262335] (fast_lio) StdoutLine: {'line': b'[ 38%] Built target fast_lio__rosidl_typesupport_introspection_c\n'}
+[0.265280] (fast_lio) StdoutLine: {'line': b'[ 47%] Built target fast_lio__rosidl_typesupport_cpp\n'}
+[0.288563] (-) TimerEvent: {}
+[0.313532] (fast_lio) StdoutLine: {'line': b'[ 55%] Built target fast_lio__rosidl_typesupport_fastrtps_cpp\n'}
+[0.321529] (fast_lio) StdoutLine: {'line': b'[ 63%] Built target fast_lio__rosidl_typesupport_introspection_cpp\n'}
+[0.388727] (-) TimerEvent: {}
+[0.407328] (fast_lio) StdoutLine: {'line': b'[ 63%] Built target fast_lio\n'}
+[0.432563] (fast_lio) StdoutLine: {'line': b'[ 75%] Built target fastlio_mapping\n'}
+[0.461494] (fast_lio) StdoutLine: {'line': b'[ 77%] Built target fast_lio__py\n'}
+[0.488934] (-) TimerEvent: {}
+[0.499610] (fast_lio) StdoutLine: {'line': b'[ 83%] Built target fast_lio__rosidl_generator_py\n'}
+[0.571740] (fast_lio) StdoutLine: {'line': b'[ 88%] Built target fast_lio__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.589166] (-) TimerEvent: {}
+[0.603558] (fast_lio) StdoutLine: {'line': b'[ 94%] Built target fast_lio__rosidl_typesupport_c__pyext\n'}
+[0.628188] (fast_lio) StdoutLine: {'line': b'[100%] Built target fast_lio__rosidl_typesupport_introspection_c__pyext\n'}
+[0.690305] (-) TimerEvent: {}
+[0.791077] (-) TimerEvent: {}
+[0.891791] (-) TimerEvent: {}
+[0.993063] (-) TimerEvent: {}
+[1.093951] (-) TimerEvent: {}
+[1.199059] (-) TimerEvent: {}
+[1.257699] (fast_lio) StdoutLine: {'line': b'running egg_info\n'}
+[1.262334] (fast_lio) StdoutLine: {'line': b'writing fast_lio.egg-info/PKG-INFO\n'}
+[1.262827] (fast_lio) StdoutLine: {'line': b'writing dependency_links to fast_lio.egg-info/dependency_links.txt\n'}
+[1.263021] (fast_lio) StdoutLine: {'line': b'writing top-level names to fast_lio.egg-info/top_level.txt\n'}
+[1.284640] (fast_lio) StdoutLine: {'line': b"reading manifest file 'fast_lio.egg-info/SOURCES.txt'\n"}
+[1.294700] (fast_lio) StdoutLine: {'line': b"writing manifest file 'fast_lio.egg-info/SOURCES.txt'\n"}
+[1.299270] (-) TimerEvent: {}
+[1.404447] (-) TimerEvent: {}
+[1.492793] (fast_lio) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_fast_lio_egg\n'}
+[1.504792] (-) TimerEvent: {}
+[1.518988] (fast_lio) CommandEnded: {'returncode': 0}
+[1.520435] (fast_lio) JobProgress: {'identifier': 'fast_lio', 'progress': 'install'}
+[1.535707] (fast_lio) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/seeed/ros2/ws/build/fast_lio'], 'cwd': '/home/seeed/ros2/ws/build/fast_lio', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'seeed'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/seeed/ros2/ws/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/seeed'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/seeed/ros2'), ('TERM_PROGRAM_VERSION', '1.124.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('ROS_IP', '10.200.54.207'), ('MANAGERPID', '1982'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '2147'), ('BUNDLED_DEBUGPY_PATH', '/home/seeed/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4508'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'seeed'), ('JOURNAL_STREAM', '8:41751'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'seeed'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/seeed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/seeed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/seeed/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-arm64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/seeed:@/tmp/.ICE-unix/2121,unix/seeed:/tmp/.ICE-unix/2121'), ('INVOCATION_ID', '5e38cb2befe54eecb275096ff9b8e2f8'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/seeed/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-a3c51ba3dbd065a2.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/seeed/.config/Code/User/workspaceStorage/190332d50263244bdca43f592a8a4c4b/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('CLINE_ACTIVE', 'true'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-72b132ebe4.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/seeed/ros2/ws/build/fast_lio'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('COPILOT_DEBUG_NONCE', 'cea7df3035083e8d9fd2d26f80136695'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble')]), 'shell': False}
+[1.557776] (fast_lio) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[1.566017] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/ament_index/resource_index/rosidl_interfaces/fast_lio\n'}
+[1.566600] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio\n'}
+[1.566928] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg\n'}
+[1.567158] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/pose6_d.h\n'}
+[1.567330] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail\n'}
+[1.567493] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.h\n'}
+[1.567648] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__struct.h\n'}
+[1.567945] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__functions.h\n'}
+[1.568120] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__functions.c\n'}
+[1.568273] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_generator_c__visibility_control.h\n'}
+[1.568474] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/library_path.sh\n'}
+[1.568706] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/library_path.dsv\n'}
+[1.568901] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_generator_c.so\n'}
+[1.569096] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio\n'}
+[1.569282] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg\n'}
+[1.569431] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[1.569578] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail\n'}
+[1.569727] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_fastrtps_c.h\n'}
+[1.569871] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_fastrtps_c.so\n'}
+[1.570013] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio\n'}
+[1.570152] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg\n'}
+[1.570295] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/pose6_d.hpp\n'}
+[1.571646] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[1.572026] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail\n'}
+[1.572219] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__traits.hpp\n'}
+[1.575743] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.hpp\n'}
+[1.576137] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__builder.hpp\n'}
+[1.576323] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__struct.hpp\n'}
+[1.577819] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio\n'}
+[1.580116] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg\n'}
+[1.581484] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[1.581875] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail\n'}
+[1.582053] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.583745] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/dds_fastrtps\n'}
+[1.583986] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_fastrtps_cpp.so\n'}
+[1.584146] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio\n'}
+[1.584308] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg\n'}
+[1.588014] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[1.591573] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail\n'}
+[1.592772] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.c\n'}
+[1.596071] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_introspection_c.h\n'}
+[1.600053] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_introspection_c.so\n'}
+[1.603301] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_c.so\n'}
+[1.607275] (-) TimerEvent: {}
+[1.610928] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio\n'}
+[1.617082] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg\n'}
+[1.617573] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail\n'}
+[1.617784] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.cpp\n'}
+[1.617959] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.618156] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_introspection_cpp.so\n'}
+[1.618320] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_cpp.so\n'}
+[1.622869] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/pythonpath.sh\n'}
+[1.623348] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/pythonpath.dsv\n'}
+[1.623720] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info\n'}
+[1.623935] (fast_lio) StdoutLine: {'line': b'-- Installing: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[1.625549] (fast_lio) StdoutLine: {'line': b'-- Installing: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[1.625941] (fast_lio) StdoutLine: {'line': b'-- Installing: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[1.626133] (fast_lio) StdoutLine: {'line': b'-- Installing: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[1.627937] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio\n'}
+[1.633907] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[1.634420] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.638782] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/libfast_lio__rosidl_generator_py.so\n'}
+[1.639820] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.640161] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_c.c\n'}
+[1.641492] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg\n'}
+[1.643128] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/_pose6_d_s.c\n'}
+[1.645091] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/_pose6_d.py\n'}
+[1.647808] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/__init__.py\n'}
+[1.648969] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[1.649899] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/__init__.py\n'}
+[1.651342] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.700715] (fast_lio) StdoutLine: {'line': b"Listing '/home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio'...\n"}
+[1.701302] (fast_lio) StdoutLine: {'line': b"Listing '/home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg'...\n"}
+[1.707842] (-) TimerEvent: {}
+[1.715745] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.717699] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.718239] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.718574] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_generator_py.so\n'}
+[1.719334] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/ament_index/resource_index/rust_packages/fast_lio\n'}
+[1.719707] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust\n'}
+[1.719970] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust/build.rs\n'}
+[1.720156] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust/src\n'}
+[1.720318] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust/src/msg.rs\n'}
+[1.720520] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust/src/msg\n'}
+[1.720724] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust/src/msg/rmw.rs\n'}
+[1.721206] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust/src/lib.rs\n'}
+[1.722306] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust/Cargo.toml\n'}
+[1.723034] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/msg/Pose6D.idl\n'}
+[1.723542] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/msg/Pose6D.msg\n'}
+[1.724016] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/fast_lio/fastlio_mapping\n'}
+[1.724290] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config\n'}
+[1.725021] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/horizon.yaml\n'}
+[1.725743] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/ouster64.yaml\n'}
+[1.726021] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/avia.yaml\n'}
+[1.726402] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/velodyne.yaml\n'}
+[1.727068] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/mid360.yaml\n'}
+[1.727257] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/launch\n'}
+[1.727471] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/launch/gdb_debug_example.launch\n'}
+[1.728029] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/launch/mapping.launch.py\n'}
+[1.729016] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rviz\n'}
+[1.729236] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rviz/fastlio.rviz\n'}
+[1.741611] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/ament_index/resource_index/package_run_dependencies/fast_lio\n'}
+[1.745184] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/ament_index/resource_index/parent_prefix_path/fast_lio\n'}
+[1.745442] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/ament_prefix_path.sh\n'}
+[1.745624] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/ament_prefix_path.dsv\n'}
+[1.745786] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/path.sh\n'}
+[1.745943] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/path.dsv\n'}
+[1.746098] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/local_setup.bash\n'}
+[1.746296] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/local_setup.sh\n'}
+[1.746444] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/local_setup.zsh\n'}
+[1.746587] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/local_setup.dsv\n'}
+[1.746744] (fast_lio) StdoutLine: {'line': b'-- Installing: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/package.dsv\n'}
+[1.746891] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/ament_index/resource_index/packages/fast_lio\n'}
+[1.747030] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cExport.cmake\n'}
+[1.747169] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cExport-release.cmake\n'}
+[1.747309] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[1.747450] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cExport-release.cmake\n'}
+[1.747590] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cppExport.cmake\n'}
+[1.747727] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[1.758145] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cppExport-release.cmake\n'}
+[1.761087] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.761697] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cExport-release.cmake\n'}
+[1.762700] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cExport.cmake\n'}
+[1.763378] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cExport-release.cmake\n'}
+[1.764634] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.766038] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cppExport-release.cmake\n'}
+[1.766285] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cppExport.cmake\n'}
+[1.766731] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cppExport-release.cmake\n'}
+[1.772469] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_pyExport.cmake\n'}
+[1.774010] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_pyExport-release.cmake\n'}
+[1.774210] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake-extras.cmake\n'}
+[1.774377] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.774534] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.774689] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.774834] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.775013] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.775159] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.775299] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lioConfig.cmake\n'}
+[1.775438] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lioConfig-version.cmake\n'}
+[1.775576] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/package.xml\n'}
+[1.776436] (fast_lio) CommandEnded: {'returncode': 0}
+[1.808984] (-) TimerEvent: {}
+[1.911105] (-) TimerEvent: {}
+[1.972435] (fast_lio) JobEnded: {'identifier': 'fast_lio', 'rc': 0}
+[1.977543] (-) EventReactorShutdown: {}

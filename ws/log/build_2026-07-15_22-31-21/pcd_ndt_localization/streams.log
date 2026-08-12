@@ -1,0 +1,29 @@
+[0.022s] Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/pcd_ndt_localization -- -j6 -l6
+[0.100s] [ 50%] Built target pcd_occupancy_grid_publisher
+[0.137s] [ 75%] Building CXX object CMakeFiles/pcd_ndt_localizer.dir/src/pcd_ndt_localizer.cpp.o
+[71.420s] [100%] Linking CXX executable pcd_ndt_localizer
+[77.855s] [100%] Built target pcd_ndt_localizer
+[77.865s] Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/pcd_ndt_localization -- -j6 -l6
+[77.876s] Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/pcd_ndt_localization
+[77.881s] -- Install configuration: ""
+[77.883s] -- Execute custom install script
+[77.884s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/lib/pcd_ndt_localization/pcd_ndt_localizer
+[77.884s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/lib/pcd_ndt_localization/pcd_occupancy_grid_publisher
+[77.885s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/config/ndt_localization.yaml
+[77.885s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/launch/localization.launch.py
+[77.886s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/ament_index/resource_index/package_run_dependencies/pcd_ndt_localization
+[77.887s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/ament_index/resource_index/parent_prefix_path/pcd_ndt_localization
+[77.887s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/ament_prefix_path.sh
+[77.888s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/ament_prefix_path.dsv
+[77.889s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/path.sh
+[77.890s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/path.dsv
+[77.890s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.bash
+[77.890s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.sh
+[77.890s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.zsh
+[77.891s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.dsv
+[77.891s] -- Symlinking: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.dsv
+[77.896s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/ament_index/resource_index/packages/pcd_ndt_localization
+[77.896s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/cmake/pcd_ndt_localizationConfig.cmake
+[77.897s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/cmake/pcd_ndt_localizationConfig-version.cmake
+[77.897s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.xml
+[77.900s] Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/pcd_ndt_localization

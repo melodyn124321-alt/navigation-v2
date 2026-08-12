@@ -1,0 +1,138 @@
+[0.030s] Invoking command in '/home/seeed/ros2/ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2 /usr/local/bin/cmake /home/seeed/ros2/ws/src/driver/livox_ros_driver2 -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/livox_ros_driver2
+[0.083s] -- ROS distro detected: humble
+[0.085s] -- livox_ros_driver2 version: 1.2.6
+[0.086s] -- Found ament_cmake_auto: 1.3.14 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.541s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.730s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.739s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.846s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.066s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.072s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.343s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.795s] [33mCMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:146 (find_package):
+[1.795s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[1.795s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[1.795s]   cmake_policy command to set the policy and suppress this warning.
+[1.795s] 
+[1.795s]   CMake variable EIGEN_ROOT is set to:
+[1.796s] 
+[1.796s]     /usr/include/eigen3
+[1.796s] 
+[1.796s]   For compatibility, find_package is ignoring the variable, but code in a
+[1.796s]   .cmake module might still use it.
+[1.796s] Call Stack (most recent call first):
+[1.796s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:299 (find_eigen)
+[1.796s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[1.797s]   /opt/ros/humble/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.797s]   /opt/ros/humble/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[1.797s]   /opt/ros/humble/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)
+[1.797s]   CMakeLists.txt:235 (ament_auto_find_build_dependencies)
+[1.797s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.797s] [0m
+[1.809s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[1.847s] [33mCMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:44 (find_package):
+[1.847s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[1.848s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[1.848s]   cmake_policy command to set the policy and suppress this warning.
+[1.848s] 
+[1.848s]   CMake variable FLANN_ROOT is set to:
+[1.848s] 
+[1.848s]     /usr
+[1.848s] 
+[1.848s]   For compatibility, find_package is ignoring the variable, but code in a
+[1.849s]   .cmake module might still use it.
+[1.849s] Call Stack (most recent call first):
+[1.849s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:256 (find_package)
+[1.849s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:301 (find_flann)
+[1.849s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[1.849s]   /opt/ros/humble/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.849s]   /opt/ros/humble/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[1.849s]   /opt/ros/humble/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)
+[1.850s]   CMakeLists.txt:235 (ament_auto_find_build_dependencies)
+[1.850s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.850s] [0m
+[1.896s] -- FLANN found (include: /usr/include, lib: /usr/lib/aarch64-linux-gnu/libflann_cpp.so)
+[2.958s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.971s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[3.541s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[3.554s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[3.568s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[4.118s] -- Found Qhull version 8.0.2
+[4.681s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[5.369s] -- Checking for module 'apr-1'
+[5.375s] --   No package 'apr-1' found
+[6.283s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[7.406s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[8.931s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[8.939s] [33mCMake Warning (dev) at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):
+[8.940s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[8.940s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[8.940s]   the cmake_policy command to set the policy and suppress this warning.
+[8.940s] 
+[8.941s] Call Stack (most recent call first):
+[8.941s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[8.941s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[8.941s]   CMakeLists.txt:251 (rosidl_generate_interfaces)
+[8.941s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[8.942s] [0m
+[8.992s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[8.995s] [33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:52 (find_package):
+[8.995s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[8.995s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[8.995s]   the cmake_policy command to set the policy and suppress this warning.
+[8.996s] 
+[8.996s] Call Stack (most recent call first):
+[8.996s]   /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[8.996s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[8.996s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[8.997s]   CMakeLists.txt:251 (rosidl_generate_interfaces)
+[8.997s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[8.997s] [0m
+[9.045s] [33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:140 (find_package):
+[9.045s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[9.046s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[9.046s]   the cmake_policy command to set the policy and suppress this warning.
+[9.046s] 
+[9.046s] Call Stack (most recent call first):
+[9.047s]   /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[9.047s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[9.047s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[9.047s]   CMakeLists.txt:251 (rosidl_generate_interfaces)
+[9.048s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[9.048s] [0m
+[9.056s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[9.056s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[9.057s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+[9.620s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[9.676s] -- Added test 'copyright' to check source files copyright and LICENSE
+[9.693s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[9.696s] -- Configured cppcheck include dirs: /home/seeed/ros2/ws/src/driver/livox_ros_driver2/3rdparty;/home/seeed/ros2/ws/src/driver/livox_ros_driver2/src
+[9.696s] -- Configured cppcheck exclude dirs and/or files: 
+[9.711s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[9.711s] -- Configured cpplint exclude dirs and/or files: 
+[9.714s] -- Added test 'flake8' to check Python code syntax and style conventions
+[9.719s] -- Added test 'lint_cmake' to check CMake code style
+[9.722s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[9.737s] -- Added test 'uncrustify' to check C / C++ code style
+[9.737s] -- Configured uncrustify additional arguments: 
+[9.739s] -- Added test 'xmllint' to check XML markup files
+[9.750s] -- Configuring done (9.7s)
+[9.983s] -- Generating done (0.2s)
+[10.029s] -- Build files have been written to: /home/seeed/ros2/ws/build/livox_ros_driver2
+[10.094s] Invoked command in '/home/seeed/ros2/ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2 /usr/local/bin/cmake /home/seeed/ros2/ws/src/driver/livox_ros_driver2 -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/livox_ros_driver2
+[10.101s] Invoking command in '/home/seeed/ros2/ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2 /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/livox_ros_driver2 -- -j6 -l6
+[10.157s] failed to create symbolic link '/home/seeed/ros2/ws/build/livox_ros_driver2/ament_cmake_python/livox_ros_driver2/livox_ros_driver2' because existing path cannot be removed: Is a directory
+[10.159s] [  1%] Built target livox_interfaces2__rs
+[10.159s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_livox_ros_driver2.dir/build.make:70：CMakeFiles/ament_cmake_python_symlink_livox_ros_driver2] 错误 1
+[10.159s] gmake[1]: *** [CMakeFiles/Makefile2:444：CMakeFiles/ament_cmake_python_symlink_livox_ros_driver2.dir/all] 错误 2
+[10.159s] gmake[1]: *** 正在等待未完成的任务....
+[10.160s] [  3%] Built target livox_interfaces2__cpp
+[10.167s] [  5%] [32mBuilding C object CMakeFiles/livox_interfaces2__rosidl_generator_c.dir/rosidl_generator_c/livox_ros_driver2/msg/detail/custom_point__functions.c.o[0m
+[10.169s] [  6%] [32mBuilding C object CMakeFiles/livox_interfaces2__rosidl_generator_c.dir/rosidl_generator_c/livox_ros_driver2/msg/detail/custom_msg__functions.c.o[0m
+[10.187s] [  8%] [32mBuilding CXX object CMakeFiles/livox_ros_driver2_node.dir/rclcpp_components/node_main_livox_ros_driver2_node.cpp.o[0m
+[10.408s] [ 10%] [32m[1mLinking C shared library liblivox_ros_driver2__rosidl_generator_c.so[0m
+[10.458s] [ 12%] Built target livox_interfaces2__rosidl_generator_c
+[18.603s] [ 13%] [32m[1mLinking CXX executable livox_ros_driver2_node[0m
+[18.822s] [ 13%] Built target livox_ros_driver2_node
+[18.823s] gmake: *** [Makefile:146：all] 错误 2
+[18.828s] Invoked command in '/home/seeed/ros2/ws/build/livox_ros_driver2' returned '2': CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2 /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/livox_ros_driver2 -- -j6 -l6

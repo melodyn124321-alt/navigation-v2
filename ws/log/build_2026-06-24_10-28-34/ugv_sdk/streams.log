@@ -1,0 +1,178 @@
+[0.055s] Invoking command in '/home/seeed/ros2/ws/build/ugv_sdk': /usr/local/bin/cmake /home/seeed/ros2/ws/src/ugv_sdk -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/ugv_sdk
+[0.271s] -- The C compiler identification is GNU 11.4.0
+[0.529s] -- The CXX compiler identification is GNU 11.4.0
+[0.587s] -- Detecting C compiler ABI info
+[0.753s] -- Detecting C compiler ABI info - done
+[0.805s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.806s] -- Detecting C compile features
+[0.807s] -- Detecting C compile features - done
+[0.838s] -- Detecting CXX compiler ABI info
+[1.042s] -- Detecting CXX compiler ABI info - done
+[1.083s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.083s] -- Detecting CXX compile features
+[1.085s] -- Detecting CXX compile features - done
+[1.085s] -- Build package with cmake
+[1.086s] -- Setting build type to 'Release' as none was specified.
+[1.086s] -- Tests will not be built
+[1.116s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.449s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.451s] -- Found Threads: TRUE  
+[1.470s] -- Project will be installed to /home/seeed/ros2/ws/install/ugv_sdk with 'make install'
+[1.474s] --  - To install LIB components to /home/seeed/ros2/ws/install/ugv_sdk/lib
+[1.477s] --  - To install BIN components to /home/seeed/ros2/ws/install/ugv_sdk/bin
+[1.481s] --  - To install INCLUDE components to /home/seeed/ros2/ws/install/ugv_sdk/include
+[1.482s] --  - To install CMAKE components to /home/seeed/ros2/ws/install/ugv_sdk/share/cmake/ugv_sdk
+[1.528s] -- Configuring done (1.5s)
+[1.593s] -- Generating done (0.0s)
+[1.597s] [33mCMake Warning:
+[1.598s]   Manually-specified variables were not used by the project:
+[1.598s] 
+[1.598s]     CATKIN_INSTALL_INTO_PREFIX_ROOT
+[1.598s] 
+[1.598s] [0m
+[1.609s] -- Build files have been written to: /home/seeed/ros2/ws/build/ugv_sdk
+[1.621s] Invoked command in '/home/seeed/ros2/ws/build/ugv_sdk' returned '0': /usr/local/bin/cmake /home/seeed/ros2/ws/src/ugv_sdk -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/ugv_sdk
+[1.627s] Invoking command in '/home/seeed/ros2/ws/build/ugv_sdk': /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/ugv_sdk -- -j6 -l6
+[1.687s] [  3%] [32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/utilities/protocol_detector.cpp.o[0m
+[1.697s] [  6%] [32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/mobile_robot/scout_robot.cpp.o[0m
+[1.698s] [ 10%] [32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/async_port/async_serial.cpp.o[0m
+[1.703s] [ 13%] [32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/async_port/async_can.cpp.o[0m
+[1.732s] [ 17%] [32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/mobile_robot/hunter_robot.cpp.o[0m
+[1.764s] [ 20%] [32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/mobile_robot/bunker_robot.cpp.o[0m
+[10.279s] In file included from [01m[K/home/seeed/ros2/ws/src/ugv_sdk/src/mobile_robot/bunker_robot.cpp:11[m[K:
+[10.279s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/include/ugv_sdk/details/robot_base/bunker_base.hpp:[m[K In member function ‘[01m[Kwestonrobot::BunkerActuatorState westonrobot::BunkerBase<ParserType>::GetActuatorState() [with ParserType = westonrobot::ProtocolV2Parser][m[K’:
+[10.279s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/include/ugv_sdk/details/robot_base/bunker_base.hpp:59:7:[m[K [01;35m[Kwarning: [m[Kiteration 2 invokes undefined behavior [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waggressive-loop-optimizations-Waggressive-loop-optimizations]8;;[m[K]
+[10.279s]    59 |       [01;35m[Kbunker_actuator[m[K.actuator_state[i] = actuator.actuator_state[i];
+[10.280s]       |       [01;35m[K^~~~~~~~~~~~~~~[m[K
+[10.280s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/include/ugv_sdk/details/robot_base/bunker_base.hpp:56:23:[m[K [01;36m[Knote: [m[Kwithin this loop
+[10.280s]    56 |     for (int i = 0; [01;36m[Ki < 3[m[K; ++i) {
+[10.280s]       |                     [01;36m[K~~^~~[m[K
+[10.304s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/include/ugv_sdk/details/robot_base/bunker_base.hpp:[m[K In member function ‘[01m[Kwestonrobot::BunkerActuatorState westonrobot::BunkerBase<ParserType>::GetActuatorState() [with ParserType = westonrobot::ProtocolV1Parser<westonrobot::BunkerLimits>][m[K’:
+[10.304s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/include/ugv_sdk/details/robot_base/bunker_base.hpp:59:7:[m[K [01;35m[Kwarning: [m[Kiteration 2 invokes undefined behavior [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waggressive-loop-optimizations-Waggressive-loop-optimizations]8;;[m[K]
+[10.304s]    59 |       [01;35m[Kbunker_actuator[m[K.actuator_state[i] = actuator.actuator_state[i];
+[10.304s]       |       [01;35m[K^~~~~~~~~~~~~~~[m[K
+[10.304s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/include/ugv_sdk/details/robot_base/bunker_base.hpp:56:23:[m[K [01;36m[Knote: [m[Kwithin this loop
+[10.305s]    56 |     for (int i = 0; [01;36m[Ki < 3[m[K; ++i) {
+[10.305s]       |                     [01;36m[K~~^~~[m[K
+[11.869s] [ 24%] [32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/mobile_robot/ranger_robot.cpp.o[0m
+[12.005s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/include/ugv_sdk/details/robot_base/bunker_base.hpp:59:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid* __builtin_memcpy(void*, const void*, long unsigned int)[m[K’ writing 60 bytes into a region of size 40 overflows the destination [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wstringop-overflow=-Wstringop-overflow=]8;;[m[K]
+[12.005s]    59 |       [01;35m[Kbunker_actuator[m[K.actuator_state[i] = actuator.actuator_state[i];
+[12.005s]       |       [01;35m[K^~~~~~~~~~~~~~~[m[K
+[12.005s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/include/ugv_sdk/details/robot_base/bunker_base.hpp:51:23:[m[K [01;36m[Knote: [m[Kat offset 104 into destination object ‘[01m[K‘result_decl’ not supported by dump_expr<expression error>[m[K’ of size 144
+[12.005s]    51 |   BunkerActuatorState [01;36m[KGetActuatorState[m[K() override {
+[12.006s]       |                       [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[12.046s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/include/ugv_sdk/details/robot_base/bunker_base.hpp:[m[K In member function ‘[01m[Kwestonrobot::BunkerActuatorState westonrobot::BunkerBase<ParserType>::GetActuatorState() [with ParserType = westonrobot::ProtocolV2Parser][m[K’:
+[12.046s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/include/ugv_sdk/details/robot_base/bunker_base.hpp:59:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid* __builtin_memcpy(void*, const void*, long unsigned int)[m[K’ writing 60 bytes into a region of size 40 overflows the destination [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wstringop-overflow=-Wstringop-overflow=]8;;[m[K]
+[12.046s]    59 |       [01;35m[Kbunker_actuator[m[K.actuator_state[i] = actuator.actuator_state[i];
+[12.046s]       |       [01;35m[K^~~~~~~~~~~~~~~[m[K
+[12.047s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/include/ugv_sdk/details/robot_base/bunker_base.hpp:51:23:[m[K [01;36m[Knote: [m[Kat offset 104 into destination object ‘[01m[K‘result_decl’ not supported by dump_expr<expression error>[m[K’ of size 144
+[12.048s]    51 |   BunkerActuatorState [01;36m[KGetActuatorState[m[K() override {
+[12.048s]       |                       [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[13.781s] [ 27%] [32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/mobile_robot/titan_robot.cpp.o[0m
+[26.191s] [ 31%] [32mBuilding C object CMakeFiles/ugv_sdk.dir/src/protocol_v1/agilex_msg_parser_v1.c.o[0m
+[26.445s] [ 34%] [32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/protocol_v2/protocol_v2_parser.cpp.o[0m
+[26.530s] [ 37%] [32mBuilding C object CMakeFiles/ugv_sdk.dir/src/protocol_v2/agilex_msg_parser_v2.c.o[0m
+[26.818s] [ 41%] [32mBuilding CXX object CMakeFiles/ugv_sdk.dir/src/mobile_robot/tracer_robot.cpp.o[0m
+[31.530s] [ 44%] [32m[1mLinking CXX static library lib/libugv_sdk.a[0m
+[31.618s] [ 44%] Built target ugv_sdk
+[31.644s] [ 48%] [32mBuilding CXX object sample/scout_demo/CMakeFiles/demo_scout_robot.dir/scout_robot_demo.cpp.o[0m
+[35.330s] [ 51%] [32m[1mLinking CXX executable ../../bin/demo_scout_robot[0m
+[35.601s] [ 51%] Built target demo_scout_robot
+[35.625s] [ 55%] [32mBuilding CXX object sample/hunter_demo/CMakeFiles/demo_hunter_robot.dir/hunter_robot_demo.cpp.o[0m
+[39.053s] [ 58%] [32m[1mLinking CXX executable ../../bin/demo_hunter_robot[0m
+[39.310s] [ 58%] Built target demo_hunter_robot
+[39.330s] [ 62%] [32mBuilding CXX object sample/utils_demo/CMakeFiles/demo_protocol_detector.dir/demo_protocol_detector.cpp.o[0m
+[42.597s] [ 65%] [32m[1mLinking CXX executable ../../bin/demo_protocol_detector[0m
+[42.777s] [ 65%] Built target demo_protocol_detector
+[42.805s] [ 68%] [32mBuilding CXX object sample/utils_demo/CMakeFiles/demo_robot_version.dir/demo_robot_version.cpp.o[0m
+[46.208s] [ 72%] [32m[1mLinking CXX executable ../../bin/demo_robot_version[0m
+[46.424s] [ 72%] Built target demo_robot_version
+[46.446s] [ 75%] [32mBuilding CXX object sample/bunker_demo/CMakeFiles/demo_bunker_robot.dir/bunker_robot_demo.cpp.o[0m
+[47.422s] [ 79%] [32m[1mLinking CXX executable ../../bin/demo_bunker_robot[0m
+[47.640s] [ 79%] Built target demo_bunker_robot
+[47.663s] [ 82%] [32mBuilding CXX object sample/ranger_demo/CMakeFiles/demo_ranger_robot.dir/ranger_robot_demo.cpp.o[0m
+[51.304s] [ 86%] [32m[1mLinking CXX executable ../../bin/demo_ranger_robot[0m
+[51.533s] [ 86%] Built target demo_ranger_robot
+[51.557s] [ 89%] [32mBuilding CXX object sample/tracer_demo/CMakeFiles/demo_tracer_robot.dir/tracer_robot_demo.cpp.o[0m
+[52.448s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/sample/tracer_demo/tracer_robot_demo.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[52.449s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/sample/tracer_demo/tracer_robot_demo.cpp:37:18:[m[K [01;35m[Kwarning: [m[K‘[01m[Kthis[m[K’ pointer is null [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnonnull-Wnonnull]8;;[m[K]
+[52.449s]    37 |   [01;35m[Ktracer->Connect(device_name)[m[K;
+[52.451s]       |   [01;35m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[52.451s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/sample/tracer_demo/tracer_robot_demo.cpp:38:30:[m[K [01;35m[Kwarning: [m[K‘[01m[Kthis[m[K’ pointer is null [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnonnull-Wnonnull]8;;[m[K]
+[52.451s]    38 |   [01;35m[Ktracer->EnableCommandedMode()[m[K;
+[52.452s]       |   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[52.452s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/sample/tracer_demo/tracer_robot_demo.cpp:42:26:[m[K [01;35m[Kwarning: [m[K‘[01m[Kthis[m[K’ pointer is null [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnonnull-Wnonnull]8;;[m[K]
+[52.452s]    42 |   [01;35m[Ktracer->SetLightCommand(CONST_OFF, 0)[m[K;
+[52.452s]       |   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[52.452s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/sample/tracer_demo/tracer_robot_demo.cpp:45:26:[m[K [01;35m[Kwarning: [m[K‘[01m[Kthis[m[K’ pointer is null [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnonnull-Wnonnull]8;;[m[K]
+[52.452s]    45 |   [01;35m[Ktracer->SetLightCommand(CONST_ON, 0)[m[K;
+[52.453s]       |   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[52.453s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/sample/tracer_demo/tracer_robot_demo.cpp:48:26:[m[K [01;35m[Kwarning: [m[K‘[01m[Kthis[m[K’ pointer is null [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnonnull-Wnonnull]8;;[m[K]
+[52.453s]    48 |   [01;35m[Ktracer->SetLightCommand(BREATH, 0)[m[K;
+[52.453s]       |   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[52.453s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/sample/tracer_demo/tracer_robot_demo.cpp:51:26:[m[K [01;35m[Kwarning: [m[K‘[01m[Kthis[m[K’ pointer is null [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnonnull-Wnonnull]8;;[m[K]
+[52.453s]    51 |   [01;35m[Ktracer->SetLightCommand(CUSTOM, 30)[m[K;
+[52.454s]       |   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[52.454s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/sample/tracer_demo/tracer_robot_demo.cpp:55:26:[m[K [01;35m[Kwarning: [m[K‘[01m[Kthis[m[K’ pointer is null [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnonnull-Wnonnull]8;;[m[K]
+[52.454s]    55 |   [01;35m[Ktracer->SetLightCommand(CONST_OFF, 0)[m[K;
+[52.454s]       |   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[52.455s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/sample/tracer_demo/tracer_robot_demo.cpp:61:29:[m[K [01;35m[Kwarning: [m[K‘[01m[Kthis[m[K’ pointer is null [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnonnull-Wnonnull]8;;[m[K]
+[52.455s]    61 |     [01;35m[Ktracer->SetMotionCommand(1.0, 0.0)[m[K;
+[52.455s]       |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[52.455s] [01m[K/home/seeed/ros2/ws/src/ugv_sdk/sample/tracer_demo/tracer_robot_demo.cpp:64:39:[m[K [01;35m[Kwarning: [m[K‘[01m[Kthis[m[K’ pointer is null [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnonnull-Wnonnull]8;;[m[K]
+[52.455s]    64 |     auto state = [01;35m[Ktracer->GetRobotState()[m[K;
+[52.456s]       |                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[52.506s] [ 93%] [32m[1mLinking CXX executable ../../bin/demo_tracer_robot[0m
+[52.669s] [ 93%] Built target demo_tracer_robot
+[52.698s] [ 96%] [32mBuilding CXX object sample/scout_demo/CMakeFiles/demo_scout_mini_omni_robot.dir/scout_mini_omni_demo.cpp.o[0m
+[56.406s] [100%] [32m[1mLinking CXX executable ../../bin/demo_scout_mini_omni_robot[0m
+[56.602s] [100%] Built target demo_scout_mini_omni_robot
+[56.617s] Invoked command in '/home/seeed/ros2/ws/build/ugv_sdk' returned '0': /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/ugv_sdk -- -j6 -l6
+[56.621s] Invoking command in '/home/seeed/ros2/ws/build/ugv_sdk': /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/ugv_sdk
+[56.631s] -- Install configuration: "Release"
+[56.631s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/lib/libugv_sdk.a
+[56.636s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk
+[56.638s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/mobile_robot
+[56.638s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/mobile_robot/scout_robot.hpp
+[56.639s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/mobile_robot/ranger_robot.hpp
+[56.639s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/mobile_robot/titan_robot.hpp
+[56.639s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/mobile_robot/tracer_robot.hpp
+[56.639s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/mobile_robot/bunker_robot.hpp
+[56.639s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/mobile_robot/hunter_robot.hpp
+[56.639s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details
+[56.639s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/robot_base
+[56.640s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/robot_base/scout_base.hpp
+[56.646s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/robot_base/hunter_base.hpp
+[56.646s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/robot_base/ranger_base.hpp
+[56.646s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/robot_base/tracer_base.hpp
+[56.647s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/robot_base/agilex_base.hpp
+[56.647s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/robot_base/titan_base.hpp
+[56.647s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/robot_base/bunker_base.hpp
+[56.647s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/protocol_v1
+[56.648s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/protocol_v1/protocol_v1_parser.hpp
+[56.648s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/protocol_v1/robot_limits.hpp
+[56.648s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/protocol_v1/agilex_msg_parser_v1.h
+[56.648s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/parser_base.hpp
+[56.648s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/async_port
+[56.649s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/async_port/async_serial.hpp
+[56.649s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/async_port/ring_buffer.hpp
+[56.649s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/async_port/async_can.hpp
+[56.650s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/interface
+[56.650s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/interface/scout_interface.hpp
+[56.650s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/interface/tracer_interface.hpp
+[56.650s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/interface/agilex_message.h
+[56.651s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/interface/hunter_interface.hpp
+[56.651s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/interface/agilex_types.h
+[56.651s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/interface/bunker_interface.hpp
+[56.651s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/interface/robot_common_interface.hpp
+[56.652s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/interface/titan_interface.hpp
+[56.652s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/interface/ranger_interface.hpp
+[56.652s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/protocol_v2
+[56.652s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/details/protocol_v2/protocol_v2_parser.hpp
+[56.653s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/utilities
+[56.653s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/include/ugv_sdk/utilities/protocol_detector.hpp
+[56.653s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/lib/cmake/ugv_sdk/ugv_sdkTargets.cmake
+[56.654s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/lib/cmake/ugv_sdk/ugv_sdkTargets-release.cmake
+[56.654s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/lib/cmake/ugv_sdk/ugv_sdkConfig.cmake
+[56.655s] -- Installing: /home/seeed/ros2/ws/install/ugv_sdk/lib/cmake/ugv_sdk/ugv_sdkConfigVersion.cmake
+[56.674s] Invoked command in '/home/seeed/ros2/ws/build/ugv_sdk' returned '0': /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/ugv_sdk

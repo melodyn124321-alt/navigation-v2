@@ -1,0 +1,25 @@
+[0.025s] Invoking command in '/home/seeed/ros2/ws/build/nav_tf_bridge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/nav_tf_bridge -- -j6 -l6
+[0.114s] [ 50%] Building CXX object CMakeFiles/map_odom_tf_bridge.dir/src/map_odom_tf_bridge.cpp.o
+[28.680s] [100%] Linking CXX executable map_odom_tf_bridge
+[30.111s] [100%] Built target map_odom_tf_bridge
+[30.121s] Invoked command in '/home/seeed/ros2/ws/build/nav_tf_bridge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/nav_tf_bridge -- -j6 -l6
+[30.127s] Invoking command in '/home/seeed/ros2/ws/build/nav_tf_bridge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/nav_tf_bridge
+[30.131s] -- Install configuration: ""
+[30.132s] -- Installing: /home/seeed/ros2/ws/install/nav_tf_bridge/lib/nav_tf_bridge/map_odom_tf_bridge
+[30.147s] -- Set runtime path of "/home/seeed/ros2/ws/install/nav_tf_bridge/lib/nav_tf_bridge/map_odom_tf_bridge" to ""
+[30.147s] -- Up-to-date: /home/seeed/ros2/ws/install/nav_tf_bridge/share/ament_index/resource_index/package_run_dependencies/nav_tf_bridge
+[30.148s] -- Up-to-date: /home/seeed/ros2/ws/install/nav_tf_bridge/share/ament_index/resource_index/parent_prefix_path/nav_tf_bridge
+[30.148s] -- Up-to-date: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/environment/ament_prefix_path.sh
+[30.150s] -- Up-to-date: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/environment/ament_prefix_path.dsv
+[30.150s] -- Up-to-date: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/environment/path.sh
+[30.150s] -- Up-to-date: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/environment/path.dsv
+[30.151s] -- Up-to-date: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/local_setup.bash
+[30.151s] -- Up-to-date: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/local_setup.sh
+[30.152s] -- Up-to-date: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/local_setup.zsh
+[30.152s] -- Up-to-date: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/local_setup.dsv
+[30.152s] -- Installing: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/package.dsv
+[30.152s] -- Up-to-date: /home/seeed/ros2/ws/install/nav_tf_bridge/share/ament_index/resource_index/packages/nav_tf_bridge
+[30.152s] -- Up-to-date: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/cmake/nav_tf_bridgeConfig.cmake
+[30.152s] -- Up-to-date: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/cmake/nav_tf_bridgeConfig-version.cmake
+[30.152s] -- Up-to-date: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/package.xml
+[30.154s] Invoked command in '/home/seeed/ros2/ws/build/nav_tf_bridge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/nav_tf_bridge

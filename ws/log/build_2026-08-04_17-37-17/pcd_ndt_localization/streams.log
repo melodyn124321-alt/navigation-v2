@@ -1,0 +1,29 @@
+[0.028s] Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/nav_tf_bridge:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2 /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/pcd_ndt_localization -- -j6 -l6
+[0.106s] [ 50%] Built target pcd_occupancy_grid_publisher
+[0.143s] [ 75%] Building CXX object CMakeFiles/pcd_ndt_localizer.dir/src/pcd_ndt_localizer.cpp.o
+[93.624s] [100%] Linking CXX executable pcd_ndt_localizer
+[96.371s] [100%] Built target pcd_ndt_localizer
+[96.381s] Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '0': CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/nav_tf_bridge:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2 /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/pcd_ndt_localization -- -j6 -l6
+[96.395s] Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/nav_tf_bridge:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2 /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/pcd_ndt_localization
+[96.397s] -- Install configuration: "Release"
+[96.399s] -- Execute custom install script
+[96.401s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/lib/pcd_ndt_localization/pcd_ndt_localizer
+[96.402s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/lib/pcd_ndt_localization/pcd_occupancy_grid_publisher
+[96.404s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/config/ndt_localization.yaml
+[96.406s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/launch/localization.launch.py
+[96.406s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/ament_index/resource_index/package_run_dependencies/pcd_ndt_localization
+[96.407s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/ament_index/resource_index/parent_prefix_path/pcd_ndt_localization
+[96.407s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/ament_prefix_path.sh
+[96.408s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/ament_prefix_path.dsv
+[96.408s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/path.sh
+[96.409s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/path.dsv
+[96.410s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.bash
+[96.410s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.sh
+[96.411s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.zsh
+[96.411s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.dsv
+[96.412s] -- Symlinking: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.dsv
+[96.418s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/ament_index/resource_index/packages/pcd_ndt_localization
+[96.418s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/cmake/pcd_ndt_localizationConfig.cmake
+[96.418s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/cmake/pcd_ndt_localizationConfig-version.cmake
+[96.418s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.xml
+[96.422s] Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '0': CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/nav_tf_bridge:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2 /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/pcd_ndt_localization

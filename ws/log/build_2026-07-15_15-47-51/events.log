@@ -1,0 +1,392 @@
+[0.000000] (-) TimerEvent: {}
+[0.000357] (-) JobUnselected: {'identifier': 'livox_ros_driver2'}
+[0.000887] (-) JobUnselected: {'identifier': 'nav_tf_bridge'}
+[0.001177] (-) JobUnselected: {'identifier': 'pcd_ndt_localization'}
+[0.001448] (-) JobUnselected: {'identifier': 'ranger_base'}
+[0.001548] (-) JobUnselected: {'identifier': 'ranger_bringup'}
+[0.001627] (-) JobUnselected: {'identifier': 'ranger_msgs'}
+[0.001703] (-) JobUnselected: {'identifier': 'ugv_sdk'}
+[0.001775] (-) JobUnselected: {'identifier': 'vikit_common'}
+[0.001845] (-) JobUnselected: {'identifier': 'vikit_ros'}
+[0.001921] (fast_lio) JobQueued: {'identifier': 'fast_lio', 'dependencies': OrderedDict([('livox_ros_driver2', '/home/seeed/ros2/ws/install/livox_ros_driver2')])}
+[0.001997] (fast_lio) JobStarted: {'identifier': 'fast_lio'}
+[0.020989] (fast_lio) JobProgress: {'identifier': 'fast_lio', 'progress': 'cmake'}
+[0.023186] (fast_lio) JobProgress: {'identifier': 'fast_lio', 'progress': 'build'}
+[0.025438] (fast_lio) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/seeed/ros2/ws/build/fast_lio', '--', '-j6', '-l6'], 'cwd': '/home/seeed/ros2/ws/build/fast_lio', 'env': OrderedDict([('LANGUAGE', 'zh_CN:en'), ('USER', 'seeed'), ('SSH_CLIENT', '10.200.24.83 42517 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/seeed/ros2/ws/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/seeed'), ('OLDPWD', '/home/seeed'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'seeed'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('XDG_SESSION_ID', '107'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:15.0'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('AMENT_PREFIX_PATH', '/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('PWD', '/home/seeed/ros2/ws/build/fast_lio'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.200.24.83 42517 10.200.54.207 22'), ('PYTHONPATH', '/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble')]), 'shell': False}
+[0.080962] (fast_lio) StdoutLine: {'line': b'[  2%] Built target fast_lio__rs\n'}
+[0.088145] (fast_lio) StdoutLine: {'line': b'[ 11%] Built target fast_lio__cpp\n'}
+[0.088717] (fast_lio) StdoutLine: {'line': b'[ 13%] Built target fast_lio__rosidl_generator_c\n'}
+[0.089620] (fast_lio) StdoutLine: {'line': b'[ 13%] Built target ament_cmake_python_symlink_fast_lio\n'}
+[0.099255] (-) TimerEvent: {}
+[0.110274] (fast_lio) StdoutLine: {'line': b'[ 22%] Built target fast_lio__rosidl_typesupport_fastrtps_cpp\n'}
+[0.110713] (fast_lio) StdoutLine: {'line': b'[ 30%] Built target fast_lio__rosidl_typesupport_cpp\n'}
+[0.111606] (fast_lio) StdoutLine: {'line': b'[ 38%] Built target fast_lio__rosidl_typesupport_introspection_cpp\n'}
+[0.133698] (fast_lio) StdoutLine: {'line': b'[ 58%] Built target fast_lio__rosidl_typesupport_c\n'}
+[0.134104] (fast_lio) StdoutLine: {'line': b'[ 63%] Built target fast_lio__rosidl_typesupport_fastrtps_c\n'}
+[0.134753] (fast_lio) StdoutLine: {'line': b'[ 61%] Built target fast_lio__rosidl_typesupport_introspection_c\n'}
+[0.155315] (fast_lio) StdoutLine: {'line': b'[ 63%] Built target fast_lio\n'}
+[0.178384] (fast_lio) StdoutLine: {'line': b'[ 66%] Built target fast_lio__py\n'}
+[0.199388] (-) TimerEvent: {}
+[0.200225] (fast_lio) StdoutLine: {'line': b'[ 72%] Built target fast_lio__rosidl_generator_py\n'}
+[0.222938] (fast_lio) StdoutLine: {'line': b'[ 77%] Built target fast_lio__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.223393] (fast_lio) StdoutLine: {'line': b'[ 83%] Built target fast_lio__rosidl_typesupport_introspection_c__pyext\n'}
+[0.227236] (fast_lio) StdoutLine: {'line': b'[ 88%] Built target fast_lio__rosidl_typesupport_c__pyext\n'}
+[0.230032] (fast_lio) StdoutLine: {'line': b'[ 91%] Building CXX object CMakeFiles/fastlio_mapping.dir/src/preprocess.cpp.o\n'}
+[0.299574] (-) TimerEvent: {}
+[0.399974] (-) TimerEvent: {}
+[0.500348] (-) TimerEvent: {}
+[0.600684] (-) TimerEvent: {}
+[0.651367] (fast_lio) StdoutLine: {'line': b'running egg_info\n'}
+[0.653333] (fast_lio) StdoutLine: {'line': b'writing fast_lio.egg-info/PKG-INFO\n'}
+[0.653827] (fast_lio) StdoutLine: {'line': b'writing dependency_links to fast_lio.egg-info/dependency_links.txt\n'}
+[0.654286] (fast_lio) StdoutLine: {'line': b'writing top-level names to fast_lio.egg-info/top_level.txt\n'}
+[0.659324] (fast_lio) StdoutLine: {'line': b"reading manifest file 'fast_lio.egg-info/SOURCES.txt'\n"}
+[0.660583] (fast_lio) StdoutLine: {'line': b"writing manifest file 'fast_lio.egg-info/SOURCES.txt'\n"}
+[0.700841] (-) TimerEvent: {}
+[0.720106] (fast_lio) StdoutLine: {'line': b'[ 91%] Built target ament_cmake_python_build_fast_lio_egg\n'}
+[0.801017] (-) TimerEvent: {}
+[0.901440] (-) TimerEvent: {}
+[1.001876] (-) TimerEvent: {}
+[1.102310] (-) TimerEvent: {}
+[1.202750] (-) TimerEvent: {}
+[1.303170] (-) TimerEvent: {}
+[1.403626] (-) TimerEvent: {}
+[1.504104] (-) TimerEvent: {}
+[1.604595] (-) TimerEvent: {}
+[1.705043] (-) TimerEvent: {}
+[1.805489] (-) TimerEvent: {}
+[1.905947] (-) TimerEvent: {}
+[2.006393] (-) TimerEvent: {}
+[2.106863] (-) TimerEvent: {}
+[2.207331] (-) TimerEvent: {}
+[2.307790] (-) TimerEvent: {}
+[2.408274] (-) TimerEvent: {}
+[2.508720] (-) TimerEvent: {}
+[2.609179] (-) TimerEvent: {}
+[2.709651] (-) TimerEvent: {}
+[2.810106] (-) TimerEvent: {}
+[2.910571] (-) TimerEvent: {}
+[3.011019] (-) TimerEvent: {}
+[3.111456] (-) TimerEvent: {}
+[3.211925] (-) TimerEvent: {}
+[3.312423] (-) TimerEvent: {}
+[3.412896] (-) TimerEvent: {}
+[3.513355] (-) TimerEvent: {}
+[3.613809] (-) TimerEvent: {}
+[3.714274] (-) TimerEvent: {}
+[3.814740] (-) TimerEvent: {}
+[3.915186] (-) TimerEvent: {}
+[4.015624] (-) TimerEvent: {}
+[4.116061] (-) TimerEvent: {}
+[4.216534] (-) TimerEvent: {}
+[4.316986] (-) TimerEvent: {}
+[4.417412] (-) TimerEvent: {}
+[4.517845] (-) TimerEvent: {}
+[4.618318] (-) TimerEvent: {}
+[4.718771] (-) TimerEvent: {}
+[4.819228] (-) TimerEvent: {}
+[4.919686] (-) TimerEvent: {}
+[5.020132] (-) TimerEvent: {}
+[5.120606] (-) TimerEvent: {}
+[5.221059] (-) TimerEvent: {}
+[5.321536] (-) TimerEvent: {}
+[5.422008] (-) TimerEvent: {}
+[5.522478] (-) TimerEvent: {}
+[5.622926] (-) TimerEvent: {}
+[5.723392] (-) TimerEvent: {}
+[5.823884] (-) TimerEvent: {}
+[5.924375] (-) TimerEvent: {}
+[6.024842] (-) TimerEvent: {}
+[6.125309] (-) TimerEvent: {}
+[6.225759] (-) TimerEvent: {}
+[6.326211] (-) TimerEvent: {}
+[6.426663] (-) TimerEvent: {}
+[6.527130] (-) TimerEvent: {}
+[6.627591] (-) TimerEvent: {}
+[6.728046] (-) TimerEvent: {}
+[6.828523] (-) TimerEvent: {}
+[6.928979] (-) TimerEvent: {}
+[7.029418] (-) TimerEvent: {}
+[7.129897] (-) TimerEvent: {}
+[7.230367] (-) TimerEvent: {}
+[7.330825] (-) TimerEvent: {}
+[7.431287] (-) TimerEvent: {}
+[7.531717] (-) TimerEvent: {}
+[7.632193] (-) TimerEvent: {}
+[7.732641] (-) TimerEvent: {}
+[7.833053] (-) TimerEvent: {}
+[7.933479] (-) TimerEvent: {}
+[8.033934] (-) TimerEvent: {}
+[8.134383] (-) TimerEvent: {}
+[8.234888] (-) TimerEvent: {}
+[8.335356] (-) TimerEvent: {}
+[8.435825] (-) TimerEvent: {}
+[8.536323] (-) TimerEvent: {}
+[8.636773] (-) TimerEvent: {}
+[8.737240] (-) TimerEvent: {}
+[8.837706] (-) TimerEvent: {}
+[8.938174] (-) TimerEvent: {}
+[9.038643] (-) TimerEvent: {}
+[9.139100] (-) TimerEvent: {}
+[9.239541] (-) TimerEvent: {}
+[9.340023] (-) TimerEvent: {}
+[9.440482] (-) TimerEvent: {}
+[9.540969] (-) TimerEvent: {}
+[9.641465] (-) TimerEvent: {}
+[9.741931] (-) TimerEvent: {}
+[9.842382] (-) TimerEvent: {}
+[9.942856] (-) TimerEvent: {}
+[10.043308] (-) TimerEvent: {}
+[10.143764] (-) TimerEvent: {}
+[10.244263] (-) TimerEvent: {}
+[10.344734] (-) TimerEvent: {}
+[10.445178] (-) TimerEvent: {}
+[10.545641] (-) TimerEvent: {}
+[10.646078] (-) TimerEvent: {}
+[10.746532] (-) TimerEvent: {}
+[10.846956] (-) TimerEvent: {}
+[10.947426] (-) TimerEvent: {}
+[11.047904] (-) TimerEvent: {}
+[11.148388] (-) TimerEvent: {}
+[11.248842] (-) TimerEvent: {}
+[11.349301] (-) TimerEvent: {}
+[11.449769] (-) TimerEvent: {}
+[11.550215] (-) TimerEvent: {}
+[11.650645] (-) TimerEvent: {}
+[11.751022] (-) TimerEvent: {}
+[11.851452] (-) TimerEvent: {}
+[11.951911] (-) TimerEvent: {}
+[12.052402] (-) TimerEvent: {}
+[12.152839] (-) TimerEvent: {}
+[12.253258] (-) TimerEvent: {}
+[12.353721] (-) TimerEvent: {}
+[12.454200] (-) TimerEvent: {}
+[12.554657] (-) TimerEvent: {}
+[12.655097] (-) TimerEvent: {}
+[12.755547] (-) TimerEvent: {}
+[12.855997] (-) TimerEvent: {}
+[12.956425] (-) TimerEvent: {}
+[13.056892] (-) TimerEvent: {}
+[13.157362] (-) TimerEvent: {}
+[13.257750] (-) TimerEvent: {}
+[13.358116] (-) TimerEvent: {}
+[13.458465] (-) TimerEvent: {}
+[13.558739] (-) TimerEvent: {}
+[13.658981] (-) TimerEvent: {}
+[13.759211] (-) TimerEvent: {}
+[13.859491] (-) TimerEvent: {}
+[13.959904] (-) TimerEvent: {}
+[14.060369] (-) TimerEvent: {}
+[14.160823] (-) TimerEvent: {}
+[14.261279] (-) TimerEvent: {}
+[14.361737] (-) TimerEvent: {}
+[14.462209] (-) TimerEvent: {}
+[14.562669] (-) TimerEvent: {}
+[14.663122] (-) TimerEvent: {}
+[14.763577] (-) TimerEvent: {}
+[14.864041] (-) TimerEvent: {}
+[14.964544] (-) TimerEvent: {}
+[15.065023] (-) TimerEvent: {}
+[15.165484] (-) TimerEvent: {}
+[15.265959] (-) TimerEvent: {}
+[15.366410] (-) TimerEvent: {}
+[15.466830] (-) TimerEvent: {}
+[15.567293] (-) TimerEvent: {}
+[15.667763] (-) TimerEvent: {}
+[15.768204] (-) TimerEvent: {}
+[15.868695] (-) TimerEvent: {}
+[15.969155] (-) TimerEvent: {}
+[16.069617] (-) TimerEvent: {}
+[16.170067] (-) TimerEvent: {}
+[16.270527] (-) TimerEvent: {}
+[16.370988] (-) TimerEvent: {}
+[16.471444] (-) TimerEvent: {}
+[16.571900] (-) TimerEvent: {}
+[16.672357] (-) TimerEvent: {}
+[16.772779] (-) TimerEvent: {}
+[16.873186] (-) TimerEvent: {}
+[16.973652] (-) TimerEvent: {}
+[17.074104] (-) TimerEvent: {}
+[17.174511] (-) TimerEvent: {}
+[17.274929] (-) TimerEvent: {}
+[17.375364] (-) TimerEvent: {}
+[17.475813] (-) TimerEvent: {}
+[17.576294] (-) TimerEvent: {}
+[17.676684] (-) TimerEvent: {}
+[17.777065] (-) TimerEvent: {}
+[17.877488] (-) TimerEvent: {}
+[17.977944] (-) TimerEvent: {}
+[18.078386] (-) TimerEvent: {}
+[18.178804] (-) TimerEvent: {}
+[18.279214] (-) TimerEvent: {}
+[18.379659] (-) TimerEvent: {}
+[18.480122] (-) TimerEvent: {}
+[18.580583] (-) TimerEvent: {}
+[18.681027] (-) TimerEvent: {}
+[18.781418] (-) TimerEvent: {}
+[18.881826] (-) TimerEvent: {}
+[18.982276] (-) TimerEvent: {}
+[19.082746] (-) TimerEvent: {}
+[19.183188] (-) TimerEvent: {}
+[19.283567] (-) TimerEvent: {}
+[19.384004] (-) TimerEvent: {}
+[19.484479] (-) TimerEvent: {}
+[19.584881] (-) TimerEvent: {}
+[19.685212] (-) TimerEvent: {}
+[19.785487] (-) TimerEvent: {}
+[19.885838] (-) TimerEvent: {}
+[19.986288] (-) TimerEvent: {}
+[20.014487] (fast_lio) StdoutLine: {'line': b'[ 94%] Linking CXX executable fastlio_mapping\n'}
+[20.086479] (-) TimerEvent: {}
+[20.186888] (-) TimerEvent: {}
+[20.287355] (-) TimerEvent: {}
+[20.387803] (-) TimerEvent: {}
+[20.488281] (-) TimerEvent: {}
+[20.588736] (-) TimerEvent: {}
+[20.689186] (-) TimerEvent: {}
+[20.789643] (-) TimerEvent: {}
+[20.890094] (-) TimerEvent: {}
+[20.990543] (-) TimerEvent: {}
+[21.090991] (-) TimerEvent: {}
+[21.191443] (-) TimerEvent: {}
+[21.291897] (-) TimerEvent: {}
+[21.392370] (-) TimerEvent: {}
+[21.492816] (-) TimerEvent: {}
+[21.593266] (-) TimerEvent: {}
+[21.693750] (-) TimerEvent: {}
+[21.794230] (-) TimerEvent: {}
+[21.894694] (-) TimerEvent: {}
+[21.995155] (-) TimerEvent: {}
+[22.095606] (-) TimerEvent: {}
+[22.196059] (-) TimerEvent: {}
+[22.296527] (-) TimerEvent: {}
+[22.396975] (-) TimerEvent: {}
+[22.497417] (-) TimerEvent: {}
+[22.597922] (-) TimerEvent: {}
+[22.698374] (-) TimerEvent: {}
+[22.798816] (-) TimerEvent: {}
+[22.899263] (-) TimerEvent: {}
+[22.999706] (-) TimerEvent: {}
+[23.073686] (fast_lio) StdoutLine: {'line': b'[100%] Built target fastlio_mapping\n'}
+[23.085483] (fast_lio) CommandEnded: {'returncode': 0}
+[23.088056] (fast_lio) JobProgress: {'identifier': 'fast_lio', 'progress': 'install'}
+[23.096088] (fast_lio) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/seeed/ros2/ws/build/fast_lio'], 'cwd': '/home/seeed/ros2/ws/build/fast_lio', 'env': OrderedDict([('LANGUAGE', 'zh_CN:en'), ('USER', 'seeed'), ('SSH_CLIENT', '10.200.24.83 42517 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/seeed/ros2/ws/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/seeed'), ('OLDPWD', '/home/seeed'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'seeed'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('XDG_SESSION_ID', '107'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:15.0'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('AMENT_PREFIX_PATH', '/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('PWD', '/home/seeed/ros2/ws/build/fast_lio'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.200.24.83 42517 10.200.54.207 22'), ('PYTHONPATH', '/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble')]), 'shell': False}
+[23.099828] (-) TimerEvent: {}
+[23.103144] (fast_lio) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[23.104559] (fast_lio) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[23.105212] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/ament_index/resource_index/rosidl_interfaces/fast_lio\n'}
+[23.106345] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__functions.h\n'}
+[23.108511] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__struct.h\n'}
+[23.108787] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.h\n'}
+[23.109024] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/pose6_d.h\n'}
+[23.109271] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_generator_c__visibility_control.h\n'}
+[23.109911] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/library_path.sh\n'}
+[23.110145] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/library_path.dsv\n'}
+[23.110401] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_fastrtps_c.h\n'}
+[23.111205] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[23.111789] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__builder.hpp\n'}
+[23.112352] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__struct.hpp\n'}
+[23.112603] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__traits.hpp\n'}
+[23.112825] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.hpp\n'}
+[23.113045] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/pose6_d.hpp\n'}
+[23.113273] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[23.114701] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[23.114994] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[23.115245] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_introspection_c.h\n'}
+[23.115842] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[23.116491] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[23.117385] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/pythonpath.sh\n'}
+[23.117861] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/pythonpath.dsv\n'}
+[23.118091] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[23.118308] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[23.118516] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[23.118721] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[23.120054] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/__init__.py\n'}
+[23.120825] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_c.c\n'}
+[23.121626] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[23.121859] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[23.122073] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[23.122518] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[23.122941] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[23.123157] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/libfast_lio__rosidl_generator_py.so\n'}
+[23.123537] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/__init__.py\n'}
+[23.125815] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/_pose6_d.py\n'}
+[23.126093] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/_pose6_d_s.c\n'}
+[23.126823] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[23.127205] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[23.127419] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[23.127628] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/ament_index/resource_index/rust_packages/fast_lio\n'}
+[23.127858] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust/Cargo.toml\n'}
+[23.128415] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust/build.rs\n'}
+[23.129134] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust/src/lib.rs\n'}
+[23.129360] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust/src/msg.rs\n'}
+[23.129568] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust/src/msg/rmw.rs\n'}
+[23.129774] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/msg/Pose6D.idl\n'}
+[23.129979] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/msg/Pose6D.msg\n'}
+[23.130189] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/lib/fast_lio/fastlio_mapping\n'}
+[23.131092] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/avia.yaml\n'}
+[23.131491] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/horizon.yaml\n'}
+[23.131850] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/mid360.yaml\n'}
+[23.132078] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/mid360.yaml.bak.20260625_211559\n'}
+[23.132415] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/mid360.yaml.bak.20260626_093929\n'}
+[23.133326] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/mid360.yaml.bak.disable_timesync_20260626_100616\n'}
+[23.133743] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/mid360.yaml.bak.fix_drift_20260626_095649\n'}
+[23.133992] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/ouster64.yaml\n'}
+[23.134231] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/velodyne.yaml\n'}
+[23.134456] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/launch/gdb_debug_example.launch\n'}
+[23.134663] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/launch/mapping.launch.py\n'}
+[23.134865] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rviz/fastlio.rviz\n'}
+[23.135067] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/ament_index/resource_index/package_run_dependencies/fast_lio\n'}
+[23.135268] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/ament_index/resource_index/parent_prefix_path/fast_lio\n'}
+[23.135467] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/ament_prefix_path.sh\n'}
+[23.135666] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/ament_prefix_path.dsv\n'}
+[23.135896] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/path.sh\n'}
+[23.136117] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/path.dsv\n'}
+[23.136646] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/local_setup.bash\n'}
+[23.136864] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/local_setup.sh\n'}
+[23.137096] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/local_setup.zsh\n'}
+[23.137310] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/local_setup.dsv\n'}
+[23.137512] (fast_lio) StdoutLine: {'line': b'-- Symlinking: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/package.dsv\n'}
+[23.140693] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/ament_index/resource_index/packages/fast_lio\n'}
+[23.141013] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake-extras.cmake\n'}
+[23.141735] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[23.142120] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[23.142363] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[23.143184] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[23.143737] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[23.143958] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[23.144195] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lioConfig.cmake\n'}
+[23.145009] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lioConfig-version.cmake\n'}
+[23.145252] (fast_lio) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/package.xml\n'}
+[23.145464] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_generator_c.so\n'}
+[23.145671] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_fastrtps_c.so\n'}
+[23.146592] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_fastrtps_cpp.so\n'}
+[23.146880] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_introspection_c.so\n'}
+[23.147331] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_c.so\n'}
+[23.147548] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_introspection_cpp.so\n'}
+[23.147761] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_cpp.so\n'}
+[23.200021] (-) TimerEvent: {}
+[23.216820] (fast_lio) StdoutLine: {'line': b"Listing '/home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio'...\n"}
+[23.217304] (fast_lio) StdoutLine: {'line': b"Listing '/home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg'...\n"}
+[23.229412] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_generator_py.so\n'}
+[23.230171] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cExport.cmake\n'}
+[23.231191] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cExport-release.cmake\n'}
+[23.233030] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[23.233315] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cExport-release.cmake\n'}
+[23.233550] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cppExport.cmake\n'}
+[23.233774] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[23.233988] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cppExport-release.cmake\n'}
+[23.234198] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cExport.cmake\n'}
+[23.234406] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cExport-release.cmake\n'}
+[23.234612] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cExport.cmake\n'}
+[23.234845] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cExport-release.cmake\n'}
+[23.235064] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[23.235272] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cppExport-release.cmake\n'}
+[23.235504] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cppExport.cmake\n'}
+[23.235856] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cppExport-release.cmake\n'}
+[23.237886] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_pyExport.cmake\n'}
+[23.238916] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_pyExport-release.cmake\n'}
+[23.239585] (fast_lio) CommandEnded: {'returncode': 0}
+[23.300355] (-) TimerEvent: {}
+[23.315973] (fast_lio) JobEnded: {'identifier': 'fast_lio', 'rc': 0}
+[23.318026] (-) EventReactorShutdown: {}

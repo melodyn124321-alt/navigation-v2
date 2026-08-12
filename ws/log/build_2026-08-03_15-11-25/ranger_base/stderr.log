@@ -1,0 +1,16 @@
+In file included from /home/seeed/ros2/ws/src/ranger_ros2/ranger_base/src/ranger_messenger.cpp:12:
+/home/seeed/ros2/ws/src/ranger_ros2/ranger_base/include/ranger_base/kinematics_model.hpp: In member function ‘void westonrobot::SpinningModel::operator()(const state_type&, westonrobot::SpinningModel::state_type&, double)’:
+/home/seeed/ros2/ws/src/ranger_ros2/ranger_base/include/ranger_base/kinematics_model.hpp:90:37: warning: unused parameter ‘x’ [-Wunused-parameter]
+   90 |   void operator()(const state_type& x, state_type& xd, double) {
+      |                   ~~~~~~~~~~~~~~~~~~^
+/home/seeed/ros2/ws/src/ranger_ros2/ranger_base/src/ranger_messenger.cpp: In member function ‘double westonrobot::RangerROSMessenger::CalculateSteeringAngle(geometry_msgs::msg::Twist, double&)’:
+/home/seeed/ros2/ws/src/ranger_ros2/ranger_base/src/ranger_messenger.cpp:529:13: warning: variable ‘w’ set but not used [-Wunused-but-set-variable]
+  529 |   double l, w, phi_i, x;
+      |             ^
+/home/seeed/ros2/ws/src/ranger_ros2/ranger_base/src/ranger_messenger.cpp:529:23: warning: variable ‘x’ set but not used [-Wunused-but-set-variable]
+  529 |   double l, w, phi_i, x;
+      |                       ^
+/home/seeed/ros2/ws/src/ranger_ros2/ranger_base/src/ranger_messenger.cpp: In member function ‘void westonrobot::RangerROSMessenger::TwistCmdCallback(geometry_msgs::msg::Twist_<std::allocator<void> >::SharedPtr)’:
+/home/seeed/ros2/ws/src/ranger_ros2/ranger_base/src/ranger_messenger.cpp:436:7: warning: ‘steer_cmd’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  436 |       if (steer_cmd > robot_params_.max_steer_angle_ackermann) {
+      |       ^~

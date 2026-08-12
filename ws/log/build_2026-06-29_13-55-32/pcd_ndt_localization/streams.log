@@ -1,0 +1,170 @@
+[0.026s] Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2 /usr/local/bin/cmake /home/seeed/ros2/ws/src/localization/pcd_ndt_localization -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/pcd_ndt_localization
+[0.231s] -- The C compiler identification is GNU 11.4.0
+[0.453s] -- The CXX compiler identification is GNU 11.4.0
+[0.519s] -- Detecting C compiler ABI info
+[0.670s] -- Detecting C compiler ABI info - done
+[0.704s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.705s] -- Detecting C compile features
+[0.706s] -- Detecting C compile features - done
+[0.736s] -- Detecting CXX compiler ABI info
+[0.895s] -- Detecting CXX compiler ABI info - done
+[0.931s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.931s] -- Detecting CXX compile features
+[0.933s] -- Detecting CXX compile features - done
+[0.947s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.268s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.550s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.658s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.671s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.696s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.735s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.783s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.903s] -- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.980s] CMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:146 (find_package):
+[1.980s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[1.980s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[1.980s]   cmake_policy command to set the policy and suppress this warning.
+[1.981s] 
+[1.981s]   CMake variable EIGEN_ROOT is set to:
+[1.981s] 
+[1.981s]     /usr/include/eigen3
+[1.981s] 
+[1.981s]   For compatibility, find_package is ignoring the variable, but code in a
+[1.982s]   .cmake module might still use it.
+[1.982s] Call Stack (most recent call first):
+[1.982s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:299 (find_eigen)
+[1.982s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[1.982s]   CMakeLists.txt:12 (find_package)
+[1.982s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.982s] 
+[1.990s] -- Checking for module 'eigen3'
+[2.016s] --   Found eigen3, version 3.4.0
+[2.077s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[2.077s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[2.145s] -- Found Boost: /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.65.0") found components: system filesystem date_time iostreams serialization 
+[2.153s] CMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:44 (find_package):
+[2.153s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[2.154s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[2.154s]   cmake_policy command to set the policy and suppress this warning.
+[2.154s] 
+[2.154s]   CMake variable FLANN_ROOT is set to:
+[2.154s] 
+[2.154s]     /usr
+[2.154s] 
+[2.155s]   For compatibility, find_package is ignoring the variable, but code in a
+[2.155s]   .cmake module might still use it.
+[2.155s] Call Stack (most recent call first):
+[2.156s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:256 (find_package)
+[2.156s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:301 (find_flann)
+[2.156s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[2.156s]   CMakeLists.txt:12 (find_package)
+[2.157s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.157s] 
+[2.187s] -- Checking for module 'flann'
+[2.214s] --   Found flann, version 1.9.1
+[2.311s] -- Found FLANN: /usr/lib/aarch64-linux-gnu/libflann_cpp.so  
+[2.311s] -- FLANN found (include: /usr/include, lib: /usr/lib/aarch64-linux-gnu/libflann_cpp.so)
+[2.459s] -- Checking for module 'libusb-1.0'
+[2.488s] --   Found libusb-1.0, version 1.0.25
+[2.563s] -- Found libusb: /usr/lib/aarch64-linux-gnu/libusb-1.0.so  
+[2.567s] -- Found OpenNI: /usr/lib/libOpenNI.so;libusb::libusb (found version "1.5.4.0") 
+[2.567s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.692s] -- Found OpenNI2: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb (found version "2.2.0.33") 
+[2.693s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.693s] ** WARNING ** io features related to pcap will be disabled
+[2.693s] ** WARNING ** io features related to png will be disabled
+[2.812s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.958s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.962s] -- Found Threads: TRUE  
+[2.971s] -- Found GLEW: /usr/lib/aarch64-linux-gnu/libGLEW.so  
+[2.997s] -- Found OpenGL: /usr/lib/aarch64-linux-gnu/libOpenGL.so  found components: OpenGL GLX 
+[3.315s] -- Found MPI_C: /usr/lib/aarch64-linux-gnu/libmpi.so (found version "3.1") 
+[3.316s] -- Found MPI: TRUE (found version "3.1") found components: C 
+[3.327s] -- Found JsonCpp: /usr/lib/aarch64-linux-gnu/libjsoncpp.so (found suitable version "1.9.5", minimum required is "0.7.0") 
+[3.374s] -- Found ZLIB: /usr/lib/aarch64-linux-gnu/libz.so (found version "1.2.11")  
+[3.437s] -- Found PNG: /usr/lib/aarch64-linux-gnu/libpng.so (found version "1.6.37") 
+[3.488s] -- Found Eigen3: /usr/include/eigen3 (found version "3.4.0") 
+[3.785s] -- Found X11: /usr/include   
+[3.786s] -- Looking for XOpenDisplay in /usr/lib/aarch64-linux-gnu/libX11.so;/usr/lib/aarch64-linux-gnu/libXext.so
+[3.919s] -- Looking for XOpenDisplay in /usr/lib/aarch64-linux-gnu/libX11.so;/usr/lib/aarch64-linux-gnu/libXext.so - found
+[3.919s] -- Looking for gethostbyname
+[4.049s] -- Looking for gethostbyname - found
+[4.050s] -- Looking for connect
+[4.178s] -- Looking for connect - found
+[4.178s] -- Looking for remove
+[4.310s] -- Looking for remove - found
+[4.314s] -- Looking for shmat
+[4.455s] -- Looking for shmat - found
+[4.456s] -- Looking for IceConnectionNumber in ICE
+[4.592s] -- Looking for IceConnectionNumber in ICE - found
+[4.909s] -- Found EXPAT: /usr/lib/aarch64-linux-gnu/libexpat.so (found version "2.4.7") 
+[4.923s] -- Found double-conversion: /usr/lib/aarch64-linux-gnu/libdouble-conversion.so  
+[4.940s] -- Found LZ4: /usr/lib/aarch64-linux-gnu/liblz4.so (found version "1.9.3") 
+[4.948s] -- Found LZMA: /usr/lib/aarch64-linux-gnu/liblzma.so (found version "5.2.5") 
+[5.021s] -- Found JPEG: /usr/lib/aarch64-linux-gnu/libjpeg.so (found version "80") 
+[5.039s] -- Found TIFF: /usr/lib/aarch64-linux-gnu/libtiff.so (found version "4.3.0")  
+[5.059s] -- Found Freetype: /usr/lib/aarch64-linux-gnu/libfreetype.so (found version "2.11.1") 
+[5.075s] -- Found utf8cpp: /usr/include/utf8cpp  
+[5.170s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[6.431s] -- looking for PCL_COMMON
+[6.435s] -- Found PCL_COMMON: /usr/lib/aarch64-linux-gnu/libpcl_common.so  
+[6.435s] -- looking for PCL_KDTREE
+[6.441s] -- Found PCL_KDTREE: /usr/lib/aarch64-linux-gnu/libpcl_kdtree.so  
+[6.442s] -- looking for PCL_OCTREE
+[6.444s] -- Found PCL_OCTREE: /usr/lib/aarch64-linux-gnu/libpcl_octree.so  
+[6.446s] -- looking for PCL_SEARCH
+[6.447s] -- Found PCL_SEARCH: /usr/lib/aarch64-linux-gnu/libpcl_search.so  
+[6.448s] -- looking for PCL_SAMPLE_CONSENSUS
+[6.450s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/aarch64-linux-gnu/libpcl_sample_consensus.so  
+[6.450s] -- looking for PCL_FILTERS
+[6.453s] -- Found PCL_FILTERS: /usr/lib/aarch64-linux-gnu/libpcl_filters.so  
+[6.453s] -- looking for PCL_IO
+[6.455s] -- Found PCL_IO: /usr/lib/aarch64-linux-gnu/libpcl_io.so  
+[6.456s] -- looking for PCL_2D
+[6.457s] -- Found PCL_2D: /usr/include/pcl-1.12  
+[6.457s] -- looking for PCL_FEATURES
+[6.461s] -- Found PCL_FEATURES: /usr/lib/aarch64-linux-gnu/libpcl_features.so  
+[6.462s] -- looking for PCL_REGISTRATION
+[6.465s] -- Found PCL_REGISTRATION: /usr/lib/aarch64-linux-gnu/libpcl_registration.so  
+[6.467s] -- Found PCL: pcl_common;pcl_kdtree;pcl_octree;pcl_search;pcl_sample_consensus;pcl_filters;pcl_io;pcl_features;pcl_registration;Boost::system;Boost::filesystem;Boost::date_time;Boost::iostreams;Boost::serialization;/usr/lib/libOpenNI.so;libusb::libusb;/usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb;VTK::ChartsCore;VTK::CommonColor;VTK::CommonComputationalGeometry;VTK::CommonCore;VTK::CommonDataModel;VTK::CommonExecutionModel;VTK::CommonMath;VTK::CommonMisc;VTK::CommonTransforms;VTK::FiltersCore;VTK::FiltersExtraction;VTK::FiltersGeneral;VTK::FiltersGeometry;VTK::FiltersModeling;VTK::FiltersSources;VTK::ImagingCore;VTK::ImagingSources;VTK::InteractionImage;VTK::InteractionStyle;VTK::InteractionWidgets;VTK::IOCore;VTK::IOGeometry;VTK::IOImage;VTK::IOLegacy;VTK::IOPLY;VTK::RenderingAnnotation;VTK::RenderingCore;VTK::RenderingContext2D;VTK::RenderingLOD;VTK::RenderingFreeType;VTK::ViewsCore;VTK::ViewsContext2D;VTK::RenderingOpenGL2;VTK::GUISupportQt;FLANN::FLANN  
+[6.472s] -- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)
+[6.616s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[6.623s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[6.852s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[6.930s] -- Found FastRTPS: /opt/ros/humble/include  
+[7.037s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[7.316s] -- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)
+[7.344s] -- Found tf2_eigen: 0.25.20 (/opt/ros/humble/share/tf2_eigen/cmake)
+[7.803s] -- Configuring done (7.8s)
+[7.914s] -- Generating done (0.1s)
+[7.931s] -- Build files have been written to: /home/seeed/ros2/ws/build/pcd_ndt_localization
+[7.989s] Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '0': CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2 /usr/local/bin/cmake /home/seeed/ros2/ws/src/localization/pcd_ndt_localization -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/pcd_ndt_localization
+[7.996s] Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2 /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/pcd_ndt_localization -- -j6 -l6
+[8.050s] [ 50%] Building CXX object CMakeFiles/pcd_ndt_localizer.dir/src/pcd_ndt_localizer.cpp.o
+[89.634s] [100%] Linking CXX executable pcd_ndt_localizer
+[92.298s] [100%] Built target pcd_ndt_localizer
+[92.309s] Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '0': CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2 /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/pcd_ndt_localization -- -j6 -l6
+[92.323s] Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2 /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/pcd_ndt_localization
+[92.331s] -- Install configuration: "Release"
+[92.333s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/lib/pcd_ndt_localization/pcd_ndt_localizer
+[92.340s] -- Set runtime path of "/home/seeed/ros2/ws/install/pcd_ndt_localization/lib/pcd_ndt_localization/pcd_ndt_localizer" to ""
+[92.340s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/config
+[92.341s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/config/ndt_localization.yaml
+[92.341s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/launch
+[92.342s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/launch/localization.launch.py
+[92.342s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/ament_index/resource_index/package_run_dependencies/pcd_ndt_localization
+[92.343s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/ament_index/resource_index/parent_prefix_path/pcd_ndt_localization
+[92.343s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/ament_prefix_path.sh
+[92.344s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/ament_prefix_path.dsv
+[92.344s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/path.sh
+[92.345s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/path.dsv
+[92.345s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.bash
+[92.345s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.sh
+[92.346s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.zsh
+[92.347s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.dsv
+[92.347s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.dsv
+[92.347s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/ament_index/resource_index/packages/pcd_ndt_localization
+[92.347s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/cmake/pcd_ndt_localizationConfig.cmake
+[92.348s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/cmake/pcd_ndt_localizationConfig-version.cmake
+[92.348s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.xml
+[92.350s] Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '0': CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2 /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/pcd_ndt_localization

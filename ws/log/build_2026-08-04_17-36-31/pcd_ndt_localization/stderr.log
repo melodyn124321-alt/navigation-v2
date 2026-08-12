@@ -1,0 +1,53 @@
+/home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp: In constructor ‘PcdNdtLocalizer::PcdNdtLocalizer()’:
+/home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:153:41: error: no matching function for call to ‘max(int, long int)’
+  153 |     scan_accumulation_frames_ = std::max(
+      |                                 ~~~~~~~~^
+  154 |       1, declare_parameter<int>("scan_accumulation_frames", 5));
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/algorithm:61,
+                 from /home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:1:
+/usr/include/c++/11/bits/stl_algobase.h:254:5: note: candidate: ‘template<class _Tp> constexpr const _Tp& std::max(const _Tp&, const _Tp&)’
+  254 |     max(const _Tp& __a, const _Tp& __b)
+      |     ^~~
+/usr/include/c++/11/bits/stl_algobase.h:254:5: note:   template argument deduction/substitution failed:
+/home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:153:41: note:   deduced conflicting types for parameter ‘const _Tp’ (‘int’ and ‘long int’)
+  153 |     scan_accumulation_frames_ = std::max(
+      |                                 ~~~~~~~~^
+  154 |       1, declare_parameter<int>("scan_accumulation_frames", 5));
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/algorithm:61,
+                 from /home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:1:
+/usr/include/c++/11/bits/stl_algobase.h:300:5: note: candidate: ‘template<class _Tp, class _Compare> constexpr const _Tp& std::max(const _Tp&, const _Tp&, _Compare)’
+  300 |     max(const _Tp& __a, const _Tp& __b, _Compare __comp)
+      |     ^~~
+/usr/include/c++/11/bits/stl_algobase.h:300:5: note:   template argument deduction/substitution failed:
+/home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:153:41: note:   deduced conflicting types for parameter ‘const _Tp’ (‘int’ and ‘long int’)
+  153 |     scan_accumulation_frames_ = std::max(
+      |                                 ~~~~~~~~^
+  154 |       1, declare_parameter<int>("scan_accumulation_frames", 5));
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/algorithm:62,
+                 from /home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:1:
+/usr/include/c++/11/bits/stl_algo.h:3461:5: note: candidate: ‘template<class _Tp> constexpr _Tp std::max(std::initializer_list<_Tp>)’
+ 3461 |     max(initializer_list<_Tp> __l)
+      |     ^~~
+/usr/include/c++/11/bits/stl_algo.h:3461:5: note:   template argument deduction/substitution failed:
+/home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:153:41: note:   mismatched types ‘std::initializer_list<_Tp>’ and ‘int’
+  153 |     scan_accumulation_frames_ = std::max(
+      |                                 ~~~~~~~~^
+  154 |       1, declare_parameter<int>("scan_accumulation_frames", 5));
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/algorithm:62,
+                 from /home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:1:
+/usr/include/c++/11/bits/stl_algo.h:3467:5: note: candidate: ‘template<class _Tp, class _Compare> constexpr _Tp std::max(std::initializer_list<_Tp>, _Compare)’
+ 3467 |     max(initializer_list<_Tp> __l, _Compare __comp)
+      |     ^~~
+/usr/include/c++/11/bits/stl_algo.h:3467:5: note:   template argument deduction/substitution failed:
+/home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:153:41: note:   mismatched types ‘std::initializer_list<_Tp>’ and ‘int’
+  153 |     scan_accumulation_frames_ = std::max(
+      |                                 ~~~~~~~~^
+  154 |       1, declare_parameter<int>("scan_accumulation_frames", 5));
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/pcd_ndt_localizer.dir/build.make:76：CMakeFiles/pcd_ndt_localizer.dir/src/pcd_ndt_localizer.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/pcd_ndt_localizer.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

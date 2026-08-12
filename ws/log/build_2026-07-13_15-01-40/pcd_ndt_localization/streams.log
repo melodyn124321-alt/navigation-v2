@@ -1,0 +1,12 @@
+[0.027s] Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/pcd_ndt_localization -- -j6 -l6
+[0.113s] [ 50%] Built target pcd_occupancy_grid_publisher
+[0.156s] [ 75%] [32mBuilding CXX object CMakeFiles/pcd_ndt_localizer.dir/src/pcd_ndt_localizer.cpp.o[0m
+[76.737s] [100%] [32m[1mLinking CXX executable pcd_ndt_localizer[0m
+[84.137s] [100%] Built target pcd_ndt_localizer
+[84.150s] Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/pcd_ndt_localization -- -j6 -l6
+[84.158s] Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/pcd_ndt_localization
+[84.163s] -- Install configuration: ""
+[84.163s] -- Up-to-date: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/config
+[84.164s] -- Up-to-date: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/launch
+[84.165s] -- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.dsv
+[84.169s] Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/pcd_ndt_localization

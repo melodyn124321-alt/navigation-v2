@@ -1,0 +1,163 @@
+[0.279s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--base-paths', 'src/nav_tf_bridge', 'src/localization/pcd_ndt_localization', '--packages-select', 'nav_tf_bridge', 'pcd_ndt_localization', '--cmake-clean-cache', '--cmake-args', '-DPython3_EXECUTABLE=/usr/bin/python3', '--event-handlers', 'console_cohesion+']
+[0.280s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=['console_cohesion+'], ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['src/nav_tf_bridge', 'src/localization/pcd_ndt_localization'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['nav_tf_bridge', 'pcd_ndt_localization'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=['-DPython3_EXECUTABLE=/usr/bin/python3'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=True, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffa22cf0d0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffa22ceb60>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffa22ceb60>>)
+[0.737s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.738s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.738s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.738s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.738s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.738s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/seeed/ros2/ws/src/nav_tf_bridge', '/home/seeed/ros2/ws/src/localization/pcd_ndt_localization'
+[0.738s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_tf_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_tf_bridge) by extension 'ignore'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_tf_bridge) by extension 'ignore_ament_install'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_tf_bridge) by extensions ['colcon_pkg']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_tf_bridge) by extension 'colcon_pkg'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_tf_bridge) by extensions ['colcon_meta']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_tf_bridge) by extension 'colcon_meta'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_tf_bridge) by extensions ['ros']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_tf_bridge) by extension 'ros'
+[0.772s] DEBUG:colcon.colcon_core.package_identification:Package 'src/nav_tf_bridge' with type 'ros.ament_cmake' and name 'nav_tf_bridge'
+[0.773s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extensions ['ignore', 'ignore_ament_install']
+[0.773s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extension 'ignore'
+[0.773s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extension 'ignore_ament_install'
+[0.774s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extensions ['colcon_pkg']
+[0.774s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extension 'colcon_pkg'
+[0.774s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extensions ['colcon_meta']
+[0.774s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extension 'colcon_meta'
+[0.774s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extensions ['ros']
+[0.774s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extension 'ros'
+[0.777s] DEBUG:colcon.colcon_core.package_identification:Package 'src/localization/pcd_ndt_localization' with type 'ros.ament_cmake' and name 'pcd_ndt_localization'
+[0.777s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.824s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.824s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.830s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 321 installed packages in /opt/ros/humble
+[0.866s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.962s] Level 5:colcon.colcon_core.verb:set package 'nav_tf_bridge' build argument 'cmake_args' from command line to '['-DPython3_EXECUTABLE=/usr/bin/python3']'
+[0.963s] Level 5:colcon.colcon_core.verb:set package 'nav_tf_bridge' build argument 'cmake_target' from command line to 'None'
+[0.963s] Level 5:colcon.colcon_core.verb:set package 'nav_tf_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.963s] Level 5:colcon.colcon_core.verb:set package 'nav_tf_bridge' build argument 'cmake_clean_cache' from command line to 'True'
+[0.963s] Level 5:colcon.colcon_core.verb:set package 'nav_tf_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[0.963s] Level 5:colcon.colcon_core.verb:set package 'nav_tf_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[0.963s] Level 5:colcon.colcon_core.verb:set package 'nav_tf_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[0.963s] Level 5:colcon.colcon_core.verb:set package 'nav_tf_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.963s] Level 5:colcon.colcon_core.verb:set package 'nav_tf_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.963s] DEBUG:colcon.colcon_core.verb:Building package 'nav_tf_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/seeed/ros2/ws/build/nav_tf_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DPython3_EXECUTABLE=/usr/bin/python3'], 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/seeed/ros2/ws/install/nav_tf_bridge', 'merge_install': False, 'path': '/home/seeed/ros2/ws/src/nav_tf_bridge', 'symlink_install': False, 'test_result_base': None}
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'cmake_args' from command line to '['-DPython3_EXECUTABLE=/usr/bin/python3']'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'cmake_target' from command line to 'None'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'cmake_clean_cache' from command line to 'True'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'cmake_clean_first' from command line to 'False'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'cmake_force_configure' from command line to 'False'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'ament_cmake_args' from command line to 'None'
+[0.965s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.965s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.965s] DEBUG:colcon.colcon_core.verb:Building package 'pcd_ndt_localization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/seeed/ros2/ws/build/pcd_ndt_localization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DPython3_EXECUTABLE=/usr/bin/python3'], 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/seeed/ros2/ws/install/pcd_ndt_localization', 'merge_install': False, 'path': '/home/seeed/ros2/ws/src/localization/pcd_ndt_localization', 'symlink_install': False, 'test_result_base': None}
+[0.965s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.968s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.968s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/seeed/ros2/ws/src/nav_tf_bridge' with build type 'ament_cmake'
+[0.968s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/seeed/ros2/ws/src/nav_tf_bridge'
+[0.978s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.978s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.978s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.985s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/seeed/ros2/ws/src/localization/pcd_ndt_localization' with build type 'ament_cmake'
+[0.985s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/seeed/ros2/ws/src/localization/pcd_ndt_localization'
+[0.986s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.986s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.000s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/nav_tf_bridge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/nav_tf_bridge -DPython3_EXECUTABLE=/usr/bin/python3 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/nav_tf_bridge
+[1.005s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/localization/pcd_ndt_localization -DPython3_EXECUTABLE=/usr/bin/python3 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/pcd_ndt_localization
+[4.351s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/nav_tf_bridge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/nav_tf_bridge -DPython3_EXECUTABLE=/usr/bin/python3 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/nav_tf_bridge
+[4.352s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/nav_tf_bridge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/nav_tf_bridge -- -j6 -l6
+[9.488s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/localization/pcd_ndt_localization -DPython3_EXECUTABLE=/usr/bin/python3 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/pcd_ndt_localization
+[9.490s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/pcd_ndt_localization -- -j6 -l6
+[40.061s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/nav_tf_bridge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/nav_tf_bridge -- -j6 -l6
+[40.071s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/nav_tf_bridge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/nav_tf_bridge
+[40.114s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nav_tf_bridge)
+[40.125s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/nav_tf_bridge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/nav_tf_bridge
+[40.126s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/nav_tf_bridge' for CMake module files
+[40.128s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/nav_tf_bridge' for CMake config files
+[40.128s] Level 1:colcon.colcon_core.shell:create_environment_hook('nav_tf_bridge', 'cmake_prefix_path')
+[40.129s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/hook/cmake_prefix_path.ps1'
+[40.131s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/hook/cmake_prefix_path.dsv'
+[40.132s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/hook/cmake_prefix_path.sh'
+[40.134s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/nav_tf_bridge/lib'
+[40.135s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/nav_tf_bridge/bin'
+[40.135s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/nav_tf_bridge/lib/pkgconfig/nav_tf_bridge.pc'
+[40.135s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/nav_tf_bridge/lib/python3.10/site-packages'
+[40.136s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/nav_tf_bridge/bin'
+[40.137s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/package.ps1'
+[40.140s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/package.dsv'
+[40.141s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/package.sh'
+[40.143s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/package.bash'
+[40.145s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/package.zsh'
+[40.146s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/nav_tf_bridge/share/colcon-core/packages/nav_tf_bridge)
+[40.148s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nav_tf_bridge)
+[40.149s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/nav_tf_bridge' for CMake module files
+[40.150s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/nav_tf_bridge' for CMake config files
+[40.151s] Level 1:colcon.colcon_core.shell:create_environment_hook('nav_tf_bridge', 'cmake_prefix_path')
+[40.151s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/hook/cmake_prefix_path.ps1'
+[40.152s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/hook/cmake_prefix_path.dsv'
+[40.153s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/hook/cmake_prefix_path.sh'
+[40.155s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/nav_tf_bridge/lib'
+[40.155s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/nav_tf_bridge/bin'
+[40.156s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/nav_tf_bridge/lib/pkgconfig/nav_tf_bridge.pc'
+[40.156s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/nav_tf_bridge/lib/python3.10/site-packages'
+[40.157s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/nav_tf_bridge/bin'
+[40.158s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/package.ps1'
+[40.159s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/package.dsv'
+[40.160s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/package.sh'
+[40.161s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/package.bash'
+[40.162s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/package.zsh'
+[40.163s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/nav_tf_bridge/share/colcon-core/packages/nav_tf_bridge)
+[96.004s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/pcd_ndt_localization -- -j6 -l6
+[96.008s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/pcd_ndt_localization
+[96.019s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pcd_ndt_localization)
+[96.020s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization' for CMake module files
+[96.022s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/pcd_ndt_localization
+[96.024s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization' for CMake config files
+[96.025s] Level 1:colcon.colcon_core.shell:create_environment_hook('pcd_ndt_localization', 'cmake_prefix_path')
+[96.026s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/hook/cmake_prefix_path.ps1'
+[96.028s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/hook/cmake_prefix_path.dsv'
+[96.030s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/hook/cmake_prefix_path.sh'
+[96.033s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/lib'
+[96.034s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/bin'
+[96.035s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/lib/pkgconfig/pcd_ndt_localization.pc'
+[96.036s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/lib/python3.10/site-packages'
+[96.038s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/bin'
+[96.039s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.ps1'
+[96.041s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.dsv'
+[96.043s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.sh'
+[96.044s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.bash'
+[96.046s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.zsh'
+[96.047s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/pcd_ndt_localization/share/colcon-core/packages/pcd_ndt_localization)
+[96.049s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pcd_ndt_localization)
+[96.050s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization' for CMake module files
+[96.052s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization' for CMake config files
+[96.053s] Level 1:colcon.colcon_core.shell:create_environment_hook('pcd_ndt_localization', 'cmake_prefix_path')
+[96.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/hook/cmake_prefix_path.ps1'
+[96.057s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/hook/cmake_prefix_path.dsv'
+[96.058s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/hook/cmake_prefix_path.sh'
+[96.060s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/lib'
+[96.060s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/bin'
+[96.060s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/lib/pkgconfig/pcd_ndt_localization.pc'
+[96.061s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/lib/python3.10/site-packages'
+[96.062s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/bin'
+[96.063s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.ps1'
+[96.065s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.dsv'
+[96.067s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.sh'
+[96.068s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.bash'
+[96.070s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.zsh'
+[96.072s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/pcd_ndt_localization/share/colcon-core/packages/pcd_ndt_localization)
+[96.073s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[96.074s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[96.074s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[96.074s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[96.076s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[96.077s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/seeed/ros2/ws/install/local_setup.ps1'
+[96.079s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/seeed/ros2/ws/install/_local_setup_util_ps1.py'
+[96.082s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/seeed/ros2/ws/install/setup.ps1'
+[96.084s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/seeed/ros2/ws/install/local_setup.sh'
+[96.086s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/seeed/ros2/ws/install/_local_setup_util_sh.py'
+[96.087s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/seeed/ros2/ws/install/setup.sh'
+[96.090s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/seeed/ros2/ws/install/local_setup.bash'
+[96.091s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/seeed/ros2/ws/install/setup.bash'
+[96.093s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/seeed/ros2/ws/install/local_setup.zsh'
+[96.096s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/seeed/ros2/ws/install/setup.zsh'

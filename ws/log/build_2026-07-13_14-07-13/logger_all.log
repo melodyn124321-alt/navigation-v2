@@ -1,0 +1,95 @@
+[0.258s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--base-paths', 'src/localization/pcd_ndt_localization', '--packages-select', 'pcd_ndt_localization', '--cmake-args', '-DPython3_EXECUTABLE=/usr/bin/python3', '--event-handlers', 'console_cohesion+']
+[0.258s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=['console_cohesion+'], ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['src/localization/pcd_ndt_localization'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['pcd_ndt_localization'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=['-DPython3_EXECUTABLE=/usr/bin/python3'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff92e2f0d0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff92e2eb60>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff92e2eb60>>)
+[0.654s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.655s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.655s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.655s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.655s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.655s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/seeed/ros2/ws/src/localization/pcd_ndt_localization'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extensions ['ignore', 'ignore_ament_install']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extension 'ignore'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extension 'ignore_ament_install'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extensions ['colcon_pkg']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extension 'colcon_pkg'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extensions ['colcon_meta']
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extension 'colcon_meta'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extensions ['ros']
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization/pcd_ndt_localization) by extension 'ros'
+[0.690s] DEBUG:colcon.colcon_core.package_identification:Package 'src/localization/pcd_ndt_localization' with type 'ros.ament_cmake' and name 'pcd_ndt_localization'
+[0.690s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.733s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.734s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.740s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 321 installed packages in /opt/ros/humble
+[0.775s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.871s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'cmake_args' from command line to '['-DPython3_EXECUTABLE=/usr/bin/python3']'
+[0.871s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'cmake_target' from command line to 'None'
+[0.872s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.872s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'cmake_clean_cache' from command line to 'False'
+[0.872s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'cmake_clean_first' from command line to 'False'
+[0.872s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'cmake_force_configure' from command line to 'False'
+[0.872s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'ament_cmake_args' from command line to 'None'
+[0.872s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.872s] Level 5:colcon.colcon_core.verb:set package 'pcd_ndt_localization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.872s] DEBUG:colcon.colcon_core.verb:Building package 'pcd_ndt_localization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/seeed/ros2/ws/build/pcd_ndt_localization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DPython3_EXECUTABLE=/usr/bin/python3'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/seeed/ros2/ws/install/pcd_ndt_localization', 'merge_install': False, 'path': '/home/seeed/ros2/ws/src/localization/pcd_ndt_localization', 'symlink_install': False, 'test_result_base': None}
+[0.872s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.875s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.876s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/seeed/ros2/ws/src/localization/pcd_ndt_localization' with build type 'ament_cmake'
+[0.876s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/seeed/ros2/ws/src/localization/pcd_ndt_localization'
+[0.883s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.884s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.884s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.904s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/pcd_ndt_localization -- -j6 -l6
+[83.389s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/pcd_ndt_localization -- -j6 -l6
+[83.398s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/pcd_ndt_localization
+[83.406s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pcd_ndt_localization)
+[83.408s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/pcd_ndt_localization
+[83.416s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization' for CMake module files
+[83.418s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization' for CMake config files
+[83.419s] Level 1:colcon.colcon_core.shell:create_environment_hook('pcd_ndt_localization', 'cmake_prefix_path')
+[83.420s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/hook/cmake_prefix_path.ps1'
+[83.422s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/hook/cmake_prefix_path.dsv'
+[83.424s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/hook/cmake_prefix_path.sh'
+[83.428s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/lib'
+[83.429s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/bin'
+[83.429s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/lib/pkgconfig/pcd_ndt_localization.pc'
+[83.430s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/lib/python3.10/site-packages'
+[83.432s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/bin'
+[83.433s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.ps1'
+[83.437s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.dsv'
+[83.439s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.sh'
+[83.442s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.bash'
+[83.445s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.zsh'
+[83.448s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/pcd_ndt_localization/share/colcon-core/packages/pcd_ndt_localization)
+[83.451s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pcd_ndt_localization)
+[83.452s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization' for CMake module files
+[83.453s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization' for CMake config files
+[83.454s] Level 1:colcon.colcon_core.shell:create_environment_hook('pcd_ndt_localization', 'cmake_prefix_path')
+[83.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/hook/cmake_prefix_path.ps1'
+[83.457s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/hook/cmake_prefix_path.dsv'
+[83.458s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/hook/cmake_prefix_path.sh'
+[83.460s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/lib'
+[83.460s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/bin'
+[83.460s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/lib/pkgconfig/pcd_ndt_localization.pc'
+[83.461s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/lib/python3.10/site-packages'
+[83.462s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/pcd_ndt_localization/bin'
+[83.463s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.ps1'
+[83.465s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.dsv'
+[83.466s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.sh'
+[83.468s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.bash'
+[83.469s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.zsh'
+[83.471s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/pcd_ndt_localization/share/colcon-core/packages/pcd_ndt_localization)
+[83.471s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[83.472s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[83.472s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[83.473s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[83.474s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[83.475s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/seeed/ros2/ws/install/local_setup.ps1'
+[83.478s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/seeed/ros2/ws/install/_local_setup_util_ps1.py'
+[83.483s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/seeed/ros2/ws/install/setup.ps1'
+[83.486s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/seeed/ros2/ws/install/local_setup.sh'
+[83.490s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/seeed/ros2/ws/install/_local_setup_util_sh.py'
+[83.493s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/seeed/ros2/ws/install/setup.sh'
+[83.495s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/seeed/ros2/ws/install/local_setup.bash'
+[83.497s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/seeed/ros2/ws/install/setup.bash'
+[83.499s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/seeed/ros2/ws/install/local_setup.zsh'
+[83.500s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/seeed/ros2/ws/install/setup.zsh'

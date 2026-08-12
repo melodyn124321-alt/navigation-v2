@@ -1,0 +1,361 @@
+[0.000000] (-) TimerEvent: {}
+[0.000255] (-) JobUnselected: {'identifier': 'fast_lio'}
+[0.000531] (-) JobUnselected: {'identifier': 'livox_ros_driver2'}
+[0.001048] (-) JobUnselected: {'identifier': 'ranger_base'}
+[0.001311] (-) JobUnselected: {'identifier': 'ranger_bringup'}
+[0.001563] (-) JobUnselected: {'identifier': 'ranger_msgs'}
+[0.001658] (-) JobUnselected: {'identifier': 'ugv_sdk'}
+[0.001731] (-) JobUnselected: {'identifier': 'vikit_common'}
+[0.001800] (-) JobUnselected: {'identifier': 'vikit_ros'}
+[0.001872] (nav_tf_bridge) JobQueued: {'identifier': 'nav_tf_bridge', 'dependencies': OrderedDict()}
+[0.001948] (pcd_ndt_localization) JobQueued: {'identifier': 'pcd_ndt_localization', 'dependencies': OrderedDict()}
+[0.002022] (nav_tf_bridge) JobStarted: {'identifier': 'nav_tf_bridge'}
+[0.015669] (pcd_ndt_localization) JobStarted: {'identifier': 'pcd_ndt_localization'}
+[0.027221] (nav_tf_bridge) JobProgress: {'identifier': 'nav_tf_bridge', 'progress': 'cmake'}
+[0.028898] (nav_tf_bridge) JobProgress: {'identifier': 'nav_tf_bridge', 'progress': 'build'}
+[0.030360] (nav_tf_bridge) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/seeed/ros2/ws/build/nav_tf_bridge', '--', '-j6', '-l6'], 'cwd': '/home/seeed/ros2/ws/build/nav_tf_bridge', 'env': OrderedDict([('LANGUAGE', 'zh_CN:en'), ('USER', 'seeed'), ('SSH_CLIENT', '192.168.1.101 46629 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('ROS_PACKAGE_PATH', '/home/seeed/ros2/ws/install/vikit_common/share:/home/seeed/ros2/ws/install/ugv_sdk/share'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/seeed/ros2/ws/install/vikit_ros/lib:/home/seeed/ros2/ws/install/vikit_common/lib:/home/seeed/ros2/ws/install/ranger_msgs/lib:/home/seeed/ros2/ws/install/fast_lio/lib:/home/seeed/ros2/ws/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/seeed'), ('OLDPWD', '/home/seeed'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('ROS_IP', '192.168.1.104'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/seeed/ros2/ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'seeed'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/seeed/ros2/ws/install/vikit_common/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/vikit_common/lib/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('XDG_SESSION_ID', '182'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/home/seeed/ros2/fastrtps_profile.xml'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:12.0'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/seeed/ros2/ws/install/vikit_ros:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/nav_tf_bridge:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('PWD', '/home/seeed/ros2/ws/build/nav_tf_bridge'), ('LC_ALL', 'C.UTF-8'), ('SSH_CONNECTION', '192.168.1.101 46629 192.168.1.104 22'), ('PYTHONPATH', '/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:/home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages:/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/nav_tf_bridge:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2')]), 'shell': False}
+[0.034732] (pcd_ndt_localization) JobProgress: {'identifier': 'pcd_ndt_localization', 'progress': 'cmake'}
+[0.037674] (pcd_ndt_localization) JobProgress: {'identifier': 'pcd_ndt_localization', 'progress': 'build'}
+[0.038768] (pcd_ndt_localization) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/seeed/ros2/ws/build/pcd_ndt_localization', '--', '-j6', '-l6'], 'cwd': '/home/seeed/ros2/ws/build/pcd_ndt_localization', 'env': OrderedDict([('LANGUAGE', 'zh_CN:en'), ('USER', 'seeed'), ('SSH_CLIENT', '192.168.1.101 46629 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('ROS_PACKAGE_PATH', '/home/seeed/ros2/ws/install/vikit_common/share:/home/seeed/ros2/ws/install/ugv_sdk/share'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/seeed/ros2/ws/install/vikit_ros/lib:/home/seeed/ros2/ws/install/vikit_common/lib:/home/seeed/ros2/ws/install/ranger_msgs/lib:/home/seeed/ros2/ws/install/fast_lio/lib:/home/seeed/ros2/ws/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/seeed'), ('OLDPWD', '/home/seeed'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('ROS_IP', '192.168.1.104'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/seeed/ros2/ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'seeed'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/seeed/ros2/ws/install/vikit_common/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/vikit_common/lib/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('XDG_SESSION_ID', '182'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/home/seeed/ros2/fastrtps_profile.xml'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:12.0'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/seeed/ros2/ws/install/vikit_ros:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/nav_tf_bridge:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('PWD', '/home/seeed/ros2/ws/build/pcd_ndt_localization'), ('LC_ALL', 'C.UTF-8'), ('SSH_CONNECTION', '192.168.1.101 46629 192.168.1.104 22'), ('PYTHONPATH', '/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:/home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages:/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/nav_tf_bridge:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2')]), 'shell': False}
+[0.099414] (-) TimerEvent: {}
+[0.110606] (nav_tf_bridge) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/map_odom_tf_bridge.dir/src/map_odom_tf_bridge.cpp.o\n'}
+[0.127870] (pcd_ndt_localization) StdoutLine: {'line': b'[ 50%] Built target pcd_ndt_localizer\n'}
+[0.128539] (pcd_ndt_localization) StdoutLine: {'line': b'[100%] Built target pcd_occupancy_grid_publisher\n'}
+[0.137375] (pcd_ndt_localization) CommandEnded: {'returncode': 0}
+[0.139631] (pcd_ndt_localization) JobProgress: {'identifier': 'pcd_ndt_localization', 'progress': 'install'}
+[0.145741] (pcd_ndt_localization) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/seeed/ros2/ws/build/pcd_ndt_localization'], 'cwd': '/home/seeed/ros2/ws/build/pcd_ndt_localization', 'env': OrderedDict([('LANGUAGE', 'zh_CN:en'), ('USER', 'seeed'), ('SSH_CLIENT', '192.168.1.101 46629 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('ROS_PACKAGE_PATH', '/home/seeed/ros2/ws/install/vikit_common/share:/home/seeed/ros2/ws/install/ugv_sdk/share'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/seeed/ros2/ws/install/vikit_ros/lib:/home/seeed/ros2/ws/install/vikit_common/lib:/home/seeed/ros2/ws/install/ranger_msgs/lib:/home/seeed/ros2/ws/install/fast_lio/lib:/home/seeed/ros2/ws/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/seeed'), ('OLDPWD', '/home/seeed'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('ROS_IP', '192.168.1.104'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/seeed/ros2/ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'seeed'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/seeed/ros2/ws/install/vikit_common/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/vikit_common/lib/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('XDG_SESSION_ID', '182'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/home/seeed/ros2/fastrtps_profile.xml'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:12.0'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/seeed/ros2/ws/install/vikit_ros:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/nav_tf_bridge:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('PWD', '/home/seeed/ros2/ws/build/pcd_ndt_localization'), ('LC_ALL', 'C.UTF-8'), ('SSH_CONNECTION', '192.168.1.101 46629 192.168.1.104 22'), ('PYTHONPATH', '/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:/home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages:/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/nav_tf_bridge:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2')]), 'shell': False}
+[0.150582] (pcd_ndt_localization) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[0.152020] (pcd_ndt_localization) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.153003] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/lib/pcd_ndt_localization/pcd_ndt_localizer\n'}
+[0.153444] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/lib/pcd_ndt_localization/pcd_occupancy_grid_publisher\n'}
+[0.154419] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/config/ndt_localization.yaml\n'}
+[0.155712] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/launch/localization.launch.py\n'}
+[0.156265] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/ament_index/resource_index/package_run_dependencies/pcd_ndt_localization\n'}
+[0.156915] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/ament_index/resource_index/parent_prefix_path/pcd_ndt_localization\n'}
+[0.157646] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/ament_prefix_path.sh\n'}
+[0.158172] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/ament_prefix_path.dsv\n'}
+[0.158832] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/path.sh\n'}
+[0.159315] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/environment/path.dsv\n'}
+[0.159950] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.bash\n'}
+[0.160493] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.sh\n'}
+[0.161053] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.zsh\n'}
+[0.161507] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/local_setup.dsv\n'}
+[0.161877] (pcd_ndt_localization) StdoutLine: {'line': b'-- Symlinking: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.dsv\n'}
+[0.167505] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/ament_index/resource_index/packages/pcd_ndt_localization\n'}
+[0.167994] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/cmake/pcd_ndt_localizationConfig.cmake\n'}
+[0.168426] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/cmake/pcd_ndt_localizationConfig-version.cmake\n'}
+[0.168983] (pcd_ndt_localization) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.xml\n'}
+[0.171701] (pcd_ndt_localization) CommandEnded: {'returncode': 0}
+[0.199536] (-) TimerEvent: {}
+[0.211011] (pcd_ndt_localization) JobEnded: {'identifier': 'pcd_ndt_localization', 'rc': 0}
+[0.299715] (-) TimerEvent: {}
+[0.400042] (-) TimerEvent: {}
+[0.500575] (-) TimerEvent: {}
+[0.600943] (-) TimerEvent: {}
+[0.701287] (-) TimerEvent: {}
+[0.801613] (-) TimerEvent: {}
+[0.901972] (-) TimerEvent: {}
+[1.002300] (-) TimerEvent: {}
+[1.102614] (-) TimerEvent: {}
+[1.202943] (-) TimerEvent: {}
+[1.303213] (-) TimerEvent: {}
+[1.403487] (-) TimerEvent: {}
+[1.503815] (-) TimerEvent: {}
+[1.604199] (-) TimerEvent: {}
+[1.704578] (-) TimerEvent: {}
+[1.804946] (-) TimerEvent: {}
+[1.905322] (-) TimerEvent: {}
+[2.005646] (-) TimerEvent: {}
+[2.105946] (-) TimerEvent: {}
+[2.206303] (-) TimerEvent: {}
+[2.306720] (-) TimerEvent: {}
+[2.407079] (-) TimerEvent: {}
+[2.507434] (-) TimerEvent: {}
+[2.607827] (-) TimerEvent: {}
+[2.708180] (-) TimerEvent: {}
+[2.808500] (-) TimerEvent: {}
+[2.908813] (-) TimerEvent: {}
+[3.009082] (-) TimerEvent: {}
+[3.109375] (-) TimerEvent: {}
+[3.209685] (-) TimerEvent: {}
+[3.309960] (-) TimerEvent: {}
+[3.410259] (-) TimerEvent: {}
+[3.510603] (-) TimerEvent: {}
+[3.611007] (-) TimerEvent: {}
+[3.711383] (-) TimerEvent: {}
+[3.811724] (-) TimerEvent: {}
+[3.912036] (-) TimerEvent: {}
+[4.012299] (-) TimerEvent: {}
+[4.112577] (-) TimerEvent: {}
+[4.212882] (-) TimerEvent: {}
+[4.313155] (-) TimerEvent: {}
+[4.413461] (-) TimerEvent: {}
+[4.513834] (-) TimerEvent: {}
+[4.614214] (-) TimerEvent: {}
+[4.714559] (-) TimerEvent: {}
+[4.814928] (-) TimerEvent: {}
+[4.915276] (-) TimerEvent: {}
+[5.015551] (-) TimerEvent: {}
+[5.115845] (-) TimerEvent: {}
+[5.216200] (-) TimerEvent: {}
+[5.316554] (-) TimerEvent: {}
+[5.416890] (-) TimerEvent: {}
+[5.517253] (-) TimerEvent: {}
+[5.617593] (-) TimerEvent: {}
+[5.717941] (-) TimerEvent: {}
+[5.818351] (-) TimerEvent: {}
+[5.918762] (-) TimerEvent: {}
+[6.019137] (-) TimerEvent: {}
+[6.119511] (-) TimerEvent: {}
+[6.219889] (-) TimerEvent: {}
+[6.320283] (-) TimerEvent: {}
+[6.420658] (-) TimerEvent: {}
+[6.521005] (-) TimerEvent: {}
+[6.621315] (-) TimerEvent: {}
+[6.721649] (-) TimerEvent: {}
+[6.822022] (-) TimerEvent: {}
+[6.922337] (-) TimerEvent: {}
+[7.022614] (-) TimerEvent: {}
+[7.122931] (-) TimerEvent: {}
+[7.223259] (-) TimerEvent: {}
+[7.323605] (-) TimerEvent: {}
+[7.423985] (-) TimerEvent: {}
+[7.524365] (-) TimerEvent: {}
+[7.624748] (-) TimerEvent: {}
+[7.725142] (-) TimerEvent: {}
+[7.825536] (-) TimerEvent: {}
+[7.925875] (-) TimerEvent: {}
+[8.026137] (-) TimerEvent: {}
+[8.126449] (-) TimerEvent: {}
+[8.226880] (-) TimerEvent: {}
+[8.327201] (-) TimerEvent: {}
+[8.427577] (-) TimerEvent: {}
+[8.527913] (-) TimerEvent: {}
+[8.628242] (-) TimerEvent: {}
+[8.728627] (-) TimerEvent: {}
+[8.829027] (-) TimerEvent: {}
+[8.929374] (-) TimerEvent: {}
+[9.029657] (-) TimerEvent: {}
+[9.129913] (-) TimerEvent: {}
+[9.230206] (-) TimerEvent: {}
+[9.330564] (-) TimerEvent: {}
+[9.430940] (-) TimerEvent: {}
+[9.531268] (-) TimerEvent: {}
+[9.631540] (-) TimerEvent: {}
+[9.731850] (-) TimerEvent: {}
+[9.832186] (-) TimerEvent: {}
+[9.932452] (-) TimerEvent: {}
+[10.032696] (-) TimerEvent: {}
+[10.132939] (-) TimerEvent: {}
+[10.233177] (-) TimerEvent: {}
+[10.333423] (-) TimerEvent: {}
+[10.433735] (-) TimerEvent: {}
+[10.534097] (-) TimerEvent: {}
+[10.634473] (-) TimerEvent: {}
+[10.734844] (-) TimerEvent: {}
+[10.835184] (-) TimerEvent: {}
+[10.935565] (-) TimerEvent: {}
+[11.035883] (-) TimerEvent: {}
+[11.136205] (-) TimerEvent: {}
+[11.236517] (-) TimerEvent: {}
+[11.336785] (-) TimerEvent: {}
+[11.437087] (-) TimerEvent: {}
+[11.537415] (-) TimerEvent: {}
+[11.637679] (-) TimerEvent: {}
+[11.737970] (-) TimerEvent: {}
+[11.838333] (-) TimerEvent: {}
+[11.938692] (-) TimerEvent: {}
+[12.038963] (-) TimerEvent: {}
+[12.139271] (-) TimerEvent: {}
+[12.239596] (-) TimerEvent: {}
+[12.339924] (-) TimerEvent: {}
+[12.440297] (-) TimerEvent: {}
+[12.540630] (-) TimerEvent: {}
+[12.640903] (-) TimerEvent: {}
+[12.741162] (-) TimerEvent: {}
+[12.841492] (-) TimerEvent: {}
+[12.941836] (-) TimerEvent: {}
+[13.042103] (-) TimerEvent: {}
+[13.142386] (-) TimerEvent: {}
+[13.242724] (-) TimerEvent: {}
+[13.342993] (-) TimerEvent: {}
+[13.443298] (-) TimerEvent: {}
+[13.543636] (-) TimerEvent: {}
+[13.644006] (-) TimerEvent: {}
+[13.744364] (-) TimerEvent: {}
+[13.844744] (-) TimerEvent: {}
+[13.945101] (-) TimerEvent: {}
+[14.045399] (-) TimerEvent: {}
+[14.145729] (-) TimerEvent: {}
+[14.246069] (-) TimerEvent: {}
+[14.346352] (-) TimerEvent: {}
+[14.446695] (-) TimerEvent: {}
+[14.547017] (-) TimerEvent: {}
+[14.647282] (-) TimerEvent: {}
+[14.747547] (-) TimerEvent: {}
+[14.847889] (-) TimerEvent: {}
+[14.948264] (-) TimerEvent: {}
+[15.048634] (-) TimerEvent: {}
+[15.148991] (-) TimerEvent: {}
+[15.249311] (-) TimerEvent: {}
+[15.349574] (-) TimerEvent: {}
+[15.449882] (-) TimerEvent: {}
+[15.550205] (-) TimerEvent: {}
+[15.650471] (-) TimerEvent: {}
+[15.750776] (-) TimerEvent: {}
+[15.851111] (-) TimerEvent: {}
+[15.951466] (-) TimerEvent: {}
+[16.051825] (-) TimerEvent: {}
+[16.152166] (-) TimerEvent: {}
+[16.252464] (-) TimerEvent: {}
+[16.352709] (-) TimerEvent: {}
+[16.452998] (-) TimerEvent: {}
+[16.553312] (-) TimerEvent: {}
+[16.653566] (-) TimerEvent: {}
+[16.753800] (-) TimerEvent: {}
+[16.854093] (-) TimerEvent: {}
+[16.954463] (-) TimerEvent: {}
+[17.054817] (-) TimerEvent: {}
+[17.155121] (-) TimerEvent: {}
+[17.255422] (-) TimerEvent: {}
+[17.355711] (-) TimerEvent: {}
+[17.456054] (-) TimerEvent: {}
+[17.556376] (-) TimerEvent: {}
+[17.656675] (-) TimerEvent: {}
+[17.757019] (-) TimerEvent: {}
+[17.857332] (-) TimerEvent: {}
+[17.957639] (-) TimerEvent: {}
+[18.057961] (-) TimerEvent: {}
+[18.158249] (-) TimerEvent: {}
+[18.258548] (-) TimerEvent: {}
+[18.358874] (-) TimerEvent: {}
+[18.459220] (-) TimerEvent: {}
+[18.559520] (-) TimerEvent: {}
+[18.659778] (-) TimerEvent: {}
+[18.760058] (-) TimerEvent: {}
+[18.860336] (-) TimerEvent: {}
+[18.960649] (-) TimerEvent: {}
+[19.060965] (-) TimerEvent: {}
+[19.161258] (-) TimerEvent: {}
+[19.261550] (-) TimerEvent: {}
+[19.361813] (-) TimerEvent: {}
+[19.462119] (-) TimerEvent: {}
+[19.562469] (-) TimerEvent: {}
+[19.662741] (-) TimerEvent: {}
+[19.763042] (-) TimerEvent: {}
+[19.863380] (-) TimerEvent: {}
+[19.963740] (-) TimerEvent: {}
+[20.064064] (-) TimerEvent: {}
+[20.164385] (-) TimerEvent: {}
+[20.264706] (-) TimerEvent: {}
+[20.364967] (-) TimerEvent: {}
+[20.465253] (-) TimerEvent: {}
+[20.565586] (-) TimerEvent: {}
+[20.665886] (-) TimerEvent: {}
+[20.766161] (-) TimerEvent: {}
+[20.866437] (-) TimerEvent: {}
+[20.966683] (-) TimerEvent: {}
+[21.066965] (-) TimerEvent: {}
+[21.167294] (-) TimerEvent: {}
+[21.267565] (-) TimerEvent: {}
+[21.367793] (-) TimerEvent: {}
+[21.468063] (-) TimerEvent: {}
+[21.568346] (-) TimerEvent: {}
+[21.668628] (-) TimerEvent: {}
+[21.768959] (-) TimerEvent: {}
+[21.869255] (-) TimerEvent: {}
+[21.969526] (-) TimerEvent: {}
+[22.069853] (-) TimerEvent: {}
+[22.170217] (-) TimerEvent: {}
+[22.270544] (-) TimerEvent: {}
+[22.370828] (-) TimerEvent: {}
+[22.471119] (-) TimerEvent: {}
+[22.571409] (-) TimerEvent: {}
+[22.671705] (-) TimerEvent: {}
+[22.772033] (-) TimerEvent: {}
+[22.872359] (-) TimerEvent: {}
+[22.972703] (-) TimerEvent: {}
+[23.073055] (-) TimerEvent: {}
+[23.173434] (-) TimerEvent: {}
+[23.273805] (-) TimerEvent: {}
+[23.374149] (-) TimerEvent: {}
+[23.474465] (-) TimerEvent: {}
+[23.574836] (-) TimerEvent: {}
+[23.675144] (-) TimerEvent: {}
+[23.775467] (-) TimerEvent: {}
+[23.875797] (-) TimerEvent: {}
+[23.976066] (-) TimerEvent: {}
+[24.076388] (-) TimerEvent: {}
+[24.176724] (-) TimerEvent: {}
+[24.277032] (-) TimerEvent: {}
+[24.377333] (-) TimerEvent: {}
+[24.477679] (-) TimerEvent: {}
+[24.577977] (-) TimerEvent: {}
+[24.678224] (-) TimerEvent: {}
+[24.778529] (-) TimerEvent: {}
+[24.878945] (-) TimerEvent: {}
+[24.979311] (-) TimerEvent: {}
+[25.079666] (-) TimerEvent: {}
+[25.180034] (-) TimerEvent: {}
+[25.280394] (-) TimerEvent: {}
+[25.380752] (-) TimerEvent: {}
+[25.481115] (-) TimerEvent: {}
+[25.581481] (-) TimerEvent: {}
+[25.681856] (-) TimerEvent: {}
+[25.782490] (-) TimerEvent: {}
+[25.882929] (-) TimerEvent: {}
+[25.983301] (-) TimerEvent: {}
+[26.083650] (-) TimerEvent: {}
+[26.184015] (-) TimerEvent: {}
+[26.284438] (-) TimerEvent: {}
+[26.384794] (-) TimerEvent: {}
+[26.485158] (-) TimerEvent: {}
+[26.585514] (-) TimerEvent: {}
+[26.685891] (-) TimerEvent: {}
+[26.786316] (-) TimerEvent: {}
+[26.886745] (-) TimerEvent: {}
+[26.987041] (-) TimerEvent: {}
+[27.087313] (-) TimerEvent: {}
+[27.187655] (-) TimerEvent: {}
+[27.288027] (-) TimerEvent: {}
+[27.388310] (-) TimerEvent: {}
+[27.434300] (nav_tf_bridge) StdoutLine: {'line': b'[100%] Linking CXX executable map_odom_tf_bridge\n'}
+[27.488510] (-) TimerEvent: {}
+[27.588879] (-) TimerEvent: {}
+[27.689287] (-) TimerEvent: {}
+[27.789736] (-) TimerEvent: {}
+[27.890120] (-) TimerEvent: {}
+[27.990454] (-) TimerEvent: {}
+[28.090806] (-) TimerEvent: {}
+[28.191204] (-) TimerEvent: {}
+[28.291548] (-) TimerEvent: {}
+[28.391863] (-) TimerEvent: {}
+[28.492185] (-) TimerEvent: {}
+[28.592582] (-) TimerEvent: {}
+[28.692944] (-) TimerEvent: {}
+[28.747076] (nav_tf_bridge) StdoutLine: {'line': b'[100%] Built target map_odom_tf_bridge\n'}
+[28.754373] (nav_tf_bridge) CommandEnded: {'returncode': 0}
+[28.756293] (nav_tf_bridge) JobProgress: {'identifier': 'nav_tf_bridge', 'progress': 'install'}
+[28.757092] (nav_tf_bridge) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/seeed/ros2/ws/build/nav_tf_bridge'], 'cwd': '/home/seeed/ros2/ws/build/nav_tf_bridge', 'env': OrderedDict([('LANGUAGE', 'zh_CN:en'), ('USER', 'seeed'), ('SSH_CLIENT', '192.168.1.101 46629 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('ROS_PACKAGE_PATH', '/home/seeed/ros2/ws/install/vikit_common/share:/home/seeed/ros2/ws/install/ugv_sdk/share'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/seeed/ros2/ws/install/vikit_ros/lib:/home/seeed/ros2/ws/install/vikit_common/lib:/home/seeed/ros2/ws/install/ranger_msgs/lib:/home/seeed/ros2/ws/install/fast_lio/lib:/home/seeed/ros2/ws/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/seeed'), ('OLDPWD', '/home/seeed'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('ROS_IP', '192.168.1.104'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/seeed/ros2/ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'seeed'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/seeed/ros2/ws/install/vikit_common/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/vikit_common/lib/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('XDG_SESSION_ID', '182'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/home/seeed/ros2/fastrtps_profile.xml'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:12.0'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/seeed/ros2/ws/install/vikit_ros:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/nav_tf_bridge:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('PWD', '/home/seeed/ros2/ws/build/nav_tf_bridge'), ('LC_ALL', 'C.UTF-8'), ('SSH_CONNECTION', '192.168.1.101 46629 192.168.1.104 22'), ('PYTHONPATH', '/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:/home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages:/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/nav_tf_bridge:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2')]), 'shell': False}
+[28.763831] (nav_tf_bridge) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[28.765042] (nav_tf_bridge) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[28.765943] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/lib/nav_tf_bridge/map_odom_tf_bridge\n'}
+[28.766453] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/ament_index/resource_index/package_run_dependencies/nav_tf_bridge\n'}
+[28.767444] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/ament_index/resource_index/parent_prefix_path/nav_tf_bridge\n'}
+[28.767868] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/environment/ament_prefix_path.sh\n'}
+[28.768253] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/environment/ament_prefix_path.dsv\n'}
+[28.768683] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/environment/path.sh\n'}
+[28.769133] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/environment/path.dsv\n'}
+[28.769582] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/local_setup.bash\n'}
+[28.769964] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/local_setup.sh\n'}
+[28.770330] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/local_setup.zsh\n'}
+[28.770723] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/local_setup.dsv\n'}
+[28.771324] (nav_tf_bridge) StdoutLine: {'line': b'-- Symlinking: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/package.dsv\n'}
+[28.776386] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/ament_index/resource_index/packages/nav_tf_bridge\n'}
+[28.776717] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/cmake/nav_tf_bridgeConfig.cmake\n'}
+[28.776991] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/cmake/nav_tf_bridgeConfig-version.cmake\n'}
+[28.777391] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/package.xml\n'}
+[28.779250] (nav_tf_bridge) CommandEnded: {'returncode': 0}
+[28.794208] (-) TimerEvent: {}
+[28.824885] (nav_tf_bridge) JobEnded: {'identifier': 'nav_tf_bridge', 'rc': 0}
+[28.826542] (-) EventReactorShutdown: {}

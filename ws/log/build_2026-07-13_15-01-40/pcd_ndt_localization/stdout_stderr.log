@@ -1,0 +1,8 @@
+[ 50%] Built target pcd_occupancy_grid_publisher
+[ 75%] [32mBuilding CXX object CMakeFiles/pcd_ndt_localizer.dir/src/pcd_ndt_localizer.cpp.o[0m
+[100%] [32m[1mLinking CXX executable pcd_ndt_localizer[0m
+[100%] Built target pcd_ndt_localizer
+-- Install configuration: ""
+-- Up-to-date: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/config
+-- Up-to-date: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/launch
+-- Installing: /home/seeed/ros2/ws/install/pcd_ndt_localization/share/pcd_ndt_localization/package.dsv

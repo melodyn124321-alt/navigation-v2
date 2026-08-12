@@ -1,0 +1,341 @@
+[0.000000] (-) TimerEvent: {}
+[0.001032] (-) JobUnselected: {'identifier': 'pcd_ndt_localization'}
+[0.001326] (-) JobUnselected: {'identifier': 'ranger_base'}
+[0.001601] (-) JobUnselected: {'identifier': 'ranger_bringup'}
+[0.001656] (-) JobUnselected: {'identifier': 'ranger_msgs'}
+[0.001764] (-) JobUnselected: {'identifier': 'ugv_sdk'}
+[0.001853] (-) JobUnselected: {'identifier': 'vikit_common'}
+[0.001937] (-) JobUnselected: {'identifier': 'vikit_ros'}
+[0.002026] (livox_ros_driver2) JobQueued: {'identifier': 'livox_ros_driver2', 'dependencies': OrderedDict()}
+[0.002122] (fast_lio) JobQueued: {'identifier': 'fast_lio', 'dependencies': OrderedDict([('livox_ros_driver2', '/home/seeed/ros2/ws/install/livox_ros_driver2')])}
+[0.002221] (livox_ros_driver2) JobStarted: {'identifier': 'livox_ros_driver2'}
+[0.023135] (livox_ros_driver2) JobProgress: {'identifier': 'livox_ros_driver2', 'progress': 'cmake'}
+[0.026976] (livox_ros_driver2) Command: {'cmd': ['/usr/local/bin/cmake', '/home/seeed/ros2/ws/src/driver/livox_ros_driver2', '-DCMAKE_BUILD_TYPE=Release', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/livox_ros_driver2'], 'cwd': '/home/seeed/ros2/ws/build/livox_ros_driver2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'seeed'), ('SSH_CLIENT', '10.200.24.83 39663 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('ROS_PACKAGE_PATH', '/home/seeed/ros2/ws/install/vikit_common/share:/home/seeed/ros2/ws/install/ugv_sdk/share'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/seeed/ros2/ws/install/vikit_ros/lib:/home/seeed/ros2/ws/install/vikit_common/lib:/home/seeed/ros2/ws/install/ranger_msgs/lib:/home/seeed/ros2/ws/install/fast_lio/lib:/home/seeed/ros2/ws/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/seeed'), ('OLDPWD', '/home/seeed'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('ROS_IP', '10.200.54.207'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/seeed/ros2/ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'seeed'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/seeed/ros2/ws/install/vikit_common/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/vikit_common/lib/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/home/seeed/ros2/fastrtps_profile.xml'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:10.0'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/seeed/ros2/ws/install/vikit_ros:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('PWD', '/home/seeed/ros2/ws/build/livox_ros_driver2'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.200.24.83 39663 10.200.54.207 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:/home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages:/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2')]), 'shell': False}
+[0.085439] (livox_ros_driver2) StdoutLine: {'line': b'-- ROS distro detected: humble\n'}
+[0.087147] (livox_ros_driver2) StdoutLine: {'line': b'-- livox_ros_driver2 version: 1.2.6\n'}
+[0.088226] (livox_ros_driver2) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.14 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[0.099015] (-) TimerEvent: {}
+[0.199491] (-) TimerEvent: {}
+[0.300060] (-) TimerEvent: {}
+[0.400537] (-) TimerEvent: {}
+[0.501069] (-) TimerEvent: {}
+[0.542710] (livox_ros_driver2) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.601197] (-) TimerEvent: {}
+[0.701961] (-) TimerEvent: {}
+[0.731461] (livox_ros_driver2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.741255] (livox_ros_driver2) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.802068] (-) TimerEvent: {}
+[0.848281] (livox_ros_driver2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.902175] (-) TimerEvent: {}
+[1.002806] (-) TimerEvent: {}
+[1.068123] (livox_ros_driver2) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.073857] (livox_ros_driver2) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.102895] (-) TimerEvent: {}
+[1.203335] (-) TimerEvent: {}
+[1.303923] (-) TimerEvent: {}
+[1.345020] (livox_ros_driver2) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.404023] (-) TimerEvent: {}
+[1.504719] (-) TimerEvent: {}
+[1.605263] (-) TimerEvent: {}
+[1.705947] (-) TimerEvent: {}
+[1.796572] (livox_ros_driver2) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:146 (find_package):\n'}
+[1.797136] (livox_ros_driver2) StderrLine: {'line': b'  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT\n'}
+[1.797309] (livox_ros_driver2) StderrLine: {'line': b'  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the\n'}
+[1.797454] (livox_ros_driver2) StderrLine: {'line': b'  cmake_policy command to set the policy and suppress this warning.\n'}
+[1.797589] (livox_ros_driver2) StderrLine: {'line': b'\n'}
+[1.797714] (livox_ros_driver2) StderrLine: {'line': b'  CMake variable EIGEN_ROOT is set to:\n'}
+[1.797836] (livox_ros_driver2) StderrLine: {'line': b'\n'}
+[1.797956] (livox_ros_driver2) StderrLine: {'line': b'    /usr/include/eigen3\n'}
+[1.798077] (livox_ros_driver2) StderrLine: {'line': b'\n'}
+[1.798195] (livox_ros_driver2) StderrLine: {'line': b'  For compatibility, find_package is ignoring the variable, but code in a\n'}
+[1.798315] (livox_ros_driver2) StderrLine: {'line': b'  .cmake module might still use it.\n'}
+[1.798435] (livox_ros_driver2) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.798552] (livox_ros_driver2) StderrLine: {'line': b'  /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:299 (find_eigen)\n'}
+[1.798671] (livox_ros_driver2) StderrLine: {'line': b'  /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)\n'}
+[1.798792] (livox_ros_driver2) StderrLine: {'line': b'  /opt/ros/humble/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[1.798911] (livox_ros_driver2) StderrLine: {'line': b'  /opt/ros/humble/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)\n'}
+[1.799033] (livox_ros_driver2) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)\n'}
+[1.799153] (livox_ros_driver2) StderrLine: {'line': b'  CMakeLists.txt:235 (ament_auto_find_build_dependencies)\n'}
+[1.799270] (livox_ros_driver2) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.799389] (livox_ros_driver2) StderrLine: {'line': b'\x1b[0m\n'}
+[1.806033] (-) TimerEvent: {}
+[1.811160] (livox_ros_driver2) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[1.849322] (livox_ros_driver2) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:44 (find_package):\n'}
+[1.849629] (livox_ros_driver2) StderrLine: {'line': b'  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT\n'}
+[1.849779] (livox_ros_driver2) StderrLine: {'line': b'  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the\n'}
+[1.849914] (livox_ros_driver2) StderrLine: {'line': b'  cmake_policy command to set the policy and suppress this warning.\n'}
+[1.850041] (livox_ros_driver2) StderrLine: {'line': b'\n'}
+[1.850164] (livox_ros_driver2) StderrLine: {'line': b'  CMake variable FLANN_ROOT is set to:\n'}
+[1.850285] (livox_ros_driver2) StderrLine: {'line': b'\n'}
+[1.850403] (livox_ros_driver2) StderrLine: {'line': b'    /usr\n'}
+[1.850521] (livox_ros_driver2) StderrLine: {'line': b'\n'}
+[1.850637] (livox_ros_driver2) StderrLine: {'line': b'  For compatibility, find_package is ignoring the variable, but code in a\n'}
+[1.850755] (livox_ros_driver2) StderrLine: {'line': b'  .cmake module might still use it.\n'}
+[1.850872] (livox_ros_driver2) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.850987] (livox_ros_driver2) StderrLine: {'line': b'  /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:256 (find_package)\n'}
+[1.851107] (livox_ros_driver2) StderrLine: {'line': b'  /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:301 (find_flann)\n'}
+[1.851224] (livox_ros_driver2) StderrLine: {'line': b'  /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)\n'}
+[1.851341] (livox_ros_driver2) StderrLine: {'line': b'  /opt/ros/humble/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[1.851491] (livox_ros_driver2) StderrLine: {'line': b'  /opt/ros/humble/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)\n'}
+[1.851615] (livox_ros_driver2) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)\n'}
+[1.851754] (livox_ros_driver2) StderrLine: {'line': b'  CMakeLists.txt:235 (ament_auto_find_build_dependencies)\n'}
+[1.851883] (livox_ros_driver2) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.852004] (livox_ros_driver2) StderrLine: {'line': b'\x1b[0m\n'}
+[1.898527] (livox_ros_driver2) StdoutLine: {'line': b'-- FLANN found (include: /usr/include, lib: /usr/lib/aarch64-linux-gnu/libflann_cpp.so)\n'}
+[1.906127] (-) TimerEvent: {}
+[2.006562] (-) TimerEvent: {}
+[2.107128] (-) TimerEvent: {}
+[2.207758] (-) TimerEvent: {}
+[2.308422] (-) TimerEvent: {}
+[2.409186] (-) TimerEvent: {}
+[2.509980] (-) TimerEvent: {}
+[2.610571] (-) TimerEvent: {}
+[2.711325] (-) TimerEvent: {}
+[2.812065] (-) TimerEvent: {}
+[2.912685] (-) TimerEvent: {}
+[2.959516] (livox_ros_driver2) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[2.973167] (livox_ros_driver2) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[3.012782] (-) TimerEvent: {}
+[3.113213] (-) TimerEvent: {}
+[3.213671] (-) TimerEvent: {}
+[3.314278] (-) TimerEvent: {}
+[3.414847] (-) TimerEvent: {}
+[3.515336] (-) TimerEvent: {}
+[3.542581] (livox_ros_driver2) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[3.556386] (livox_ros_driver2) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[3.570445] (livox_ros_driver2) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[3.615433] (-) TimerEvent: {}
+[3.715915] (-) TimerEvent: {}
+[3.816414] (-) TimerEvent: {}
+[3.916930] (-) TimerEvent: {}
+[4.017582] (-) TimerEvent: {}
+[4.118153] (-) TimerEvent: {}
+[4.120251] (livox_ros_driver2) StdoutLine: {'line': b'-- Found Qhull version 8.0.2\n'}
+[4.218314] (-) TimerEvent: {}
+[4.318913] (-) TimerEvent: {}
+[4.419535] (-) TimerEvent: {}
+[4.520343] (-) TimerEvent: {}
+[4.620912] (-) TimerEvent: {}
+[4.683354] (livox_ros_driver2) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[4.721014] (-) TimerEvent: {}
+[4.821555] (-) TimerEvent: {}
+[4.922380] (-) TimerEvent: {}
+[5.022995] (-) TimerEvent: {}
+[5.123621] (-) TimerEvent: {}
+[5.224236] (-) TimerEvent: {}
+[5.324889] (-) TimerEvent: {}
+[5.371181] (livox_ros_driver2) StdoutLine: {'line': b"-- Checking for module 'apr-1'\n"}
+[5.377203] (livox_ros_driver2) StdoutLine: {'line': b"--   No package 'apr-1' found\n"}
+[5.424983] (-) TimerEvent: {}
+[5.525427] (-) TimerEvent: {}
+[5.625976] (-) TimerEvent: {}
+[5.726606] (-) TimerEvent: {}
+[5.827411] (-) TimerEvent: {}
+[5.928060] (-) TimerEvent: {}
+[6.028717] (-) TimerEvent: {}
+[6.129417] (-) TimerEvent: {}
+[6.229963] (-) TimerEvent: {}
+[6.284471] (livox_ros_driver2) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[6.330085] (-) TimerEvent: {}
+[6.430636] (-) TimerEvent: {}
+[6.531266] (-) TimerEvent: {}
+[6.631791] (-) TimerEvent: {}
+[6.732538] (-) TimerEvent: {}
+[6.833245] (-) TimerEvent: {}
+[6.933858] (-) TimerEvent: {}
+[7.034431] (-) TimerEvent: {}
+[7.135047] (-) TimerEvent: {}
+[7.235684] (-) TimerEvent: {}
+[7.336294] (-) TimerEvent: {}
+[7.407271] (livox_ros_driver2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[7.436395] (-) TimerEvent: {}
+[7.536942] (-) TimerEvent: {}
+[7.637504] (-) TimerEvent: {}
+[7.738184] (-) TimerEvent: {}
+[7.839088] (-) TimerEvent: {}
+[7.939807] (-) TimerEvent: {}
+[8.040384] (-) TimerEvent: {}
+[8.140927] (-) TimerEvent: {}
+[8.241522] (-) TimerEvent: {}
+[8.342040] (-) TimerEvent: {}
+[8.442871] (-) TimerEvent: {}
+[8.543453] (-) TimerEvent: {}
+[8.644289] (-) TimerEvent: {}
+[8.744940] (-) TimerEvent: {}
+[8.845502] (-) TimerEvent: {}
+[8.929673] (livox_ros_driver2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.941310] (livox_ros_driver2) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):\n'}
+[8.941698] (livox_ros_driver2) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[8.941968] (livox_ros_driver2) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[8.942212] (livox_ros_driver2) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[8.942447] (livox_ros_driver2) StderrLine: {'line': b'\n'}
+[8.942673] (livox_ros_driver2) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[8.942894] (livox_ros_driver2) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[8.943111] (livox_ros_driver2) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[8.943325] (livox_ros_driver2) StderrLine: {'line': b'  CMakeLists.txt:251 (rosidl_generate_interfaces)\n'}
+[8.943535] (livox_ros_driver2) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[8.943746] (livox_ros_driver2) StderrLine: {'line': b'\x1b[0m\n'}
+[8.945592] (-) TimerEvent: {}
+[8.994161] (livox_ros_driver2) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[8.996549] (livox_ros_driver2) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:52 (find_package):\n'}
+[8.997040] (livox_ros_driver2) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[8.997312] (livox_ros_driver2) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[8.997553] (livox_ros_driver2) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[8.997777] (livox_ros_driver2) StderrLine: {'line': b'\n'}
+[8.997990] (livox_ros_driver2) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[8.998203] (livox_ros_driver2) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[8.998415] (livox_ros_driver2) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[8.998623] (livox_ros_driver2) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[8.998831] (livox_ros_driver2) StderrLine: {'line': b'  CMakeLists.txt:251 (rosidl_generate_interfaces)\n'}
+[8.999276] (livox_ros_driver2) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[8.999438] (livox_ros_driver2) StderrLine: {'line': b'\x1b[0m\n'}
+[9.045770] (-) TimerEvent: {}
+[9.047047] (livox_ros_driver2) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:140 (find_package):\n'}
+[9.047495] (livox_ros_driver2) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[9.047742] (livox_ros_driver2) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[9.048050] (livox_ros_driver2) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[9.048280] (livox_ros_driver2) StderrLine: {'line': b'\n'}
+[9.048498] (livox_ros_driver2) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[9.048714] (livox_ros_driver2) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[9.048978] (livox_ros_driver2) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[9.049199] (livox_ros_driver2) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[9.049441] (livox_ros_driver2) StderrLine: {'line': b'  CMakeLists.txt:251 (rosidl_generate_interfaces)\n'}
+[9.049667] (livox_ros_driver2) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[9.049883] (livox_ros_driver2) StderrLine: {'line': b'\x1b[0m\n'}
+[9.057947] (livox_ros_driver2) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[9.058413] (livox_ros_driver2) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[9.058697] (livox_ros_driver2) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[9.145916] (-) TimerEvent: {}
+[9.246432] (-) TimerEvent: {}
+[9.346898] (-) TimerEvent: {}
+[9.447574] (-) TimerEvent: {}
+[9.548256] (-) TimerEvent: {}
+[9.622295] (livox_ros_driver2) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[9.648432] (-) TimerEvent: {}
+[9.677577] (livox_ros_driver2) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[9.695461] (livox_ros_driver2) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[9.698124] (livox_ros_driver2) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/seeed/ros2/ws/src/driver/livox_ros_driver2/3rdparty;/home/seeed/ros2/ws/src/driver/livox_ros_driver2/src\n'}
+[9.698341] (livox_ros_driver2) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[9.713189] (livox_ros_driver2) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[9.713385] (livox_ros_driver2) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[9.716149] (livox_ros_driver2) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[9.720883] (livox_ros_driver2) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[9.723863] (livox_ros_driver2) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[9.738827] (livox_ros_driver2) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[9.738994] (livox_ros_driver2) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[9.741666] (livox_ros_driver2) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[9.748508] (-) TimerEvent: {}
+[9.752072] (livox_ros_driver2) StdoutLine: {'line': b'-- Configuring done (9.7s)\n'}
+[9.848911] (-) TimerEvent: {}
+[9.949744] (-) TimerEvent: {}
+[9.985311] (livox_ros_driver2) StdoutLine: {'line': b'-- Generating done (0.2s)\n'}
+[10.030786] (livox_ros_driver2) StdoutLine: {'line': b'-- Build files have been written to: /home/seeed/ros2/ws/build/livox_ros_driver2\n'}
+[10.049850] (-) TimerEvent: {}
+[10.095381] (livox_ros_driver2) CommandEnded: {'returncode': 0}
+[10.097412] (livox_ros_driver2) JobProgress: {'identifier': 'livox_ros_driver2', 'progress': 'build'}
+[10.100539] (livox_ros_driver2) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/seeed/ros2/ws/build/livox_ros_driver2', '--', '-j6', '-l6'], 'cwd': '/home/seeed/ros2/ws/build/livox_ros_driver2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'seeed'), ('SSH_CLIENT', '10.200.24.83 39663 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('ROS_PACKAGE_PATH', '/home/seeed/ros2/ws/install/vikit_common/share:/home/seeed/ros2/ws/install/ugv_sdk/share'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/seeed/ros2/ws/install/vikit_ros/lib:/home/seeed/ros2/ws/install/vikit_common/lib:/home/seeed/ros2/ws/install/ranger_msgs/lib:/home/seeed/ros2/ws/install/fast_lio/lib:/home/seeed/ros2/ws/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/seeed'), ('OLDPWD', '/home/seeed'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('ROS_IP', '10.200.54.207'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/seeed/ros2/ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'seeed'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/seeed/ros2/ws/install/vikit_common/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/vikit_common/lib/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/home/seeed/ros2/fastrtps_profile.xml'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:10.0'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/seeed/ros2/ws/install/vikit_ros:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('PWD', '/home/seeed/ros2/ws/build/livox_ros_driver2'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.200.24.83 39663 10.200.54.207 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:/home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages:/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2')]), 'shell': False}
+[10.150054] (-) TimerEvent: {}
+[10.158439] (livox_ros_driver2) StderrLine: {'line': b"failed to create symbolic link '/home/seeed/ros2/ws/build/livox_ros_driver2/ament_cmake_python/livox_ros_driver2/livox_ros_driver2' because existing path cannot be removed: Is a directory\n"}
+[10.160022] (livox_ros_driver2) StdoutLine: {'line': b'[  1%] Built target livox_interfaces2__rs\n'}
+[10.160991] (livox_ros_driver2) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_livox_ros_driver2.dir/build.make:70\xef\xbc\x9aCMakeFiles/ament_cmake_python_symlink_livox_ros_driver2] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[10.161313] (livox_ros_driver2) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:444\xef\xbc\x9aCMakeFiles/ament_cmake_python_symlink_livox_ros_driver2.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[10.161571] (livox_ros_driver2) StderrLine: {'line': b'gmake[1]: *** \xe6\xad\xa3\xe5\x9c\xa8\xe7\xad\x89\xe5\xbe\x85\xe6\x9c\xaa\xe5\xae\x8c\xe6\x88\x90\xe7\x9a\x84\xe4\xbb\xbb\xe5\x8a\xa1....\n'}
+[10.161802] (livox_ros_driver2) StdoutLine: {'line': b'[  3%] Built target livox_interfaces2__cpp\n'}
+[10.168646] (livox_ros_driver2) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/livox_interfaces2__rosidl_generator_c.dir/rosidl_generator_c/livox_ros_driver2/msg/detail/custom_point__functions.c.o\x1b[0m\n'}
+[10.170626] (livox_ros_driver2) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/livox_interfaces2__rosidl_generator_c.dir/rosidl_generator_c/livox_ros_driver2/msg/detail/custom_msg__functions.c.o\x1b[0m\n'}
+[10.188553] (livox_ros_driver2) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object CMakeFiles/livox_ros_driver2_node.dir/rclcpp_components/node_main_livox_ros_driver2_node.cpp.o\x1b[0m\n'}
+[10.250267] (-) TimerEvent: {}
+[10.350986] (-) TimerEvent: {}
+[10.409434] (livox_ros_driver2) StdoutLine: {'line': b'[ 10%] \x1b[32m\x1b[1mLinking C shared library liblivox_ros_driver2__rosidl_generator_c.so\x1b[0m\n'}
+[10.451197] (-) TimerEvent: {}
+[10.459555] (livox_ros_driver2) StdoutLine: {'line': b'[ 12%] Built target livox_interfaces2__rosidl_generator_c\n'}
+[10.551341] (-) TimerEvent: {}
+[10.651873] (-) TimerEvent: {}
+[10.752361] (-) TimerEvent: {}
+[10.852872] (-) TimerEvent: {}
+[10.953378] (-) TimerEvent: {}
+[11.053906] (-) TimerEvent: {}
+[11.154435] (-) TimerEvent: {}
+[11.254942] (-) TimerEvent: {}
+[11.355498] (-) TimerEvent: {}
+[11.456175] (-) TimerEvent: {}
+[11.556878] (-) TimerEvent: {}
+[11.657465] (-) TimerEvent: {}
+[11.758146] (-) TimerEvent: {}
+[11.858801] (-) TimerEvent: {}
+[11.959358] (-) TimerEvent: {}
+[12.059880] (-) TimerEvent: {}
+[12.160407] (-) TimerEvent: {}
+[12.260950] (-) TimerEvent: {}
+[12.361510] (-) TimerEvent: {}
+[12.462185] (-) TimerEvent: {}
+[12.562850] (-) TimerEvent: {}
+[12.663402] (-) TimerEvent: {}
+[12.763946] (-) TimerEvent: {}
+[12.864481] (-) TimerEvent: {}
+[12.965029] (-) TimerEvent: {}
+[13.065543] (-) TimerEvent: {}
+[13.166038] (-) TimerEvent: {}
+[13.266543] (-) TimerEvent: {}
+[13.367068] (-) TimerEvent: {}
+[13.467685] (-) TimerEvent: {}
+[13.568208] (-) TimerEvent: {}
+[13.668740] (-) TimerEvent: {}
+[13.769527] (-) TimerEvent: {}
+[13.870034] (-) TimerEvent: {}
+[13.970559] (-) TimerEvent: {}
+[14.071115] (-) TimerEvent: {}
+[14.171624] (-) TimerEvent: {}
+[14.272131] (-) TimerEvent: {}
+[14.372675] (-) TimerEvent: {}
+[14.473357] (-) TimerEvent: {}
+[14.573981] (-) TimerEvent: {}
+[14.674522] (-) TimerEvent: {}
+[14.775037] (-) TimerEvent: {}
+[14.875551] (-) TimerEvent: {}
+[14.976060] (-) TimerEvent: {}
+[15.076548] (-) TimerEvent: {}
+[15.177083] (-) TimerEvent: {}
+[15.277593] (-) TimerEvent: {}
+[15.378158] (-) TimerEvent: {}
+[15.478800] (-) TimerEvent: {}
+[15.579328] (-) TimerEvent: {}
+[15.679893] (-) TimerEvent: {}
+[15.780558] (-) TimerEvent: {}
+[15.881208] (-) TimerEvent: {}
+[15.981738] (-) TimerEvent: {}
+[16.082262] (-) TimerEvent: {}
+[16.182775] (-) TimerEvent: {}
+[16.283279] (-) TimerEvent: {}
+[16.383817] (-) TimerEvent: {}
+[16.484419] (-) TimerEvent: {}
+[16.584962] (-) TimerEvent: {}
+[16.685446] (-) TimerEvent: {}
+[16.785922] (-) TimerEvent: {}
+[16.886395] (-) TimerEvent: {}
+[16.986891] (-) TimerEvent: {}
+[17.087398] (-) TimerEvent: {}
+[17.187902] (-) TimerEvent: {}
+[17.288414] (-) TimerEvent: {}
+[17.389053] (-) TimerEvent: {}
+[17.489691] (-) TimerEvent: {}
+[17.590272] (-) TimerEvent: {}
+[17.690872] (-) TimerEvent: {}
+[17.791515] (-) TimerEvent: {}
+[17.892085] (-) TimerEvent: {}
+[17.992651] (-) TimerEvent: {}
+[18.093251] (-) TimerEvent: {}
+[18.193798] (-) TimerEvent: {}
+[18.294334] (-) TimerEvent: {}
+[18.394884] (-) TimerEvent: {}
+[18.495504] (-) TimerEvent: {}
+[18.596054] (-) TimerEvent: {}
+[18.605432] (livox_ros_driver2) StdoutLine: {'line': b'[ 13%] \x1b[32m\x1b[1mLinking CXX executable livox_ros_driver2_node\x1b[0m\n'}
+[18.696134] (-) TimerEvent: {}
+[18.796514] (-) TimerEvent: {}
+[18.824234] (livox_ros_driver2) StdoutLine: {'line': b'[ 13%] Built target livox_ros_driver2_node\n'}
+[18.825568] (livox_ros_driver2) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[18.830088] (livox_ros_driver2) CommandEnded: {'returncode': 2}
+[18.878544] (livox_ros_driver2) JobEnded: {'identifier': 'livox_ros_driver2', 'rc': 2}
+[18.889770] (fast_lio) JobSkipped: {'identifier': 'fast_lio'}
+[18.889944] (-) EventReactorShutdown: {}

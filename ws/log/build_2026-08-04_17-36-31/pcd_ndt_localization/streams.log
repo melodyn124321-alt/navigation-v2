@@ -1,0 +1,57 @@
+[0.028s] Invoking command in '/home/seeed/ros2/ws/build/pcd_ndt_localization': CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/nav_tf_bridge:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2 /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/pcd_ndt_localization -- -j6 -l6
+[0.157s] [ 50%] Built target pcd_occupancy_grid_publisher
+[0.157s] [ 75%] Building CXX object CMakeFiles/pcd_ndt_localizer.dir/src/pcd_ndt_localizer.cpp.o
+[16.789s] /home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp: In constructor ‘PcdNdtLocalizer::PcdNdtLocalizer()’:
+[16.789s] /home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:153:41: error: no matching function for call to ‘max(int, long int)’
+[16.789s]   153 |     scan_accumulation_frames_ = std::max(
+[16.789s]       |                                 ~~~~~~~~^
+[16.790s]   154 |       1, declare_parameter<int>("scan_accumulation_frames", 5));
+[16.790s]       |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[16.793s] In file included from /usr/include/c++/11/algorithm:61,
+[16.793s]                  from /home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:1:
+[16.793s] /usr/include/c++/11/bits/stl_algobase.h:254:5: note: candidate: ‘template<class _Tp> constexpr const _Tp& std::max(const _Tp&, const _Tp&)’
+[16.793s]   254 |     max(const _Tp& __a, const _Tp& __b)
+[16.794s]       |     ^~~
+[16.794s] /usr/include/c++/11/bits/stl_algobase.h:254:5: note:   template argument deduction/substitution failed:
+[16.794s] /home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:153:41: note:   deduced conflicting types for parameter ‘const _Tp’ (‘int’ and ‘long int’)
+[16.794s]   153 |     scan_accumulation_frames_ = std::max(
+[16.795s]       |                                 ~~~~~~~~^
+[16.795s]   154 |       1, declare_parameter<int>("scan_accumulation_frames", 5));
+[16.795s]       |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[16.795s] In file included from /usr/include/c++/11/algorithm:61,
+[16.795s]                  from /home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:1:
+[16.796s] /usr/include/c++/11/bits/stl_algobase.h:300:5: note: candidate: ‘template<class _Tp, class _Compare> constexpr const _Tp& std::max(const _Tp&, const _Tp&, _Compare)’
+[16.796s]   300 |     max(const _Tp& __a, const _Tp& __b, _Compare __comp)
+[16.796s]       |     ^~~
+[16.796s] /usr/include/c++/11/bits/stl_algobase.h:300:5: note:   template argument deduction/substitution failed:
+[16.796s] /home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:153:41: note:   deduced conflicting types for parameter ‘const _Tp’ (‘int’ and ‘long int’)
+[16.796s]   153 |     scan_accumulation_frames_ = std::max(
+[16.797s]       |                                 ~~~~~~~~^
+[16.797s]   154 |       1, declare_parameter<int>("scan_accumulation_frames", 5));
+[16.797s]       |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[16.797s] In file included from /usr/include/c++/11/algorithm:62,
+[16.797s]                  from /home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:1:
+[16.797s] /usr/include/c++/11/bits/stl_algo.h:3461:5: note: candidate: ‘template<class _Tp> constexpr _Tp std::max(std::initializer_list<_Tp>)’
+[16.798s]  3461 |     max(initializer_list<_Tp> __l)
+[16.798s]       |     ^~~
+[16.798s] /usr/include/c++/11/bits/stl_algo.h:3461:5: note:   template argument deduction/substitution failed:
+[16.798s] /home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:153:41: note:   mismatched types ‘std::initializer_list<_Tp>’ and ‘int’
+[16.798s]   153 |     scan_accumulation_frames_ = std::max(
+[16.799s]       |                                 ~~~~~~~~^
+[16.799s]   154 |       1, declare_parameter<int>("scan_accumulation_frames", 5));
+[16.799s]       |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[16.799s] In file included from /usr/include/c++/11/algorithm:62,
+[16.799s]                  from /home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:1:
+[16.800s] /usr/include/c++/11/bits/stl_algo.h:3467:5: note: candidate: ‘template<class _Tp, class _Compare> constexpr _Tp std::max(std::initializer_list<_Tp>, _Compare)’
+[16.800s]  3467 |     max(initializer_list<_Tp> __l, _Compare __comp)
+[16.800s]       |     ^~~
+[16.800s] /usr/include/c++/11/bits/stl_algo.h:3467:5: note:   template argument deduction/substitution failed:
+[16.800s] /home/seeed/ros2/ws/src/localization/pcd_ndt_localization/src/pcd_ndt_localizer.cpp:153:41: note:   mismatched types ‘std::initializer_list<_Tp>’ and ‘int’
+[16.801s]   153 |     scan_accumulation_frames_ = std::max(
+[16.801s]       |                                 ~~~~~~~~^
+[16.801s]   154 |       1, declare_parameter<int>("scan_accumulation_frames", 5));
+[16.801s]       |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[46.229s] gmake[2]: *** [CMakeFiles/pcd_ndt_localizer.dir/build.make:76：CMakeFiles/pcd_ndt_localizer.dir/src/pcd_ndt_localizer.cpp.o] 错误 1
+[46.230s] gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/pcd_ndt_localizer.dir/all] 错误 2
+[46.230s] gmake: *** [Makefile:146：all] 错误 2
+[46.234s] Invoked command in '/home/seeed/ros2/ws/build/pcd_ndt_localization' returned '2': CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/vikit_ros:/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common:/home/seeed/ros2/ws/install/ranger_base:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs:/home/seeed/ros2/ws/install/ranger_bringup:/home/seeed/ros2/ws/install/pcd_ndt_localization:/home/seeed/ros2/ws/install/nav_tf_bridge:/home/seeed/ros2/ws/install/fast_lio:/home/seeed/ros2/ws/install/livox_ros_driver2 /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/pcd_ndt_localization -- -j6 -l6

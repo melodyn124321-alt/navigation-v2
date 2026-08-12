@@ -1,0 +1,6 @@
+Invoking command in '/home/seeed/ros2/ws/build/vikit_common': /usr/local/bin/cmake /home/seeed/ros2/ws/src/depd/rpg_vikit/vikit_common -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/vikit_common
+Invoked command in '/home/seeed/ros2/ws/build/vikit_common' returned '0': /usr/local/bin/cmake /home/seeed/ros2/ws/src/depd/rpg_vikit/vikit_common -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/vikit_common
+Invoking command in '/home/seeed/ros2/ws/build/vikit_common': /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/vikit_common -- -j6 -l6
+Invoked command in '/home/seeed/ros2/ws/build/vikit_common' returned '0': /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/vikit_common -- -j6 -l6
+Invoking command in '/home/seeed/ros2/ws/build/vikit_common': /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/vikit_common
+Invoked command in '/home/seeed/ros2/ws/build/vikit_common' returned '0': /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/vikit_common

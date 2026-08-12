@@ -1,0 +1,174 @@
+[0.033s] Invoking command in '/home/seeed/ros2/ws/build/fast_lio': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/fast_lio -- -j6 -l6
+[0.150s] [  2%] Built target fast_lio__cpp
+[0.151s] [  5%] Built target fast_lio__rs
+[0.157s] [  5%] Built target ament_cmake_python_symlink_fast_lio
+[0.158s] [ 13%] Built target fast_lio__rosidl_generator_c
+[0.182s] [ 22%] Built target fast_lio__rosidl_typesupport_introspection_c
+[0.184s] [ 30%] Built target fast_lio__rosidl_typesupport_cpp
+[0.185s] [ 38%] Built target fast_lio__rosidl_typesupport_introspection_cpp
+[0.186s] [ 47%] Built target fast_lio__rosidl_typesupport_fastrtps_cpp
+[0.195s] [ 55%] Built target fast_lio__rosidl_typesupport_fastrtps_c
+[0.208s] [ 63%] Built target fast_lio__rosidl_typesupport_c
+[0.229s] [ 63%] Built target fast_lio
+[0.249s] [ 66%] Built target fast_lio__py
+[0.277s] [ 72%] Built target fast_lio__rosidl_generator_py
+[0.301s] [ 77%] Built target fast_lio__rosidl_typesupport_introspection_c__pyext
+[0.304s] [ 83%] Built target fast_lio__rosidl_typesupport_fastrtps_c__pyext
+[0.305s] [ 88%] Built target fast_lio__rosidl_typesupport_c__pyext
+[0.360s] [ 91%] Building CXX object CMakeFiles/fastlio_mapping.dir/src/laserMapping.cpp.o
+[0.362s] [ 94%] Building CXX object CMakeFiles/fastlio_mapping.dir/src/preprocess.cpp.o
+[0.714s] running egg_info
+[0.716s] writing fast_lio.egg-info/PKG-INFO
+[0.717s] writing dependency_links to fast_lio.egg-info/dependency_links.txt
+[0.717s] writing top-level names to fast_lio.egg-info/top_level.txt
+[0.726s] reading manifest file 'fast_lio.egg-info/SOURCES.txt'
+[0.726s] writing manifest file 'fast_lio.egg-info/SOURCES.txt'
+[0.792s] [ 94%] Built target ament_cmake_python_build_fast_lio_egg
+[16.367s] In file included from /usr/include/boost/smart_ptr/detail/sp_thread_sleep.hpp:22,
+[16.367s]                  from /usr/include/boost/smart_ptr/detail/yield_k.hpp:23,
+[16.367s]                  from /usr/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp:14,
+[16.368s]                  from /usr/include/boost/smart_ptr/detail/spinlock.hpp:42,
+[16.368s]                  from /usr/include/boost/smart_ptr/detail/spinlock_pool.hpp:25,
+[16.368s]                  from /usr/include/boost/smart_ptr/shared_ptr.hpp:29,
+[16.368s]                  from /usr/include/boost/shared_ptr.hpp:17,
+[16.368s]                  from /usr/include/boost/date_time/microsec_time_clock.hpp:18,
+[16.368s]                  from /usr/include/boost/interprocess/detail/posix_time_types_wrk.hpp:31,
+[16.368s]                  from /usr/include/boost/interprocess/detail/os_thread_functions.hpp:36,
+[16.369s]                  from /usr/include/boost/interprocess/sync/file_lock.hpp:26,
+[16.369s]                  from /usr/include/pcl-1.12/pcl/io/pcd_io.h:46,
+[16.369s]                  from /opt/ros/humble/include/pcl_conversions/pcl_conversions/pcl_conversions.h:73,
+[16.369s]                  from /home/seeed/ros2/ws/src/slam/fast_lio/src/IMU_Processing.hpp:18,
+[16.369s]                  from /home/seeed/ros2/ws/src/slam/fast_lio/src/laserMapping.cpp:47:
+[16.369s] /usr/include/boost/bind.hpp:36:1: note: ‘#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.’
+[16.369s]    36 | BOOST_PRAGMA_MESSAGE(
+[16.369s]       | ^~~~~~~~~~~~~~~~~~~~
+[30.489s] In file included from /home/seeed/ros2/ws/src/slam/fast_lio/include/IKFoM_toolkit/esekfom/../mtk/types/SOn.hpp:83,
+[30.489s]                  from /home/seeed/ros2/ws/src/slam/fast_lio/include/IKFoM_toolkit/esekfom/esekfom.hpp:49,
+[30.490s]                  from /home/seeed/ros2/ws/src/slam/fast_lio/include/use-ikfom.hpp:4,
+[30.490s]                  from /home/seeed/ros2/ws/src/slam/fast_lio/src/IMU_Processing.hpp:22,
+[30.490s]                  from /home/seeed/ros2/ws/src/slam/fast_lio/src/laserMapping.cpp:47:
+[30.491s] /home/seeed/ros2/ws/src/slam/fast_lio/include/IKFoM_toolkit/esekfom/../mtk/types/../src/mtkmath.hpp: In instantiation of ‘std::pair<_FIter, _FIter> MTK::cos_sinc_sqrt(const scalar&) [with scalar = double]’:
+[30.491s] /home/seeed/ros2/ws/src/slam/fast_lio/include/IKFoM_toolkit/esekfom/../mtk/types/../src/mtkmath.hpp:252:52:   required from ‘scalar MTK::exp(MTK::vectview<scalar, dim>, MTK::vectview<const scalar, dim>, const scalar&) [with scalar = double; int n = 3]’
+[30.491s] /home/seeed/ros2/ws/src/slam/fast_lio/include/IKFoM_toolkit/esekfom/../mtk/types/S2.hpp:140:32:   required from ‘void MTK::S2<_scalar, den, num, S2_typ>::boxplus(MTK::vectview<const _scalar, 2>, MTK::S2<_scalar, den, num, S2_typ>::scalar) [with _scalar = double; int den = 98090; int num = 10000; int S2_typ = 1; MTK::S2<_scalar, den, num, S2_typ>::scalar = double]’
+[30.491s] /home/seeed/ros2/ws/src/slam/fast_lio/include/use-ikfom.hpp:12:1:   required from here
+[30.492s] /home/seeed/ros2/ws/src/slam/fast_lio/include/IKFoM_toolkit/esekfom/../mtk/types/../src/mtkmath.hpp:143:27: note: parameter passing for argument of type ‘std::pair<double, double>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+[30.492s]   143 | std::pair<scalar, scalar> cos_sinc_sqrt(const scalar &x2){
+[30.492s]       |                           ^~~~~~~~~~~~~
+[172.746s] [ 97%] Linking CXX executable fastlio_mapping
+[175.899s] [100%] Built target fastlio_mapping
+[175.910s] Invoked command in '/home/seeed/ros2/ws/build/fast_lio' returned '0': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/fast_lio -- -j6 -l6
+[175.921s] Invoking command in '/home/seeed/ros2/ws/build/fast_lio': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/fast_lio
+[175.930s] -- Install configuration: "Release"
+[175.932s] -- Execute custom install script
+[175.932s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/ament_index/resource_index/rosidl_interfaces/fast_lio
+[175.935s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__functions.h
+[175.935s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__struct.h
+[175.936s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.h
+[175.936s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/pose6_d.h
+[175.937s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_generator_c__visibility_control.h
+[175.937s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/library_path.sh
+[175.937s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/library_path.dsv
+[175.938s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_fastrtps_c.h
+[175.938s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[175.939s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__builder.hpp
+[175.940s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__struct.hpp
+[175.940s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__traits.hpp
+[175.940s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.hpp
+[175.941s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/pose6_d.hpp
+[175.941s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_generator_cpp__visibility_control.hpp
+[175.941s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_fastrtps_cpp.hpp
+[175.942s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[175.942s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_introspection_c.h
+[175.943s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[175.944s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_introspection_cpp.hpp
+[175.944s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/pythonpath.sh
+[175.944s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/pythonpath.dsv
+[175.945s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/PKG-INFO
+[175.946s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/SOURCES.txt
+[175.946s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/dependency_links.txt
+[175.946s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/top_level.txt
+[175.947s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/__init__.py
+[175.948s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_c.c
+[175.949s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_fastrtps_c.c
+[175.949s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_introspection_c.c
+[175.950s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[175.950s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[175.950s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[175.950s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/libfast_lio__rosidl_generator_py.so
+[175.950s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/__init__.py
+[175.950s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/_pose6_d.py
+[175.951s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/_pose6_d_s.c
+[175.951s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[175.952s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[175.952s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[175.953s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/ament_index/resource_index/rust_packages/fast_lio
+[175.954s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust/Cargo.toml
+[175.954s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust/build.rs
+[175.955s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust/src/lib.rs
+[175.955s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust/src/msg.rs
+[175.955s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rust/src/msg/rmw.rs
+[175.956s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/msg/Pose6D.idl
+[175.956s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/msg/Pose6D.msg
+[175.956s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/lib/fast_lio/fastlio_mapping
+[175.957s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/avia.yaml
+[175.958s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/horizon.yaml
+[175.958s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/mid360.yaml
+[175.958s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/mid360.yaml.bak.20260625_211559
+[175.959s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/mid360.yaml.bak.20260626_093929
+[175.959s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/mid360.yaml.bak.disable_timesync_20260626_100616
+[175.959s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/mid360.yaml.bak.fix_drift_20260626_095649
+[175.959s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/ouster64.yaml
+[175.960s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/config/velodyne.yaml
+[175.960s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/launch/gdb_debug_example.launch
+[175.960s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/launch/mapping.launch.py
+[175.961s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/rviz/fastlio.rviz
+[175.961s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/ament_index/resource_index/package_run_dependencies/fast_lio
+[175.961s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/ament_index/resource_index/parent_prefix_path/fast_lio
+[175.962s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/ament_prefix_path.sh
+[175.962s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/ament_prefix_path.dsv
+[175.962s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/path.sh
+[175.963s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/environment/path.dsv
+[175.963s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/local_setup.bash
+[175.964s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/local_setup.sh
+[175.964s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/local_setup.zsh
+[175.964s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/local_setup.dsv
+[175.965s] -- Symlinking: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/package.dsv
+[175.971s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/ament_index/resource_index/packages/fast_lio
+[175.971s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake-extras.cmake
+[175.971s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_include_directories-extras.cmake
+[175.972s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_libraries-extras.cmake
+[175.972s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_targets-extras.cmake
+[175.972s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[175.972s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_dependencies-extras.cmake
+[175.973s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[175.974s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lioConfig.cmake
+[175.974s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lioConfig-version.cmake
+[175.974s] -- Up-to-date symlink: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/package.xml
+[175.975s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_generator_c.so
+[175.976s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_fastrtps_c.so
+[175.976s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_fastrtps_cpp.so
+[175.977s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_introspection_c.so
+[175.978s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_c.so
+[175.978s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_introspection_cpp.so
+[175.979s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_cpp.so
+[176.051s] Listing '/home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio'...
+[176.051s] Listing '/home/seeed/ros2/ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg'...
+[176.064s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/lib/libfast_lio__rosidl_generator_py.so
+[176.065s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cExport.cmake
+[176.065s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cExport-release.cmake
+[176.067s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cExport.cmake
+[176.067s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cExport-release.cmake
+[176.067s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cppExport.cmake
+[176.069s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cppExport.cmake
+[176.069s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cppExport-release.cmake
+[176.070s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cExport.cmake
+[176.070s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cExport-release.cmake
+[176.070s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cExport.cmake
+[176.070s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cExport-release.cmake
+[176.071s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cppExport.cmake
+[176.071s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cppExport-release.cmake
+[176.072s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cppExport.cmake
+[176.072s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cppExport-release.cmake
+[176.072s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_pyExport.cmake
+[176.072s] -- Up-to-date: /home/seeed/ros2/ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_pyExport-release.cmake
+[176.077s] Invoked command in '/home/seeed/ros2/ws/build/fast_lio' returned '0': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/fast_lio

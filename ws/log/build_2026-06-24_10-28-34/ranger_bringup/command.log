@@ -1,0 +1,6 @@
+Invoking command in '/home/seeed/ros2/ws/build/ranger_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/ranger_ros2/ranger_bringup -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/ranger_bringup
+Invoked command in '/home/seeed/ros2/ws/build/ranger_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/ranger_ros2/ranger_bringup -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/ranger_bringup
+Invoking command in '/home/seeed/ros2/ws/build/ranger_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/ranger_bringup -- -j6 -l6
+Invoked command in '/home/seeed/ros2/ws/build/ranger_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/ranger_bringup -- -j6 -l6
+Invoking command in '/home/seeed/ros2/ws/build/ranger_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/ranger_bringup
+Invoked command in '/home/seeed/ros2/ws/build/ranger_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/ranger_bringup

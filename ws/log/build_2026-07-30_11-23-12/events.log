@@ -1,0 +1,495 @@
+[0.000000] (-) TimerEvent: {}
+[0.000166] (-) JobUnselected: {'identifier': 'fast_lio'}
+[0.000386] (-) JobUnselected: {'identifier': 'livox_ros_driver2'}
+[0.000684] (-) JobUnselected: {'identifier': 'pcd_ndt_localization'}
+[0.001205] (-) JobUnselected: {'identifier': 'ranger_base'}
+[0.001498] (-) JobUnselected: {'identifier': 'ranger_bringup'}
+[0.001770] (-) JobUnselected: {'identifier': 'ranger_msgs'}
+[0.001874] (-) JobUnselected: {'identifier': 'ugv_sdk'}
+[0.001950] (-) JobUnselected: {'identifier': 'vikit_common'}
+[0.002023] (-) JobUnselected: {'identifier': 'vikit_ros'}
+[0.002098] (nav_tf_bridge) JobQueued: {'identifier': 'nav_tf_bridge', 'dependencies': OrderedDict()}
+[0.002176] (nav_tf_bridge) JobStarted: {'identifier': 'nav_tf_bridge'}
+[0.023613] (nav_tf_bridge) JobProgress: {'identifier': 'nav_tf_bridge', 'progress': 'cmake'}
+[0.027395] (nav_tf_bridge) Command: {'cmd': ['/usr/local/bin/cmake', '/home/seeed/ros2/ws/src/nav_tf_bridge', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/nav_tf_bridge'], 'cwd': '/home/seeed/ros2/ws/build/nav_tf_bridge', 'env': OrderedDict([('LANGUAGE', 'zh_CN:en'), ('USER', 'seeed'), ('SSH_CLIENT', '192.168.1.101 52325 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/seeed'), ('OLDPWD', '/home/seeed'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'seeed'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('XDG_SESSION_ID', '180'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:10.0'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('PWD', '/home/seeed/ros2/ws/build/nav_tf_bridge'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.101 52325 192.168.1.104 22'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.090402] (nav_tf_bridge) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099323] (-) TimerEvent: {}
+[0.199683] (-) TimerEvent: {}
+[0.300060] (-) TimerEvent: {}
+[0.400440] (-) TimerEvent: {}
+[0.500811] (-) TimerEvent: {}
+[0.573387] (nav_tf_bridge) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.600965] (-) TimerEvent: {}
+[0.611601] (nav_tf_bridge) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.696626] (nav_tf_bridge) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.701079] (-) TimerEvent: {}
+[0.712668] (nav_tf_bridge) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.729717] (nav_tf_bridge) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.762604] (nav_tf_bridge) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.801240] (-) TimerEvent: {}
+[0.802670] (nav_tf_bridge) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.901386] (-) TimerEvent: {}
+[0.921262] (nav_tf_bridge) StdoutLine: {'line': b'-- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[0.972088] (nav_tf_bridge) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.001531] (-) TimerEvent: {}
+[1.060534] (nav_tf_bridge) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.064814] (nav_tf_bridge) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.101670] (-) TimerEvent: {}
+[1.201988] (-) TimerEvent: {}
+[1.302355] (-) TimerEvent: {}
+[1.339932] (nav_tf_bridge) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.402569] (-) TimerEvent: {}
+[1.476259] (nav_tf_bridge) StdoutLine: {'line': b'-- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)\n'}
+[1.489896] (nav_tf_bridge) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.20 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[1.502777] (nav_tf_bridge) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.503181] (-) TimerEvent: {}
+[1.507493] (nav_tf_bridge) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.603370] (-) TimerEvent: {}
+[1.703717] (-) TimerEvent: {}
+[1.804078] (-) TimerEvent: {}
+[1.904416] (-) TimerEvent: {}
+[1.985861] (nav_tf_bridge) StdoutLine: {'line': b'-- Configuring done (1.9s)\n'}
+[2.004671] (-) TimerEvent: {}
+[2.049429] (nav_tf_bridge) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[2.063018] (nav_tf_bridge) StdoutLine: {'line': b'-- Build files have been written to: /home/seeed/ros2/ws/build/nav_tf_bridge\n'}
+[2.088705] (nav_tf_bridge) CommandEnded: {'returncode': 0}
+[2.090992] (nav_tf_bridge) JobProgress: {'identifier': 'nav_tf_bridge', 'progress': 'build'}
+[2.093636] (nav_tf_bridge) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/seeed/ros2/ws/build/nav_tf_bridge', '--', '-j6', '-l6'], 'cwd': '/home/seeed/ros2/ws/build/nav_tf_bridge', 'env': OrderedDict([('LANGUAGE', 'zh_CN:en'), ('USER', 'seeed'), ('SSH_CLIENT', '192.168.1.101 52325 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/seeed'), ('OLDPWD', '/home/seeed'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'seeed'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('XDG_SESSION_ID', '180'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:10.0'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('PWD', '/home/seeed/ros2/ws/build/nav_tf_bridge'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.101 52325 192.168.1.104 22'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[2.104882] (-) TimerEvent: {}
+[2.188836] (nav_tf_bridge) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/map_odom_tf_bridge.dir/src/map_odom_tf_bridge.cpp.o\n'}
+[2.205035] (-) TimerEvent: {}
+[2.305441] (-) TimerEvent: {}
+[2.405866] (-) TimerEvent: {}
+[2.506419] (-) TimerEvent: {}
+[2.606786] (-) TimerEvent: {}
+[2.707143] (-) TimerEvent: {}
+[2.807503] (-) TimerEvent: {}
+[2.907868] (-) TimerEvent: {}
+[3.008259] (-) TimerEvent: {}
+[3.108628] (-) TimerEvent: {}
+[3.209021] (-) TimerEvent: {}
+[3.309419] (-) TimerEvent: {}
+[3.409795] (-) TimerEvent: {}
+[3.510161] (-) TimerEvent: {}
+[3.610554] (-) TimerEvent: {}
+[3.710946] (-) TimerEvent: {}
+[3.811328] (-) TimerEvent: {}
+[3.911706] (-) TimerEvent: {}
+[4.012090] (-) TimerEvent: {}
+[4.112489] (-) TimerEvent: {}
+[4.212877] (-) TimerEvent: {}
+[4.313283] (-) TimerEvent: {}
+[4.413696] (-) TimerEvent: {}
+[4.514097] (-) TimerEvent: {}
+[4.614515] (-) TimerEvent: {}
+[4.714940] (-) TimerEvent: {}
+[4.815355] (-) TimerEvent: {}
+[4.915778] (-) TimerEvent: {}
+[5.016167] (-) TimerEvent: {}
+[5.116718] (-) TimerEvent: {}
+[5.217196] (-) TimerEvent: {}
+[5.317596] (-) TimerEvent: {}
+[5.417985] (-) TimerEvent: {}
+[5.518360] (-) TimerEvent: {}
+[5.618738] (-) TimerEvent: {}
+[5.719106] (-) TimerEvent: {}
+[5.820316] (-) TimerEvent: {}
+[5.920677] (-) TimerEvent: {}
+[6.021044] (-) TimerEvent: {}
+[6.121463] (-) TimerEvent: {}
+[6.221888] (-) TimerEvent: {}
+[6.322265] (-) TimerEvent: {}
+[6.422717] (-) TimerEvent: {}
+[6.523094] (-) TimerEvent: {}
+[6.623485] (-) TimerEvent: {}
+[6.723890] (-) TimerEvent: {}
+[6.824285] (-) TimerEvent: {}
+[6.924747] (-) TimerEvent: {}
+[7.025193] (-) TimerEvent: {}
+[7.125549] (-) TimerEvent: {}
+[7.225938] (-) TimerEvent: {}
+[7.326289] (-) TimerEvent: {}
+[7.426697] (-) TimerEvent: {}
+[7.527064] (-) TimerEvent: {}
+[7.627426] (-) TimerEvent: {}
+[7.727810] (-) TimerEvent: {}
+[7.828175] (-) TimerEvent: {}
+[7.928615] (-) TimerEvent: {}
+[8.029055] (-) TimerEvent: {}
+[8.129446] (-) TimerEvent: {}
+[8.229811] (-) TimerEvent: {}
+[8.330186] (-) TimerEvent: {}
+[8.430803] (-) TimerEvent: {}
+[8.531177] (-) TimerEvent: {}
+[8.631575] (-) TimerEvent: {}
+[8.731963] (-) TimerEvent: {}
+[8.832344] (-) TimerEvent: {}
+[8.932725] (-) TimerEvent: {}
+[9.033123] (-) TimerEvent: {}
+[9.133520] (-) TimerEvent: {}
+[9.233935] (-) TimerEvent: {}
+[9.334362] (-) TimerEvent: {}
+[9.435194] (-) TimerEvent: {}
+[9.535603] (-) TimerEvent: {}
+[9.636028] (-) TimerEvent: {}
+[9.736439] (-) TimerEvent: {}
+[9.836854] (-) TimerEvent: {}
+[9.937264] (-) TimerEvent: {}
+[10.037644] (-) TimerEvent: {}
+[10.138043] (-) TimerEvent: {}
+[10.238442] (-) TimerEvent: {}
+[10.338831] (-) TimerEvent: {}
+[10.439263] (-) TimerEvent: {}
+[10.539692] (-) TimerEvent: {}
+[10.640210] (-) TimerEvent: {}
+[10.740776] (-) TimerEvent: {}
+[10.841315] (-) TimerEvent: {}
+[10.941709] (-) TimerEvent: {}
+[11.042106] (-) TimerEvent: {}
+[11.142475] (-) TimerEvent: {}
+[11.242853] (-) TimerEvent: {}
+[11.343224] (-) TimerEvent: {}
+[11.443623] (-) TimerEvent: {}
+[11.544052] (-) TimerEvent: {}
+[11.644444] (-) TimerEvent: {}
+[11.744816] (-) TimerEvent: {}
+[11.845276] (-) TimerEvent: {}
+[11.945712] (-) TimerEvent: {}
+[12.046256] (-) TimerEvent: {}
+[12.146701] (-) TimerEvent: {}
+[12.247114] (-) TimerEvent: {}
+[12.347531] (-) TimerEvent: {}
+[12.447964] (-) TimerEvent: {}
+[12.548469] (-) TimerEvent: {}
+[12.649360] (-) TimerEvent: {}
+[12.749790] (-) TimerEvent: {}
+[12.850179] (-) TimerEvent: {}
+[12.950585] (-) TimerEvent: {}
+[13.051010] (-) TimerEvent: {}
+[13.151446] (-) TimerEvent: {}
+[13.251892] (-) TimerEvent: {}
+[13.352334] (-) TimerEvent: {}
+[13.452767] (-) TimerEvent: {}
+[13.553212] (-) TimerEvent: {}
+[13.653604] (-) TimerEvent: {}
+[13.753978] (-) TimerEvent: {}
+[13.854354] (-) TimerEvent: {}
+[13.954806] (-) TimerEvent: {}
+[14.055191] (-) TimerEvent: {}
+[14.155553] (-) TimerEvent: {}
+[14.255915] (-) TimerEvent: {}
+[14.356365] (-) TimerEvent: {}
+[14.456809] (-) TimerEvent: {}
+[14.557238] (-) TimerEvent: {}
+[14.657689] (-) TimerEvent: {}
+[14.758723] (-) TimerEvent: {}
+[14.859082] (-) TimerEvent: {}
+[14.959478] (-) TimerEvent: {}
+[15.059843] (-) TimerEvent: {}
+[15.160204] (-) TimerEvent: {}
+[15.260571] (-) TimerEvent: {}
+[15.360926] (-) TimerEvent: {}
+[15.461302] (-) TimerEvent: {}
+[15.561681] (-) TimerEvent: {}
+[15.662062] (-) TimerEvent: {}
+[15.762427] (-) TimerEvent: {}
+[15.862798] (-) TimerEvent: {}
+[15.963169] (-) TimerEvent: {}
+[16.063561] (-) TimerEvent: {}
+[16.163949] (-) TimerEvent: {}
+[16.264344] (-) TimerEvent: {}
+[16.364744] (-) TimerEvent: {}
+[16.465229] (-) TimerEvent: {}
+[16.565941] (-) TimerEvent: {}
+[16.666350] (-) TimerEvent: {}
+[16.766876] (-) TimerEvent: {}
+[16.867242] (-) TimerEvent: {}
+[16.967608] (-) TimerEvent: {}
+[17.067950] (-) TimerEvent: {}
+[17.168309] (-) TimerEvent: {}
+[17.268677] (-) TimerEvent: {}
+[17.369069] (-) TimerEvent: {}
+[17.469475] (-) TimerEvent: {}
+[17.569867] (-) TimerEvent: {}
+[17.670255] (-) TimerEvent: {}
+[17.770635] (-) TimerEvent: {}
+[17.871026] (-) TimerEvent: {}
+[17.971413] (-) TimerEvent: {}
+[18.071774] (-) TimerEvent: {}
+[18.172132] (-) TimerEvent: {}
+[18.272553] (-) TimerEvent: {}
+[18.372938] (-) TimerEvent: {}
+[18.473358] (-) TimerEvent: {}
+[18.573765] (-) TimerEvent: {}
+[18.674177] (-) TimerEvent: {}
+[18.774577] (-) TimerEvent: {}
+[18.874956] (-) TimerEvent: {}
+[18.975324] (-) TimerEvent: {}
+[19.075691] (-) TimerEvent: {}
+[19.176062] (-) TimerEvent: {}
+[19.276443] (-) TimerEvent: {}
+[19.376839] (-) TimerEvent: {}
+[19.477594] (-) TimerEvent: {}
+[19.577967] (-) TimerEvent: {}
+[19.678345] (-) TimerEvent: {}
+[19.778682] (-) TimerEvent: {}
+[19.879046] (-) TimerEvent: {}
+[19.979417] (-) TimerEvent: {}
+[20.079798] (-) TimerEvent: {}
+[20.180226] (-) TimerEvent: {}
+[20.280682] (-) TimerEvent: {}
+[20.381137] (-) TimerEvent: {}
+[20.481615] (-) TimerEvent: {}
+[20.581991] (-) TimerEvent: {}
+[20.682360] (-) TimerEvent: {}
+[20.782805] (-) TimerEvent: {}
+[20.883185] (-) TimerEvent: {}
+[20.983550] (-) TimerEvent: {}
+[21.083909] (-) TimerEvent: {}
+[21.184298] (-) TimerEvent: {}
+[21.284776] (-) TimerEvent: {}
+[21.385522] (-) TimerEvent: {}
+[21.485970] (-) TimerEvent: {}
+[21.586338] (-) TimerEvent: {}
+[21.686753] (-) TimerEvent: {}
+[21.787111] (-) TimerEvent: {}
+[21.887486] (-) TimerEvent: {}
+[21.987859] (-) TimerEvent: {}
+[22.088240] (-) TimerEvent: {}
+[22.188730] (-) TimerEvent: {}
+[22.289223] (-) TimerEvent: {}
+[22.389601] (-) TimerEvent: {}
+[22.489992] (-) TimerEvent: {}
+[22.590448] (-) TimerEvent: {}
+[22.690958] (-) TimerEvent: {}
+[22.791412] (-) TimerEvent: {}
+[22.891785] (-) TimerEvent: {}
+[22.992109] (-) TimerEvent: {}
+[23.092485] (-) TimerEvent: {}
+[23.192903] (-) TimerEvent: {}
+[23.296143] (-) TimerEvent: {}
+[23.396532] (-) TimerEvent: {}
+[23.496963] (-) TimerEvent: {}
+[23.597602] (-) TimerEvent: {}
+[23.698026] (-) TimerEvent: {}
+[23.798457] (-) TimerEvent: {}
+[23.898901] (-) TimerEvent: {}
+[23.999306] (-) TimerEvent: {}
+[24.099683] (-) TimerEvent: {}
+[24.200070] (-) TimerEvent: {}
+[24.300446] (-) TimerEvent: {}
+[24.400799] (-) TimerEvent: {}
+[24.501170] (-) TimerEvent: {}
+[24.601533] (-) TimerEvent: {}
+[24.701905] (-) TimerEvent: {}
+[24.802220] (-) TimerEvent: {}
+[24.902648] (-) TimerEvent: {}
+[25.003229] (-) TimerEvent: {}
+[25.103662] (-) TimerEvent: {}
+[25.204070] (-) TimerEvent: {}
+[25.304427] (-) TimerEvent: {}
+[25.404883] (-) TimerEvent: {}
+[25.505603] (-) TimerEvent: {}
+[25.606054] (-) TimerEvent: {}
+[25.706438] (-) TimerEvent: {}
+[25.806963] (-) TimerEvent: {}
+[25.907344] (-) TimerEvent: {}
+[26.007754] (-) TimerEvent: {}
+[26.108155] (-) TimerEvent: {}
+[26.208516] (-) TimerEvent: {}
+[26.308890] (-) TimerEvent: {}
+[26.409292] (-) TimerEvent: {}
+[26.509698] (-) TimerEvent: {}
+[26.610107] (-) TimerEvent: {}
+[26.710522] (-) TimerEvent: {}
+[26.810948] (-) TimerEvent: {}
+[26.911380] (-) TimerEvent: {}
+[27.011793] (-) TimerEvent: {}
+[27.112202] (-) TimerEvent: {}
+[27.212617] (-) TimerEvent: {}
+[27.313037] (-) TimerEvent: {}
+[27.413579] (-) TimerEvent: {}
+[27.514003] (-) TimerEvent: {}
+[27.614413] (-) TimerEvent: {}
+[27.714793] (-) TimerEvent: {}
+[27.815179] (-) TimerEvent: {}
+[27.915577] (-) TimerEvent: {}
+[28.015966] (-) TimerEvent: {}
+[28.116344] (-) TimerEvent: {}
+[28.216862] (-) TimerEvent: {}
+[28.317281] (-) TimerEvent: {}
+[28.417714] (-) TimerEvent: {}
+[28.518089] (-) TimerEvent: {}
+[28.618475] (-) TimerEvent: {}
+[28.720105] (-) TimerEvent: {}
+[28.820471] (-) TimerEvent: {}
+[28.920849] (-) TimerEvent: {}
+[29.021242] (-) TimerEvent: {}
+[29.121605] (-) TimerEvent: {}
+[29.221988] (-) TimerEvent: {}
+[29.322429] (-) TimerEvent: {}
+[29.422801] (-) TimerEvent: {}
+[29.523156] (-) TimerEvent: {}
+[29.623527] (-) TimerEvent: {}
+[29.723937] (-) TimerEvent: {}
+[29.824337] (-) TimerEvent: {}
+[29.924732] (-) TimerEvent: {}
+[30.025249] (-) TimerEvent: {}
+[30.125616] (-) TimerEvent: {}
+[30.226008] (-) TimerEvent: {}
+[30.326438] (-) TimerEvent: {}
+[30.426846] (-) TimerEvent: {}
+[30.527224] (-) TimerEvent: {}
+[30.627655] (-) TimerEvent: {}
+[30.728082] (-) TimerEvent: {}
+[30.828464] (-) TimerEvent: {}
+[30.928854] (-) TimerEvent: {}
+[31.029314] (-) TimerEvent: {}
+[31.129729] (-) TimerEvent: {}
+[31.230110] (-) TimerEvent: {}
+[31.330565] (-) TimerEvent: {}
+[31.431019] (-) TimerEvent: {}
+[31.531391] (-) TimerEvent: {}
+[31.631771] (-) TimerEvent: {}
+[31.732091] (-) TimerEvent: {}
+[31.832454] (-) TimerEvent: {}
+[31.932871] (-) TimerEvent: {}
+[32.033277] (-) TimerEvent: {}
+[32.133660] (-) TimerEvent: {}
+[32.234038] (-) TimerEvent: {}
+[32.334388] (-) TimerEvent: {}
+[32.434844] (-) TimerEvent: {}
+[32.535301] (-) TimerEvent: {}
+[32.635683] (-) TimerEvent: {}
+[32.736059] (-) TimerEvent: {}
+[32.836442] (-) TimerEvent: {}
+[32.936825] (-) TimerEvent: {}
+[33.037846] (-) TimerEvent: {}
+[33.138219] (-) TimerEvent: {}
+[33.238604] (-) TimerEvent: {}
+[33.338988] (-) TimerEvent: {}
+[33.439468] (-) TimerEvent: {}
+[33.539830] (-) TimerEvent: {}
+[33.640199] (-) TimerEvent: {}
+[33.741301] (-) TimerEvent: {}
+[33.841745] (-) TimerEvent: {}
+[33.942165] (-) TimerEvent: {}
+[34.042585] (-) TimerEvent: {}
+[34.143011] (-) TimerEvent: {}
+[34.243406] (-) TimerEvent: {}
+[34.343776] (-) TimerEvent: {}
+[34.444138] (-) TimerEvent: {}
+[34.544701] (-) TimerEvent: {}
+[34.646946] (-) TimerEvent: {}
+[34.747352] (-) TimerEvent: {}
+[34.848322] (-) TimerEvent: {}
+[34.948746] (-) TimerEvent: {}
+[35.049176] (-) TimerEvent: {}
+[35.149545] (-) TimerEvent: {}
+[35.249917] (-) TimerEvent: {}
+[35.350281] (-) TimerEvent: {}
+[35.453338] (-) TimerEvent: {}
+[35.553719] (-) TimerEvent: {}
+[35.654097] (-) TimerEvent: {}
+[35.754469] (-) TimerEvent: {}
+[35.854846] (-) TimerEvent: {}
+[35.955217] (-) TimerEvent: {}
+[36.055598] (-) TimerEvent: {}
+[36.155969] (-) TimerEvent: {}
+[36.256330] (-) TimerEvent: {}
+[36.356719] (-) TimerEvent: {}
+[36.457136] (-) TimerEvent: {}
+[36.557994] (-) TimerEvent: {}
+[36.658398] (-) TimerEvent: {}
+[36.758835] (-) TimerEvent: {}
+[36.859214] (-) TimerEvent: {}
+[36.959619] (-) TimerEvent: {}
+[37.059986] (-) TimerEvent: {}
+[37.160343] (-) TimerEvent: {}
+[37.260711] (-) TimerEvent: {}
+[37.361071] (-) TimerEvent: {}
+[37.461457] (-) TimerEvent: {}
+[37.561815] (-) TimerEvent: {}
+[37.662174] (-) TimerEvent: {}
+[37.762635] (-) TimerEvent: {}
+[37.863008] (-) TimerEvent: {}
+[37.963351] (-) TimerEvent: {}
+[38.063716] (-) TimerEvent: {}
+[38.164085] (-) TimerEvent: {}
+[38.264436] (-) TimerEvent: {}
+[38.364813] (-) TimerEvent: {}
+[38.465192] (-) TimerEvent: {}
+[38.565553] (-) TimerEvent: {}
+[38.665953] (-) TimerEvent: {}
+[38.766331] (-) TimerEvent: {}
+[38.866709] (-) TimerEvent: {}
+[38.967175] (-) TimerEvent: {}
+[39.067560] (-) TimerEvent: {}
+[39.167928] (-) TimerEvent: {}
+[39.268307] (-) TimerEvent: {}
+[39.368672] (-) TimerEvent: {}
+[39.469039] (-) TimerEvent: {}
+[39.569473] (-) TimerEvent: {}
+[39.669827] (-) TimerEvent: {}
+[39.770186] (-) TimerEvent: {}
+[39.870565] (-) TimerEvent: {}
+[39.970949] (-) TimerEvent: {}
+[40.071299] (-) TimerEvent: {}
+[40.171688] (-) TimerEvent: {}
+[40.273273] (-) TimerEvent: {}
+[40.373701] (-) TimerEvent: {}
+[40.474078] (-) TimerEvent: {}
+[40.574437] (-) TimerEvent: {}
+[40.674810] (-) TimerEvent: {}
+[40.775185] (-) TimerEvent: {}
+[40.875567] (-) TimerEvent: {}
+[40.976158] (-) TimerEvent: {}
+[41.076529] (-) TimerEvent: {}
+[41.177596] (-) TimerEvent: {}
+[41.278014] (-) TimerEvent: {}
+[41.378432] (-) TimerEvent: {}
+[41.478908] (-) TimerEvent: {}
+[41.579282] (-) TimerEvent: {}
+[41.679756] (-) TimerEvent: {}
+[41.780600] (-) TimerEvent: {}
+[41.881058] (-) TimerEvent: {}
+[41.981464] (-) TimerEvent: {}
+[42.082033] (-) TimerEvent: {}
+[42.182427] (-) TimerEvent: {}
+[42.282885] (-) TimerEvent: {}
+[42.383329] (-) TimerEvent: {}
+[42.483687] (-) TimerEvent: {}
+[42.584050] (-) TimerEvent: {}
+[42.684411] (-) TimerEvent: {}
+[42.752100] (nav_tf_bridge) StdoutLine: {'line': b'[100%] Linking CXX executable map_odom_tf_bridge\n'}
+[42.784567] (-) TimerEvent: {}
+[42.884929] (-) TimerEvent: {}
+[42.985329] (-) TimerEvent: {}
+[43.085691] (-) TimerEvent: {}
+[43.186168] (-) TimerEvent: {}
+[43.226917] (nav_tf_bridge) StdoutLine: {'line': b'[100%] Built target map_odom_tf_bridge\n'}
+[43.240078] (nav_tf_bridge) CommandEnded: {'returncode': 0}
+[43.240990] (nav_tf_bridge) JobProgress: {'identifier': 'nav_tf_bridge', 'progress': 'install'}
+[43.247708] (nav_tf_bridge) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/seeed/ros2/ws/build/nav_tf_bridge'], 'cwd': '/home/seeed/ros2/ws/build/nav_tf_bridge', 'env': OrderedDict([('LANGUAGE', 'zh_CN:en'), ('USER', 'seeed'), ('SSH_CLIENT', '192.168.1.101 52325 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/seeed'), ('OLDPWD', '/home/seeed'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'seeed'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('XDG_SESSION_ID', '180'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:10.0'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('PWD', '/home/seeed/ros2/ws/build/nav_tf_bridge'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.101 52325 192.168.1.104 22'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[43.251633] (nav_tf_bridge) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[43.252696] (nav_tf_bridge) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[43.253418] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/lib/nav_tf_bridge/map_odom_tf_bridge\n'}
+[43.254448] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/ament_index/resource_index/package_run_dependencies/nav_tf_bridge\n'}
+[43.255469] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/ament_index/resource_index/parent_prefix_path/nav_tf_bridge\n'}
+[43.256149] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/environment/ament_prefix_path.sh\n'}
+[43.256615] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/environment/ament_prefix_path.dsv\n'}
+[43.258065] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/environment/path.sh\n'}
+[43.258330] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/environment/path.dsv\n'}
+[43.258701] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/local_setup.bash\n'}
+[43.259158] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/local_setup.sh\n'}
+[43.259620] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/local_setup.zsh\n'}
+[43.259986] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/local_setup.dsv\n'}
+[43.260378] (nav_tf_bridge) StdoutLine: {'line': b'-- Symlinking: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/package.dsv\n'}
+[43.265454] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/ament_index/resource_index/packages/nav_tf_bridge\n'}
+[43.266007] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/cmake/nav_tf_bridgeConfig.cmake\n'}
+[43.266768] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/cmake/nav_tf_bridgeConfig-version.cmake\n'}
+[43.267252] (nav_tf_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/seeed/ros2/ws/install/nav_tf_bridge/share/nav_tf_bridge/package.xml\n'}
+[43.269607] (nav_tf_bridge) CommandEnded: {'returncode': 0}
+[43.286310] (-) TimerEvent: {}
+[43.346655] (nav_tf_bridge) JobEnded: {'identifier': 'nav_tf_bridge', 'rc': 0}
+[43.348783] (-) EventReactorShutdown: {}

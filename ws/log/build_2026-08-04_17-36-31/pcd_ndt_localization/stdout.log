@@ -1,0 +1,2 @@
+[ 50%] Built target pcd_occupancy_grid_publisher
+[ 75%] Building CXX object CMakeFiles/pcd_ndt_localizer.dir/src/pcd_ndt_localizer.cpp.o

@@ -1,0 +1,710 @@
+[0.395s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.395s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffbb6c3640>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffbb6c30d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffbb6c30d0>>)
+[0.875s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.875s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.875s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.875s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.875s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.876s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.876s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/seeed/ros2/ws'
+[0.876s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.876s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.876s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.877s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.877s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.877s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.877s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.877s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.877s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.907s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.907s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.907s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.907s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.907s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.908s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.908s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.908s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.908s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.908s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd) by extensions ['ignore', 'ignore_ament_install']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd) by extension 'ignore'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd) by extension 'ignore_ament_install'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd) by extensions ['colcon_pkg']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd) by extension 'colcon_pkg'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd) by extensions ['colcon_meta']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd) by extension 'colcon_meta'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd) by extensions ['ros']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd) by extension 'ros'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd) by extensions ['cmake', 'python']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd) by extension 'cmake'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd) by extension 'python'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd) by extensions ['python_setup_py']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd) by extension 'python_setup_py'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit) by extensions ['ignore', 'ignore_ament_install']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit) by extension 'ignore'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit) by extension 'ignore_ament_install'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit) by extensions ['colcon_pkg']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit) by extension 'colcon_pkg'
+[0.914s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit) by extensions ['colcon_meta']
+[0.914s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit) by extension 'colcon_meta'
+[0.914s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit) by extensions ['ros']
+[0.914s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit) by extension 'ros'
+[0.914s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit) by extensions ['cmake', 'python']
+[0.914s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit) by extension 'cmake'
+[0.914s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit) by extension 'python'
+[0.914s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit) by extensions ['python_setup_py']
+[0.914s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit) by extension 'python_setup_py'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_common) by extensions ['ignore', 'ignore_ament_install']
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_common) by extension 'ignore'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_common) by extension 'ignore_ament_install'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_common) by extensions ['colcon_pkg']
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_common) by extension 'colcon_pkg'
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_common) by extensions ['colcon_meta']
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_common) by extension 'colcon_meta'
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_common) by extensions ['ros']
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_common) by extension 'ros'
+[0.923s] DEBUG:colcon.colcon_core.package_identification:Package 'src/depd/rpg_vikit/vikit_common' with type 'ros.catkin' and name 'vikit_common'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_ros) by extension 'ignore'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_ros) by extension 'ignore_ament_install'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_ros) by extensions ['colcon_pkg']
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_ros) by extension 'colcon_pkg'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_ros) by extensions ['colcon_meta']
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_ros) by extension 'colcon_meta'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_ros) by extensions ['ros']
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/depd/rpg_vikit/vikit_ros) by extension 'ros'
+[0.927s] DEBUG:colcon.colcon_core.package_identification:Package 'src/depd/rpg_vikit/vikit_ros' with type 'ros.ament_cmake' and name 'vikit_ros'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver) by extensions ['ignore', 'ignore_ament_install']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver) by extension 'ignore'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver) by extension 'ignore_ament_install'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver) by extensions ['colcon_pkg']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver) by extension 'colcon_pkg'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver) by extensions ['colcon_meta']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver) by extension 'colcon_meta'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver) by extensions ['ros']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver) by extension 'ros'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver) by extensions ['cmake', 'python']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver) by extension 'cmake'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver) by extension 'python'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver) by extensions ['python_setup_py']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver) by extension 'python_setup_py'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver/livox_ros_driver2) by extensions ['ignore', 'ignore_ament_install']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver/livox_ros_driver2) by extension 'ignore'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver/livox_ros_driver2) by extension 'ignore_ament_install'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver/livox_ros_driver2) by extensions ['colcon_pkg']
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver/livox_ros_driver2) by extension 'colcon_pkg'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver/livox_ros_driver2) by extensions ['colcon_meta']
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver/livox_ros_driver2) by extension 'colcon_meta'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver/livox_ros_driver2) by extensions ['ros']
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(src/driver/livox_ros_driver2) by extension 'ros'
+[0.934s] DEBUG:colcon.colcon_core.package_identification:Package 'src/driver/livox_ros_driver2' with type 'ros.ament_cmake' and name 'livox_ros_driver2'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2) by extension 'ignore'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2) by extension 'ignore_ament_install'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2) by extensions ['colcon_pkg']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2) by extension 'colcon_pkg'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2) by extensions ['colcon_meta']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2) by extension 'colcon_meta'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2) by extensions ['ros']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2) by extension 'ros'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2) by extensions ['cmake', 'python']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2) by extension 'cmake'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2) by extension 'python'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2) by extensions ['python_setup_py']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2) by extension 'python_setup_py'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/docs) by extensions ['ignore', 'ignore_ament_install']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/docs) by extension 'ignore'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/docs) by extension 'ignore_ament_install'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/docs) by extensions ['colcon_pkg']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/docs) by extension 'colcon_pkg'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/docs) by extensions ['colcon_meta']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/docs) by extension 'colcon_meta'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/docs) by extensions ['ros']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/docs) by extension 'ros'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/docs) by extensions ['cmake', 'python']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/docs) by extension 'cmake'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/docs) by extension 'python'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/docs) by extensions ['python_setup_py']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/docs) by extension 'python_setup_py'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_base) by extensions ['ignore', 'ignore_ament_install']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_base) by extension 'ignore'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_base) by extension 'ignore_ament_install'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_base) by extensions ['colcon_pkg']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_base) by extension 'colcon_pkg'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_base) by extensions ['colcon_meta']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_base) by extension 'colcon_meta'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_base) by extensions ['ros']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_base) by extension 'ros'
+[0.942s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ranger_ros2/ranger_base' with type 'ros.ament_cmake' and name 'ranger_base'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_bringup) by extension 'ignore'
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_bringup) by extension 'ignore_ament_install'
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_bringup) by extensions ['colcon_pkg']
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_bringup) by extension 'colcon_pkg'
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_bringup) by extensions ['colcon_meta']
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_bringup) by extension 'colcon_meta'
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_bringup) by extensions ['ros']
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_bringup) by extension 'ros'
+[0.945s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ranger_ros2/ranger_bringup' with type 'ros.ament_cmake' and name 'ranger_bringup'
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_msgs) by extension 'ignore'
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_msgs) by extension 'ignore_ament_install'
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_msgs) by extensions ['colcon_pkg']
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_msgs) by extension 'colcon_pkg'
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_msgs) by extensions ['colcon_meta']
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_msgs) by extension 'colcon_meta'
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_msgs) by extensions ['ros']
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(src/ranger_ros2/ranger_msgs) by extension 'ros'
+[0.948s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ranger_ros2/ranger_msgs' with type 'ros.ament_cmake' and name 'ranger_msgs'
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extensions ['ignore', 'ignore_ament_install']
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'ignore'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'ignore_ament_install'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extensions ['colcon_pkg']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'colcon_pkg'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extensions ['colcon_meta']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'colcon_meta'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extensions ['ros']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'ros'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extensions ['cmake', 'python']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'cmake'
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'python'
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extensions ['python_setup_py']
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'python_setup_py'
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam/fast_lio) by extensions ['ignore', 'ignore_ament_install']
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam/fast_lio) by extension 'ignore'
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam/fast_lio) by extension 'ignore_ament_install'
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam/fast_lio) by extensions ['colcon_pkg']
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam/fast_lio) by extension 'colcon_pkg'
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam/fast_lio) by extensions ['colcon_meta']
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam/fast_lio) by extension 'colcon_meta'
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam/fast_lio) by extensions ['ros']
+[0.951s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam/fast_lio) by extension 'ros'
+[0.953s] DEBUG:colcon.colcon_core.package_identification:Package 'src/slam/fast_lio' with type 'ros.ament_cmake' and name 'fast_lio'
+[0.954s] Level 1:colcon.colcon_core.package_identification:_identify(src/ugv_sdk) by extensions ['ignore', 'ignore_ament_install']
+[0.954s] Level 1:colcon.colcon_core.package_identification:_identify(src/ugv_sdk) by extension 'ignore'
+[0.954s] Level 1:colcon.colcon_core.package_identification:_identify(src/ugv_sdk) by extension 'ignore_ament_install'
+[0.954s] Level 1:colcon.colcon_core.package_identification:_identify(src/ugv_sdk) by extensions ['colcon_pkg']
+[0.954s] Level 1:colcon.colcon_core.package_identification:_identify(src/ugv_sdk) by extension 'colcon_pkg'
+[0.955s] Level 1:colcon.colcon_core.package_identification:_identify(src/ugv_sdk) by extensions ['colcon_meta']
+[0.955s] Level 1:colcon.colcon_core.package_identification:_identify(src/ugv_sdk) by extension 'colcon_meta'
+[0.955s] Level 1:colcon.colcon_core.package_identification:_identify(src/ugv_sdk) by extensions ['ros']
+[0.955s] Level 1:colcon.colcon_core.package_identification:_identify(src/ugv_sdk) by extension 'ros'
+[0.956s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ugv_sdk' with type 'ros.catkin' and name 'ugv_sdk'
+[0.956s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.957s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.957s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.957s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.957s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.017s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.017s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.023s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 276 installed packages in /opt/ros/humble
+[1.057s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_args' from command line to 'None'
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_target' from command line to 'None'
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_clean_cache' from command line to 'False'
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_clean_first' from command line to 'False'
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_force_configure' from command line to 'False'
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'ament_cmake_args' from command line to 'None'
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'catkin_cmake_args' from command line to 'None'
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.146s] DEBUG:colcon.colcon_core.verb:Building package 'livox_ros_driver2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/seeed/ros2/ws/build/livox_ros_driver2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/seeed/ros2/ws/install/livox_ros_driver2', 'merge_install': False, 'path': '/home/seeed/ros2/ws/src/driver/livox_ros_driver2', 'symlink_install': False, 'test_result_base': None}
+[1.146s] Level 5:colcon.colcon_core.verb:set package 'ranger_bringup' build argument 'cmake_args' from command line to 'None'
+[1.146s] Level 5:colcon.colcon_core.verb:set package 'ranger_bringup' build argument 'cmake_target' from command line to 'None'
+[1.146s] Level 5:colcon.colcon_core.verb:set package 'ranger_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.147s] Level 5:colcon.colcon_core.verb:set package 'ranger_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[1.147s] Level 5:colcon.colcon_core.verb:set package 'ranger_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[1.147s] Level 5:colcon.colcon_core.verb:set package 'ranger_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[1.147s] Level 5:colcon.colcon_core.verb:set package 'ranger_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[1.147s] Level 5:colcon.colcon_core.verb:set package 'ranger_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[1.147s] Level 5:colcon.colcon_core.verb:set package 'ranger_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.147s] DEBUG:colcon.colcon_core.verb:Building package 'ranger_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/seeed/ros2/ws/build/ranger_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/seeed/ros2/ws/install/ranger_bringup', 'merge_install': False, 'path': '/home/seeed/ros2/ws/src/ranger_ros2/ranger_bringup', 'symlink_install': False, 'test_result_base': None}
+[1.148s] Level 5:colcon.colcon_core.verb:set package 'ranger_msgs' build argument 'cmake_args' from command line to 'None'
+[1.148s] Level 5:colcon.colcon_core.verb:set package 'ranger_msgs' build argument 'cmake_target' from command line to 'None'
+[1.148s] Level 5:colcon.colcon_core.verb:set package 'ranger_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.148s] Level 5:colcon.colcon_core.verb:set package 'ranger_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[1.148s] Level 5:colcon.colcon_core.verb:set package 'ranger_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[1.148s] Level 5:colcon.colcon_core.verb:set package 'ranger_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[1.148s] Level 5:colcon.colcon_core.verb:set package 'ranger_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[1.148s] Level 5:colcon.colcon_core.verb:set package 'ranger_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[1.148s] Level 5:colcon.colcon_core.verb:set package 'ranger_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.148s] DEBUG:colcon.colcon_core.verb:Building package 'ranger_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/seeed/ros2/ws/build/ranger_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/seeed/ros2/ws/install/ranger_msgs', 'merge_install': False, 'path': '/home/seeed/ros2/ws/src/ranger_ros2/ranger_msgs', 'symlink_install': False, 'test_result_base': None}
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'cmake_args' from command line to 'None'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'cmake_target' from command line to 'None'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'cmake_clean_cache' from command line to 'False'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'cmake_clean_first' from command line to 'False'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'cmake_force_configure' from command line to 'False'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'ament_cmake_args' from command line to 'None'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'catkin_cmake_args' from command line to 'None'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'ugv_sdk' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.149s] DEBUG:colcon.colcon_core.verb:Building package 'ugv_sdk' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/seeed/ros2/ws/build/ugv_sdk', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/seeed/ros2/ws/install/ugv_sdk', 'merge_install': False, 'path': '/home/seeed/ros2/ws/src/ugv_sdk', 'symlink_install': False, 'test_result_base': None}
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_args' from command line to 'None'
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_target' from command line to 'None'
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_clean_cache' from command line to 'False'
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_clean_first' from command line to 'False'
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_force_configure' from command line to 'False'
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'ament_cmake_args' from command line to 'None'
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'catkin_cmake_args' from command line to 'None'
+[1.150s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.151s] DEBUG:colcon.colcon_core.verb:Building package 'vikit_common' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/seeed/ros2/ws/build/vikit_common', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/seeed/ros2/ws/install/vikit_common', 'merge_install': False, 'path': '/home/seeed/ros2/ws/src/depd/rpg_vikit/vikit_common', 'symlink_install': False, 'test_result_base': None}
+[1.151s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'cmake_args' from command line to 'None'
+[1.151s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'cmake_target' from command line to 'None'
+[1.151s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.151s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'cmake_clean_cache' from command line to 'False'
+[1.151s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'cmake_clean_first' from command line to 'False'
+[1.152s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'cmake_force_configure' from command line to 'False'
+[1.152s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'ament_cmake_args' from command line to 'None'
+[1.152s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'catkin_cmake_args' from command line to 'None'
+[1.152s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.152s] DEBUG:colcon.colcon_core.verb:Building package 'fast_lio' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/seeed/ros2/ws/build/fast_lio', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/seeed/ros2/ws/install/fast_lio', 'merge_install': False, 'path': '/home/seeed/ros2/ws/src/slam/fast_lio', 'symlink_install': False, 'test_result_base': None}
+[1.152s] Level 5:colcon.colcon_core.verb:set package 'ranger_base' build argument 'cmake_args' from command line to 'None'
+[1.153s] Level 5:colcon.colcon_core.verb:set package 'ranger_base' build argument 'cmake_target' from command line to 'None'
+[1.153s] Level 5:colcon.colcon_core.verb:set package 'ranger_base' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.153s] Level 5:colcon.colcon_core.verb:set package 'ranger_base' build argument 'cmake_clean_cache' from command line to 'False'
+[1.153s] Level 5:colcon.colcon_core.verb:set package 'ranger_base' build argument 'cmake_clean_first' from command line to 'False'
+[1.153s] Level 5:colcon.colcon_core.verb:set package 'ranger_base' build argument 'cmake_force_configure' from command line to 'False'
+[1.153s] Level 5:colcon.colcon_core.verb:set package 'ranger_base' build argument 'ament_cmake_args' from command line to 'None'
+[1.153s] Level 5:colcon.colcon_core.verb:set package 'ranger_base' build argument 'catkin_cmake_args' from command line to 'None'
+[1.153s] Level 5:colcon.colcon_core.verb:set package 'ranger_base' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.153s] DEBUG:colcon.colcon_core.verb:Building package 'ranger_base' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/seeed/ros2/ws/build/ranger_base', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/seeed/ros2/ws/install/ranger_base', 'merge_install': False, 'path': '/home/seeed/ros2/ws/src/ranger_ros2/ranger_base', 'symlink_install': False, 'test_result_base': None}
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'cmake_args' from command line to 'None'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'cmake_target' from command line to 'None'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'cmake_clean_first' from command line to 'False'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'cmake_force_configure' from command line to 'False'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'ament_cmake_args' from command line to 'None'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.154s] DEBUG:colcon.colcon_core.verb:Building package 'vikit_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/seeed/ros2/ws/build/vikit_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/seeed/ros2/ws/install/vikit_ros', 'merge_install': False, 'path': '/home/seeed/ros2/ws/src/depd/rpg_vikit/vikit_ros', 'symlink_install': False, 'test_result_base': None}
+[1.154s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.157s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.158s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/seeed/ros2/ws/src/driver/livox_ros_driver2' with build type 'ament_cmake'
+[1.158s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/seeed/ros2/ws/src/driver/livox_ros_driver2'
+[1.166s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.167s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.167s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.174s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/seeed/ros2/ws/src/ranger_ros2/ranger_msgs' with build type 'ament_cmake'
+[1.174s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/seeed/ros2/ws/src/ranger_ros2/ranger_msgs'
+[1.175s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.175s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.181s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/seeed/ros2/ws/src/ugv_sdk' with build type 'catkin'
+[1.182s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/seeed/ros2/ws/src/ugv_sdk'
+[1.182s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.183s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.188s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/seeed/ros2/ws/src/depd/rpg_vikit/vikit_common' with build type 'catkin'
+[1.189s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/seeed/ros2/ws/src/depd/rpg_vikit/vikit_common'
+[1.189s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.190s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.196s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/seeed/ros2/ws/src/ranger_ros2/ranger_bringup' with build type 'ament_cmake'
+[1.196s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/seeed/ros2/ws/src/ranger_ros2/ranger_bringup'
+[1.197s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.197s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.216s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/driver/livox_ros_driver2 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/livox_ros_driver2
+[1.228s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/ranger_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/ranger_ros2/ranger_msgs -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/ranger_msgs
+[1.237s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/ugv_sdk': /usr/local/bin/cmake /home/seeed/ros2/ws/src/ugv_sdk -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/ugv_sdk
+[1.239s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/vikit_common': /usr/local/bin/cmake /home/seeed/ros2/ws/src/depd/rpg_vikit/vikit_common -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/vikit_common
+[1.250s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/ranger_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/ranger_ros2/ranger_bringup -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/ranger_bringup
+[2.803s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/ugv_sdk' returned '0': /usr/local/bin/cmake /home/seeed/ros2/ws/src/ugv_sdk -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/ugv_sdk
+[2.809s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/ugv_sdk': /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/ugv_sdk -- -j6 -l6
+[3.847s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/ranger_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/ranger_ros2/ranger_bringup -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/ranger_bringup
+[3.848s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/ranger_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/ranger_bringup -- -j6 -l6
+[3.975s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/ranger_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/ranger_bringup -- -j6 -l6
+[3.991s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/ranger_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/ranger_bringup
+[4.046s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ranger_bringup)
+[4.048s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/ranger_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/ranger_bringup
+[4.063s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_bringup' for CMake module files
+[4.064s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_bringup' for CMake config files
+[4.064s] Level 1:colcon.colcon_core.shell:create_environment_hook('ranger_bringup', 'cmake_prefix_path')
+[4.065s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ranger_bringup/share/ranger_bringup/hook/cmake_prefix_path.ps1'
+[4.083s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/ranger_bringup/share/ranger_bringup/hook/cmake_prefix_path.dsv'
+[4.092s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ranger_bringup/share/ranger_bringup/hook/cmake_prefix_path.sh'
+[4.100s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_bringup/bin'
+[4.101s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_bringup/lib/pkgconfig/ranger_bringup.pc'
+[4.101s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_bringup/lib/python3.10/site-packages'
+[4.102s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_bringup/bin'
+[4.120s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_bringup/share/ranger_bringup/package.ps1'
+[4.130s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/ranger_bringup/share/ranger_bringup/package.dsv'
+[4.132s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_bringup/share/ranger_bringup/package.sh'
+[4.136s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_bringup/share/ranger_bringup/package.bash'
+[4.146s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_bringup/share/ranger_bringup/package.zsh'
+[4.149s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/ranger_bringup/share/colcon-core/packages/ranger_bringup)
+[4.151s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ranger_bringup)
+[4.152s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_bringup' for CMake module files
+[4.153s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_bringup' for CMake config files
+[4.153s] Level 1:colcon.colcon_core.shell:create_environment_hook('ranger_bringup', 'cmake_prefix_path')
+[4.154s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ranger_bringup/share/ranger_bringup/hook/cmake_prefix_path.ps1'
+[4.168s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/ranger_bringup/share/ranger_bringup/hook/cmake_prefix_path.dsv'
+[4.169s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ranger_bringup/share/ranger_bringup/hook/cmake_prefix_path.sh'
+[4.171s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_bringup/bin'
+[4.171s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_bringup/lib/pkgconfig/ranger_bringup.pc'
+[4.172s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_bringup/lib/python3.10/site-packages'
+[4.173s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_bringup/bin'
+[4.173s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_bringup/share/ranger_bringup/package.ps1'
+[4.176s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/ranger_bringup/share/ranger_bringup/package.dsv'
+[4.184s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_bringup/share/ranger_bringup/package.sh'
+[4.186s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_bringup/share/ranger_bringup/package.bash'
+[4.199s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_bringup/share/ranger_bringup/package.zsh'
+[4.201s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/ranger_bringup/share/colcon-core/packages/ranger_bringup)
+[4.205s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/vikit_common' returned '0': /usr/local/bin/cmake /home/seeed/ros2/ws/src/depd/rpg_vikit/vikit_common -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/vikit_common
+[4.208s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/vikit_common': /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/vikit_common -- -j6 -l6
+[20.384s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/ranger_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/ranger_ros2/ranger_msgs -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/ranger_msgs
+[20.385s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/ranger_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/ranger_msgs -- -j6 -l6
+[32.342s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/seeed/ros2/ws/src/driver/livox_ros_driver2 -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/livox_ros_driver2
+[32.343s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/livox_ros_driver2 -- -j6 -l6
+[57.799s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/ugv_sdk' returned '0': /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/ugv_sdk -- -j6 -l6
+[57.804s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/ugv_sdk': /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/ugv_sdk
+[57.845s] Level 1:colcon.colcon_core.shell:create_environment_hook('ugv_sdk', 'ros_package_path')
+[57.847s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ugv_sdk/share/ugv_sdk/hook/ros_package_path.ps1'
+[57.850s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/ugv_sdk/share/ugv_sdk/hook/ros_package_path.dsv'
+[57.851s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ugv_sdk/share/ugv_sdk/hook/ros_package_path.sh'
+[57.852s] Level 1:colcon.colcon_core.shell:create_environment_hook('ugv_sdk', 'pkg_config_path')
+[57.853s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ugv_sdk/share/ugv_sdk/hook/pkg_config_path.ps1'
+[57.854s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/ugv_sdk/share/ugv_sdk/hook/pkg_config_path.dsv'
+[57.856s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/ugv_sdk' returned '0': /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/ugv_sdk
+[57.856s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ugv_sdk/share/ugv_sdk/hook/pkg_config_path.sh'
+[57.863s] Level 1:colcon.colcon_core.shell:create_environment_hook('ugv_sdk', 'pkg_config_path_multiarch')
+[57.864s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ugv_sdk/share/ugv_sdk/hook/pkg_config_path_multiarch.ps1'
+[57.865s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/ugv_sdk/share/ugv_sdk/hook/pkg_config_path_multiarch.dsv'
+[57.866s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ugv_sdk/share/ugv_sdk/hook/pkg_config_path_multiarch.sh'
+[57.870s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ugv_sdk)
+[57.871s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ugv_sdk' for CMake module files
+[57.873s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ugv_sdk' for CMake config files
+[57.874s] Level 1:colcon.colcon_core.shell:create_environment_hook('ugv_sdk', 'cmake_prefix_path')
+[57.876s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ugv_sdk/share/ugv_sdk/hook/cmake_prefix_path.ps1'
+[57.877s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/ugv_sdk/share/ugv_sdk/hook/cmake_prefix_path.dsv'
+[57.879s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ugv_sdk/share/ugv_sdk/hook/cmake_prefix_path.sh'
+[57.880s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ugv_sdk/lib'
+[57.881s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ugv_sdk/bin'
+[57.881s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig/ugv_sdk.pc'
+[57.882s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ugv_sdk/lib/python3.10/site-packages'
+[57.883s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ugv_sdk/bin'
+[57.884s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ugv_sdk/share/ugv_sdk/package.ps1'
+[57.886s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/ugv_sdk/share/ugv_sdk/package.dsv'
+[57.887s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ugv_sdk/share/ugv_sdk/package.sh'
+[57.888s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ugv_sdk/share/ugv_sdk/package.bash'
+[57.891s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ugv_sdk/share/ugv_sdk/package.zsh'
+[57.893s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/ugv_sdk/share/colcon-core/packages/ugv_sdk)
+[65.364s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/ranger_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/ranger_msgs -- -j6 -l6
+[65.368s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/ranger_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/ranger_msgs
+[65.566s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ranger_msgs)
+[65.567s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_msgs' for CMake module files
+[65.568s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/ranger_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/ranger_msgs
+[65.570s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_msgs' for CMake config files
+[65.571s] Level 1:colcon.colcon_core.shell:create_environment_hook('ranger_msgs', 'cmake_prefix_path')
+[65.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/hook/cmake_prefix_path.ps1'
+[65.573s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/hook/cmake_prefix_path.dsv'
+[65.574s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/hook/cmake_prefix_path.sh'
+[65.575s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_msgs/lib'
+[65.576s] Level 1:colcon.colcon_core.shell:create_environment_hook('ranger_msgs', 'ld_library_path_lib')
+[65.576s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/hook/ld_library_path_lib.ps1'
+[65.577s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/hook/ld_library_path_lib.dsv'
+[65.578s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/hook/ld_library_path_lib.sh'
+[65.578s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_msgs/bin'
+[65.579s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_msgs/lib/pkgconfig/ranger_msgs.pc'
+[65.580s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_msgs/lib/python3.10/site-packages'
+[65.581s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_msgs/bin'
+[65.581s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/package.ps1'
+[65.583s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/package.dsv'
+[65.584s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/package.sh'
+[65.586s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/package.bash'
+[65.587s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/package.zsh'
+[65.587s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/ranger_msgs/share/colcon-core/packages/ranger_msgs)
+[65.589s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ranger_msgs)
+[65.590s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_msgs' for CMake module files
+[65.591s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_msgs' for CMake config files
+[65.592s] Level 1:colcon.colcon_core.shell:create_environment_hook('ranger_msgs', 'cmake_prefix_path')
+[65.593s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/hook/cmake_prefix_path.ps1'
+[65.594s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/hook/cmake_prefix_path.dsv'
+[65.595s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/hook/cmake_prefix_path.sh'
+[65.596s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_msgs/lib'
+[65.597s] Level 1:colcon.colcon_core.shell:create_environment_hook('ranger_msgs', 'ld_library_path_lib')
+[65.597s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/hook/ld_library_path_lib.ps1'
+[65.598s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/hook/ld_library_path_lib.dsv'
+[65.599s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/hook/ld_library_path_lib.sh'
+[65.600s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_msgs/bin'
+[65.600s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_msgs/lib/pkgconfig/ranger_msgs.pc'
+[65.601s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_msgs/lib/python3.10/site-packages'
+[65.602s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_msgs/bin'
+[65.603s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/package.ps1'
+[65.604s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/package.dsv'
+[65.606s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/package.sh'
+[65.607s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/package.bash'
+[65.608s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_msgs/share/ranger_msgs/package.zsh'
+[65.609s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/ranger_msgs/share/colcon-core/packages/ranger_msgs)
+[65.610s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/seeed/ros2/ws/src/ranger_ros2/ranger_base' with build type 'ament_cmake'
+[65.610s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/seeed/ros2/ws/src/ranger_ros2/ranger_base'
+[65.611s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[65.611s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[65.648s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/ranger_base': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/ranger_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/ranger_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig PYTHONPATH=/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/ugv_sdk/share /usr/local/bin/cmake /home/seeed/ros2/ws/src/ranger_ros2/ranger_base -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/ranger_base
+[69.144s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/ranger_base' returned '0': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/ranger_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/ranger_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig PYTHONPATH=/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/ugv_sdk/share /usr/local/bin/cmake /home/seeed/ros2/ws/src/ranger_ros2/ranger_base -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/ranger_base
+[69.148s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/ranger_base': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/ranger_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/ranger_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig PYTHONPATH=/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/ugv_sdk/share /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/ranger_base -- -j6 -l6
+[127.310s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/ranger_base' returned '0': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/ranger_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/ranger_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig PYTHONPATH=/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/ugv_sdk/share /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/ranger_base -- -j6 -l6
+[127.315s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/ranger_base': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/ranger_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/ranger_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig PYTHONPATH=/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/ugv_sdk/share /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/ranger_base
+[127.343s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ranger_base)
+[127.345s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_base' for CMake module files
+[127.346s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/ranger_base' returned '0': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/ranger_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/ugv_sdk:/home/seeed/ros2/ws/install/ranger_msgs LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/ranger_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/ugv_sdk/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/ugv_sdk/lib/pkgconfig PYTHONPATH=/home/seeed/ros2/ws/install/ranger_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/ugv_sdk/share /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/ranger_base
+[127.347s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_base' for CMake config files
+[127.347s] Level 1:colcon.colcon_core.shell:create_environment_hook('ranger_base', 'cmake_prefix_path')
+[127.348s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ranger_base/share/ranger_base/hook/cmake_prefix_path.ps1'
+[127.350s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/ranger_base/share/ranger_base/hook/cmake_prefix_path.dsv'
+[127.352s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ranger_base/share/ranger_base/hook/cmake_prefix_path.sh'
+[127.354s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_base/lib'
+[127.355s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_base/bin'
+[127.355s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_base/lib/pkgconfig/ranger_base.pc'
+[127.357s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_base/lib/python3.10/site-packages'
+[127.358s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_base/bin'
+[127.359s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_base/share/ranger_base/package.ps1'
+[127.362s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/ranger_base/share/ranger_base/package.dsv'
+[127.363s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_base/share/ranger_base/package.sh'
+[127.365s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_base/share/ranger_base/package.bash'
+[127.366s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_base/share/ranger_base/package.zsh'
+[127.367s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/ranger_base/share/colcon-core/packages/ranger_base)
+[127.369s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ranger_base)
+[127.370s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_base' for CMake module files
+[127.372s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_base' for CMake config files
+[127.373s] Level 1:colcon.colcon_core.shell:create_environment_hook('ranger_base', 'cmake_prefix_path')
+[127.374s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ranger_base/share/ranger_base/hook/cmake_prefix_path.ps1'
+[127.376s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/ranger_base/share/ranger_base/hook/cmake_prefix_path.dsv'
+[127.378s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/ranger_base/share/ranger_base/hook/cmake_prefix_path.sh'
+[127.380s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_base/lib'
+[127.380s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_base/bin'
+[127.381s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_base/lib/pkgconfig/ranger_base.pc'
+[127.381s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_base/lib/python3.10/site-packages'
+[127.382s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/ranger_base/bin'
+[127.383s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_base/share/ranger_base/package.ps1'
+[127.385s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/ranger_base/share/ranger_base/package.dsv'
+[127.387s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_base/share/ranger_base/package.sh'
+[127.389s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_base/share/ranger_base/package.bash'
+[127.391s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/ranger_base/share/ranger_base/package.zsh'
+[127.392s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/ranger_base/share/colcon-core/packages/ranger_base)
+[130.431s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/vikit_common' returned '0': /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/vikit_common -- -j6 -l6
+[130.436s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/vikit_common': /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/vikit_common
+[130.473s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/vikit_common' returned '0': /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/vikit_common
+[130.474s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_common', 'ros_package_path')
+[130.475s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/hook/ros_package_path.ps1'
+[130.477s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/hook/ros_package_path.dsv'
+[130.478s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/hook/ros_package_path.sh'
+[130.479s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_common', 'pkg_config_path')
+[130.480s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/hook/pkg_config_path.ps1'
+[130.481s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/hook/pkg_config_path.dsv'
+[130.482s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/hook/pkg_config_path.sh'
+[130.483s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_common', 'pkg_config_path_multiarch')
+[130.484s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/hook/pkg_config_path_multiarch.ps1'
+[130.486s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/hook/pkg_config_path_multiarch.dsv'
+[130.487s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/hook/pkg_config_path_multiarch.sh'
+[130.489s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vikit_common)
+[130.490s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_common' for CMake module files
+[130.492s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_common' for CMake config files
+[130.493s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_common', 'cmake_prefix_path')
+[130.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/hook/cmake_prefix_path.ps1'
+[130.495s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/hook/cmake_prefix_path.dsv'
+[130.496s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/hook/cmake_prefix_path.sh'
+[130.498s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_common/lib'
+[130.498s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_common', 'ld_library_path_lib')
+[130.499s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/hook/ld_library_path_lib.ps1'
+[130.500s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/hook/ld_library_path_lib.dsv'
+[130.501s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/hook/ld_library_path_lib.sh'
+[130.502s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_common/bin'
+[130.502s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_common/lib/pkgconfig/vikit_common.pc'
+[130.503s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_common/lib/python3.10/site-packages'
+[130.505s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_common/bin'
+[130.506s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/package.ps1'
+[130.508s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/package.dsv'
+[130.510s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/package.sh'
+[130.512s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/package.bash'
+[130.513s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/vikit_common/share/vikit_common/package.zsh'
+[130.514s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/vikit_common/share/colcon-core/packages/vikit_common)
+[130.516s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/seeed/ros2/ws/src/depd/rpg_vikit/vikit_ros' with build type 'ament_cmake'
+[130.516s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/seeed/ros2/ws/src/depd/rpg_vikit/vikit_ros'
+[130.517s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[130.517s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[130.539s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/vikit_ros': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/vikit_common/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/vikit_common/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/vikit_common/lib/pkgconfig ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/vikit_common/share /usr/local/bin/cmake /home/seeed/ros2/ws/src/depd/rpg_vikit/vikit_ros -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/vikit_ros
+[133.913s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/vikit_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/vikit_common/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/vikit_common/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/vikit_common/lib/pkgconfig ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/vikit_common/share /usr/local/bin/cmake /home/seeed/ros2/ws/src/depd/rpg_vikit/vikit_ros -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/vikit_ros
+[133.914s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/vikit_ros': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/vikit_common/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/vikit_common/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/vikit_common/lib/pkgconfig ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/vikit_common/share /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/vikit_ros -- -j6 -l6
+[138.748s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/livox_ros_driver2 -- -j6 -l6
+[138.752s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/livox_ros_driver2
+[138.941s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(livox_ros_driver2)
+[138.942s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/livox_ros_driver2' for CMake module files
+[138.945s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/livox_ros_driver2
+[138.948s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/livox_ros_driver2' for CMake config files
+[138.951s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'cmake_prefix_path')
+[138.952s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.ps1'
+[138.955s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.dsv'
+[138.956s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.sh'
+[138.959s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/livox_ros_driver2/lib'
+[138.960s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'ld_library_path_lib')
+[138.961s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.ps1'
+[138.964s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.dsv'
+[138.966s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.sh'
+[138.968s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/livox_ros_driver2/bin'
+[138.968s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/livox_ros_driver2/lib/pkgconfig/livox_ros_driver2.pc'
+[138.969s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/livox_ros_driver2/lib/python3.10/site-packages'
+[138.970s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/livox_ros_driver2/bin'
+[138.972s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/package.ps1'
+[138.976s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv'
+[138.978s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/package.sh'
+[138.980s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/package.bash'
+[138.982s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/package.zsh'
+[138.983s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/livox_ros_driver2/share/colcon-core/packages/livox_ros_driver2)
+[138.985s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(livox_ros_driver2)
+[138.986s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/livox_ros_driver2' for CMake module files
+[138.990s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/livox_ros_driver2' for CMake config files
+[138.991s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'cmake_prefix_path')
+[138.993s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.ps1'
+[138.995s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.dsv'
+[138.997s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.sh'
+[138.999s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/livox_ros_driver2/lib'
+[139.000s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'ld_library_path_lib')
+[139.000s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.ps1'
+[139.002s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.dsv'
+[139.003s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.sh'
+[139.007s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/livox_ros_driver2/bin'
+[139.008s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/livox_ros_driver2/lib/pkgconfig/livox_ros_driver2.pc'
+[139.008s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/livox_ros_driver2/lib/python3.10/site-packages'
+[139.009s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/livox_ros_driver2/bin'
+[139.010s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/package.ps1'
+[139.013s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv'
+[139.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/package.sh'
+[139.018s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/package.bash'
+[139.019s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/livox_ros_driver2/share/livox_ros_driver2/package.zsh'
+[139.020s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/livox_ros_driver2/share/colcon-core/packages/livox_ros_driver2)
+[139.021s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/seeed/ros2/ws/src/slam/fast_lio' with build type 'ament_cmake'
+[139.022s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/seeed/ros2/ws/src/slam/fast_lio'
+[139.023s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[139.023s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[139.049s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/fast_lio': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/local/bin/cmake /home/seeed/ros2/ws/src/slam/fast_lio -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/fast_lio
+[148.385s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/vikit_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/vikit_common/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/vikit_common/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/vikit_common/lib/pkgconfig ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/vikit_common/share /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/vikit_ros -- -j6 -l6
+[148.391s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/vikit_ros': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/vikit_common/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/vikit_common/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/vikit_common/lib/pkgconfig ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/vikit_common/share /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/vikit_ros
+[148.414s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vikit_ros)
+[148.416s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_ros' for CMake module files
+[148.417s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/vikit_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/seeed/ros2/ws/install/vikit_common LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/vikit_common/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/seeed/ros2/ws/install/vikit_common/lib/aarch64-linux-gnu/pkgconfig:/home/seeed/ros2/ws/install/vikit_common/lib/pkgconfig ROS_PACKAGE_PATH=/home/seeed/ros2/ws/install/vikit_common/share /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/vikit_ros
+[148.418s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_ros' for CMake config files
+[148.419s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_ros', 'cmake_prefix_path')
+[148.420s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/hook/cmake_prefix_path.ps1'
+[148.422s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/hook/cmake_prefix_path.dsv'
+[148.424s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/hook/cmake_prefix_path.sh'
+[148.426s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_ros/lib'
+[148.426s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_ros', 'ld_library_path_lib')
+[148.427s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/hook/ld_library_path_lib.ps1'
+[148.429s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/hook/ld_library_path_lib.dsv'
+[148.430s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/hook/ld_library_path_lib.sh'
+[148.432s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_ros/bin'
+[148.432s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_ros/lib/pkgconfig/vikit_ros.pc'
+[148.433s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_ros/lib/python3.10/site-packages'
+[148.434s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_ros/bin'
+[148.435s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/package.ps1'
+[148.438s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/package.dsv'
+[148.439s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/package.sh'
+[148.441s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/package.bash'
+[148.443s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/package.zsh'
+[148.444s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/vikit_ros/share/colcon-core/packages/vikit_ros)
+[148.446s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vikit_ros)
+[148.448s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_ros' for CMake module files
+[148.450s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_ros' for CMake config files
+[148.450s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_ros', 'cmake_prefix_path')
+[148.451s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/hook/cmake_prefix_path.ps1'
+[148.452s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/hook/cmake_prefix_path.dsv'
+[148.453s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/hook/cmake_prefix_path.sh'
+[148.455s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_ros/lib'
+[148.455s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_ros', 'ld_library_path_lib')
+[148.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/hook/ld_library_path_lib.ps1'
+[148.458s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/hook/ld_library_path_lib.dsv'
+[148.460s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/hook/ld_library_path_lib.sh'
+[148.461s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_ros/bin'
+[148.461s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_ros/lib/pkgconfig/vikit_ros.pc'
+[148.462s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_ros/lib/python3.10/site-packages'
+[148.464s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/vikit_ros/bin'
+[148.465s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/package.ps1'
+[148.468s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/package.dsv'
+[148.469s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/package.sh'
+[148.471s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/package.bash'
+[148.473s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/vikit_ros/share/vikit_ros/package.zsh'
+[148.475s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/vikit_ros/share/colcon-core/packages/vikit_ros)
+[153.022s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/fast_lio' returned '0': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/local/bin/cmake /home/seeed/ros2/ws/src/slam/fast_lio -DCMAKE_INSTALL_PREFIX=/home/seeed/ros2/ws/install/fast_lio
+[153.028s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/fast_lio': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/fast_lio -- -j6 -l6
+[354.262s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/fast_lio' returned '0': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/local/bin/cmake --build /home/seeed/ros2/ws/build/fast_lio -- -j6 -l6
+[354.268s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/seeed/ros2/ws/build/fast_lio': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/fast_lio
+[354.509s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(fast_lio)
+[354.510s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/fast_lio' for CMake module files
+[354.512s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/seeed/ros2/ws/build/fast_lio' returned '0': AMENT_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/seeed/ros2/ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/seeed/ros2/ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/local/bin/cmake --install /home/seeed/ros2/ws/build/fast_lio
+[354.513s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/fast_lio' for CMake config files
+[354.515s] Level 1:colcon.colcon_core.shell:create_environment_hook('fast_lio', 'cmake_prefix_path')
+[354.516s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/hook/cmake_prefix_path.ps1'
+[354.519s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/hook/cmake_prefix_path.dsv'
+[354.521s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/hook/cmake_prefix_path.sh'
+[354.523s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/fast_lio/lib'
+[354.523s] Level 1:colcon.colcon_core.shell:create_environment_hook('fast_lio', 'ld_library_path_lib')
+[354.524s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/hook/ld_library_path_lib.ps1'
+[354.525s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/hook/ld_library_path_lib.dsv'
+[354.526s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/hook/ld_library_path_lib.sh'
+[354.527s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/fast_lio/bin'
+[354.528s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/fast_lio/lib/pkgconfig/fast_lio.pc'
+[354.528s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/fast_lio/lib/python3.10/site-packages'
+[354.529s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/fast_lio/bin'
+[354.530s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/package.ps1'
+[354.532s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/package.dsv'
+[354.533s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/package.sh'
+[354.534s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/package.bash'
+[354.536s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/package.zsh'
+[354.538s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/fast_lio/share/colcon-core/packages/fast_lio)
+[354.540s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(fast_lio)
+[354.541s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/fast_lio' for CMake module files
+[354.543s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/fast_lio' for CMake config files
+[354.544s] Level 1:colcon.colcon_core.shell:create_environment_hook('fast_lio', 'cmake_prefix_path')
+[354.545s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/hook/cmake_prefix_path.ps1'
+[354.546s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/hook/cmake_prefix_path.dsv'
+[354.547s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/hook/cmake_prefix_path.sh'
+[354.549s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/fast_lio/lib'
+[354.549s] Level 1:colcon.colcon_core.shell:create_environment_hook('fast_lio', 'ld_library_path_lib')
+[354.550s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/hook/ld_library_path_lib.ps1'
+[354.551s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/hook/ld_library_path_lib.dsv'
+[354.552s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/hook/ld_library_path_lib.sh'
+[354.553s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/fast_lio/bin'
+[354.553s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/fast_lio/lib/pkgconfig/fast_lio.pc'
+[354.554s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/fast_lio/lib/python3.10/site-packages'
+[354.555s] Level 1:colcon.colcon_core.environment:checking '/home/seeed/ros2/ws/install/fast_lio/bin'
+[354.556s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/package.ps1'
+[354.558s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/package.dsv'
+[354.559s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/package.sh'
+[354.561s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/package.bash'
+[354.562s] INFO:colcon.colcon_core.shell:Creating package script '/home/seeed/ros2/ws/install/fast_lio/share/fast_lio/package.zsh'
+[354.563s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/seeed/ros2/ws/install/fast_lio/share/colcon-core/packages/fast_lio)
+[354.564s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[354.565s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[354.565s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[354.566s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[354.601s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[354.601s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[354.601s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[354.724s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[354.726s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/seeed/ros2/ws/install/local_setup.ps1'
+[354.729s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/seeed/ros2/ws/install/_local_setup_util_ps1.py'
+[354.734s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/seeed/ros2/ws/install/setup.ps1'
+[354.737s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/seeed/ros2/ws/install/local_setup.sh'
+[354.740s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/seeed/ros2/ws/install/_local_setup_util_sh.py'
+[354.742s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/seeed/ros2/ws/install/setup.sh'
+[354.745s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/seeed/ros2/ws/install/local_setup.bash'
+[354.747s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/seeed/ros2/ws/install/setup.bash'
+[354.749s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/seeed/ros2/ws/install/local_setup.zsh'
+[354.751s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/seeed/ros2/ws/install/setup.zsh'
