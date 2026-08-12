@@ -1,0 +1,5 @@
+.git.bak/
+**/.git.bak/
+
+# Original rosbag exceeds GitHub LFS single-file limit; upload split parts instead.
+bags/raw_livox_20260626_094631/raw_livox_20260626_094631_0.db3

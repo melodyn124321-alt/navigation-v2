@@ -1,0 +1,54 @@
+pcd_ndt_localizer:
+  ros__parameters:
+    map_path: "/home/seeed/ros2/maps/in/fastlio_map_from_raw_livox_094631_20260629_133011.pcd"
+    input_cloud_topic: "/cloud_registered_body"
+    odom_topic: "/Odometry"
+    initialpose_topic: "/initialpose"
+
+    global_frame: "map"
+    base_frame: "relocalization_body"
+    # The fixed base_link -> Livox pose is xyz=(0.890, -0.050, 0.700) m and
+    # RPY=(+15.732, -0.611, +90.0) deg. The M12 connector (-X) faces
+    # vehicle right (-Y). NDT estimates the Livox/Fast-LIO body
+    # pose, so these are the exact inverse transform (localization -> base).
+    localization_to_base_roll_rad: -0.010669779
+    localization_to_base_pitch_rad: -0.274581016
+    localization_to_base_yaw_rad: -1.570796327
+    localization_to_base_x_m: 0.042528450
+    localization_to_base_y_m: 0.666725193
+    localization_to_base_z_m: -0.915570231
+    visualization_yaw_offset_rad: 0.0
+    # Zero means the last localization marker remains visible until replaced.
+    marker_lifetime_sec: 0.0
+
+    map_leaf_size: 0.25
+    scan_leaf_size: 0.25
+    min_scan_points: 80
+
+    ndt_resolution: 0.7
+    ndt_step_size: 0.1
+    ndt_trans_eps: 0.01
+    ndt_max_iterations: 40
+    max_fitness_score: 0.10
+    path_keep_count: 300
+    require_initial_pose: true
+
+    publish_tf: true
+    publish_map_cloud: true
+    publish_aligned_cloud: true
+    map_publish_period_sec: 1.0
+
+    publish_occupancy_grid: true
+    occupancy_resolution: 0.10
+    occupancy_min_z: 0.15
+    occupancy_max_z: 1.2
+    occupancy_padding_m: 1.0
+    occupancy_inflate_cells: 0
+    occupancy_min_points_per_cell: 3
+    occupancy_min_z_span: 0.15
+    occupancy_save_map_files: false
+    occupancy_yaml_path: "/home/seeed/ros2/maps/in/fastlio_map_from_raw_livox_094631_20260629_133011_grid.yaml"
+    reject_occupied_pose: true
+    reject_pose_outside_grid: true
+    occupancy_check_radius_cells: 1
+    occupancy_reject_min_occupied_cells: 4

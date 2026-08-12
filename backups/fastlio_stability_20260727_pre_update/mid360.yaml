@@ -1,0 +1,67 @@
+/**:
+    ros__parameters:
+        feature_extract_enable: false
+        # Keep more non-repetitive MID-360 samples for wall/building coverage.
+        point_filter_num: 2
+        max_iteration: 3
+        # Indoor mapping needs finer voxels to retain thin walls, door frames,
+        # and partially observed surfaces outside the cabinet mask.
+        filter_size_surf: 0.30
+        filter_size_map: 0.30
+        cube_side_length: 1000.0
+        runtime_pos_log_enable: false
+        # Fast-LIO runs on seeed. Keep the service target on the same host;
+        # the recording runbook copies this live snapshot to a timestamped name.
+        map_file_path: "/home/seeed/ros2/maps/live/fastlio_map_live.pcd"
+
+        common:
+            lid_topic:  "/livox/lidar"
+            imu_topic:  "/livox/imu"
+            time_sync_en: false        # keep disabled for Livox driver-provided synced IMU/LiDAR stamps
+            time_offset_lidar_to_imu: 0.0 # Time offset between lidar and IMU calibrated by other algorithms, e.g. LI-Init (can be found in README).
+                                        # This param will take effect no matter what time_sync_en is. So if the time offset is not known exactly, please set as 0.0
+
+        preprocess:
+            lidar_type: 1                # 1 for Livox serials LiDAR, 2 for Velodyne LiDAR, 3 for ouster LiDAR, 4 for any other pointcloud input
+            scan_line:  4
+            # Live cabinet-mounted scans showed no self return below 1.0 m.
+            # Keep the gate near the MID-360 minimum range so nearby walls and
+            # navigation obstacles remain observable.
+            blind: 0.10
+            exclusion_box_enabled: false
+            exclusion_min_x: -0.68
+            exclusion_max_x: 0.03
+            # manual_003 found intermittent cabinet-edge returns down to
+            # y=-0.30 m. Keep 0.04 m quantization/mounting margin on both sides.
+            exclusion_min_y: -0.34
+            exclusion_max_y: 0.34
+            exclusion_min_z: -0.08
+            exclusion_max_z: 0.38
+            timestamp_unit: 3
+            scan_rate: 10
+
+        mapping:
+            acc_cov: 0.01
+            gyr_cov: 0.01
+            b_acc_cov: 0.0005
+            b_gyr_cov: 0.0005
+            fov_degree:    360.0
+            det_range:     100.0
+            extrinsic_est_en:  false     # false: use calibrated extrinsic (see extrinsic_T/R below)
+            extrinsic_T: [ -0.011, -0.02329, 0.04412 ]
+            extrinsic_R: [ 1., 0., 0.,
+                            0., 1., 0.,
+                            0., 0., 1.]
+
+        publish:
+            path_en: true                # true: publish Path
+            effect_map_en: false         # true: publish Effects
+            map_en: false                # false: reduce runtime load; enable only when saving a final PCD
+            scan_publish_en:  true       # false: close all the point cloud output
+            dense_publish_en: false      # false: low down the points number in a global-frame point clouds scan.
+            scan_bodyframe_pub_en: true  # true: output the point cloud scans in IMU-body-frame
+
+        pcd_save:
+            pcd_save_en: true            # true: enable /map_save service to write map_file_path
+            interval: -1                 # how many LiDAR frames saved in each pcd file; 
+                                        # -1 : all frames will be saved in ONE pcd file, may lead to memory crash when having too much frames.

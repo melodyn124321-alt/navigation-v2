@@ -1,0 +1,363 @@
+#!/usr/bin/env python3
+"""Find persistent near-field returns fixed in a Livox sensor frame."""
+
+import argparse
+import collections
+import glob
+import math
+import os
+import sqlite3
+
+from rclpy.serialization import deserialize_message
+from rosidl_runtime_py.utilities import get_message
+
+
+def percentile(values, ratio):
+    ordered = sorted(values)
+    if not ordered:
+        return float("nan")
+    index = round((len(ordered) - 1) * ratio)
+    return ordered[max(0, min(index, len(ordered) - 1))]
+
+
+def connected_components(voxels):
+    remaining = set(voxels)
+    components = []
+    neighbors = [
+        (dx, dy, dz)
+        for dx in (-1, 0, 1)
+        for dy in (-1, 0, 1)
+        for dz in (-1, 0, 1)
+        if (dx, dy, dz) != (0, 0, 0)
+    ]
+    while remaining:
+        seed = remaining.pop()
+        component = [seed]
+        queue = collections.deque([seed])
+        while queue:
+            current = queue.popleft()
+            for delta in neighbors:
+                neighbor = tuple(a + b for a, b in zip(current, delta))
+                if neighbor in remaining:
+                    remaining.remove(neighbor)
+                    component.append(neighbor)
+                    queue.append(neighbor)
+        components.append(component)
+    return sorted(components, key=len, reverse=True)
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("bag_path")
+    parser.add_argument("--topic", default="/livox/lidar")
+    parser.add_argument("--sample-frames", type=int, default=300)
+    parser.add_argument("--min-range", type=float, default=0.08)
+    parser.add_argument("--max-range", type=float, default=1.50)
+    parser.add_argument("--mapping-blind", type=float, default=0.10)
+    parser.add_argument("--voxel", type=float, default=0.04)
+    parser.add_argument("--min-persistence", type=float, default=0.08)
+    parser.add_argument("--min-component-voxels", type=int, default=3)
+    parser.add_argument("--base-x", type=float, default=0.89)
+    parser.add_argument("--base-y", type=float, default=-0.05)
+    parser.add_argument("--base-z", type=float, default=0.70)
+    parser.add_argument("--base-roll", type=float, default=15.732)
+    parser.add_argument("--base-pitch", type=float, default=-0.611)
+    # M12 (-X) faces vehicle right (-Y), so LiDAR +X faces vehicle left.
+    parser.add_argument("--base-yaw", type=float, default=90.0)
+    parser.add_argument("--self-margin", type=float, default=0.04)
+    parser.add_argument("--check-exclusion", action="store_true")
+    parser.add_argument("--check-range-gate", action="store_true")
+    parser.add_argument("--exclusion-min-x", type=float, default=-0.68)
+    parser.add_argument("--exclusion-max-x", type=float, default=0.03)
+    parser.add_argument("--exclusion-min-y", type=float, default=-0.34)
+    parser.add_argument("--exclusion-max-y", type=float, default=0.34)
+    parser.add_argument("--exclusion-min-z", type=float, default=-0.08)
+    parser.add_argument("--exclusion-max-z", type=float, default=0.38)
+    args = parser.parse_args()
+
+    databases = sorted(glob.glob(os.path.join(args.bag_path, "*.db3")))
+    if len(databases) != 1:
+        raise SystemExit(
+            f"expected exactly one .db3 file, found {len(databases)}")
+    connection = sqlite3.connect(f"file:{databases[0]}?mode=ro", uri=True)
+    topic = connection.execute(
+        "SELECT id, type FROM topics WHERE name=?", (args.topic,)
+    ).fetchone()
+    if topic is None:
+        raise SystemExit(f"topic not found: {args.topic}")
+    topic_id, type_name = topic
+    message_type = get_message(type_name)
+    rows = connection.execute(
+        "SELECT id FROM messages WHERE topic_id=? ORDER BY timestamp",
+        (topic_id,),
+    ).fetchall()
+    if not rows:
+        raise SystemExit(f"topic has no messages: {args.topic}")
+
+    requested = max(1, args.sample_frames)
+    stride = max(1, len(rows) // requested)
+    sampled = rows[::stride][:requested]
+    frame_hits = collections.Counter()
+    point_ranges = []
+    near_points = 0
+    progress_step = max(1, len(sampled) // 6)
+    for sample_index, (message_id,) in enumerate(sampled, start=1):
+        data = connection.execute(
+            "SELECT data FROM messages WHERE id=?", (message_id,)
+        ).fetchone()[0]
+        message = deserialize_message(data, message_type)
+        occupied = set()
+        for point in message.points:
+            x, y, z = float(point.x), float(point.y), float(point.z)
+            distance = math.sqrt(x * x + y * y + z * z)
+            if (
+                not math.isfinite(distance)
+                or distance < args.min_range
+                or distance > args.max_range
+            ):
+                continue
+            near_points += 1
+            point_ranges.append(distance)
+            occupied.add((
+                math.floor(x / args.voxel),
+                math.floor(y / args.voxel),
+                math.floor(z / args.voxel),
+            ))
+        frame_hits.update(occupied)
+        if (
+            sample_index == 1
+            or sample_index % progress_step == 0
+            or sample_index == len(sampled)
+        ):
+            print(
+                f"self_return_scan_progress: "
+                f"{sample_index}/{len(sampled)} frames "
+                f"near_points={near_points}",
+                flush=True,
+            )
+    connection.close()
+
+    minimum_hits = max(2, math.ceil(len(sampled) * args.min_persistence))
+    persistent = {
+        voxel: hits for voxel, hits in frame_hits.items()
+        if hits >= minimum_hits
+    }
+    components = [
+        component for component in connected_components(persistent)
+        if len(component) >= args.min_component_voxels
+    ]
+
+    print(
+        f"bag={args.bag_path} frames_total={len(rows)} "
+        f"frames_sampled={len(sampled)} voxel={args.voxel:.3f}m "
+        f"range=[{args.min_range:.2f},{args.max_range:.2f}]m"
+    )
+    print(
+        f"near_points={near_points} nearest={min(point_ranges, default=float('nan')):.3f}m "
+        f"range_p01={percentile(point_ranges, 0.01):.3f}m "
+        f"persistent_threshold={minimum_hits}/{len(sampled)}frames "
+        f"persistent_voxels={len(persistent)} components={len(components)}"
+    )
+
+    roll = math.radians(args.base_roll)
+    pitch = math.radians(args.base_pitch)
+    yaw = math.radians(args.base_yaw)
+    cr, sr = math.cos(roll), math.sin(roll)
+    cp, sp = math.cos(pitch), math.sin(pitch)
+    cy, sy = math.cos(yaw), math.sin(yaw)
+    rotation = (
+        (cy * cp, cy * sp * sr - sy * cr, cy * sp * cr + sy * sr),
+        (sy * cp, sy * sp * sr + cy * cr, sy * sp * cr - cy * sr),
+        (-sp, cp * sr, cp * cr),
+    )
+
+    def sensor_to_base(point):
+        translation = (args.base_x, args.base_y, args.base_z)
+        return tuple(
+            translation[row] + sum(
+                rotation[row][column] * point[column]
+                for column in range(3)
+            )
+            for row in range(3)
+        )
+
+    print(
+        f"lidar_mount_base: xyz=({args.base_x:+.3f},{args.base_y:+.3f},"
+        f"{args.base_z:+.3f})m rpy=({args.base_roll:+.3f},"
+        f"{args.base_pitch:+.3f},{args.base_yaw:+.3f})deg"
+    )
+    for index, component in enumerate(components[:20], start=1):
+        centers = [
+            tuple((coordinate + 0.5) * args.voxel for coordinate in voxel)
+            for voxel in component
+        ]
+        sensor_min = [min(point[axis] for point in centers) for axis in range(3)]
+        sensor_max = [max(point[axis] for point in centers) for axis in range(3)]
+        ranges = [math.sqrt(sum(value * value for value in point)) for point in centers]
+        nearest = min(ranges)
+        farthest = max(ranges)
+        base_points = [sensor_to_base(point) for point in centers]
+        base_min = [min(point[axis] for point in base_points) for axis in range(3)]
+        base_max = [max(point[axis] for point in base_points) for axis in range(3)]
+        hit_values = [persistent[voxel] for voxel in component]
+        beyond_blind = sum(
+            math.sqrt(sum(value * value for value in point))
+            > args.mapping_blind
+            for point in centers
+        )
+        print(
+            f"component_{index}: voxels={len(component)} "
+            f"persistence_max={max(hit_values)}/{len(sampled)} "
+            f"nearest_sensor={nearest:.3f}m "
+            f"farthest_sensor={farthest:.3f}m "
+            f"voxels_beyond_blind_{args.mapping_blind:.2f}m="
+            f"{beyond_blind}/{len(component)}"
+        )
+        print(
+            "  sensor_bbox: "
+            f"x=[{sensor_min[0]:+.3f},{sensor_max[0]:+.3f}] "
+            f"y=[{sensor_min[1]:+.3f},{sensor_max[1]:+.3f}] "
+            f"z=[{sensor_min[2]:+.3f},{sensor_max[2]:+.3f}]"
+        )
+        print(
+            "  base_bbox:   "
+            f"x=[{base_min[0]:+.3f},{base_max[0]:+.3f}] "
+            f"y=[{base_min[1]:+.3f},{base_max[1]:+.3f}] "
+            f"z=[{base_min[2]:+.3f},{base_max[2]:+.3f}]"
+        )
+
+    chassis_limits = (
+        (-0.38, 0.38),
+        (-0.27, 0.27),
+        (-0.05, 0.40),
+    )
+    persistent_centers = {
+        voxel: tuple(
+            (coordinate + 0.5) * args.voxel for coordinate in voxel)
+        for voxel in persistent
+    }
+    chassis_voxels = {}
+    for voxel, center in persistent_centers.items():
+        base_point = sensor_to_base(center)
+        if all(
+            minimum <= value <= maximum
+            for value, (minimum, maximum)
+            in zip(base_point, chassis_limits)
+        ):
+            chassis_voxels[voxel] = center
+    print(
+        "chassis_geometry: "
+        "x[-0.38,+0.38] y[-0.27,+0.27] z[-0.05,+0.40]m"
+    )
+    if chassis_voxels:
+        centers = list(chassis_voxels.values())
+        half_voxel = 0.5 * args.voxel
+        sensor_min = [
+            min(point[axis] for point in centers)
+            - half_voxel - args.self_margin
+            for axis in range(3)
+        ]
+        sensor_max = [
+            max(point[axis] for point in centers)
+            + half_voxel + args.self_margin
+            for axis in range(3)
+        ]
+        print(
+            f"chassis_self_returns: voxels={len(chassis_voxels)} "
+            f"persistence_max="
+            f"{max(persistent[voxel] for voxel in chassis_voxels)}"
+            f"/{len(sampled)}frames"
+        )
+        print(
+            f"recommended_sensor_exclusion_with_"
+            f"{args.self_margin:.2f}m_margin: "
+            f"x=[{sensor_min[0]:+.3f},{sensor_max[0]:+.3f}] "
+            f"y=[{sensor_min[1]:+.3f},{sensor_max[1]:+.3f}] "
+            f"z=[{sensor_min[2]:+.3f},{sensor_max[2]:+.3f}]"
+        )
+    else:
+        print(
+            "chassis_self_returns: none in persistent voxels; "
+            "keep exclusion_box_enabled=false"
+        )
+
+    if not components:
+        print(
+            "RESULT: no persistent near-field component found; lower "
+            "--min-persistence or increase --voxel only after checking the bag"
+        )
+        return 2
+    if args.check_range_gate:
+        centers = list(chassis_voxels.values())
+        outside = [
+            point for point in centers
+            if math.sqrt(sum(value * value for value in point))
+            > args.mapping_blind
+        ]
+        if outside:
+            farthest = max(
+                math.sqrt(sum(value * value for value in point))
+                for point in centers
+            )
+            print(
+                f"RESULT: FAIL chassis self-returns have "
+                f"{len(outside)}/{len(centers)} voxels beyond the "
+                f"{args.mapping_blind:.3f}m range gate; "
+                f"farthest={farthest:.3f}m"
+            )
+            return 4
+        if centers:
+            print(
+                "range_gate_check: PASS all chassis self-return voxels are "
+                f"inside blind={args.mapping_blind:.3f}m"
+            )
+        else:
+            print(
+                "range_gate_check: PASS no persistent returns intersect "
+                "the configured chassis geometry"
+            )
+    if args.check_exclusion:
+        primary = max(
+            components,
+            key=lambda component: (
+                max(persistent[voxel] for voxel in component),
+                len(component),
+            ),
+        )
+        centers = [
+            tuple((coordinate + 0.5) * args.voxel for coordinate in voxel)
+            for voxel in primary
+        ]
+        limits = (
+            (args.exclusion_min_x, args.exclusion_max_x),
+            (args.exclusion_min_y, args.exclusion_max_y),
+            (args.exclusion_min_z, args.exclusion_max_z),
+        )
+        outside = [
+            point for point in centers
+            if any(
+                value < minimum or value > maximum
+                for value, (minimum, maximum) in zip(point, limits)
+            )
+        ]
+        if outside:
+            print(
+                f"RESULT: FAIL primary persistent component has "
+                f"{len(outside)}/{len(primary)} voxels outside the exclusion box"
+            )
+            return 3
+        print(
+            "exclusion_check: PASS primary persistent component is fully "
+            "inside x=[{:.3f},{:.3f}] y=[{:.3f},{:.3f}] "
+            "z=[{:.3f},{:.3f}]".format(
+                args.exclusion_min_x, args.exclusion_max_x,
+                args.exclusion_min_y, args.exclusion_max_y,
+                args.exclusion_min_z, args.exclusion_max_z,
+            )
+        )
+    print("RESULT: persistent sensor-frame returns found")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

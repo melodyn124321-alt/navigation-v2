@@ -1,0 +1,1604 @@
+#!/usr/bin/env python3
+"""Convert an RViz goal into an obstacle-checked aligned approach."""
+
+import copy
+import math
+import threading
+import time
+
+import rclpy
+from action_msgs.msg import GoalStatus
+from geometry_msgs.msg import Point, PoseStamped
+from nav2_msgs.action import (
+    BackUp,
+    DriveOnHeading,
+    NavigateThroughPoses,
+    NavigateToPose,
+    Spin,
+)
+from nav_msgs.msg import OccupancyGrid, Path
+from rclpy.action import ActionClient, ActionServer, CancelResponse, GoalResponse
+from rclpy.callback_groups import ReentrantCallbackGroup
+from rclpy.duration import Duration
+from rclpy.executors import MultiThreadedExecutor
+from rclpy.node import Node
+from rclpy.qos import DurabilityPolicy, QoSProfile, ReliabilityPolicy
+from rclpy.time import Time
+from std_msgs.msg import Bool, String
+from tf2_ros import Buffer, TransformException, TransformListener
+from visualization_msgs.msg import Marker, MarkerArray
+
+
+def yaw_from_quaternion(q):
+    return math.atan2(
+        2.0 * (q.w * q.z + q.x * q.y),
+        1.0 - 2.0 * (q.y * q.y + q.z * q.z),
+    )
+
+
+def choose_direct_route_mode(
+        forward_turn, reverse_turn, alignment_limit,
+        automatic_reverse_enabled):
+    """Choose an automatic direct-route direction without changing hardware.
+
+    Disabling automatic reverse does not remove the /backup behavior or the
+    reverse safety gate.  It only makes an RViz navigation goal align to the
+    forward bearing and then use the forward-only Nav2 planner/controller.
+    """
+    if not automatic_reverse_enabled:
+        if abs(forward_turn) <= alignment_limit + 1.0e-6:
+            return "forward", forward_turn
+        return None, None
+    if (
+            abs(forward_turn) <= abs(reverse_turn)
+            and abs(forward_turn) <= alignment_limit):
+        return "forward", forward_turn
+    if abs(reverse_turn) <= alignment_limit:
+        return "straight_reverse", reverse_turn
+    return None, None
+
+
+def calculate_spin_time_allowance(
+        angle, minimum_timeout, effective_min_angular_speed,
+        timeout_factor, timeout_margin):
+    """Return a conservative allowance for a collision-checked spin step."""
+    nominal_duration = (
+        abs(angle) / max(0.01, effective_min_angular_speed)
+    )
+    return max(
+        minimum_timeout,
+        nominal_duration * max(1.0, timeout_factor)
+        + max(0.0, timeout_margin),
+    )
+
+
+class AlignedNavGoalAdapter(Node):
+    def __init__(self):
+        super().__init__("aligned_nav_goal_adapter")
+        self.approach_distance = float(
+            self.declare_parameter("approach_distance", 0.70).value)
+        self.min_approach_distance = float(
+            self.declare_parameter("min_approach_distance", 0.45).value)
+        self.approach_step = float(
+            self.declare_parameter("approach_step", 0.05).value)
+        self.maximum_cost = int(
+            self.declare_parameter("maximum_cost", 90).value)
+        self.map_wait_timeout = float(
+            self.declare_parameter("map_wait_timeout", 5.0).value)
+        self.outer_action_name = str(
+            self.declare_parameter(
+                "outer_action_name", "/aligned_navigate_to_pose").value)
+        self.direct_reverse_plan_topic = str(
+            self.declare_parameter(
+                "direct_reverse_plan_topic",
+                "/direct_reverse_plan").value)
+        self.feedback_period = float(
+            self.declare_parameter("feedback_period", 0.20).value)
+        self.progress_timeout = float(
+            self.declare_parameter("progress_timeout", 45.0).value)
+        self.progress_min_displacement = float(
+            self.declare_parameter("progress_min_displacement", 0.03).value)
+        self.small_spin_min_angle = float(
+            self.declare_parameter("small_spin_min_angle", 0.08).value)
+        self.small_spin_max_angle = float(
+            self.declare_parameter("small_spin_max_angle", 0.52).value)
+        self.direct_alignment_max_angle = float(
+            self.declare_parameter(
+                "direct_alignment_max_angle", math.pi).value)
+        self.automatic_reverse_enabled = bool(
+            self.declare_parameter(
+                "automatic_reverse_enabled", False).value)
+        self.final_alignment_max_angle = float(
+            self.declare_parameter(
+                "final_alignment_max_angle", math.pi).value)
+        self.small_spin_timeout = float(
+            self.declare_parameter("small_spin_timeout", 12.0).value)
+        self.small_spin_effective_min_angular_speed = float(
+            self.declare_parameter(
+                "small_spin_effective_min_angular_speed", 0.035).value)
+        self.small_spin_timeout_factor = float(
+            self.declare_parameter(
+                "small_spin_timeout_factor", 1.35).value)
+        self.small_spin_timeout_margin = float(
+            self.declare_parameter(
+                "small_spin_timeout_margin", 3.0).value)
+        self.straight_reverse_speed = float(
+            self.declare_parameter(
+                "straight_reverse_speed", 0.04).value)
+        self.reverse_time_allowance_factor = float(
+            self.declare_parameter(
+                "reverse_time_allowance_factor", 3.0).value)
+        self.terminal_handoff_distance = float(
+            self.declare_parameter(
+                "terminal_handoff_distance", 0.35).value)
+        self.terminal_position_tolerance = float(
+            self.declare_parameter(
+                "terminal_position_tolerance", 0.10).value)
+        self.terminal_forward_speed = float(
+            self.declare_parameter(
+                "terminal_forward_speed", 0.04).value)
+        self.terminal_time_allowance_factor = float(
+            self.declare_parameter(
+                "terminal_time_allowance_factor", 3.0).value)
+        self.terminal_alignment_max_angle = float(
+            self.declare_parameter(
+                "terminal_alignment_max_angle", 0.52).value)
+        self.policy_block_timeout = float(
+            self.declare_parameter("policy_block_timeout", 6.0).value)
+        self.stale_command_abort_timeout = float(
+            self.declare_parameter(
+                "stale_command_abort_timeout", 15.0).value)
+        self.global_costmap = None
+        self.active = False
+        self.inner_handle = None
+        self.spin_handle = None
+        self.backup_handle = None
+        self.drive_handle = None
+        self.direct_reverse_plan = None
+        self.direct_reverse_distance = 0.0
+        self.last_backup_status_time = None
+        self.last_feedback_time = None
+        self.last_progress_status_time = None
+        self.last_motion_status = None
+        self.last_distance = math.inf
+        self.best_distance = math.inf
+        self.last_recoveries = 0
+        self.progress_anchor_x = None
+        self.progress_anchor_y = None
+        self.progress_anchor_time = None
+        self.progress_abort_requested = False
+        self.abort_reason = None
+        self.motion_block_start_time = None
+        self.motion_block_kind = None
+        self.motion_armed = None
+        self.goal_lock = threading.Lock()
+        self.goal_reserved = False
+        self.motion_authorized = False
+        self.goal_sequence = 0
+        self.current_goal_id = None
+        self.active_target = None
+        self.terminal_handoff_enabled = False
+        self.terminal_handoff_requested = False
+        self.last_drive_status_time = None
+
+        callback_group = ReentrantCallbackGroup()
+        self.tf_buffer = Buffer()
+        self.tf_listener = TransformListener(
+            self.tf_buffer, self, spin_thread=False)
+        latched_qos = QoSProfile(
+            depth=1,
+            reliability=ReliabilityPolicy.RELIABLE,
+            durability=DurabilityPolicy.TRANSIENT_LOCAL,
+        )
+        status_qos = QoSProfile(
+            depth=20,
+            reliability=ReliabilityPolicy.RELIABLE,
+            durability=DurabilityPolicy.TRANSIENT_LOCAL,
+        )
+        self.create_subscription(
+            OccupancyGrid,
+            "/global_costmap/costmap",
+            self.on_costmap,
+            latched_qos,
+            callback_group=callback_group,
+        )
+        self.create_subscription(
+            String,
+            "/nav_motion_status",
+            self.on_motion_status,
+            10,
+            callback_group=callback_group,
+        )
+        self.create_subscription(
+            Bool,
+            "/nav_motion_armed",
+            self.on_motion_armed,
+            10,
+            callback_group=callback_group,
+        )
+        self.status_pub = self.create_publisher(
+            String, "/aligned_goal_status", status_qos)
+        self.approach_pub = self.create_publisher(
+            PoseStamped, "/aligned_goal_approach_pose", latched_qos)
+        self.target_pub = self.create_publisher(
+            PoseStamped, "/aligned_goal_target_pose", latched_qos)
+        self.marker_pub = self.create_publisher(
+            MarkerArray, "/nav_goal_markers", latched_qos)
+        # Heartbeat-style lease consumed by the final motion gate.  A fresh
+        # false lease stops residual controller/smoother commands after a goal
+        # finishes or is rejected; a missing lease also fails closed.
+        self.goal_active_pub = self.create_publisher(
+            Bool, "/aligned_goal_active", latched_qos)
+        self.inner_client = ActionClient(
+            self,
+            NavigateThroughPoses,
+            "/navigate_through_poses",
+            callback_group=callback_group,
+        )
+        self.spin_client = ActionClient(
+            self,
+            Spin,
+            "/spin",
+            callback_group=callback_group,
+        )
+        self.backup_client = ActionClient(
+            self,
+            BackUp,
+            "/backup",
+            callback_group=callback_group,
+        )
+        self.drive_client = ActionClient(
+            self,
+            DriveOnHeading,
+            "/drive_on_heading",
+            callback_group=callback_group,
+        )
+        self.plan_pub = self.create_publisher(Path, "/plan", 10)
+        self.direct_reverse_plan_pub = self.create_publisher(
+            Path, self.direct_reverse_plan_topic, 10)
+        self.outer_server = ActionServer(
+            self,
+            NavigateToPose,
+            self.outer_action_name,
+            execute_callback=self.execute,
+            goal_callback=self.on_goal,
+            cancel_callback=self.on_cancel,
+            callback_group=callback_group,
+        )
+        self.create_timer(
+            0.50, self.check_persistent_motion_block,
+            callback_group=callback_group)
+        self.create_timer(
+            0.50, self.publish_direct_reverse_plan,
+            callback_group=callback_group)
+        self.create_timer(
+            0.20, self.publish_goal_active_lease,
+            callback_group=callback_group)
+        self.publish_goal_active_lease()
+        self.publish_status(
+            f"READY approach={self.approach_distance:.2f}m "
+            f"outer_action={self.outer_action_name} "
+            f"reverse_plan={self.direct_reverse_plan_topic} "
+            f"minimum={self.min_approach_distance:.2f}m "
+            f"progress={self.progress_min_displacement:.2f}m/"
+            f"{self.progress_timeout:.0f}s "
+            f"small_spin_step<="
+            f"{math.degrees(self.small_spin_max_angle):.0f}deg "
+            f"spin_timeout=dynamic(min={self.small_spin_timeout:.0f}s,"
+            f"effective_rate={self.small_spin_effective_min_angular_speed:.3f}rad/s) "
+            f"initial_alignment<="
+            f"{math.degrees(self.direct_alignment_max_angle):.0f}deg "
+            f"automatic_reverse={self.automatic_reverse_enabled} "
+            f"strategy="
+            f"{'shortest_direction' if self.automatic_reverse_enabled else 'spin_then_forward'} "
+            f"final_alignment<="
+            f"{math.degrees(self.final_alignment_max_angle):.0f}deg "
+            f"policy_abort={self.policy_block_timeout:.0f}s "
+            f"stale_abort={self.stale_command_abort_timeout:.0f}s "
+            f"straight_reverse_speed={self.straight_reverse_speed:.2f}m/s "
+            f"reverse_allowance_factor="
+            f"{self.reverse_time_allowance_factor:.1f} "
+            f"terminal_handoff={self.terminal_handoff_distance:.2f}m "
+            f"terminal_speed={self.terminal_forward_speed:.2f}m/s "
+            f"terminal_allowance_factor="
+            f"{self.terminal_time_allowance_factor:.1f} "
+            f"terminal_tolerance={self.terminal_position_tolerance:.2f}m")
+
+    def on_costmap(self, msg):
+        self.global_costmap = msg
+
+    def publish_status(self, text):
+        if self.current_goal_id is not None and "goal_id=" not in text:
+            text = f"{text} goal_id={self.current_goal_id}"
+        self.status_pub.publish(String(data=text))
+        self.get_logger().info(text)
+
+    def publish_goal_active_lease(self):
+        with self.goal_lock:
+            active = self.active and self.motion_authorized
+        self.goal_active_pub.publish(Bool(data=active))
+
+    def set_motion_authorized(self, authorized):
+        with self.goal_lock:
+            changed = self.motion_authorized != bool(authorized)
+            self.motion_authorized = bool(authorized)
+        self.publish_goal_active_lease()
+        if changed:
+            state = "ACTIVE" if authorized else "BLOCKED"
+            self.publish_status(
+                f"MOTION_LEASE_{state} "
+                "current child action command authorization")
+
+    def on_motion_status(self, msg):
+        state = msg.data.strip()
+        if not self.active:
+            return
+        now = self.get_clock().now().nanoseconds / 1e9
+        if state.startswith("reverse prohibited"):
+            block_kind = "reverse policy"
+        elif state == "stale navigation command":
+            block_kind = "stale command"
+        else:
+            block_kind = None
+        if block_kind != self.motion_block_kind:
+            self.motion_block_kind = block_kind
+            self.motion_block_start_time = now if block_kind else None
+        if state == self.last_motion_status:
+            return
+        self.last_motion_status = state
+        if state == "ready":
+            self.publish_status("RUNNING motion permitted")
+        elif state == "disarmed":
+            self.publish_status(
+                "BLOCKED motion gate is DISARMED; arm before sending a goal")
+        else:
+            self.publish_status(f"BLOCKED {state}")
+
+    def on_motion_armed(self, msg):
+        was_armed = self.motion_armed
+        self.motion_armed = bool(msg.data)
+        if (
+                was_armed is True
+                and self.motion_armed is False
+                and self.active
+                and not self.progress_abort_requested):
+            self.progress_abort_requested = True
+            self.abort_reason = "motion gate was disarmed during active goal"
+            self.publish_status(f"ABORTING {self.abort_reason}")
+            for handle in (
+                    self.inner_handle, self.spin_handle,
+                    self.backup_handle, self.drive_handle):
+                if handle is not None:
+                    handle.cancel_goal_async()
+
+    def check_persistent_motion_block(self):
+        handle = (
+            self.inner_handle or self.backup_handle or self.drive_handle)
+        if (
+                not self.active
+                or handle is None
+                or self.motion_block_kind is None
+                or self.motion_block_start_time is None
+                or self.progress_abort_requested):
+            return
+        now = self.get_clock().now().nanoseconds / 1e9
+        blocked_for = now - self.motion_block_start_time
+        timeout = (
+            self.policy_block_timeout
+            if self.motion_block_kind == "reverse policy"
+            else self.stale_command_abort_timeout
+        )
+        if blocked_for < timeout:
+            return
+        self.progress_abort_requested = True
+        self.abort_reason = (
+            f"persistent {self.motion_block_kind}: "
+            f"{self.last_motion_status} for {blocked_for:.1f}s"
+        )
+        self.publish_status(f"ABORTING {self.abort_reason}")
+        handle.cancel_goal_async()
+
+    def make_straight_path(self, start, target):
+        path = Path()
+        path.header.frame_id = "map"
+        path.header.stamp = self.get_clock().now().to_msg()
+        distance = math.hypot(
+            target.pose.position.x - start[0],
+            target.pose.position.y - start[1],
+        )
+        samples = max(3, int(math.ceil(distance / 0.05)) + 1)
+        for index in range(samples):
+            ratio = index / (samples - 1)
+            pose = PoseStamped()
+            pose.header = copy.deepcopy(path.header)
+            pose.pose.position.x = (
+                start[0]
+                + ratio * (target.pose.position.x - start[0])
+            )
+            pose.pose.position.y = (
+                start[1]
+                + ratio * (target.pose.position.y - start[1])
+            )
+            self.set_pose_yaw(pose, start[2])
+            path.poses.append(pose)
+        return path
+
+    def publish_direct_reverse_plan(self):
+        if self.direct_reverse_plan is None:
+            return
+        stamp = self.get_clock().now().to_msg()
+        self.direct_reverse_plan.header.stamp = stamp
+        for pose in self.direct_reverse_plan.poses:
+            pose.header.stamp = stamp
+        self.direct_reverse_plan_pub.publish(self.direct_reverse_plan)
+
+    def clear_direct_reverse_plan(self):
+        empty = Path()
+        empty.header.frame_id = "map"
+        empty.header.stamp = self.get_clock().now().to_msg()
+        self.direct_reverse_plan_pub.publish(empty)
+
+    def relay_backup_feedback(self, outer_handle, feedback_msg):
+        self.set_motion_authorized(True)
+        now = self.get_clock().now().nanoseconds / 1e9
+        traveled = float(feedback_msg.feedback.distance_traveled)
+        remaining = max(0.0, self.direct_reverse_distance - traveled)
+        feedback = NavigateToPose.Feedback()
+        base_pose = self.current_base_pose()
+        if base_pose is not None:
+            feedback.current_pose.header.frame_id = "map"
+            feedback.current_pose.header.stamp = (
+                self.get_clock().now().to_msg())
+            feedback.current_pose.pose.position.x = base_pose[0]
+            feedback.current_pose.pose.position.y = base_pose[1]
+            self.set_pose_yaw(feedback.current_pose, base_pose[2])
+        feedback.distance_remaining = remaining
+        outer_handle.publish_feedback(feedback)
+        if (
+                self.last_backup_status_time is None
+                or now - self.last_backup_status_time >= 1.0):
+            self.publish_status(
+                "STRAIGHT_REVERSE_RUNNING "
+                f"traveled={traveled:.3f}m "
+                f"remaining={remaining:.3f}m "
+                f"speed={self.straight_reverse_speed:.3f}m/s")
+            self.last_backup_status_time = now
+
+    def relay_drive_feedback(self, outer_handle, feedback_msg):
+        self.set_motion_authorized(True)
+        now = self.get_clock().now().nanoseconds / 1e9
+        base_pose = self.current_base_pose()
+        target_distance = math.inf
+        feedback = NavigateToPose.Feedback()
+        if base_pose is not None:
+            feedback.current_pose.header.frame_id = "map"
+            feedback.current_pose.header.stamp = (
+                self.get_clock().now().to_msg())
+            feedback.current_pose.pose.position.x = base_pose[0]
+            feedback.current_pose.pose.position.y = base_pose[1]
+            self.set_pose_yaw(feedback.current_pose, base_pose[2])
+            if self.active_target is not None:
+                target_distance = math.hypot(
+                    self.active_target.pose.position.x - base_pose[0],
+                    self.active_target.pose.position.y - base_pose[1],
+                )
+        feedback.distance_remaining = target_distance
+        outer_handle.publish_feedback(feedback)
+        if math.isfinite(target_distance):
+            self.last_distance = target_distance
+            self.best_distance = min(self.best_distance, target_distance)
+        if (
+                self.last_drive_status_time is None
+                or now - self.last_drive_status_time >= 1.0):
+            traveled = float(feedback_msg.feedback.distance_traveled)
+            self.publish_status(
+                "TERMINAL_FORWARD_RUNNING "
+                f"traveled={traveled:.3f}m "
+                f"target_distance={target_distance:.3f}m "
+                f"speed={self.terminal_forward_speed:.3f}m/s")
+            self.last_drive_status_time = now
+
+    async def run_terminal_forward(self, outer_handle, target):
+        base_pose = self.current_base_pose()
+        if base_pose is None:
+            self.publish_status(
+                "TERMINAL_ABORT cannot read map->base_link pose")
+            return False
+        remaining = math.hypot(
+            target.pose.position.x - base_pose[0],
+            target.pose.position.y - base_pose[1],
+        )
+        if remaining <= self.terminal_position_tolerance:
+            self.publish_status(
+                "TERMINAL_POSITION_REACHED "
+                f"distance={remaining:.3f}m without extra motion")
+            return True
+        if not self.corridor_is_clear(
+                base_pose[0], base_pose[1],
+                target.pose.position.x, target.pose.position.y):
+            self.publish_status(
+                "TERMINAL_ABORT final straight corridor is occupied")
+            return False
+
+        bearing = math.atan2(
+            target.pose.position.y - base_pose[1],
+            target.pose.position.x - base_pose[0],
+        )
+        alignment = math.atan2(
+            math.sin(bearing - base_pose[2]),
+            math.cos(bearing - base_pose[2]),
+        )
+        if abs(alignment) > self.terminal_alignment_max_angle:
+            self.publish_status(
+                "TERMINAL_ABORT final corridor requires excessive alignment "
+                f"angle={math.degrees(alignment):+.1f}deg "
+                f"limit={math.degrees(self.terminal_alignment_max_angle):.1f}deg")
+            return False
+        if not await self.run_segmented_spin(
+                outer_handle, alignment, "terminal"):
+            self.publish_status(
+                "TERMINAL_ABORT bounded terminal alignment is blocked")
+            return False
+
+        base_pose = self.current_base_pose()
+        if base_pose is None:
+            self.publish_status(
+                "TERMINAL_ABORT pose unavailable after alignment")
+            return False
+        remaining = math.hypot(
+            target.pose.position.x - base_pose[0],
+            target.pose.position.y - base_pose[1],
+        )
+        if remaining <= self.terminal_position_tolerance:
+            self.publish_status(
+                "TERMINAL_POSITION_REACHED "
+                f"distance={remaining:.3f}m after alignment")
+            return True
+        if not self.corridor_is_clear(
+                base_pose[0], base_pose[1],
+                target.pose.position.x, target.pose.position.y):
+            self.publish_status(
+                "TERMINAL_ABORT corridor changed after alignment")
+            return False
+        if not self.drive_client.wait_for_server(timeout_sec=8.0):
+            self.publish_status(
+                "TERMINAL_ABORT /drive_on_heading action unavailable")
+            return False
+
+        terminal_path = self.make_straight_path(base_pose, target)
+        self.plan_pub.publish(terminal_path)
+        time.sleep(0.10)
+        self.plan_pub.publish(terminal_path)
+        self.publish_status(
+            "TERMINAL_FORWARD "
+            f"distance={remaining:.3f}m "
+            f"speed={self.terminal_forward_speed:.3f}m/s "
+            "planner=replanning-disabled behavior=/drive_on_heading")
+        drive_goal = DriveOnHeading.Goal()
+        drive_goal.target.x = remaining
+        drive_goal.speed = self.terminal_forward_speed
+        allowance = min(
+            90.0,
+            max(
+                8.0,
+                remaining
+                / max(0.01, self.terminal_forward_speed)
+                * self.terminal_time_allowance_factor,
+            ),
+        )
+        drive_goal.time_allowance.sec = int(allowance)
+        drive_goal.time_allowance.nanosec = int(
+            (allowance - int(allowance)) * 1.0e9)
+        self.last_drive_status_time = None
+        self.drive_handle = await self.drive_client.send_goal_async(
+            drive_goal,
+            feedback_callback=lambda msg: self.relay_drive_feedback(
+                outer_handle, msg),
+        )
+        if not self.drive_handle.accepted:
+            self.drive_handle = None
+            self.publish_status(
+                "TERMINAL_ABORT /drive_on_heading rejected")
+            return False
+        self.set_motion_authorized(False)
+        drive_result = await self.drive_handle.get_result_async()
+        self.set_motion_authorized(False)
+        self.drive_handle = None
+        if outer_handle.is_cancel_requested:
+            return False
+        if drive_result.status != GoalStatus.STATUS_SUCCEEDED:
+            stopped_pose = self.current_base_pose()
+            stopped_error = math.inf
+            if stopped_pose is not None:
+                stopped_error = math.hypot(
+                    target.pose.position.x - stopped_pose[0],
+                    target.pose.position.y - stopped_pose[1],
+                )
+            if stopped_error <= self.terminal_position_tolerance:
+                self.publish_status(
+                    "TERMINAL_POSITION_REACHED "
+                    f"distance={stopped_error:.3f}m "
+                    f"after /drive_on_heading status={drive_result.status}")
+                return True
+            self.publish_status(
+                "TERMINAL_ABORT /drive_on_heading "
+                f"status={drive_result.status} "
+                f"distance={stopped_error:.3f}m")
+            return False
+        final_pose = self.current_base_pose()
+        if final_pose is None:
+            self.publish_status(
+                "TERMINAL_ABORT final pose unavailable")
+            return False
+        final_error = math.hypot(
+            target.pose.position.x - final_pose[0],
+            target.pose.position.y - final_pose[1],
+        )
+        if final_error > max(0.15, self.terminal_position_tolerance):
+            self.publish_status(
+                "TERMINAL_ABORT forward segment ended outside position "
+                f"tolerance distance={final_error:.3f}m")
+            return False
+        self.publish_status(
+            "TERMINAL_POSITION_REACHED "
+            f"distance={final_error:.3f}m")
+        return True
+
+    async def run_final_alignment(self, outer_handle, target, desired_yaw):
+        base_pose = self.current_base_pose()
+        if base_pose is None:
+            self.publish_status(
+                "FINAL_HEADING_ABORT pose unavailable; cannot verify heading")
+            return False
+        initial_turn = math.atan2(
+            math.sin(desired_yaw - base_pose[2]),
+            math.cos(desired_yaw - base_pose[2]),
+        )
+        if abs(initial_turn) > self.final_alignment_max_angle:
+            self.publish_status(
+                "FINAL_HEADING_ABORT requested rotation is larger than "
+                f"the bounded limit angle={math.degrees(initial_turn):+.1f}deg "
+                f"limit={math.degrees(self.final_alignment_max_angle):.1f}deg")
+            return False
+        planned_steps = max(
+            1,
+            int(math.ceil(
+                abs(initial_turn) / self.small_spin_max_angle)),
+        )
+        self.publish_status(
+            "POSITION_REACHED target position accepted once; "
+            "starting measured segmented final alignment "
+            f"angle={math.degrees(initial_turn):+.1f}deg "
+            f"steps={planned_steps} "
+            f"step_limit={math.degrees(self.small_spin_max_angle):.1f}deg")
+
+        # Re-read map->base_link before every bounded step.  This prevents
+        # accumulated wheel-slip or NDT yaw error from being mistaken for a
+        # correctly completed final orientation.
+        for step_index in range(planned_steps + 2):
+            if outer_handle.is_cancel_requested:
+                return False
+            base_pose = self.current_base_pose()
+            if base_pose is None:
+                self.publish_status(
+                    "FINAL_HEADING_ABORT pose unavailable between steps")
+                return False
+            residual = math.atan2(
+                math.sin(desired_yaw - base_pose[2]),
+                math.cos(desired_yaw - base_pose[2]),
+            )
+            position_error = math.hypot(
+                target.pose.position.x - base_pose[0],
+                target.pose.position.y - base_pose[1],
+            )
+            if abs(residual) < self.small_spin_min_angle:
+                if position_error > max(
+                        0.15, self.terminal_position_tolerance):
+                    self.publish_status(
+                        "FINAL_HEADING_ABORT position drifted during "
+                        f"alignment distance={position_error:.3f}m")
+                    return False
+                self.publish_status(
+                    "FINAL_HEADING_REACHED "
+                    f"yaw_error={math.degrees(residual):+.1f}deg "
+                    f"position_error={position_error:.3f}m "
+                    f"steps={step_index}")
+                return True
+            step_angle = math.copysign(
+                min(abs(residual), self.small_spin_max_angle),
+                residual,
+            )
+            self.publish_status(
+                "FINAL_HEADING_STEP "
+                f"step={step_index + 1}/{planned_steps + 2} "
+                f"command={math.degrees(step_angle):+.1f}deg "
+                f"remaining={math.degrees(residual):+.1f}deg "
+                f"position_error={position_error:.3f}m")
+            if not await self.run_segmented_spin(
+                    outer_handle, step_angle, "final"):
+                return False
+            time.sleep(0.10)
+
+        base_pose = self.current_base_pose()
+        residual = math.inf
+        if base_pose is not None:
+            residual = math.atan2(
+                math.sin(desired_yaw - base_pose[2]),
+                math.cos(desired_yaw - base_pose[2]),
+            )
+        self.publish_status(
+            "FINAL_HEADING_ABORT did not converge within bounded steps "
+            f"yaw_error={math.degrees(residual):+.1f}deg")
+        return False
+
+    def publish_target_markers(self, target):
+        now = self.get_clock().now().to_msg()
+
+        center = Marker()
+        center.header.frame_id = "map"
+        center.header.stamp = now
+        center.ns = "nav_goal_immediate"
+        center.id = 0
+        center.type = Marker.CYLINDER
+        center.action = Marker.ADD
+        center.pose = copy.deepcopy(target.pose)
+        center.pose.position.z = 0.08
+        center.scale.x = 0.16
+        center.scale.y = 0.16
+        center.scale.z = 0.08
+        center.color.r = 0.0
+        center.color.g = 0.9
+        center.color.b = 1.0
+        center.color.a = 0.95
+        center.frame_locked = True
+
+        arrow = copy.deepcopy(center)
+        arrow.id = 1
+        arrow.type = Marker.ARROW
+        arrow.pose = copy.deepcopy(target.pose)
+        arrow.pose.position.z = 0.14
+        arrow.scale.x = 0.55
+        arrow.scale.y = 0.12
+        arrow.scale.z = 0.12
+        arrow.color.r = 1.0
+        arrow.color.g = 0.45
+        arrow.color.b = 0.0
+
+        ring = copy.deepcopy(center)
+        ring.id = 2
+        ring.type = Marker.LINE_STRIP
+        ring.pose.orientation.x = 0.0
+        ring.pose.orientation.y = 0.0
+        ring.pose.orientation.z = 0.0
+        ring.pose.orientation.w = 1.0
+        ring.scale.x = 0.035
+        ring.color.r = 0.0
+        ring.color.g = 1.0
+        ring.color.b = 0.25
+        ring.color.a = 1.0
+        ring.points = []
+        for index in range(49):
+            angle = 2.0 * math.pi * index / 48.0
+            ring.points.append(Point(
+                x=0.08 * math.cos(angle),
+                y=0.08 * math.sin(angle),
+                z=0.02,
+            ))
+
+        label = copy.deepcopy(center)
+        label.id = 3
+        label.type = Marker.TEXT_VIEW_FACING
+        label.pose.position.z = 0.60
+        label.pose.orientation.x = 0.0
+        label.pose.orientation.y = 0.0
+        label.pose.orientation.z = 0.0
+        label.pose.orientation.w = 1.0
+        label.scale.x = 0.0
+        label.scale.y = 0.0
+        label.scale.z = 0.20
+        label.color.r = 0.0
+        label.color.g = 0.9
+        label.color.b = 1.0
+        label.color.a = 1.0
+        label.text = (
+            f"NAV GOAL {self.current_goal_id}"
+            if self.current_goal_id is not None
+            else "NAV GOAL"
+        )
+
+        self.marker_pub.publish(MarkerArray(
+            markers=[center, arrow, ring, label]))
+
+    def on_goal(self, request):
+        if self.motion_armed is not True:
+            self.publish_status(
+                "REJECTED motion gate is DISARMED; run "
+                "seeed_arm_nav_motion.sh and wait for [MOTION_ARMED] "
+                "before sending a goal")
+            self.get_logger().warn(
+                "rejecting navigation goal while motion gate is disarmed")
+            return GoalResponse.REJECT
+        if request.pose.header.frame_id not in ("", "map"):
+            self.get_logger().error(
+                f"goal frame must be map, got {request.pose.header.frame_id!r}")
+            return GoalResponse.REJECT
+        with self.goal_lock:
+            if self.active or self.goal_reserved:
+                self.get_logger().warn(
+                    "rejecting a second goal while one is active or reserved")
+                self.publish_status(
+                    "DUPLICATE_REJECTED another goal is already active; "
+                    "the existing goal will not be submitted again")
+                return GoalResponse.REJECT
+            self.goal_sequence += 1
+            self.current_goal_id = f"G{self.goal_sequence:04d}"
+            self.goal_reserved = True
+            self.motion_authorized = False
+        self.publish_goal_active_lease()
+        pose = request.pose.pose
+        self.publish_status(
+            "RECEIVED exactly once "
+            f"target=({pose.position.x:.3f},{pose.position.y:.3f}) "
+            f"yaw={math.degrees(yaw_from_quaternion(pose.orientation)):+.1f}deg")
+        return GoalResponse.ACCEPT
+
+    def on_cancel(self, _goal_handle):
+        self.set_motion_authorized(False)
+        if self.inner_handle is not None:
+            self.inner_handle.cancel_goal_async()
+        if self.spin_handle is not None:
+            self.spin_handle.cancel_goal_async()
+        if self.backup_handle is not None:
+            self.backup_handle.cancel_goal_async()
+        if self.drive_handle is not None:
+            self.drive_handle.cancel_goal_async()
+        return CancelResponse.ACCEPT
+
+    @staticmethod
+    def set_pose_yaw(pose_stamped, yaw):
+        pose_stamped.pose.orientation.x = 0.0
+        pose_stamped.pose.orientation.y = 0.0
+        pose_stamped.pose.orientation.z = math.sin(yaw / 2.0)
+        pose_stamped.pose.orientation.w = math.cos(yaw / 2.0)
+
+    async def run_segmented_spin(self, outer_handle, angle, phase):
+        if abs(angle) < self.small_spin_min_angle:
+            return True
+        if not self.spin_client.wait_for_server(timeout_sec=5.0):
+            self.publish_status(
+                f"SPIN_BLOCKED bounded /spin action unavailable phase={phase}")
+            return False
+        spin_steps = max(
+            1,
+            int(math.ceil(abs(angle) / self.small_spin_max_angle)),
+        )
+        spin_step_angle = angle / spin_steps
+        self.publish_status(
+            f"SMALL_SPIN phase={phase} "
+            f"total={math.degrees(angle):+.1f}deg "
+            f"steps={spin_steps} "
+            f"step_limit={math.degrees(self.small_spin_max_angle):.1f}deg")
+        for spin_index in range(spin_steps):
+            if outer_handle.is_cancel_requested:
+                return False
+            self.publish_status(
+                f"SMALL_SPIN phase={phase} "
+                f"step={spin_index + 1}/{spin_steps} "
+                f"angle={math.degrees(spin_step_angle):+.1f}deg "
+                f"total={math.degrees(angle):+.1f}deg")
+            spin_goal = Spin.Goal()
+            spin_goal.target_yaw = float(spin_step_angle)
+            spin_allowance = calculate_spin_time_allowance(
+                spin_step_angle,
+                self.small_spin_timeout,
+                self.small_spin_effective_min_angular_speed,
+                self.small_spin_timeout_factor,
+                self.small_spin_timeout_margin,
+            )
+            self.publish_status(
+                f"SMALL_SPIN_ALLOWANCE phase={phase} "
+                f"step={spin_index + 1}/{spin_steps} "
+                f"angle={math.degrees(spin_step_angle):+.1f}deg "
+                f"allowance={spin_allowance:.1f}s")
+            spin_goal.time_allowance.sec = int(spin_allowance)
+            spin_goal.time_allowance.nanosec = int(
+                (spin_allowance - int(spin_allowance)) * 1.0e9)
+            spin_started = time.monotonic()
+            self.spin_handle = await self.spin_client.send_goal_async(spin_goal)
+            if not self.spin_handle.accepted:
+                self.publish_status(
+                    "SPIN_BLOCKED bounded small-spin request rejected "
+                    f"phase={phase} step={spin_index + 1}/{spin_steps}")
+                self.spin_handle = None
+                return False
+            self.set_motion_authorized(True)
+            spin_result = await self.spin_handle.get_result_async()
+            self.set_motion_authorized(False)
+            self.spin_handle = None
+            if outer_handle.is_cancel_requested:
+                return False
+            if spin_result.status != GoalStatus.STATUS_SUCCEEDED:
+                spin_elapsed = time.monotonic() - spin_started
+                failure_kind = (
+                    "SPIN_TIMEOUT"
+                    if spin_elapsed >= max(0.0, spin_allowance - 0.75)
+                    else "SPIN_ABORTED"
+                )
+                self.publish_status(
+                    f"{failure_kind} bounded small-spin failed "
+                    f"phase={phase} step={spin_index + 1}/{spin_steps} "
+                    f"status={spin_result.status} "
+                    f"elapsed={spin_elapsed:.1f}s "
+                    f"allowance={spin_allowance:.1f}s")
+                return False
+        return True
+
+    def current_base_pose(self):
+        try:
+            transform = self.tf_buffer.lookup_transform(
+                "map",
+                "base_link",
+                Time(),
+                timeout=Duration(seconds=0.50),
+            )
+        except TransformException as error:
+            self.get_logger().warn(
+                f"cannot inspect direct-route heading: {error}")
+            return None
+        translation = transform.transform.translation
+        rotation = transform.transform.rotation
+        return (
+            float(translation.x),
+            float(translation.y),
+            yaw_from_quaternion(rotation),
+        )
+
+    def grid_cost(self, x, y):
+        grid = self.global_costmap
+        if grid is None:
+            return None
+        info = grid.info
+        cx = int(math.floor((x - info.origin.position.x) / info.resolution))
+        cy = int(math.floor((y - info.origin.position.y) / info.resolution))
+        if cx < 0 or cy < 0 or cx >= info.width or cy >= info.height:
+            return None
+        return int(grid.data[cy * info.width + cx])
+
+    def corridor_is_clear(self, start_x, start_y, goal_x, goal_y):
+        grid = self.global_costmap
+        if grid is None:
+            return False
+        distance = math.hypot(goal_x - start_x, goal_y - start_y)
+        samples = max(2, int(math.ceil(distance / grid.info.resolution)) + 1)
+        for index in range(samples):
+            ratio = index / (samples - 1)
+            x = start_x + ratio * (goal_x - start_x)
+            y = start_y + ratio * (goal_y - start_y)
+            cost = self.grid_cost(x, y)
+            if cost is None or cost < 0 or cost > self.maximum_cost:
+                return False
+        return True
+
+    def select_approach_pose(self, target):
+        yaw = yaw_from_quaternion(target.pose.orientation)
+        distance = self.approach_distance
+        while distance + 1.0e-6 >= self.min_approach_distance:
+            approach = copy.deepcopy(target)
+            approach.header.stamp = self.get_clock().now().to_msg()
+            approach.pose.position.x -= distance * math.cos(yaw)
+            approach.pose.position.y -= distance * math.sin(yaw)
+            if self.corridor_is_clear(
+                    approach.pose.position.x, approach.pose.position.y,
+                    target.pose.position.x, target.pose.position.y):
+                return approach, distance
+            distance -= self.approach_step
+        return None, None
+
+    def relay_feedback(self, outer_handle, feedback_msg):
+        self.set_motion_authorized(True)
+        now = self.get_clock().now().nanoseconds / 1e9
+        if (self.last_feedback_time is not None and
+                now - self.last_feedback_time < self.feedback_period):
+            return
+        self.last_feedback_time = now
+        source = feedback_msg.feedback
+        feedback = NavigateToPose.Feedback()
+        feedback.current_pose = source.current_pose
+        feedback.navigation_time = source.navigation_time
+        feedback.estimated_time_remaining = source.estimated_time_remaining
+        feedback.number_of_recoveries = source.number_of_recoveries
+        position = source.current_pose.pose.position
+        if self.active_target is not None:
+            target_distance = math.hypot(
+                float(position.x) - self.active_target.pose.position.x,
+                float(position.y) - self.active_target.pose.position.y,
+            )
+        else:
+            target_distance = float(source.distance_remaining)
+        feedback.distance_remaining = target_distance
+        outer_handle.publish_feedback(feedback)
+        self.last_distance = target_distance
+        self.best_distance = min(self.best_distance, self.last_distance)
+        if (
+                self.terminal_handoff_enabled
+                and not self.terminal_handoff_requested
+                and not self.progress_abort_requested
+                and self.motion_armed is True
+                and target_distance <= self.terminal_handoff_distance
+                and self.corridor_is_clear(
+                    float(position.x), float(position.y),
+                    self.active_target.pose.position.x,
+                    self.active_target.pose.position.y)):
+            self.terminal_handoff_requested = True
+            self.publish_status(
+                "TERMINAL_HANDOFF stopping 2D A* replanning before the "
+                "short measured terminal segment "
+                f"target_distance={target_distance:.3f}m "
+                f"path_remaining={source.distance_remaining:.3f}m")
+            if self.inner_handle is not None:
+                self.inner_handle.cancel_goal_async()
+        if self.progress_anchor_time is None:
+            self.progress_anchor_x = float(position.x)
+            self.progress_anchor_y = float(position.y)
+            self.progress_anchor_time = now
+        displacement = math.hypot(
+            float(position.x) - self.progress_anchor_x,
+            float(position.y) - self.progress_anchor_y,
+        )
+        watchdog_age = now - self.progress_anchor_time
+        if displacement >= self.progress_min_displacement:
+            self.progress_anchor_x = float(position.x)
+            self.progress_anchor_y = float(position.y)
+            self.progress_anchor_time = now
+            displacement = 0.0
+            watchdog_age = 0.0
+        elif (
+                watchdog_age >= self.progress_timeout
+                and not self.progress_abort_requested):
+            self.progress_abort_requested = True
+            self.abort_reason = (
+                "no effective chassis displacement: "
+                f"motion={self.last_motion_status or 'unknown'} "
+                f"moved={displacement:.3f}m "
+                f"limit={self.progress_min_displacement:.3f}m/"
+                f"{self.progress_timeout:.0f}s "
+                f"distance={self.last_distance:.3f}m"
+            )
+            self.publish_status(
+                f"ABORTING {self.abort_reason}")
+            if self.inner_handle is not None:
+                self.inner_handle.cancel_goal_async()
+        recoveries = int(source.number_of_recoveries)
+        if recoveries > self.last_recoveries:
+            self.publish_status(
+                f"RECOVERY count={recoveries} "
+                f"distance={self.last_distance:.3f}m")
+        self.last_recoveries = recoveries
+        if (self.last_progress_status_time is None or
+                now - self.last_progress_status_time >= 1.0):
+            elapsed = (
+                float(source.navigation_time.sec)
+                + float(source.navigation_time.nanosec) / 1.0e9
+            )
+            self.publish_status(
+                f"RUNNING target_distance={target_distance:.3f}m "
+                f"path_remaining={source.distance_remaining:.3f}m "
+                f"recoveries={source.number_of_recoveries} "
+                f"elapsed={elapsed:.1f}s "
+                f"moved={displacement:.3f}m/"
+                f"{self.progress_min_displacement:.3f}m "
+                f"watchdog={watchdog_age:.1f}/"
+                f"{self.progress_timeout:.0f}s")
+            self.last_progress_status_time = now
+
+    async def execute(self, outer_handle):
+        with self.goal_lock:
+            self.active = True
+            self.goal_reserved = False
+            self.motion_authorized = False
+        self.publish_goal_active_lease()
+        self.inner_handle = None
+        self.spin_handle = None
+        self.backup_handle = None
+        self.drive_handle = None
+        self.direct_reverse_plan = None
+        self.clear_direct_reverse_plan()
+        self.direct_reverse_distance = 0.0
+        self.last_backup_status_time = None
+        self.last_drive_status_time = None
+        self.last_feedback_time = None
+        self.last_progress_status_time = None
+        self.last_motion_status = None
+        self.last_distance = math.inf
+        self.best_distance = math.inf
+        self.last_recoveries = 0
+        self.progress_anchor_x = None
+        self.progress_anchor_y = None
+        self.progress_anchor_time = None
+        self.progress_abort_requested = False
+        self.abort_reason = None
+        self.motion_block_start_time = None
+        self.motion_block_kind = None
+        self.active_target = None
+        self.terminal_handoff_enabled = False
+        self.terminal_handoff_requested = False
+        result = NavigateToPose.Result()
+        try:
+            deadline = self.get_clock().now().nanoseconds / 1e9 + self.map_wait_timeout
+            while self.global_costmap is None:
+                if self.get_clock().now().nanoseconds / 1e9 >= deadline:
+                    self.publish_status("REJECTED global costmap unavailable")
+                    outer_handle.abort()
+                    return result
+                # Action callbacks run in rclpy's multithreaded executor, not
+                # an asyncio event loop. Another executor thread can still
+                # receive the costmap while this callback briefly waits.
+                time.sleep(0.10)
+
+            target = copy.deepcopy(outer_handle.request.pose)
+            target.header.frame_id = "map"
+            target.header.stamp = self.get_clock().now().to_msg()
+            self.active_target = copy.deepcopy(target)
+            self.target_pub.publish(target)
+            self.publish_target_markers(target)
+            desired_yaw = yaw_from_quaternion(target.pose.orientation)
+            navigation_target = copy.deepcopy(target)
+            base_pose = self.current_base_pose()
+            direct_route = False
+            direct_route_mode = "forward"
+            forward_direct_corridor = False
+            final_alignment_after_route = False
+            forward_pre_alignment = False
+            initial_turn = 0.0
+            final_turn = 0.0
+            approach = None
+            distance = None
+            if base_pose is not None and self.corridor_is_clear(
+                    base_pose[0], base_pose[1],
+                    target.pose.position.x, target.pose.position.y):
+                direct_route = True
+                bearing = math.atan2(
+                    target.pose.position.y - base_pose[1],
+                    target.pose.position.x - base_pose[0],
+                )
+                forward_initial_turn = math.atan2(
+                    math.sin(bearing - base_pose[2]),
+                    math.cos(bearing - base_pose[2]),
+                )
+                reverse_heading = math.atan2(
+                    math.sin(bearing + math.pi),
+                    math.cos(bearing + math.pi),
+                )
+                reverse_initial_turn = math.atan2(
+                    math.sin(reverse_heading - base_pose[2]),
+                    math.cos(reverse_heading - base_pose[2]),
+                )
+                direct_route_mode, initial_turn = choose_direct_route_mode(
+                    forward_initial_turn,
+                    reverse_initial_turn,
+                    self.direct_alignment_max_angle,
+                    self.automatic_reverse_enabled,
+                )
+                if direct_route_mode is None:
+                    self.publish_status(
+                        "REJECTED direct travel heading unavailable: "
+                        f"forward={math.degrees(forward_initial_turn):+.1f}deg "
+                        f"reverse={math.degrees(reverse_initial_turn):+.1f}deg "
+                        f"initial_limit="
+                        f"{math.degrees(self.direct_alignment_max_angle):.1f}deg")
+                    outer_handle.abort()
+                    return result
+                travel_heading = (
+                    bearing
+                    if direct_route_mode == "forward"
+                    else reverse_heading
+                )
+                final_turn = math.atan2(
+                    math.sin(desired_yaw - travel_heading),
+                    math.cos(desired_yaw - travel_heading),
+                )
+                if abs(final_turn) > self.final_alignment_max_angle + 1.0e-6:
+                    self.publish_status(
+                        "FINAL_HEADING_LIMIT requested final rotation exceeds "
+                        "the configured total segmented-rotation limit "
+                        f"angle={math.degrees(final_turn):+.1f}deg "
+                        f"limit="
+                        f"{math.degrees(self.final_alignment_max_angle):.1f}deg")
+                elif abs(final_turn) > self.small_spin_max_angle:
+                    self.publish_status(
+                        "FINAL_HEADING_SEGMENTED requested final rotation "
+                        "will be split into measured small steps "
+                        f"angle={math.degrees(final_turn):+.1f}deg "
+                        f"step_limit="
+                        f"{math.degrees(self.small_spin_max_angle):.1f}deg")
+                direct_distance = math.hypot(
+                    target.pose.position.x - base_pose[0],
+                    target.pose.position.y - base_pose[1],
+                )
+                distance = min(
+                    self.approach_distance,
+                    max(0.10, direct_distance * 0.50),
+                )
+                approach = copy.deepcopy(target)
+                approach.header.stamp = self.get_clock().now().to_msg()
+                approach.pose.position.x -= distance * math.cos(bearing)
+                approach.pose.position.y -= distance * math.sin(bearing)
+                self.set_pose_yaw(approach, travel_heading)
+                self.set_pose_yaw(navigation_target, travel_heading)
+                self.publish_status(
+                    "DIRECT_GEOMETRY "
+                    f"mode={direct_route_mode} "
+                    f"initial={math.degrees(initial_turn):+.1f}deg "
+                    f"final={math.degrees(final_turn):+.1f}deg; "
+                    "position and final heading will be executed separately")
+                if direct_route_mode == "forward":
+                    # Align to the forward travel bearing before asking Nav2
+                    # to move. This prevents the controller from trying to
+                    # solve a goal behind the chassis by selecting /backup or
+                    # by drawing a large forward loop. Every spin command is
+                    # still bounded by small_spin_max_angle.
+                    forward_direct_corridor = True
+                    forward_pre_alignment = True
+                    direct_route = False
+                    approach = copy.deepcopy(target)
+                    navigation_target = copy.deepcopy(target)
+                    self.set_pose_yaw(navigation_target, travel_heading)
+                    distance = 0.0
+                    final_alignment_after_route = True
+            else:
+                # A blocked direct corridor must not impose an unrelated
+                # 0.45-0.70 m staging-space requirement behind the target.
+                # Give the requested reachable pose directly to the
+                # forward-only planner and let it produce the obstacle detour.
+                approach = copy.deepcopy(target)
+                distance = 0.0
+
+            if forward_pre_alignment and not await self.run_segmented_spin(
+                    outer_handle, initial_turn, "forward_pre"):
+                if outer_handle.is_cancel_requested:
+                    self.publish_status(
+                        "CANCELED during forward pre-alignment")
+                    outer_handle.canceled()
+                else:
+                    self.publish_status(
+                        "ABORTED forward pre-alignment failed or was safety-"
+                        "blocked; automatic reverse remains disabled")
+                    outer_handle.abort()
+                return result
+            if forward_pre_alignment:
+                self.publish_status(
+                    "FORWARD_AFTER_SPIN automatic reverse is disabled; "
+                    f"aligned={math.degrees(initial_turn):+.1f}deg and "
+                    "starting the forward-only route")
+
+            if direct_route and not await self.run_segmented_spin(
+                    outer_handle, initial_turn, "pre"):
+                if outer_handle.is_cancel_requested:
+                    self.publish_status(
+                        "CANCELED during direct-route pre-alignment")
+                    outer_handle.canceled()
+                    return result
+                # Straight reverse requires alignment. If the behavior server
+                # rejects that in-place rotation because its swept footprint is
+                # occupied, retain safety and fall back to the ordinary
+                # forward-only planner instead of aborting the whole goal.
+                self.publish_status(
+                    "REVERSE_FALLBACK pre-alignment was collision-blocked; "
+                    "using the forward-only obstacle-avoidance planner")
+                forward_direct_corridor = True
+                direct_route = False
+                direct_route_mode = "forward"
+                approach = copy.deepcopy(target)
+                navigation_target = copy.deepcopy(target)
+                distance = 0.0
+                initial_turn = 0.0
+                final_turn = 0.0
+            if direct_route:
+                self.publish_status(
+                    f"DIRECT mode={direct_route_mode} small-spin complete; "
+                    "starting short route")
+            elif forward_direct_corridor:
+                self.publish_status(
+                    "FORWARD_ROUTE direct corridor is clear; initial heading "
+                    "is aligned by bounded spin, then a collision-checked "
+                    "forward-only 2D A* path reaches the target position; "
+                    "final yaw is separate")
+            else:
+                self.publish_status(
+                    "DETOUR direct corridor is occupied; using the "
+                    "forward-only obstacle-avoidance planner")
+
+            if not (
+                    direct_route
+                    and direct_route_mode == "straight_reverse"):
+                self.terminal_handoff_enabled = True
+                final_alignment_after_route = True
+
+            if direct_route and direct_route_mode == "straight_reverse":
+                if not self.backup_client.wait_for_server(timeout_sec=10.0):
+                    self.publish_status(
+                        "REJECTED /backup action unavailable")
+                    outer_handle.abort()
+                    return result
+                start_pose = self.current_base_pose()
+                if start_pose is None:
+                    self.publish_status(
+                        "REJECTED cannot refresh base pose before "
+                        "straight reverse")
+                    outer_handle.abort()
+                    return result
+                reverse_distance = math.hypot(
+                    target.pose.position.x - start_pose[0],
+                    target.pose.position.y - start_pose[1],
+                )
+                self.direct_reverse_distance = reverse_distance
+                self.direct_reverse_plan = self.make_straight_path(
+                    start_pose, target)
+                # Two immediate publications satisfy the independent
+                # consecutive-plan requirement before the first negative
+                # velocity arrives. The timer keeps the plan fresh afterward.
+                self.publish_direct_reverse_plan()
+                time.sleep(0.10)
+                self.publish_direct_reverse_plan()
+                self.publish_status(
+                    "STRAIGHT_REVERSE_CHECKED "
+                    f"distance={reverse_distance:.3f}m "
+                    f"points={len(self.direct_reverse_plan.poses)} "
+                    "planner=none behavior=/backup")
+                backup_goal = BackUp.Goal()
+                backup_goal.target.x = reverse_distance
+                backup_goal.speed = self.straight_reverse_speed
+                allowance = min(
+                    300.0,
+                    max(
+                        15.0,
+                        reverse_distance
+                        / max(0.01, self.straight_reverse_speed)
+                        * self.reverse_time_allowance_factor,
+                    ),
+                )
+                backup_goal.time_allowance.sec = int(allowance)
+                backup_goal.time_allowance.nanosec = int(
+                    (allowance - int(allowance)) * 1.0e9)
+                self.backup_handle = await self.backup_client.send_goal_async(
+                    backup_goal,
+                    feedback_callback=lambda msg: self.relay_backup_feedback(
+                        outer_handle, msg),
+                )
+                if not self.backup_handle.accepted:
+                    self.publish_status(
+                        "ABORTED checked straight reverse was rejected")
+                    outer_handle.abort()
+                    return result
+                self.set_motion_authorized(False)
+                backup_result = await self.backup_handle.get_result_async()
+                self.set_motion_authorized(False)
+                self.backup_handle = None
+                self.direct_reverse_plan = None
+                self.clear_direct_reverse_plan()
+                if outer_handle.is_cancel_requested:
+                    self.publish_status(
+                        "CANCELED checked straight reverse")
+                    outer_handle.canceled()
+                elif (
+                        backup_result.status == GoalStatus.STATUS_CANCELED
+                        and self.progress_abort_requested):
+                    self.publish_status(
+                        f"ABORTED {self.abort_reason or 'motion watchdog'}")
+                    outer_handle.abort()
+                else:
+                    stopped_pose = self.current_base_pose()
+                    stopped_error = math.inf
+                    if stopped_pose is not None:
+                        stopped_error = math.hypot(
+                            target.pose.position.x - stopped_pose[0],
+                            target.pose.position.y - stopped_pose[1],
+                        )
+                    position_reached = (
+                        stopped_error <= self.terminal_position_tolerance)
+                    if (
+                            backup_result.status
+                            != GoalStatus.STATUS_SUCCEEDED
+                            and not position_reached):
+                        self.publish_status(
+                            "ABORTED checked straight reverse "
+                            f"status={backup_result.status} "
+                            f"distance={stopped_error:.3f}m")
+                        outer_handle.abort()
+                        return result
+                    if (
+                            backup_result.status
+                            == GoalStatus.STATUS_SUCCEEDED
+                            and stopped_error > max(
+                                0.15, self.terminal_position_tolerance)):
+                        self.publish_status(
+                            "ABORTED /backup reported success outside "
+                            f"position tolerance distance={stopped_error:.3f}m")
+                        outer_handle.abort()
+                        return result
+                    if backup_result.status != GoalStatus.STATUS_SUCCEEDED:
+                        self.publish_status(
+                            "TERMINAL_POSITION_REACHED "
+                            f"distance={stopped_error:.3f}m after "
+                            f"/backup status={backup_result.status}")
+                    if not await self.run_final_alignment(
+                            outer_handle, target, desired_yaw):
+                        if outer_handle.is_cancel_requested:
+                            self.publish_status(
+                                "CANCELED during final bounded alignment")
+                            outer_handle.canceled()
+                        else:
+                            self.publish_status(
+                                "ABORTED position reached but final heading "
+                                "alignment is collision-blocked or unverifiable")
+                            outer_handle.abort()
+                    else:
+                        self.publish_status(
+                            "SUCCEEDED checked straight reverse arrival "
+                            f"yaw={desired_yaw:.3f}")
+                        outer_handle.succeed()
+                return result
+
+            if not self.inner_client.wait_for_server(timeout_sec=10.0):
+                self.publish_status("REJECTED /navigate_through_poses unavailable")
+                outer_handle.abort()
+                return result
+
+            self.approach_pub.publish(approach)
+            if direct_route:
+                self.publish_status(
+                    f"ACTIVE approach={distance:.2f}m "
+                    f"pre=({approach.pose.position.x:.3f},"
+                    f"{approach.pose.position.y:.3f}) "
+                    f"goal=({target.pose.position.x:.3f},"
+                    f"{target.pose.position.y:.3f}) yaw={desired_yaw:.3f}")
+            elif forward_direct_corridor:
+                self.publish_status(
+                    "ACTIVE forward direct route to "
+                    f"goal=({target.pose.position.x:.3f},"
+                    f"{target.pose.position.y:.3f}) yaw={desired_yaw:.3f}")
+            else:
+                self.publish_status(
+                    "ACTIVE forward detour directly to "
+                    f"goal=({target.pose.position.x:.3f},"
+                    f"{target.pose.position.y:.3f}) yaw={desired_yaw:.3f}")
+
+            inner_goal = NavigateThroughPoses.Goal()
+            inner_goal.poses = (
+                [approach, navigation_target]
+                if direct_route else [navigation_target]
+            )
+            inner_goal.behavior_tree = ""
+            self.publish_status(
+                "PLANNER forward-only GridBased 2D A* tree selected")
+            send_future = self.inner_client.send_goal_async(
+                inner_goal,
+                feedback_callback=lambda msg: self.relay_feedback(
+                    outer_handle, msg),
+            )
+            self.inner_handle = await send_future
+            if not self.inner_handle.accepted:
+                self.publish_status("ABORTED aligned NavigateThroughPoses rejected")
+                outer_handle.abort()
+                return result
+            self.set_motion_authorized(False)
+
+            wrapped = await self.inner_handle.get_result_async()
+            self.set_motion_authorized(False)
+            if outer_handle.is_cancel_requested:
+                self.publish_status("CANCELED aligned navigation")
+                outer_handle.canceled()
+            elif (
+                    wrapped.status == GoalStatus.STATUS_CANCELED
+                    and self.progress_abort_requested):
+                self.publish_status(
+                    f"ABORTED {self.abort_reason or 'motion watchdog'} "
+                    f"distance={self.last_distance:.3f}m "
+                    f"best={self.best_distance:.3f}m")
+                outer_handle.abort()
+            elif (
+                    wrapped.status == GoalStatus.STATUS_CANCELED
+                    and self.terminal_handoff_requested):
+                self.inner_handle = None
+                if not await self.run_terminal_forward(
+                        outer_handle, target):
+                    if outer_handle.is_cancel_requested:
+                        self.publish_status(
+                            "CANCELED during terminal forward segment")
+                        outer_handle.canceled()
+                    else:
+                        self.publish_status(
+                            "ABORTED safe terminal forward segment failed; "
+                            "the planner loop was not followed")
+                        outer_handle.abort()
+                elif not await self.run_final_alignment(
+                        outer_handle, target, desired_yaw):
+                    if outer_handle.is_cancel_requested:
+                        self.publish_status(
+                            "CANCELED during bounded final alignment")
+                        outer_handle.canceled()
+                    else:
+                        self.publish_status(
+                            "ABORTED target position reached but bounded "
+                            "final alignment is collision-blocked")
+                        outer_handle.abort()
+                else:
+                    self.publish_status(
+                        "SUCCEEDED terminal straight arrival "
+                        f"yaw_request={desired_yaw:.3f}")
+                    outer_handle.succeed()
+            elif wrapped.status == GoalStatus.STATUS_CANCELED:
+                self.publish_status("CANCELED aligned navigation")
+                outer_handle.canceled()
+            elif wrapped.status == GoalStatus.STATUS_SUCCEEDED:
+                if (
+                        (direct_route or final_alignment_after_route)
+                        and not await self.run_final_alignment(
+                            outer_handle, target, desired_yaw)):
+                    if outer_handle.is_cancel_requested:
+                        self.publish_status(
+                            "CANCELED during final bounded alignment")
+                        outer_handle.canceled()
+                    else:
+                        outer_handle.abort()
+                else:
+                    self.publish_status(
+                        "SUCCEEDED aligned arrival "
+                        f"yaw={desired_yaw:.3f}")
+                    outer_handle.succeed()
+            else:
+                self.publish_status(
+                    f"ABORTED inner action status={wrapped.status} "
+                    f"distance={self.last_distance:.3f}m "
+                    f"best={self.best_distance:.3f}m "
+                    f"recoveries={self.last_recoveries}")
+                outer_handle.abort()
+            return result
+        except Exception as error:
+            self.publish_status(f"ABORTED adapter exception: {error}")
+            outer_handle.abort()
+            return result
+        finally:
+            self.inner_handle = None
+            self.spin_handle = None
+            self.backup_handle = None
+            self.drive_handle = None
+            self.direct_reverse_plan = None
+            self.clear_direct_reverse_plan()
+            self.active_target = None
+            self.terminal_handoff_enabled = False
+            self.terminal_handoff_requested = False
+            with self.goal_lock:
+                self.active = False
+                self.goal_reserved = False
+                self.motion_authorized = False
+                self.current_goal_id = None
+            self.publish_goal_active_lease()
+
+    def destroy_node(self):
+        self.outer_server.destroy()
+        self.inner_client.destroy()
+        self.spin_client.destroy()
+        self.backup_client.destroy()
+        self.drive_client.destroy()
+        super().destroy_node()
+
+
+def main():
+    rclpy.init()
+    node = AlignedNavGoalAdapter()
+    executor = MultiThreadedExecutor(num_threads=3)
+    executor.add_node(node)
+    try:
+        executor.spin()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        executor.shutdown()
+        node.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
+
+
+if __name__ == "__main__":
+    main()
