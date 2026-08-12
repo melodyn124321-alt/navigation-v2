@@ -1,0 +1,7 @@
+image: /home/seeed/ros2/maps/replay/fastlio_map_manual_001_level_nav.yaml.pgm
+mode: trinary
+resolution: 0.05
+origin: [-11.256, -12.5186, 0.0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.25

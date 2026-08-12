@@ -1,0 +1,7 @@
+image: /home/seeed/ros2/maps/replay/fastlio_map_manual_001_level_groundsafe_20260729_nav.yaml.pgm
+mode: trinary
+resolution: 0.05
+origin: [-11.2473, -12.5253, 0.0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.25
