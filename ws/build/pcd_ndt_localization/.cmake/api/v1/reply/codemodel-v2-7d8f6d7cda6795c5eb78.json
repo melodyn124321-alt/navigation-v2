@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-cb8e970f218858227b10.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "pcd_ndt_localization",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "pcd_ndt_localization_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pcd_ndt_localization_uninstall-Release-502bf182a4121b89bbf4.json",
+					"name" : "pcd_ndt_localization_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pcd_ndt_localizer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pcd_ndt_localizer-Release-f58c5f35e628cfe021f8.json",
+					"name" : "pcd_ndt_localizer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pcd_occupancy_grid_publisher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pcd_occupancy_grid_publisher-Release-2556ae8415e72adb6f86.json",
+					"name" : "pcd_occupancy_grid_publisher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-e76728550eaf3acc2c11.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/seeed/ros2/ws/build/pcd_ndt_localization",
+		"source" : "/home/seeed/ros2/ws/src/localization/pcd_ndt_localization"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-f883e972fa7f64d67d31.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "ranger_msgs__py",
+					"jsonFile" : "directory-ranger_msgs__py-3c24321d16d683951ce5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/seeed/ros2/ws/build/ranger_msgs/ranger_msgs__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "ranger_msgs__rs",
+					"jsonFile" : "directory-ranger_msgs__rs-1eb58049ab1ace6c92bc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/seeed/ros2/ws/build/ranger_msgs/ranger_msgs__rs",
+					"targetIndexes" : 
+					[
+						16
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "ranger_msgs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_ranger_msgs_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_ranger_msgs_egg-b170f4f67a90e840ebb4.json",
+					"name" : "ament_cmake_python_build_ranger_msgs_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_ranger_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_ranger_msgs-fc3e99bcce9b11bf0b0e.json",
+					"name" : "ament_cmake_python_copy_ranger_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ranger_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ranger_msgs-1a5bd744842e976de222.json",
+					"name" : "ranger_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ranger_msgs__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ranger_msgs__cpp-a0b4202ea39adcc51405.json",
+					"name" : "ranger_msgs__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ranger_msgs__py::@2a99a6637ac03a59da3a",
+					"jsonFile" : "target-ranger_msgs__py-a37c36646a95eaafcf8a.json",
+					"name" : "ranger_msgs__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ranger_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ranger_msgs__rosidl_generator_c-b83ef8abcaa8dc34b50b.json",
+					"name" : "ranger_msgs__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ranger_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ranger_msgs__rosidl_generator_py-fe6b7f17826760af8352.json",
+					"name" : "ranger_msgs__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ranger_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ranger_msgs__rosidl_typesupport_c-490098c257d96dd9ac40.json",
+					"name" : "ranger_msgs__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ranger_msgs__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ranger_msgs__rosidl_typesupport_c__pyext-4b038d2151c5c5e54d7c.json",
+					"name" : "ranger_msgs__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ranger_msgs__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ranger_msgs__rosidl_typesupport_cpp-51e3e47c9a5a64dc921b.json",
+					"name" : "ranger_msgs__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ranger_msgs__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ranger_msgs__rosidl_typesupport_fastrtps_c-72d381964fb72fea9a7c.json",
+					"name" : "ranger_msgs__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ranger_msgs__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ranger_msgs__rosidl_typesupport_fastrtps_c__pyext-54ed099f0f746e6f83d3.json",
+					"name" : "ranger_msgs__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ranger_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ranger_msgs__rosidl_typesupport_fastrtps_cpp-6dc88ef82be9d2e21c3f.json",
+					"name" : "ranger_msgs__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ranger_msgs__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ranger_msgs__rosidl_typesupport_introspection_c-d225061b64371d827642.json",
+					"name" : "ranger_msgs__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ranger_msgs__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ranger_msgs__rosidl_typesupport_introspection_c__pyext-f84562561f44dabd48ef.json",
+					"name" : "ranger_msgs__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ranger_msgs__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ranger_msgs__rosidl_typesupport_introspection_cpp-962fa4d649898dbc2448.json",
+					"name" : "ranger_msgs__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ranger_msgs__rs::@8d0a9be205bc6ca4a1e0",
+					"jsonFile" : "target-ranger_msgs__rs-4463a630b8975b2980a3.json",
+					"name" : "ranger_msgs__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ranger_msgs_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ranger_msgs_uninstall-38f8327d16e6f2b2e49f.json",
+					"name" : "ranger_msgs_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-11fc81614ef55054a762.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/seeed/ros2/ws/build/ranger_msgs",
+		"source" : "/home/seeed/ros2/ws/src/ranger_ros2/ranger_msgs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

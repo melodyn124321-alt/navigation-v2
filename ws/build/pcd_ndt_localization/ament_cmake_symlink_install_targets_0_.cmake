@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/seeed/ros2/ws/build/pcd_ndt_localization/pcd_ndt_localizer" "/home/seeed/ros2/ws/build/pcd_ndt_localization/pcd_occupancy_grid_publisher" "TARGETS" "pcd_ndt_localizer" "pcd_occupancy_grid_publisher" "DESTINATION" "lib/pcd_ndt_localization")
