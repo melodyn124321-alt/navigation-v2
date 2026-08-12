@@ -1,0 +1,20 @@
+[INFO] [launch]: All log files can be found below /home/seeed/.ros/log/2026-08-04-14-55-06-120140-seeed-40569
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [ranger_base_node-1]: process started with pid [40604]
+[ranger_base_node-1] [0m[INFO] [1785826506.288930412] [ranger_base_node]: Successfully loaded the following parameters: 
+[ranger_base_node-1]  port_name: can0
+[ranger_base_node-1]  robot_model: ranger_mini_v2
+[ranger_base_node-1]  odom_frame: odom
+[ranger_base_node-1]  base_frame: base_link
+[ranger_base_node-1]  update_rate: 50
+[ranger_base_node-1]  odom_topic_name: odom
+[ranger_base_node-1]  publish_odom_tf: 1
+[ranger_base_node-1] [0m
+[ranger_base_node-1] Start listening to port: can0
+[ranger_base_node-1] [33m[WARN] [1785826506.317870047] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826507.317880429] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826508.634911227] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826509.634913513] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826510.634906678] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826511.634901475] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826512.634913553] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m

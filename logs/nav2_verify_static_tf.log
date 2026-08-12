@@ -1,0 +1,4 @@
+[INFO] [1783588203.822335602] [static_transform_publisher_SYSvlt5z26zg4mEH]: Spinning until stopped - publishing transform
+translation: ('0.000000', '0.000000', '0.000000')
+rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+from 'map' to 'relocalization_body'

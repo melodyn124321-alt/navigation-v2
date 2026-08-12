@@ -1,0 +1,202 @@
+Checking PCD-NDT localization output...
+Waiting for stable TF map -> base_link and odom -> base_link...
+[INFO] [1783729454.498447109] [nav_tf_readiness_check]: waiting for map->base_link and odom->base_link: "map" passed to lookupTransform argument target_frame does not exist. 
+[INFO] [1783729456.512847926] [nav_tf_readiness_check]: waiting for map->base_link and odom->base_link: "map" passed to lookupTransform argument target_frame does not exist. 
+[INFO] [1783729457.762536450] [nav_tf_readiness_check]: TF READY: 20 consecutive samples for map->base_link and odom->base_link
+Starting Nav2-only direct map->base_link TF relay...
+Starting current-time relocalization TF republisher for visualization...
+Rechecking TF after the visualization republisher starts...
+[INFO] [1783729468.909544063] [nav_tf_readiness_check]: waiting for map->base_link and odom->base_link: "map" passed to lookupTransform argument target_frame does not exist. 
+[INFO] [1783729471.049655412] [nav_tf_readiness_check]: waiting for map->base_link and odom->base_link: "base_link" passed to lookupTransform argument source_frame does not exist. 
+[INFO] [1783729473.188908364] [nav_tf_readiness_check]: waiting for map->base_link and odom->base_link: Could not find a connection between 'map' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[INFO] [1783729475.289386884] [nav_tf_readiness_check]: TF READY: 20 consecutive samples for map->base_link and odom->base_link
+Starting map_server...
+Transitioning successful
+Transitioning successful
+Starting Nav2 navigation nodes after localization is stable...
+Controller output is kept on /cmd_vel_nav_smoothed.
+The real /cmd_vel bridge starts only when ENABLE_CMD_VEL_BRIDGE=true and CONFIRM_NAV_MOTION=I_UNDERSTAND.
+Starting Nav2 lifecycle manager...
+Waiting for lifecycle manager to configure and activate Nav2 nodes...
+Lifecycle check 1/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: inactive [2]
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Lifecycle check 2/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: inactive [2]
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Lifecycle check 3/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: inactive [2]
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Lifecycle check 4/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: inactive [2]
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Lifecycle check 5/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: inactive [2]
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Lifecycle check 6/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: inactive [2]
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Lifecycle check 7/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: inactive [2]
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Lifecycle check 8/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: inactive [2]
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Lifecycle check 9/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: inactive [2]
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Lifecycle check 10/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: inactive [2]
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Lifecycle check 11/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: not discovered yet
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Lifecycle check 12/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: inactive [2]
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Lifecycle check 13/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: inactive [2]
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Lifecycle check 14/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: inactive [2]
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Lifecycle check 15/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: inactive [2]
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Lifecycle check 16/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: inactive [2]
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Lifecycle check 17/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: inactive [2]
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Lifecycle check 18/18:
+  /planner_server: not discovered yet
+  /controller_server: inactive [2]
+  /smoother_server: inactive [2]
+  /behavior_server: inactive [2]
+  /bt_navigator: inactive [2]
+  /waypoint_follower: inactive [2]
+  /velocity_smoother: inactive [2]
+Nav2 did not reach the active state within 90 seconds.
+Controller log:
+[INFO] [1783729497.432989088] [controller_server]: 
+	controller_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1783729497.445645495] [controller_server]: Creating controller server
+[INFO] [1783729497.533554173] [local_costmap.local_costmap]: 
+	local_costmap lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1783729497.536002418] [local_costmap.local_costmap]: Creating Costmap
+[INFO] [1783729508.125932485] [controller_server]: Configuring controller interface
+[INFO] [1783729508.126331571] [controller_server]: getting goal checker plugins..
+[INFO] [1783729508.126534874] [controller_server]: Controller frequency set to 10.0000Hz
+[INFO] [1783729508.126625405] [local_costmap.local_costmap]: Configuring
+[INFO] [1783729508.143840690] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[INFO] [1783729508.157861656] [local_costmap.local_costmap]: Subscribed to Topics: livox_cloud
+[INFO] [1783729508.176499709] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[INFO] [1783729508.176661347] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[INFO] [1783729508.187750723] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[INFO] [1783729508.233672763] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[INFO] [1783729508.235721666] [controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+[INFO] [1783729508.236736933] [controller_server]: Controller Server has general_goal_checker  goal checkers available.
+[INFO] [1783729508.237906669] [controller_server]: Created controller : FollowPath of type nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController
+[INFO] [1783729508.265822549] [controller_server]: Controller Server has FollowPath  controllers available.
+Lifecycle manager log:
+[INFO] [1783729504.879744852] [lifecycle_manager_navigation]: Creating
+[INFO] [1783729504.900356830] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[INFO] [1783729507.917659891] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[INFO] [1783729507.917991935] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[INFO] [1783729508.125271598] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[INFO] [1783729508.298553667] [lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[INFO] [1783729508.386629968] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[INFO] [1783729508.684911408] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[INFO] [1783729509.061057212] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[INFO] [1783729509.183518672] [lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[INFO] [1783729509.203842544] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m

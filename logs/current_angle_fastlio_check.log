@@ -1,0 +1,20 @@
+[INFO] [launch]: All log files can be found below /home/seeed/.ros/log/2026-07-25-17-20-20-716438-seeed-9602
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [9637]
+[fastlio_mapping-1] [INFO] [1784971220.981233481] [laser_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] ~~~~/home/seeed/ros2/ws/src/slam/fast_lio/ file opened
+[fastlio_mapping-1] [INFO] [1784971220.994124252] [laser_mapping]: Node init finished.
+[fastlio_mapping-1] [WARN] [1784971222.173638339] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784971222.273697851] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784971222.373684048] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784971222.473567875] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1784971222.573706109] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1784971222.679573098] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] [INFO] [1784971280.585752765] [rclcpp]: signal_handler(SIGINT/SIGTERM)

@@ -1,0 +1,23 @@
+Input: /home/seeed/ros2/maps/replay/fastlio_map_manual_001_raw.pcd
+Output: /home/seeed/ros2/maps/replay/fastlio_map_manual_001_corridor_clean_strict.pcd
+Height slice: z=[0.30,2.20]m
+Radius filter: radius=0.20m min_neighbors=10
+Voxel leaf: 0.06m
+> Computing Filter a point cloud using the pcl::PassThroughFilterEstimate. For more information, use: pcl_passthrough_filter -h
+> Loading /home/seeed/ros2/maps/replay/fastlio_map_manual_001_raw.pcd [done, 126.281 ms : 2327583 points]
+Available dimensions: x y z intensity normal_x normal_y normal_z curvature
+[done, 103.311 ms : 847716 points]
+> Saving /tmp/clean_pcd_corridor.Ch4JqN/height.pcd [done, 605.768 ms : 847716 points]
+Statistical Outlier Removal filtering of a point cloud. For more information, use: pcl_outlier_removal -h
+> Loading /tmp/clean_pcd_corridor.Ch4JqN/height.pcd [done, 147.637 ms : 847716 points]
+Available dimensions: x y z intensity normal_x normal_y normal_z curvature
+Computing filtered cloud from 847716 points with radius 0.200000, min_pts 10 ...[done, 4837.79 ms : 844177 points, 3539 indices removed]
+> Saving /tmp/clean_pcd_corridor.Ch4JqN/inliers.pcd [done, 596.502 ms : 844177 points]
+Downsample a cloud using pcl::VoxelGrid. For more information, use: pcl_voxel_grid -h
+Using a leaf size of: 0.060000, 0.060000, 0.060000
+Filtering data on field: z between: -inf ->inf
+> Loading /tmp/clean_pcd_corridor.Ch4JqN/inliers.pcd [done, 145.899 ms : 844177 points]
+Available dimensions: x y z intensity normal_x normal_y normal_z curvature
+> Computing [done, 285.262 ms : 73051 points]
+> Saving /home/seeed/ros2/maps/replay/fastlio_map_manual_001_corridor_clean_strict.pcd [done, 55.1534 ms : 73051 points]
+RESULT: PASS cleaned PCD points=73051 bytes=1134592

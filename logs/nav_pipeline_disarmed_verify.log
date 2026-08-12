@@ -1,0 +1,14 @@
+PIPELINE_GOAL start=(0.043,-0.814,1.710) goal=(-0.013,-0.418,1.710)
+PIPELINE_ACCEPTED
+STATUS READY approach=0.70m minimum=0.45m progress=0.03m/45s small_spin_step<=30deg initial_alignment<=90deg final_alignment<=180deg policy_abort=6s stale_abort=15s straight_reverse_speed=0.04m/s
+STATUS DIRECT_GEOMETRY mode=forward initial=+0.0deg final=+0.0deg; position and final heading will be executed separately
+STATUS FORWARD_ROUTE direct corridor is clear; using a collision-checked forward Dubin path without pre-spin
+STATUS ACTIVE forward direct route to goal=(-0.013,-0.418) yaw=1.710
+STATUS PLANNER forward-only GridBased tree selected
+STATUS RUNNING distance=0.364m recoveries=0 elapsed=0.0s moved=0.000m/0.030m watchdog=0.0/45s
+STATUS RECOVERY count=1 distance=0.364m
+STATUS CANCELED aligned navigation
+PIPELINE_PRE_GATE_NONZERO=YES
+PIPELINE_PRE_GATE_SAMPLE linear.x=0.010 angular.z=0.013
+PIPELINE_PHYSICAL_NONZERO=NO
+PIPELINE_PASS goal accepted, forward plan executed, pre-gate command generated, physical output remained zero

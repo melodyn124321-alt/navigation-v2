@@ -1,0 +1,2 @@
+[INFO] [1784124040.061528914] [nav_motion_safety_gate]: motion gate starts DISARMED: fitness<=0.100, localization<=0.50s, cmd<=0.30s, obstacle_age<=1.00s, limits=(0.08 m/s, 0.25 rad/s)
+[WARN] [1784124040.128117534] [nav_motion_safety_gate]: motion blocked: disarmed

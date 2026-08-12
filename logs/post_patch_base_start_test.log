@@ -1,0 +1,42 @@
+Chassis geometry: 0.720x0.500x0.345 m
+base_link -> LiDAR: xyz=(0.890,-0.050,0.700) m
+base_link -> LiDAR: rpy=(0.274581016,-0.010669779,1.570796327) rad
+Expected live gravity tilt: roll=15.732 deg pitch=-0.611 deg
+Stopping ROS2 wrappers and nodes on this host...
+Remaining matching processes:
+   7105 bash            bash /home/seeed/ros2/scripts/seeed_start_manual_002_nav_safe.sh /home/seeed/ros2/maps/replay/fastlio_map_manual_001_level.pcd /home/seeed/ros2/maps/replay/fastlio_map_manual_001_level_nav.yaml
+   7311 grep            grep -E livox|fastlio|pcd_ndt|map_server|planner_server|controller_server|smoother_server|behavior_server|bt_navigator|waypoint_follower|velocity_smooth|lifecycle_manager|ranger|map_camera_init_bridge|ros2 bag|rviz2
+Starting the two rear KS109 sensors...
+ALREADY_RUNNING pid=3677
+Both KS109 range topics are live.
+Starting Livox driver...
+INFO: gravity-based LiDAR mount check is skipped during normal navigation startup.
+      Static base_link -> LiDAR calibration remains unchanged.
+      On a verified level surface, use VERIFY_LIDAR_MOUNT=true for maintenance validation.
+Starting Fast-LIO live odometry/cloud source...
+Starting PCD-NDT localization with PCD: /home/seeed/ros2/maps/replay/fastlio_map_manual_001_level.pcd
+Ranger base driver is not started. START_RANGER=true enables it.
+Starting low-overhead map->odom TF bridge...
+Nav2 is intentionally not started before initial localization.
+Set RViz 2D Pose Estimate first. After /relocalization_pose is stable, run:
+  /home/seeed/ros2/scripts/seeed_activate_nav2_after_initialpose.sh
+Verification:
+/ks109_dual_range
+/laser_mapping
+/livox_lidar_publisher
+/map_odom_tf_bridge_cpp
+/pcd_ndt_localizer
+--- important topics
+/Laser_map [sensor_msgs/msg/PointCloud2]
+/cloud_registered [sensor_msgs/msg/PointCloud2]
+/cloud_registered_body [sensor_msgs/msg/PointCloud2]
+/map_cloud [sensor_msgs/msg/PointCloud2]
+/relocalization_markers [visualization_msgs/msg/MarkerArray]
+/relocalization_odom [nav_msgs/msg/Odometry]
+/relocalization_path [nav_msgs/msg/Path]
+/relocalization_pose [geometry_msgs/msg/PoseStamped]
+/tf [tf2_msgs/msg/TFMessage]
+--- safety
+Nav2 is not started yet, so no navigation velocity is being generated.
+Ranger base driver is not started. START_RANGER=true enables it.
+Use RViz 2D Pose Estimate first, activate Nav2, then send a Nav2 Goal only after /relocalization_pose is stable.

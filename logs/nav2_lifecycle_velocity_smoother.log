@@ -1,0 +1,5 @@
+[INFO] [1786513231.698901895] [nav2_manual_lifecycle]: velocity_smoother: current unconfigured [1]
+[INFO] [1786513231.699884011] [nav2_manual_lifecycle]: velocity_smoother: configure
+[INFO] [1786513231.828999901] [nav2_manual_lifecycle]: velocity_smoother: waiting 4.0s for TF and map callbacks before activation
+[INFO] [1786513235.831590826] [nav2_manual_lifecycle]: velocity_smoother: activate
+[INFO] [1786513235.907702505] [nav2_manual_lifecycle]: velocity_smoother: active [3]

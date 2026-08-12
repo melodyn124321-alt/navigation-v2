@@ -1,0 +1,3 @@
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1784093115.354456564] [rosbag2_storage]: Opened database '/home/seeed/ros2/bags/raw_livox_manual_001/raw_livox_manual_001_0.db3' for READ_ONLY.
+[INFO] [1784093115.354587128] [rosbag2_player]: Set rate to 0.5
+[INFO] [1784093115.366134228] [rosbag2_storage]: Opened database '/home/seeed/ros2/bags/raw_livox_manual_001/raw_livox_manual_001_0.db3' for READ_ONLY.

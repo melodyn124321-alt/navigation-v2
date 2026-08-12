@@ -1,0 +1,28 @@
+[INFO] [launch]: All log files can be found below /home/seeed/.ros/log/2026-07-15-15-32-08-453801-seeed-27095
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [27170]
+[fastlio_mapping-1] [INFO] [1784100728.714738996] [laser_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] [INFO] [1784100728.715094560] [laser_mapping]: LiDAR exclusion box enabled=true x=[-0.300,0.350] y=[0.020,0.600] z=[-0.080,0.420]
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] ~~~~/home/seeed/ros2/ws/src/slam/fast_lio/ file opened
+[fastlio_mapping-1] [INFO] [1784100728.728274726] [laser_mapping]: Node init finished.
+[fastlio_mapping-1] [WARN] [1784100736.990618749] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784100737.009091096] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784100737.028824158] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784100737.048797709] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784100737.068785564] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784100737.088820621] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784100737.108960609] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1784100737.129269212] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1784100737.152454745] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] [INFO] [1784101185.727226150] [laser_mapping]: Saving map to /home/seeed/ros2/maps/replay/fastlio_map_manual_001.pcd...
+[fastlio_mapping-1] [INFO] [1784101185.759961388] [laser_mapping]: Map saved. points=211579 source=accumulated_map_cloud path=/home/seeed/ros2/maps/replay/fastlio_map_manual_001.pcd

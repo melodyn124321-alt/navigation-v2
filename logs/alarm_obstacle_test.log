@@ -1,0 +1,707 @@
+publisher: beginning loop
+publishing #1: std_msgs.msg.Bool(data=True)
+
+publishing #2: std_msgs.msg.Bool(data=True)
+
+publishing #3: std_msgs.msg.Bool(data=True)
+
+publishing #4: std_msgs.msg.Bool(data=True)
+
+publishing #5: std_msgs.msg.Bool(data=True)
+
+publishing #6: std_msgs.msg.Bool(data=True)
+
+publishing #7: std_msgs.msg.Bool(data=True)
+
+publishing #8: std_msgs.msg.Bool(data=True)
+
+publishing #9: std_msgs.msg.Bool(data=True)
+
+publishing #10: std_msgs.msg.Bool(data=True)
+
+publishing #11: std_msgs.msg.Bool(data=True)
+
+publishing #12: std_msgs.msg.Bool(data=True)
+
+publishing #13: std_msgs.msg.Bool(data=True)
+
+publishing #14: std_msgs.msg.Bool(data=True)
+
+publishing #15: std_msgs.msg.Bool(data=True)
+
+publishing #16: std_msgs.msg.Bool(data=True)
+
+publishing #17: std_msgs.msg.Bool(data=True)
+
+publishing #18: std_msgs.msg.Bool(data=True)
+
+publishing #19: std_msgs.msg.Bool(data=True)
+
+publishing #20: std_msgs.msg.Bool(data=True)
+
+publishing #21: std_msgs.msg.Bool(data=True)
+
+publishing #22: std_msgs.msg.Bool(data=True)
+
+publishing #23: std_msgs.msg.Bool(data=True)
+
+publishing #24: std_msgs.msg.Bool(data=True)
+
+publishing #25: std_msgs.msg.Bool(data=True)
+
+publishing #26: std_msgs.msg.Bool(data=True)
+
+publishing #27: std_msgs.msg.Bool(data=True)
+
+publishing #28: std_msgs.msg.Bool(data=True)
+
+publishing #29: std_msgs.msg.Bool(data=True)
+
+publishing #30: std_msgs.msg.Bool(data=True)
+
+publishing #31: std_msgs.msg.Bool(data=True)
+
+publishing #32: std_msgs.msg.Bool(data=True)
+
+publishing #33: std_msgs.msg.Bool(data=True)
+
+publishing #34: std_msgs.msg.Bool(data=True)
+
+publishing #35: std_msgs.msg.Bool(data=True)
+
+publishing #36: std_msgs.msg.Bool(data=True)
+
+publishing #37: std_msgs.msg.Bool(data=True)
+
+publishing #38: std_msgs.msg.Bool(data=True)
+
+publishing #39: std_msgs.msg.Bool(data=True)
+
+publishing #40: std_msgs.msg.Bool(data=True)
+
+publishing #41: std_msgs.msg.Bool(data=True)
+
+publishing #42: std_msgs.msg.Bool(data=True)
+
+publishing #43: std_msgs.msg.Bool(data=True)
+
+publishing #44: std_msgs.msg.Bool(data=True)
+
+publishing #45: std_msgs.msg.Bool(data=True)
+
+publishing #46: std_msgs.msg.Bool(data=True)
+
+publishing #47: std_msgs.msg.Bool(data=True)
+
+publishing #48: std_msgs.msg.Bool(data=True)
+
+publishing #49: std_msgs.msg.Bool(data=True)
+
+publishing #50: std_msgs.msg.Bool(data=True)
+
+publishing #51: std_msgs.msg.Bool(data=True)
+
+publishing #52: std_msgs.msg.Bool(data=True)
+
+publishing #53: std_msgs.msg.Bool(data=True)
+
+publishing #54: std_msgs.msg.Bool(data=True)
+
+publishing #55: std_msgs.msg.Bool(data=True)
+
+publishing #56: std_msgs.msg.Bool(data=True)
+
+publishing #57: std_msgs.msg.Bool(data=True)
+
+publishing #58: std_msgs.msg.Bool(data=True)
+
+publishing #59: std_msgs.msg.Bool(data=True)
+
+publishing #60: std_msgs.msg.Bool(data=True)
+
+publishing #61: std_msgs.msg.Bool(data=True)
+
+publishing #62: std_msgs.msg.Bool(data=True)
+
+publishing #63: std_msgs.msg.Bool(data=True)
+
+publishing #64: std_msgs.msg.Bool(data=True)
+
+publishing #65: std_msgs.msg.Bool(data=True)
+
+publishing #66: std_msgs.msg.Bool(data=True)
+
+publishing #67: std_msgs.msg.Bool(data=True)
+
+publishing #68: std_msgs.msg.Bool(data=True)
+
+publishing #69: std_msgs.msg.Bool(data=True)
+
+publishing #70: std_msgs.msg.Bool(data=True)
+
+publishing #71: std_msgs.msg.Bool(data=True)
+
+publishing #72: std_msgs.msg.Bool(data=True)
+
+publishing #73: std_msgs.msg.Bool(data=True)
+
+publishing #74: std_msgs.msg.Bool(data=True)
+
+publishing #75: std_msgs.msg.Bool(data=True)
+
+publishing #76: std_msgs.msg.Bool(data=True)
+
+publishing #77: std_msgs.msg.Bool(data=True)
+
+publishing #78: std_msgs.msg.Bool(data=True)
+
+publishing #79: std_msgs.msg.Bool(data=True)
+
+publishing #80: std_msgs.msg.Bool(data=True)
+
+publishing #81: std_msgs.msg.Bool(data=True)
+
+publishing #82: std_msgs.msg.Bool(data=True)
+
+publishing #83: std_msgs.msg.Bool(data=True)
+
+publishing #84: std_msgs.msg.Bool(data=True)
+
+publishing #85: std_msgs.msg.Bool(data=True)
+
+publishing #86: std_msgs.msg.Bool(data=True)
+
+publishing #87: std_msgs.msg.Bool(data=True)
+
+publishing #88: std_msgs.msg.Bool(data=True)
+
+publishing #89: std_msgs.msg.Bool(data=True)
+
+publishing #90: std_msgs.msg.Bool(data=True)
+
+publishing #91: std_msgs.msg.Bool(data=True)
+
+publishing #92: std_msgs.msg.Bool(data=True)
+
+publishing #93: std_msgs.msg.Bool(data=True)
+
+publishing #94: std_msgs.msg.Bool(data=True)
+
+publishing #95: std_msgs.msg.Bool(data=True)
+
+publishing #96: std_msgs.msg.Bool(data=True)
+
+publishing #97: std_msgs.msg.Bool(data=True)
+
+publishing #98: std_msgs.msg.Bool(data=True)
+
+publishing #99: std_msgs.msg.Bool(data=True)
+
+publishing #100: std_msgs.msg.Bool(data=True)
+
+publishing #101: std_msgs.msg.Bool(data=True)
+
+publishing #102: std_msgs.msg.Bool(data=True)
+
+publishing #103: std_msgs.msg.Bool(data=True)
+
+publishing #104: std_msgs.msg.Bool(data=True)
+
+publishing #105: std_msgs.msg.Bool(data=True)
+
+publishing #106: std_msgs.msg.Bool(data=True)
+
+publishing #107: std_msgs.msg.Bool(data=True)
+
+publishing #108: std_msgs.msg.Bool(data=True)
+
+publishing #109: std_msgs.msg.Bool(data=True)
+
+publishing #110: std_msgs.msg.Bool(data=True)
+
+publishing #111: std_msgs.msg.Bool(data=True)
+
+publishing #112: std_msgs.msg.Bool(data=True)
+
+publishing #113: std_msgs.msg.Bool(data=True)
+
+publishing #114: std_msgs.msg.Bool(data=True)
+
+publishing #115: std_msgs.msg.Bool(data=True)
+
+publishing #116: std_msgs.msg.Bool(data=True)
+
+publishing #117: std_msgs.msg.Bool(data=True)
+
+publishing #118: std_msgs.msg.Bool(data=True)
+
+publishing #119: std_msgs.msg.Bool(data=True)
+
+publishing #120: std_msgs.msg.Bool(data=True)
+
+publishing #121: std_msgs.msg.Bool(data=True)
+
+publishing #122: std_msgs.msg.Bool(data=True)
+
+publishing #123: std_msgs.msg.Bool(data=True)
+
+publishing #124: std_msgs.msg.Bool(data=True)
+
+publishing #125: std_msgs.msg.Bool(data=True)
+
+publishing #126: std_msgs.msg.Bool(data=True)
+
+publishing #127: std_msgs.msg.Bool(data=True)
+
+publishing #128: std_msgs.msg.Bool(data=True)
+
+publishing #129: std_msgs.msg.Bool(data=True)
+
+publishing #130: std_msgs.msg.Bool(data=True)
+
+publishing #131: std_msgs.msg.Bool(data=True)
+
+publishing #132: std_msgs.msg.Bool(data=True)
+
+publishing #133: std_msgs.msg.Bool(data=True)
+
+publishing #134: std_msgs.msg.Bool(data=True)
+
+publishing #135: std_msgs.msg.Bool(data=True)
+
+publishing #136: std_msgs.msg.Bool(data=True)
+
+publishing #137: std_msgs.msg.Bool(data=True)
+
+publishing #138: std_msgs.msg.Bool(data=True)
+
+publishing #139: std_msgs.msg.Bool(data=True)
+
+publishing #140: std_msgs.msg.Bool(data=True)
+
+publishing #141: std_msgs.msg.Bool(data=True)
+
+publishing #142: std_msgs.msg.Bool(data=True)
+
+publishing #143: std_msgs.msg.Bool(data=True)
+
+publishing #144: std_msgs.msg.Bool(data=True)
+
+publishing #145: std_msgs.msg.Bool(data=True)
+
+publishing #146: std_msgs.msg.Bool(data=True)
+
+publishing #147: std_msgs.msg.Bool(data=True)
+
+publishing #148: std_msgs.msg.Bool(data=True)
+
+publishing #149: std_msgs.msg.Bool(data=True)
+
+publishing #150: std_msgs.msg.Bool(data=True)
+
+publishing #151: std_msgs.msg.Bool(data=True)
+
+publishing #152: std_msgs.msg.Bool(data=True)
+
+publishing #153: std_msgs.msg.Bool(data=True)
+
+publishing #154: std_msgs.msg.Bool(data=True)
+
+publishing #155: std_msgs.msg.Bool(data=True)
+
+publishing #156: std_msgs.msg.Bool(data=True)
+
+publishing #157: std_msgs.msg.Bool(data=True)
+
+publishing #158: std_msgs.msg.Bool(data=True)
+
+publishing #159: std_msgs.msg.Bool(data=True)
+
+publishing #160: std_msgs.msg.Bool(data=True)
+
+publishing #161: std_msgs.msg.Bool(data=True)
+
+publishing #162: std_msgs.msg.Bool(data=True)
+
+publishing #163: std_msgs.msg.Bool(data=True)
+
+publishing #164: std_msgs.msg.Bool(data=True)
+
+publishing #165: std_msgs.msg.Bool(data=True)
+
+publishing #166: std_msgs.msg.Bool(data=True)
+
+publishing #167: std_msgs.msg.Bool(data=True)
+
+publishing #168: std_msgs.msg.Bool(data=True)
+
+publishing #169: std_msgs.msg.Bool(data=True)
+
+publishing #170: std_msgs.msg.Bool(data=True)
+
+publishing #171: std_msgs.msg.Bool(data=True)
+
+publishing #172: std_msgs.msg.Bool(data=True)
+
+publishing #173: std_msgs.msg.Bool(data=True)
+
+publishing #174: std_msgs.msg.Bool(data=True)
+
+publishing #175: std_msgs.msg.Bool(data=True)
+
+publishing #176: std_msgs.msg.Bool(data=True)
+
+publishing #177: std_msgs.msg.Bool(data=True)
+
+publishing #178: std_msgs.msg.Bool(data=True)
+
+publishing #179: std_msgs.msg.Bool(data=True)
+
+publishing #180: std_msgs.msg.Bool(data=True)
+
+publishing #181: std_msgs.msg.Bool(data=True)
+
+publishing #182: std_msgs.msg.Bool(data=True)
+
+publishing #183: std_msgs.msg.Bool(data=True)
+
+publishing #184: std_msgs.msg.Bool(data=True)
+
+publishing #185: std_msgs.msg.Bool(data=True)
+
+publishing #186: std_msgs.msg.Bool(data=True)
+
+publishing #187: std_msgs.msg.Bool(data=True)
+
+publishing #188: std_msgs.msg.Bool(data=True)
+
+publishing #189: std_msgs.msg.Bool(data=True)
+
+publishing #190: std_msgs.msg.Bool(data=True)
+
+publishing #191: std_msgs.msg.Bool(data=True)
+
+publishing #192: std_msgs.msg.Bool(data=True)
+
+publishing #193: std_msgs.msg.Bool(data=True)
+
+publishing #194: std_msgs.msg.Bool(data=True)
+
+publishing #195: std_msgs.msg.Bool(data=True)
+
+publishing #196: std_msgs.msg.Bool(data=True)
+
+publishing #197: std_msgs.msg.Bool(data=True)
+
+publishing #198: std_msgs.msg.Bool(data=True)
+
+publishing #199: std_msgs.msg.Bool(data=True)
+
+publishing #200: std_msgs.msg.Bool(data=True)
+
+publishing #201: std_msgs.msg.Bool(data=True)
+
+publishing #202: std_msgs.msg.Bool(data=True)
+
+publishing #203: std_msgs.msg.Bool(data=True)
+
+publishing #204: std_msgs.msg.Bool(data=True)
+
+publishing #205: std_msgs.msg.Bool(data=True)
+
+publishing #206: std_msgs.msg.Bool(data=True)
+
+publishing #207: std_msgs.msg.Bool(data=True)
+
+publishing #208: std_msgs.msg.Bool(data=True)
+
+publishing #209: std_msgs.msg.Bool(data=True)
+
+publishing #210: std_msgs.msg.Bool(data=True)
+
+publishing #211: std_msgs.msg.Bool(data=True)
+
+publishing #212: std_msgs.msg.Bool(data=True)
+
+publishing #213: std_msgs.msg.Bool(data=True)
+
+publishing #214: std_msgs.msg.Bool(data=True)
+
+publishing #215: std_msgs.msg.Bool(data=True)
+
+publishing #216: std_msgs.msg.Bool(data=True)
+
+publishing #217: std_msgs.msg.Bool(data=True)
+
+publishing #218: std_msgs.msg.Bool(data=True)
+
+publishing #219: std_msgs.msg.Bool(data=True)
+
+publishing #220: std_msgs.msg.Bool(data=True)
+
+publishing #221: std_msgs.msg.Bool(data=True)
+
+publishing #222: std_msgs.msg.Bool(data=True)
+
+publishing #223: std_msgs.msg.Bool(data=True)
+
+publishing #224: std_msgs.msg.Bool(data=True)
+
+publishing #225: std_msgs.msg.Bool(data=True)
+
+publishing #226: std_msgs.msg.Bool(data=True)
+
+publishing #227: std_msgs.msg.Bool(data=True)
+
+publishing #228: std_msgs.msg.Bool(data=True)
+
+publishing #229: std_msgs.msg.Bool(data=True)
+
+publishing #230: std_msgs.msg.Bool(data=True)
+
+publishing #231: std_msgs.msg.Bool(data=True)
+
+publishing #232: std_msgs.msg.Bool(data=True)
+
+publishing #233: std_msgs.msg.Bool(data=True)
+
+publishing #234: std_msgs.msg.Bool(data=True)
+
+publishing #235: std_msgs.msg.Bool(data=True)
+
+publishing #236: std_msgs.msg.Bool(data=True)
+
+publishing #237: std_msgs.msg.Bool(data=True)
+
+publishing #238: std_msgs.msg.Bool(data=True)
+
+publishing #239: std_msgs.msg.Bool(data=True)
+
+publishing #240: std_msgs.msg.Bool(data=True)
+
+publishing #241: std_msgs.msg.Bool(data=True)
+
+publishing #242: std_msgs.msg.Bool(data=True)
+
+publishing #243: std_msgs.msg.Bool(data=True)
+
+publishing #244: std_msgs.msg.Bool(data=True)
+
+publishing #245: std_msgs.msg.Bool(data=True)
+
+publishing #246: std_msgs.msg.Bool(data=True)
+
+publishing #247: std_msgs.msg.Bool(data=True)
+
+publishing #248: std_msgs.msg.Bool(data=True)
+
+publishing #249: std_msgs.msg.Bool(data=True)
+
+publishing #250: std_msgs.msg.Bool(data=True)
+
+publishing #251: std_msgs.msg.Bool(data=True)
+
+publishing #252: std_msgs.msg.Bool(data=True)
+
+publishing #253: std_msgs.msg.Bool(data=True)
+
+publishing #254: std_msgs.msg.Bool(data=True)
+
+publishing #255: std_msgs.msg.Bool(data=True)
+
+publishing #256: std_msgs.msg.Bool(data=True)
+
+publishing #257: std_msgs.msg.Bool(data=True)
+
+publishing #258: std_msgs.msg.Bool(data=True)
+
+publishing #259: std_msgs.msg.Bool(data=True)
+
+publishing #260: std_msgs.msg.Bool(data=True)
+
+publishing #261: std_msgs.msg.Bool(data=True)
+
+publishing #262: std_msgs.msg.Bool(data=True)
+
+publishing #263: std_msgs.msg.Bool(data=True)
+
+publishing #264: std_msgs.msg.Bool(data=True)
+
+publishing #265: std_msgs.msg.Bool(data=True)
+
+publishing #266: std_msgs.msg.Bool(data=True)
+
+publishing #267: std_msgs.msg.Bool(data=True)
+
+publishing #268: std_msgs.msg.Bool(data=True)
+
+publishing #269: std_msgs.msg.Bool(data=True)
+
+publishing #270: std_msgs.msg.Bool(data=True)
+
+publishing #271: std_msgs.msg.Bool(data=True)
+
+publishing #272: std_msgs.msg.Bool(data=True)
+
+publishing #273: std_msgs.msg.Bool(data=True)
+
+publishing #274: std_msgs.msg.Bool(data=True)
+
+publishing #275: std_msgs.msg.Bool(data=True)
+
+publishing #276: std_msgs.msg.Bool(data=True)
+
+publishing #277: std_msgs.msg.Bool(data=True)
+
+publishing #278: std_msgs.msg.Bool(data=True)
+
+publishing #279: std_msgs.msg.Bool(data=True)
+
+publishing #280: std_msgs.msg.Bool(data=True)
+
+publishing #281: std_msgs.msg.Bool(data=True)
+
+publishing #282: std_msgs.msg.Bool(data=True)
+
+publishing #283: std_msgs.msg.Bool(data=True)
+
+publishing #284: std_msgs.msg.Bool(data=True)
+
+publishing #285: std_msgs.msg.Bool(data=True)
+
+publishing #286: std_msgs.msg.Bool(data=True)
+
+publishing #287: std_msgs.msg.Bool(data=True)
+
+publishing #288: std_msgs.msg.Bool(data=True)
+
+publishing #289: std_msgs.msg.Bool(data=True)
+
+publishing #290: std_msgs.msg.Bool(data=True)
+
+publishing #291: std_msgs.msg.Bool(data=True)
+
+publishing #292: std_msgs.msg.Bool(data=True)
+
+publishing #293: std_msgs.msg.Bool(data=True)
+
+publishing #294: std_msgs.msg.Bool(data=True)
+
+publishing #295: std_msgs.msg.Bool(data=True)
+
+publishing #296: std_msgs.msg.Bool(data=True)
+
+publishing #297: std_msgs.msg.Bool(data=True)
+
+publishing #298: std_msgs.msg.Bool(data=True)
+
+publishing #299: std_msgs.msg.Bool(data=True)
+
+publishing #300: std_msgs.msg.Bool(data=True)
+
+publishing #301: std_msgs.msg.Bool(data=True)
+
+publishing #302: std_msgs.msg.Bool(data=True)
+
+publishing #303: std_msgs.msg.Bool(data=True)
+
+publishing #304: std_msgs.msg.Bool(data=True)
+
+publishing #305: std_msgs.msg.Bool(data=True)
+
+publishing #306: std_msgs.msg.Bool(data=True)
+
+publishing #307: std_msgs.msg.Bool(data=True)
+
+publishing #308: std_msgs.msg.Bool(data=True)
+
+publishing #309: std_msgs.msg.Bool(data=True)
+
+publishing #310: std_msgs.msg.Bool(data=True)
+
+publishing #311: std_msgs.msg.Bool(data=True)
+
+publishing #312: std_msgs.msg.Bool(data=True)
+
+publishing #313: std_msgs.msg.Bool(data=True)
+
+publishing #314: std_msgs.msg.Bool(data=True)
+
+publishing #315: std_msgs.msg.Bool(data=True)
+
+publishing #316: std_msgs.msg.Bool(data=True)
+
+publishing #317: std_msgs.msg.Bool(data=True)
+
+publishing #318: std_msgs.msg.Bool(data=True)
+
+publishing #319: std_msgs.msg.Bool(data=True)
+
+publishing #320: std_msgs.msg.Bool(data=True)
+
+publishing #321: std_msgs.msg.Bool(data=True)
+
+publishing #322: std_msgs.msg.Bool(data=True)
+
+publishing #323: std_msgs.msg.Bool(data=True)
+
+publishing #324: std_msgs.msg.Bool(data=True)
+
+publishing #325: std_msgs.msg.Bool(data=True)
+
+publishing #326: std_msgs.msg.Bool(data=True)
+
+publishing #327: std_msgs.msg.Bool(data=True)
+
+publishing #328: std_msgs.msg.Bool(data=True)
+
+publishing #329: std_msgs.msg.Bool(data=True)
+
+publishing #330: std_msgs.msg.Bool(data=True)
+
+publishing #331: std_msgs.msg.Bool(data=True)
+
+publishing #332: std_msgs.msg.Bool(data=True)
+
+publishing #333: std_msgs.msg.Bool(data=True)
+
+publishing #334: std_msgs.msg.Bool(data=True)
+
+publishing #335: std_msgs.msg.Bool(data=True)
+
+publishing #336: std_msgs.msg.Bool(data=True)
+
+publishing #337: std_msgs.msg.Bool(data=True)
+
+publishing #338: std_msgs.msg.Bool(data=True)
+
+publishing #339: std_msgs.msg.Bool(data=True)
+
+publishing #340: std_msgs.msg.Bool(data=True)
+
+publishing #341: std_msgs.msg.Bool(data=True)
+
+publishing #342: std_msgs.msg.Bool(data=True)
+
+publishing #343: std_msgs.msg.Bool(data=True)
+
+publishing #344: std_msgs.msg.Bool(data=True)
+
+publishing #345: std_msgs.msg.Bool(data=True)
+
+publishing #346: std_msgs.msg.Bool(data=True)
+
+publishing #347: std_msgs.msg.Bool(data=True)
+
+publishing #348: std_msgs.msg.Bool(data=True)
+
+publishing #349: std_msgs.msg.Bool(data=True)
+
+publishing #350: std_msgs.msg.Bool(data=True)
+
+publishing #351: std_msgs.msg.Bool(data=True)
+
+publishing #352: std_msgs.msg.Bool(data=True)
+
+publishing #353: std_msgs.msg.Bool(data=True)
+

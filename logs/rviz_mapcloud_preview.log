@@ -1,0 +1,6 @@
+[INFO] [launch]: All log files can be found below /home/seeed/.ros/log/2026-08-04-12-34-32-239631-seeed-16830
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [pcd_ndt_localizer-1]: process started with pid [16865]
+[pcd_ndt_localizer-1] [INFO] [1785818072.533671375] [pcd_ndt_localizer]: Loaded map /home/seeed/ros2/maps/replay/fastlio_map_manual_001_level.pcd raw=226228 filtered=13525 leaf=0.250
+[pcd_ndt_localizer-1] [INFO] [1785818072.538108325] [pcd_ndt_localizer]: PCD occupancy grid ready. raw=226228 kept=63500 occupied_cells=3368 size=151x178 res=0.100 z=[-0.64, 0.84] min_points=3 min_z_span=0.10
+[pcd_ndt_localizer-1] [INFO] [1785818072.569267656] [pcd_ndt_localizer]: PCD NDT localization ready. map=/home/seeed/ros2/maps/replay/fastlio_map_manual_001_level.pcd points=13525 require_initial_pose=1 reject_occupied_pose=1

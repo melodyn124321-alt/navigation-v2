@@ -1,0 +1,397 @@
+[INFO] [launch]: All log files can be found below /home/seeed/.ros/log/2026-07-06-10-04-48-504884-seeed-10755
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [10790]
+[fastlio_mapping-1] [INFO] [1783303488.777509475] [laser_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] ~~~~/home/seeed/ros2/ws/src/slam/fast_lio/ file opened
+[fastlio_mapping-1] [INFO] [1783303488.793791775] [laser_mapping]: Node init finished.
+[fastlio_mapping-1] [WARN] [1783303491.123072575] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1783303491.223125586] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1783303491.323031969] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1783303491.422981713] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1783303491.523610135] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1783303491.627054971] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] IMU and LiDAR not Synced, IMU time: 1783053996.772539, lidar header time: 1783303545.300552 
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] IMU and LiDAR not Synced, IMU time: 1783053998.598152, lidar header time: 1783303548.800577 
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] lidar loop back, clear buffer
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!

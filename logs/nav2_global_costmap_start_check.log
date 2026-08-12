@@ -1,0 +1,2 @@
+map=1200x1098 resolution=0.050
+start world=(1.645,-3.038) yaw=-2.753 cell=(316, 664) cost=0 nearest_passable=(316, 664) nearest_world=(1.6258002358108765, -3.035599504908916) nearest_blocked=None blocked_component=None

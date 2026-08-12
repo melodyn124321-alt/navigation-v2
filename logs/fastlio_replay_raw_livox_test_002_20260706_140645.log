@@ -1,0 +1,183 @@
+[INFO] [launch]: All log files can be found below /home/seeed/.ros/log/2026-07-06-14-06-50-524864-seeed-17597
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [17632]
+[fastlio_mapping-1] [INFO] [1783318010.804246908] [laser_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] ~~~~/home/seeed/ros2/ws/src/slam/fast_lio/ file opened
+[fastlio_mapping-1] [INFO] [1783318010.818511268] [laser_mapping]: Node init finished.
+[fastlio_mapping-1] [WARN] [1783318018.107970182] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1783318018.307898646] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1783318018.507947082] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1783318018.707948125] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1783318018.908147670] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1783318019.110548784] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] [INFO] [1783318336.493880508] [laser_mapping]: Saving map to /home/seeed/ros2/maps/replay/fastlio_map_from_raw_livox_test_002_20260706_140645.pcd...
+[fastlio_mapping-1] [INFO] [1783318336.540485028] [laser_mapping]: Map saved. points=354343 source=accumulated_map_cloud path=/home/seeed/ros2/maps/replay/fastlio_map_from_raw_livox_test_002_20260706_140645.pcd

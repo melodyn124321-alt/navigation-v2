@@ -1,0 +1,16 @@
+[INFO] [1786513273.555858394] [nav_motion_safety_gate]: motion gate starts DISARMED: fitness_startup<=0.180 runtime_block>0.220 for 2.00s clear<=0.180x3, terminal_fitness<=0.20m:block>0.350/clear<=0.320, degraded_recovery<=0.50m@0.08m/s,45.0deg@0.08rad/s, localization<=10.00s, cmd<=0.30s, obstacle_age<=1.00s, rear_sonar=reverse stop<=0.22m clear>=0.35m, turn_allow>0.25m, self_echo=[0.08,0.12]m sensor_to_tail=0.15m tail_clearance>=0.02m hold=1.50s clear_samples=3/8, turn_guard=True, reverse_speed_taper=True, operator_heartbeat<=3.00s, goal_lease<=0.75s, limits=(0.40 m/s, 0.18 rad/s), speed_profile=(start<=0.080m/s for 0.30m, cruise<=0.400m/s, approach=0.80m to 0.050m/s), small_spin<=300.2deg at<=0.12rad/s reset_after=0.05m, curvature<=2.25 1/m, reverse_straight_only=True reverse_angular<=0.015rad/s plan=/direct_reverse_plan timeout=3.0s straight_limits=(lateral<=0.10m, heading_span<=0.12rad, length_ratio<=1.03, confirmations=2)
+[WARN] [1786513273.568902295] [nav_motion_safety_gate]: motion blocked: disarmed
+[INFO] [1786513273.906027552] [nav_motion_safety_gate]: NDT runtime safety recovered after consecutive healthy samples: fitness=0.082 clear<=0.180 mode=normal samples=3
+[INFO] [1786513274.522635382] [nav_motion_safety_gate]: FORWARD_ONLY confirmations=0/2 age=infs waiting for path
+[WARN] [1786513281.546340538] [nav_motion_safety_gate]: motion gate ARMED
+[WARN] [1786513281.559634016] [nav_motion_safety_gate]: motion blocked: stale navigation goal lease
+[WARN] [1786513285.546783832] [nav_motion_safety_gate]: motion gate DISARMED
+[WARN] [1786513285.574398762] [nav_motion_safety_gate]: motion blocked: disarmed
+[WARN] [1786513523.390239002] [nav_motion_safety_gate]: motion gate ARMED
+[WARN] [1786513523.401650129] [nav_motion_safety_gate]: motion blocked: no active navigation goal
+[WARN] [1786513611.591724223] [nav_motion_safety_gate]: motion blocked: disarmed
+[WARN] [1786513611.594541756] [nav_motion_safety_gate]: motion gate DISARMED
+[WARN] [1786513711.474430523] [nav_motion_safety_gate]: motion gate ARMED
+[WARN] [1786513711.495152069] [nav_motion_safety_gate]: motion blocked: no active navigation goal
+[WARN] [1786513737.473394090] [nav_motion_safety_gate]: motion gate DISARMED
+[WARN] [1786513737.488498861] [nav_motion_safety_gate]: motion blocked: disarmed

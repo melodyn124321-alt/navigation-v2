@@ -1,0 +1,5 @@
+[INFO] [1786513244.593071118] [nav2_manual_lifecycle]: collision_monitor: current unconfigured [1]
+[INFO] [1786513244.594155862] [nav2_manual_lifecycle]: collision_monitor: configure
+[INFO] [1786513244.748749899] [nav2_manual_lifecycle]: collision_monitor: waiting 4.0s for TF and map callbacks before activation
+[INFO] [1786513248.751632963] [nav2_manual_lifecycle]: collision_monitor: activate
+[INFO] [1786513248.833131175] [nav2_manual_lifecycle]: collision_monitor: active [3]

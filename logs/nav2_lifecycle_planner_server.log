@@ -1,0 +1,5 @@
+[INFO] [1786513185.545288037] [nav2_manual_lifecycle]: planner_server: current unconfigured [1]
+[INFO] [1786513185.546201703] [nav2_manual_lifecycle]: planner_server: configure
+[INFO] [1786513185.833738682] [nav2_manual_lifecycle]: planner_server: waiting 5.0s for TF and map callbacks before activation
+[INFO] [1786513190.839711262] [nav2_manual_lifecycle]: planner_server: activate
+[INFO] [1786513191.951758907] [nav2_manual_lifecycle]: planner_server: active [3]

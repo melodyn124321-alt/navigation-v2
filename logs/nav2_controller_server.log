@@ -1,0 +1,31 @@
+[INFO] [1786513165.804747441] [controller_server]: 
+	controller_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1786513165.813429742] [controller_server]: Creating controller server
+[INFO] [1786513165.829598237] [local_costmap.local_costmap]: 
+	local_costmap lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1786513165.831173559] [local_costmap.local_costmap]: Creating Costmap
+[INFO] [1786513167.986229909] [controller_server]: Configuring controller interface
+[INFO] [1786513167.986801930] [controller_server]: getting goal checker plugins..
+[INFO] [1786513167.987205912] [controller_server]: Controller frequency set to 5.0000Hz
+[INFO] [1786513167.987317052] [local_costmap.local_costmap]: Configuring
+[INFO] [1786513168.032163492] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[INFO] [1786513168.042623171] [local_costmap.local_costmap]: Subscribed to Topics: livox_cloud
+[INFO] [1786513168.059223234] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[INFO] [1786513168.059368583] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[INFO] [1786513168.062324340] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[INFO] [1786513168.125997868] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[INFO] [1786513168.129715412] [controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+[INFO] [1786513168.131431123] [controller_server]: Controller Server has general_goal_checker  goal checkers available.
+[INFO] [1786513168.132536187] [controller_server]: Created controller : FollowPath of type nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController
+[INFO] [1786513168.156960729] [controller_server]: Controller Server has FollowPath  controllers available.
+[INFO] [1786513172.217267108] [controller_server]: Activating
+[INFO] [1786513172.217620401] [local_costmap.local_costmap]: Activating
+[INFO] [1786513172.217675347] [local_costmap.local_costmap]: Checking transform
+[INFO] [1786513172.218009631] [local_costmap.local_costmap]: start
+[INFO] [1786513172.423817350] [controller_server]: Activating controller: FollowPath of type regulated_pure_pursuit_controller::RegulatedPurePursuitController
+[INFO] [1786513172.423980684] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[INFO] [1786513399.893063880] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap

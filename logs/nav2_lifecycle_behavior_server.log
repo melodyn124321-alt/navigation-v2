@@ -1,0 +1,5 @@
+[INFO] [1786513196.343374875] [nav2_manual_lifecycle]: behavior_server: current unconfigured [1]
+[INFO] [1786513196.344554534] [nav2_manual_lifecycle]: behavior_server: configure
+[INFO] [1786513196.581856269] [nav2_manual_lifecycle]: behavior_server: waiting 4.0s for TF and map callbacks before activation
+[INFO] [1786513200.583716543] [nav2_manual_lifecycle]: behavior_server: activate
+[INFO] [1786513200.627274232] [nav2_manual_lifecycle]: behavior_server: active [3]

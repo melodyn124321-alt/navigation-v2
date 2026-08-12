@@ -1,0 +1,113 @@
+[INFO] [launch]: All log files can be found below /home/seeed/.ros/log/2026-08-04-14-52-56-089595-seeed-40270
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [ranger_base_node-1]: process started with pid [40305]
+[ranger_base_node-1] [0m[INFO] [1785826376.267599359] [ranger_base_node]: Successfully loaded the following parameters: 
+[ranger_base_node-1]  port_name: can1
+[ranger_base_node-1]  robot_model: ranger_mini_v2
+[ranger_base_node-1]  odom_frame: odom
+[ranger_base_node-1]  base_frame: base_link
+[ranger_base_node-1]  update_rate: 50
+[ranger_base_node-1]  odom_topic_name: odom
+[ranger_base_node-1]  publish_odom_tf: 1
+[ranger_base_node-1] [0m
+[ranger_base_node-1] Start listening to port: can1
+[ranger_base_node-1] [33m[WARN] [1785826376.296111459] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826377.295973932] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826378.295968313] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826379.295966279] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826380.295984565] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826381.295955522] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826382.295975696] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826383.295966141] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826384.295976683] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826385.295973689] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826386.295964582] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826387.295983988] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826388.295966881] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826389.295968303] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826390.295972028] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826391.295970602] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826392.295967191] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826393.295967621] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826394.295964754] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826395.295975200] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1785826396.295968334] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826397.295970267] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826398.295965417] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826399.295961878] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826400.295967300] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826401.295966097] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826402.295965375] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826403.295962252] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826404.295968506] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826405.295966664] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826406.295968565] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826407.295965475] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826408.295966160] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826409.295961598] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826410.295958123] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826411.295964985] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826412.295960902] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826413.295964500] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826414.295963842] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826415.295966319] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826416.295963197] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826417.295964106] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826418.295968184] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826419.295965702] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826420.295964179] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826421.295969665] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826422.295958862] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826423.295973724] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826424.295967401] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826425.295962807] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826426.295968261] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826427.295961490] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826428.295963104] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826429.295963725] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826430.295965339] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826431.295970057] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826432.295968022] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826433.295969604] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826434.295964145] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame
+[ranger_base_node-1] [33m[WARN] [1785826435.295965983] [ranger_base_node]: Ranger control_mode=0 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] Failed to send CAN frame

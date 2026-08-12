@@ -1,0 +1,283 @@
+publisher: beginning loop
+publishing #1: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #2: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #3: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #4: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #5: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #6: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #7: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #8: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #9: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #10: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #11: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #12: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #13: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #14: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #15: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #16: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #17: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #18: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #19: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #20: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #21: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #22: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #23: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #24: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #25: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #26: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #27: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #28: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #29: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #30: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #31: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #32: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #33: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #34: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #35: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #36: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #37: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #38: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #39: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #40: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #41: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #42: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #43: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #44: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #45: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #46: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #47: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #48: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #49: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #50: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #51: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #52: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #53: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #54: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #55: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #56: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #57: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #58: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #59: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #60: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #61: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #62: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #63: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #64: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #65: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #66: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #67: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #68: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #69: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #70: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #71: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #72: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #73: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #74: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #75: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #76: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #77: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #78: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #79: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #80: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #81: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #82: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #83: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #84: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #85: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #86: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #87: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #88: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #89: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #90: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #91: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #92: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #93: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #94: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #95: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #96: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #97: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #98: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #99: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #100: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #101: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #102: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #103: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #104: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #105: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #106: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #107: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #108: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #109: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #110: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #111: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #112: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #113: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #114: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #115: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #116: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #117: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #118: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #119: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #120: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #121: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #122: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #123: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #124: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #125: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #126: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #127: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #128: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #129: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #130: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #131: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #132: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #133: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #134: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #135: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #136: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #137: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #138: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #139: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #140: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+
+publishing #141: std_msgs.msg.String(data='ACTIVE_alarm_verification')
+

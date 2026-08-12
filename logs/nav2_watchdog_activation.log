@@ -1,0 +1,108 @@
+Vehicle geometry: chassis=0.720x0.500x0.345 m
+LiDAR mount: rear=0.100 m front=0.620 m
+base_link -> nav_lidar: xyz=(-0.260000,0.0,0.480) yaw=3.141592653589793 rad
+[1/10] Checking live NDT localization...
+NDT fitness=0.010864686511416977 is within the 0.10 limit.
+Checking persistent localization marker and consecutive healthy samples...
+LOCALIZATION_STABILITY PASS recent_fitness=[0.010876048412292427, 0.011246011793388558, 0.011246011793388558, 0.011098990619792772, 0.011098990619792772] marker='LOCALIZED  score=0.011' persistent_marker=True tf_successes=644
+[2/10] Checking stable map -> odom -> base_link TF...
+[INFO] [1783945399.963148790] [nav_tf_readiness_check]: waiting for map->base_link and odom->base_link: "map" passed to lookupTransform argument target_frame does not exist. 
+[INFO] [1783945402.586147102] [nav_tf_readiness_check]: TF READY: 20 consecutive samples for map->base_link and odom->base_link
+[3/10] Stopping the old navigation-only processes...
+[4/10] Starting the DISARMED final motion gate first...
+Motion gate is visible in the ROS graph (attempt 1).
+[5/10] Starting the chassis-oriented dynamic obstacle cloud...
+[INFO] [1783945414.248465304] [tf2_echo]: Waiting for transform base_link ->  nav_lidar: Invalid frame ID "base_link" passed to canTransform argument target_frame - frame does not exist
+At time 0.0
+- Translation: [-0.260, 0.000, 0.480]
+- Rotation: in Quaternion (xyzw) [0.000, 0.000, 1.000, 0.000]
+- Rotation: in RPY (radian) [0.000, -0.000, 3.142]
+- Rotation: in RPY (degree) [0.000, -0.000, 180.000]
+- Matrix:
+ -1.000 -0.000  0.000 -0.260
+  0.000 -1.000  0.000  0.000
+  0.000  0.000  1.000  0.480
+  0.000  0.000  0.000  1.000
+At time 0.0
+- Translation: [-0.260, 0.000, 0.480]
+- Rotation: in Quaternion (xyzw) [0.000, 0.000, 1.000, 0.000]
+- Rotation: in RPY (radian) [0.000, -0.000, 3.142]
+- Rotation: in RPY (degree) [0.000, -0.000, 180.000]
+- Matrix:
+ -1.000 -0.000  0.000 -0.260
+  0.000 -1.000  0.000  0.000
+  0.000  0.000  1.000  0.480
+  0.000  0.000  0.000  1.000
+[INFO] [1783945416.854907936] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+data: ok received=40 published=40 age=0.166s points=5805->726 frame=nav_lidar test_injection=False
+---
+[6/10] Starting and activating map_server...
+Transitioning successful
+Transitioning successful
+[7/10] Starting and activating Nav2 nodes one at a time...
+Starting /controller_server (attempt 1/3)...
+  /controller_server: active [3]
+Starting /smoother_server (attempt 1/3)...
+  /smoother_server: active [3]
+Starting /planner_server (attempt 1/3)...
+  /planner_server: active [3]
+Starting /behavior_server (attempt 1/3)...
+  /behavior_server: active [3]
+Starting /bt_navigator (attempt 1/3)...
+  /bt_navigator: active [3]
+Starting /waypoint_follower (attempt 1/3)...
+  /waypoint_follower: active [3]
+Starting /velocity_smoother (attempt 1/3)...
+  /velocity_smoother: active [3]
+Starting /collision_monitor (attempt 1/3)...
+  /collision_monitor: active [3]
+[8/10] All managed Nav2 nodes reached active [3].
+[9/10] Starting the persistent Nav2 goal marker...
+[10/10] Verifying lifecycle, obstacle layers, goal marker, and velocity isolation...
+  /map_server: active [3]
+  /planner_server: active [3]
+  /controller_server: active [3]
+  /smoother_server: active [3]
+  /behavior_server: active [3]
+  /bt_navigator: active [3]
+  /waypoint_follower: active [3]
+  /velocity_smoother: active [3]
+  /collision_monitor: active [3]
+[INFO] [1783945559.487718155] [nav_tf_readiness_check]: waiting for map->base_link and odom->base_link: "map" passed to lookupTransform argument target_frame does not exist. 
+[INFO] [1783945561.644940830] [nav_tf_readiness_check]: waiting for map->base_link and odom->base_link: "map" passed to lookupTransform argument target_frame does not exist. 
+[INFO] [1783945563.799560579] [nav_tf_readiness_check]: waiting for map->base_link and odom->base_link: Lookup would require extrapolation at time 1783945561.911090, but only time 1783945562.262933 is in the buffer, when looking up transform from frame [base_link] to frame [map]
+[INFO] [1783945565.062687533] [nav_tf_readiness_check]: TF READY: 20 consecutive samples for map->base_link and odom->base_link
+--- /nav_obstacle_cloud
+Type: sensor_msgs/msg/PointCloud2
+Publisher count: 1
+Subscription count: 4
+--- /local_costmap/costmap
+Type: nav_msgs/msg/OccupancyGrid
+Publisher count: 1
+Subscription count: 1
+--- /global_costmap/costmap
+Type: nav_msgs/msg/OccupancyGrid
+Publisher count: 1
+Subscription count: 0
+--- /nav_goal_markers
+Type: visualization_msgs/msg/MarkerArray
+Publisher count: 1
+Subscription count: 1
+--- /cmd_vel_nav_collision_safe
+Type: geometry_msgs/msg/Twist
+Publisher count: 1
+Subscription count: 1
+--- /cmd_vel
+Type: geometry_msgs/msg/Twist
+Publisher count: 1
+Subscription count: 1
+--- dynamic obstacle status
+data: ok received=1468 published=1468 age=0.039s points=5785->724 frame=nav_lidar test_injection=False
+---
+--- motion gate status
+data: disarmed
+---
+
+Nav2 dynamic avoidance is ACTIVE, but physical motion remains DISARMED.
+Velocity chain: Nav2 -> smoother -> collision monitor -> safety gate -> /cmd_vel
+Only arm after checking the local/global costmaps in hn RViz.

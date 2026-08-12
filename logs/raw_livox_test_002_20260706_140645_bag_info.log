@@ -1,0 +1,11 @@
+
+Files:             raw_livox_test_002_0.db3
+Bag size:          600.6 MiB
+Storage id:        sqlite3
+Duration:          153.964769035s
+Start:             Jul  6 2026 12:47:26.532527479 (1783313246.532527479)
+End:               Jul  6 2026 12:50:00.497296514 (1783313400.497296514)
+Messages:          32334
+Topic information: Topic: /livox/lidar | Type: livox_ros_driver2/msg/CustomMsg | Count: 1540 | Serialization Format: cdr
+                   Topic: /livox/imu | Type: sensor_msgs/msg/Imu | Count: 30794 | Serialization Format: cdr
+

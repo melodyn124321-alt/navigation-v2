@@ -1,0 +1,2 @@
+[INFO] [1786513151.959787254] [nav_obstacle_cloud_republisher]: republishing /cloud_registered_body as /nav_obstacle_cloud in frame base_link, stride=6, lidar_in_base=(0.100,-0.110,0.749,rpy=(-0.8018,-0.0071,-1.5708)), stamp_delay=0.150s, viz=z[0.08,1.60] range=[0.05,5.00], self_box=x[-0.38,0.38] y+/-0.27
+[INFO] [1786513152.708027130] [nav_obstacle_cloud_republisher]: first cloud received: points=5913 source_frame=body

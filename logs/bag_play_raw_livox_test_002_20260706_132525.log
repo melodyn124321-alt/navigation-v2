@@ -1,0 +1,9 @@
+[INFO] [1783315537.520015355] [rosbag2_storage]: Opened database '/home/seeed/ros2/bags/raw_livox_test_002/raw_livox_test_002_0.db3' for READ_ONLY.
+[INFO] [1783315537.520236642] [rosbag2_player]: Set rate to 0.5
+[INFO] [1783315537.532214761] [rosbag2_player]: Adding keyboard callbacks.
+[INFO] [1783315537.532381806] [rosbag2_player]: Press SPACE for Pause/Resume
+[INFO] [1783315537.532432816] [rosbag2_player]: Press CURSOR_RIGHT for Play Next Message
+[INFO] [1783315537.532470257] [rosbag2_player]: Press CURSOR_UP for Increase Rate 10%
+[INFO] [1783315537.532503794] [rosbag2_player]: Press CURSOR_DOWN for Decrease Rate 10%
+[INFO] [1783315537.533886400] [rosbag2_storage]: Opened database '/home/seeed/ros2/bags/raw_livox_test_002/raw_livox_test_002_0.db3' for READ_ONLY.
+[INFO] [1783315683.457187578] [rclcpp]: signal_handler(SIGINT/SIGTERM)

@@ -1,0 +1,5 @@
+[INFO] [1786513223.125890767] [nav2_manual_lifecycle]: waypoint_follower: current unconfigured [1]
+[INFO] [1786513223.126982647] [nav2_manual_lifecycle]: waypoint_follower: configure
+[INFO] [1786513223.243067757] [nav2_manual_lifecycle]: waypoint_follower: waiting 4.0s for TF and map callbacks before activation
+[INFO] [1786513227.247568415] [nav2_manual_lifecycle]: waypoint_follower: activate
+[INFO] [1786513227.305451908] [nav2_manual_lifecycle]: waypoint_follower: active [3]

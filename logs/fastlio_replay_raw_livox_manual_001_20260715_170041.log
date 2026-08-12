@@ -1,0 +1,48 @@
+[INFO] [launch]: All log files can be found below /home/seeed/.ros/log/2026-07-15-17-00-47-975405-seeed-47777
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [47852]
+[fastlio_mapping-1] [INFO] [1784106048.247376430] [laser_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] [INFO] [1784106048.247752091] [laser_mapping]: LiDAR exclusion box enabled=true x=[-0.300,0.350] y=[0.020,0.600] z=[-0.080,0.420]
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] ~~~~/home/seeed/ros2/ws/src/slam/fast_lio/ file opened
+[fastlio_mapping-1] [INFO] [1784106048.263267093] [laser_mapping]: Node init finished.
+[fastlio_mapping-1] [WARN] [1784106056.536244513] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784106056.553495508] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784106056.573548066] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784106056.593575503] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784106056.613567867] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784106056.633450115] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784106056.653605876] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1784106056.673826536] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1784106056.697351527] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] [INFO] [1784106075.074502978] [fast_lio.preprocess]: CustomMsg exclusion removed 277/6647 candidate points in scan 100
+[fastlio_mapping-1] [INFO] [1784106096.486471215] [fast_lio.preprocess]: CustomMsg exclusion removed 273/6263 candidate points in scan 200
+[fastlio_mapping-1] [INFO] [1784106118.396529422] [fast_lio.preprocess]: CustomMsg exclusion removed 275/6647 candidate points in scan 300
+[fastlio_mapping-1] [INFO] [1784106139.676813204] [fast_lio.preprocess]: CustomMsg exclusion removed 293/6647 candidate points in scan 400
+[fastlio_mapping-1] [INFO] [1784106162.720477273] [fast_lio.preprocess]: CustomMsg exclusion removed 313/6644 candidate points in scan 500
+[fastlio_mapping-1] [INFO] [1784106184.577968870] [fast_lio.preprocess]: CustomMsg exclusion removed 274/6677 candidate points in scan 600
+[fastlio_mapping-1] [INFO] [1784106205.071414099] [fast_lio.preprocess]: CustomMsg exclusion removed 278/6678 candidate points in scan 700
+[fastlio_mapping-1] [INFO] [1784106225.477649284] [fast_lio.preprocess]: CustomMsg exclusion removed 265/6648 candidate points in scan 800
+[fastlio_mapping-1] [INFO] [1784106247.308955579] [fast_lio.preprocess]: CustomMsg exclusion removed 270/6646 candidate points in scan 900
+[fastlio_mapping-1] [INFO] [1784106269.474864017] [fast_lio.preprocess]: CustomMsg exclusion removed 251/6649 candidate points in scan 1000
+[fastlio_mapping-1] [INFO] [1784106292.491935955] [fast_lio.preprocess]: CustomMsg exclusion removed 311/6650 candidate points in scan 1100
+[fastlio_mapping-1] [INFO] [1784106311.679928886] [fast_lio.preprocess]: CustomMsg exclusion removed 274/6678 candidate points in scan 1200
+[fastlio_mapping-1] [INFO] [1784106333.145604058] [fast_lio.preprocess]: CustomMsg exclusion removed 272/6647 candidate points in scan 1300
+[fastlio_mapping-1] [INFO] [1784106352.673940536] [fast_lio.preprocess]: CustomMsg exclusion removed 297/6711 candidate points in scan 1400
+[fastlio_mapping-1] [INFO] [1784106373.268226205] [fast_lio.preprocess]: CustomMsg exclusion removed 264/6649 candidate points in scan 1500
+[fastlio_mapping-1] [INFO] [1784106394.877669105] [fast_lio.preprocess]: CustomMsg exclusion removed 305/6680 candidate points in scan 1600
+[fastlio_mapping-1] [INFO] [1784106415.075740542] [fast_lio.preprocess]: CustomMsg exclusion removed 251/6646 candidate points in scan 1700
+[fastlio_mapping-1] [INFO] [1784106437.060202840] [fast_lio.preprocess]: CustomMsg exclusion removed 267/6647 candidate points in scan 1800
+[fastlio_mapping-1] [INFO] [1784106458.075793415] [fast_lio.preprocess]: CustomMsg exclusion removed 251/6680 candidate points in scan 1900
+[fastlio_mapping-1] [INFO] [1784106478.880464409] [fast_lio.preprocess]: CustomMsg exclusion removed 226/6649 candidate points in scan 2000
+[fastlio_mapping-1] [INFO] [1784106505.303622775] [laser_mapping]: Saving map to /home/seeed/ros2/maps/replay/fastlio_map_manual_001.pcd...
+[fastlio_mapping-1] [INFO] [1784106505.336041720] [laser_mapping]: Map saved. points=208257 source=accumulated_map_cloud path=/home/seeed/ros2/maps/replay/fastlio_map_manual_001.pcd

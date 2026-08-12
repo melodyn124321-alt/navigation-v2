@@ -1,0 +1,18 @@
+[INFO] [1785325028.053067768] [nav_obstacle_cloud_republisher]: republishing /cloud_registered_body as /nav_obstacle_cloud in frame base_link, stride=4, lidar_in_base=(0.100,-0.110,0.749,rpy=(-0.8018,-0.0071,1.5708)), stamp_delay=0.150s, self_box=x[-0.38,0.38] y+/-0.27
+[INFO] [1785325028.951462101] [nav_obstacle_cloud_republisher]: first cloud received: points=5833 source_frame=body
+Traceback (most recent call last):
+  File "/home/seeed/ros2/scripts/nav_obstacle_cloud_republisher.py", line 318, in <module>
+    main()
+  File "/home/seeed/ros2/scripts/nav_obstacle_cloud_republisher.py", line 308, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 808, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 797, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 780, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 681, in _wait_for_ready_callbacks
+    raise ExternalShutdownException()
+rclpy.executors.ExternalShutdownException

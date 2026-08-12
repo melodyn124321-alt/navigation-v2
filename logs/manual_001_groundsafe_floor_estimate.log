@@ -1,0 +1,10 @@
+pcd=/home/seeed/ros2/maps/replay/fastlio_map_manual_001.pcd
+points=226661 sampled=120000
+reference_normal=(0.006000072,-0.718008616,0.696008352)
+ransac_inliers=21529 plane_offset=5.056436 reference_error_deg=0.170274
+floor_peak_threshold=4700 floor_peak_points=21662 floor_local_points=23900 residual_p50=0.007032m residual_p99=0.040888m
+RESULT_NORMAL=0.008907964 -0.718419467 0.695553102
+RESULT_FLOOR_Z=-0.755880326
+RESULT_TILT_CORRECTION_DEG=45.928691
+RESULT_FLOOR_RESIDUAL_P99=0.040887568
+RESULT: PASS constrained floor estimate

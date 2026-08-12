@@ -1,0 +1,28 @@
+[INFO] [1786513194.256739812] [behavior_server]: 
+	behavior_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1786513196.348123529] [behavior_server]: Configuring
+[INFO] [1786513196.409068478] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors/Spin
+[INFO] [1786513196.410867744] [behavior_server]: Configuring spin
+[INFO] [1786513196.461895018] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors/BackUp
+[INFO] [1786513196.463891507] [behavior_server]: Configuring backup
+[INFO] [1786513196.496135054] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors/DriveOnHeading
+[INFO] [1786513196.497923631] [behavior_server]: Configuring drive_on_heading
+[INFO] [1786513196.542114624] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors/Wait
+[INFO] [1786513196.544336529] [behavior_server]: Configuring wait
+[INFO] [1786513200.591830280] [behavior_server]: Activating
+[INFO] [1786513200.592017678] [behavior_server]: Activating spin
+[INFO] [1786513200.592077105] [behavior_server]: Activating backup
+[INFO] [1786513200.592117714] [behavior_server]: Activating drive_on_heading
+[INFO] [1786513200.592148051] [behavior_server]: Activating wait
+[INFO] [1786513200.592195893] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[INFO] [1786513289.554773322] [behavior_server]: Running drive_on_heading
+[INFO] [1786513289.557970175] [behavior_server]: DriveOnHeading: no acceleration or deceleration limits set
+[WARN] [1786513292.556411320] [behavior_server]: Exceeded time allowance before reaching the DriveOnHeading goal - Exiting DriveOnHeading
+[WARN] [1786513292.556587007] [behavior_server]: drive_on_heading failed
+[WARN] [1786513292.556662305] [behavior_server]: [drive_on_heading] [ActionServer] Aborting handle.
+[INFO] [1786513292.566246720] [behavior_server]: Running spin
+[INFO] [1786513292.566556491] [behavior_server]: Turning 0.10 for spin behavior.
+[INFO] [1786513292.766735876] [behavior_server]: Canceling spin
+[INFO] [1786513292.767014958] [behavior_server]: [spin] [ActionServer] Client requested to cancel the goal. Cancelling.

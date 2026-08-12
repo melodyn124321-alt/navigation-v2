@@ -1,0 +1,1 @@
+[INFO] [1783671981.989386865] [safe_cmd_vel_bridge]: bridging /cmd_vel_nav_smoothed -> /cmd_vel, timeout=0.35s

@@ -1,0 +1,8 @@
+PIPELINE_GOAL start=(0.044,-0.813,1.711) goal=(-0.011,-0.417,1.711)
+PIPELINE_ACCEPTED
+STATUS READY approach=0.70m minimum=0.45m progress=0.03m/45s small_spin_step<=30deg initial_alignment<=90deg final_alignment<=180deg policy_abort=6s stale_abort=15s straight_reverse_speed=0.04m/s
+STATUS REJECTED motion gate is DISARMED; run seeed_arm_nav_motion.sh and wait for [MOTION_ARMED] before sending a goal
+PIPELINE_PRE_GATE_NONZERO=YES
+PIPELINE_PRE_GATE_SAMPLE linear.x=0.005 angular.z=0.000
+PIPELINE_PHYSICAL_NONZERO=NO
+PIPELINE_PASS inner goal accepted, forward plan executed, pre-gate command generated, physical output remained zero

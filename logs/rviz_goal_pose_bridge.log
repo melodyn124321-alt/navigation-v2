@@ -1,0 +1,1 @@
+[INFO] [1786513305.487930549] [rviz_goal_pose_bridge]: RViz goal bridge: /goal_pose_relay (legacy ) -> /aligned_navigate_to_pose; duplicates are rejected before active-goal replacement

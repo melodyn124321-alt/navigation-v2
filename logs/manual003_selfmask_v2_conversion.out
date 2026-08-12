@@ -1,0 +1,478 @@
+Bag: /home/seeed/ros2/bags/raw_livox_manual_003
+Output PCD: /home/seeed/ros2/maps/replay/fastlio_map_manual_003_selfmask_v2.pcd
+Replay rate: 0.5
+Clock rate: 100 Hz
+Abort on voxel overflow: true
+Abort on recent No Effective Points count >= 80
+Static-map cleanup: true (voxel=0.08m radius=0.18m min_pts=3)
+Checking that the electrical-cabinet return is covered by the exclusion box...
+bag=/home/seeed/ros2/bags/raw_livox_manual_003 frames_total=2690 frames_sampled=300 voxel=0.040m range=[0.08,1.50]m
+near_points=670202 nearest=0.098m range_p01=0.143m persistent_threshold=9/300frames persistent_voxels=5125 components=31
+component_1: voxels=1635 persistence_max=40/300 nearest_sensor=0.980m farthest_sensor=1.505m voxels_beyond_blind_0.50m=1635/1635
+  sensor_bbox: x=[-0.300,+0.900] y=[+0.980,+1.500] z=[-0.140,+0.780]
+  base_bbox:   x=[-0.690,+0.510] y=[-1.500,-0.980] z=[+0.590,+1.510]
+component_2: voxels=739 persistence_max=47/300 nearest_sensor=1.179m farthest_sensor=1.519m voxels_beyond_blind_0.50m=739/739
+  sensor_bbox: x=[-0.340,+0.820] y=[-1.500,-1.140] z=[-0.140,+0.380]
+  base_bbox:   x=[-0.610,+0.550] y=[+1.140,+1.500] z=[+0.590,+1.110]
+component_3: voxels=642 persistence_max=44/300 nearest_sensor=1.152m farthest_sensor=1.515m voxels_beyond_blind_0.50m=642/642
+  sensor_bbox: x=[+1.100,+1.500] y=[-0.740,+0.460] z=[-0.180,+0.580]
+  base_bbox:   x=[-1.290,-0.890] y=[-0.460,+0.740] z=[+0.550,+1.310]
+component_4: voxels=480 persistence_max=36/300 nearest_sensor=0.791m farthest_sensor=1.302m voxels_beyond_blind_0.50m=480/480
+  sensor_bbox: x=[-0.260,+0.940] y=[-1.180,-0.700] z=[-0.100,+0.420]
+  base_bbox:   x=[-0.730,+0.470] y=[+0.700,+1.180] z=[+0.630,+1.150]
+component_5: voxels=416 persistence_max=36/300 nearest_sensor=0.975m farthest_sensor=1.505m voxels_beyond_blind_0.50m=416/416
+  sensor_bbox: x=[-1.020,-0.460] y=[+0.780,+1.260] z=[-0.100,+0.420]
+  base_bbox:   x=[+0.670,+1.230] y=[-1.260,-0.780] z=[+0.630,+1.150]
+component_6: voxels=307 persistence_max=300/300 nearest_sensor=0.087m farthest_sensor=0.623m voxels_beyond_blind_0.50m=76/307
+  sensor_bbox: x=[-0.500,-0.020] y=[-0.300,+0.260] z=[-0.020,+0.300]
+  base_bbox:   x=[+0.230,+0.710] y=[-0.260,+0.300] z=[+0.710,+1.030]
+component_7: voxels=191 persistence_max=16/300 nearest_sensor=0.962m farthest_sensor=1.493m voxels_beyond_blind_0.50m=191/191
+  sensor_bbox: x=[+0.700,+1.260] y=[+0.540,+1.020] z=[-0.100,+0.420]
+  base_bbox:   x=[-1.050,-0.490] y=[-1.020,-0.540] z=[+0.630,+1.150]
+component_8: voxels=173 persistence_max=18/300 nearest_sensor=0.696m farthest_sensor=1.060m voxels_beyond_blind_0.50m=173/173
+  sensor_bbox: x=[-0.100,+0.620] y=[+0.620,+0.900] z=[-0.060,+0.220]
+  base_bbox:   x=[-0.410,+0.310] y=[-0.900,-0.620] z=[+0.670,+0.950]
+component_9: voxels=90 persistence_max=21/300 nearest_sensor=1.132m farthest_sensor=1.485m voxels_beyond_blind_0.50m=90/90
+  sensor_bbox: x=[-1.260,-0.780] y=[-0.820,-0.780] z=[-0.100,+0.220]
+  base_bbox:   x=[+0.990,+1.470] y=[+0.780,+0.820] z=[+0.630,+0.950]
+component_10: voxels=69 persistence_max=19/300 nearest_sensor=1.297m farthest_sensor=1.503m voxels_beyond_blind_0.50m=69/69
+  sensor_bbox: x=[+1.020,+1.260] y=[-0.820,-0.740] z=[-0.100,+0.420]
+  base_bbox:   x=[-1.050,-0.810] y=[+0.740,+0.820] z=[+0.630,+1.150]
+component_11: voxels=57 persistence_max=17/300 nearest_sensor=0.653m farthest_sensor=0.868m voxels_beyond_blind_0.50m=57/57
+  sensor_bbox: x=[+0.260,+0.540] y=[-0.700,-0.540] z=[-0.060,+0.260]
+  base_bbox:   x=[-0.330,-0.050] y=[+0.540,+0.700] z=[+0.670,+0.990]
+component_12: voxels=53 persistence_max=24/300 nearest_sensor=0.908m farthest_sensor=1.037m voxels_beyond_blind_0.50m=53/53
+  sensor_bbox: x=[-0.620,-0.420] y=[-0.900,-0.780] z=[-0.060,+0.260]
+  base_bbox:   x=[+0.630,+0.830] y=[+0.780,+0.900] z=[+0.670,+0.990]
+component_13: voxels=43 persistence_max=16/300 nearest_sensor=0.550m farthest_sensor=0.705m voxels_beyond_blind_0.50m=43/43
+  sensor_bbox: x=[-0.140,+0.060] y=[-0.700,-0.540] z=[-0.020,+0.180]
+  base_bbox:   x=[+0.150,+0.350] y=[+0.540,+0.700] z=[+0.710,+0.910]
+component_14: voxels=38 persistence_max=20/300 nearest_sensor=1.388m farthest_sensor=1.499m voxels_beyond_blind_0.50m=38/38
+  sensor_bbox: x=[-0.860,-0.660] y=[-1.300,-1.140] z=[-0.100,+0.300]
+  base_bbox:   x=[+0.870,+1.070] y=[+1.140,+1.300] z=[+0.630,+1.030]
+component_15: voxels=18 persistence_max=25/300 nearest_sensor=1.331m farthest_sensor=1.423m voxels_beyond_blind_0.50m=18/18
+  sensor_bbox: x=[+0.900,+0.980] y=[-1.100,-0.940] z=[-0.140,+0.100]
+  base_bbox:   x=[-0.770,-0.690] y=[+0.940,+1.100] z=[+0.590,+0.830]
+component_16: voxels=12 persistence_max=12/300 nearest_sensor=0.381m farthest_sensor=0.615m voxels_beyond_blind_0.50m=6/12
+  sensor_bbox: x=[+0.260,+0.540] y=[+0.260,+0.260] z=[+0.100,+0.140]
+  base_bbox:   x=[-0.330,-0.050] y=[-0.260,-0.260] z=[+0.830,+0.870]
+component_17: voxels=10 persistence_max=11/300 nearest_sensor=1.194m farthest_sensor=1.298m voxels_beyond_blind_0.50m=10/10
+  sensor_bbox: x=[-1.140,-1.020] y=[-0.700,-0.580] z=[-0.020,+0.020]
+  base_bbox:   x=[+1.230,+1.350] y=[+0.580,+0.700] z=[+0.710,+0.750]
+component_18: voxels=8 persistence_max=12/300 nearest_sensor=0.805m farthest_sensor=0.840m voxels_beyond_blind_0.50m=8/8
+  sensor_bbox: x=[-0.060,+0.140] y=[+0.660,+0.660] z=[+0.460,+0.500]
+  base_bbox:   x=[+0.070,+0.270] y=[-0.660,-0.660] z=[+1.190,+1.230]
+component_19: voxels=7 persistence_max=10/300 nearest_sensor=1.420m farthest_sensor=1.458m voxels_beyond_blind_0.50m=7/7
+  sensor_bbox: x=[+1.220,+1.300] y=[-0.620,-0.500] z=[+0.340,+0.420]
+  base_bbox:   x=[-1.090,-1.010] y=[+0.500,+0.620] z=[+1.070,+1.150]
+component_20: voxels=7 persistence_max=11/300 nearest_sensor=0.857m farthest_sensor=0.969m voxels_beyond_blind_0.50m=7/7
+  sensor_bbox: x=[+0.220,+0.460] y=[+0.660,+0.660] z=[+0.500,+0.540]
+  base_bbox:   x=[-0.250,-0.010] y=[-0.660,-0.660] z=[+1.230,+1.270]
+exclusion_check: PASS primary persistent component is fully inside x=[-0.680,0.030] y=[-0.340,0.340] z=[-0.080,0.380]
+RESULT: persistent sensor-frame returns found
+Running bag continuity and mounting-angle preflight...
+/livox/lidar_timing: sensor_median_gap=0.099982s sensor_max_gap=0.109649s estimated_missing_frames=0 record_max_gap=3.020742s delivery_delay_p95=2.375550s delivery_delay_max=3.134867s
+/livox/imu_timing: sensor_median_gap=0.004846s sensor_max_gap=0.019413s estimated_missing_frames=0 record_max_gap=0.053592s delivery_delay_p95=0.012532s delivery_delay_max=0.049718s
+bag=/home/seeed/ros2/bags/raw_livox_manual_003
+/livox/lidar: count=2690 span=268.904s average_hz=10.000 max_gap=0.109649s gaps_over_0.150s=0
+/livox/imu: count=53836 span=269.177s average_hz=199.999 max_gap=0.019413s gaps_over_0.050s=0
+sampled_points_per_lidar_frame: min=19680.000 p01=19872.000 p05=19968.000 p50=19968.000 p95=20064.000 p99=20064.000 max=20736.000
+sampled_range: min=0.200m p01=0.245m p05=0.836m p50=3.844m p95=8.919m p99=11.541m max=30.264m
+raw_elevation: min=-7.195deg p01=-5.702deg p05=-3.437deg p50=18.183deg p95=46.777deg p99=49.558deg max=52.512deg
+raw_azimuth_5deg_bins=72/72 coverage=100.0% sampled_points=268637
+initial_static_imu: samples=2400 window=12.0s accel_mean=(-0.0651,-0.0076,0.9935)msg_units accel_std=(0.0074,0.0129,0.0148) norm=0.9957msg_units
+initial_static_gyro: mean=(-0.00234,0.00081,0.00110)rad/s std=(0.00494,0.00098,0.00195)
+gravity_tilt_estimate: roll=-0.437deg pitch=3.750deg
+mount_calibration: expected_roll=-0.635deg expected_pitch=+3.270deg error=(0.198,0.480)deg limit=0.750deg
+RESULT: PASS continuity and calibrated mount pose
+Stopping ROS2 wrappers and nodes on this host...
+Remaining matching processes:
+  38351 bash            bash /home/seeed/ros2/scripts/seeed_bag_to_pcd.sh /home/seeed/ros2/bags/raw_livox_manual_003 /home/seeed/ros2/maps/replay fastlio_map_manual_003_selfmask_v2.pcd
+  38656 grep            grep -E livox|fastlio|pcd_ndt|map_server|planner_server|controller_server|smoother_server|behavior_server|bt_navigator|waypoint_follower|velocity_smooth|lifecycle_manager|ranger|map_camera_init_bridge|ros2 bag|rviz2
+
+Files:             raw_livox_manual_003_0.db3
+Bag size:          1.0 GiB
+Storage id:        sqlite3
+Duration:          269.176993248s
+Start:             Jul 15 2026 23:49:34.630780333 (1784130574.630780333)
+End:               Jul 15 2026 23:54:03.807773581 (1784130843.807773581)
+Messages:          56526
+Topic information: Topic: /livox/lidar | Type: livox_ros_driver2/msg/CustomMsg | Count: 2690 | Serialization Format: cdr
+                   Topic: /livox/imu | Type: sensor_msgs/msg/Imu | Count: 53836 | Serialization Format: cdr
+
+Starting Fast-LIO for offline replay...
+Waiting for /map_save service...
+Playing bag. Keep hn RViz open with fastlio_bag_mapping.rviz to watch replay mapping.
+Progress is printed every 15 seconds; do not move the live LiDAR for this offline replay.
+--- replay still running: 2026-07-16 00:31:15 ---
+    PID     ELAPSED COMMAND         COMMAND
+  38776       00:15 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 bag play /home/seeed/ros2/bags/raw_livox_manual_003 --clock 100 --disable-keyboard-controls --topics /livox/lidar /livox/imu -r 0.5
+    PID     ELAPSED COMMAND         COMMAND
+  38696       00:17 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 launch fast_lio mapping.launch.py rviz:=false use_sim_time:=true config_path:=/tmp/fastlio_replay_raw_livox_manual_003_20260716_002906 config_file:=mid360_replay.yaml
+/Odometry
+/cloud_registered
+/cloud_registered_body
+/path
+/tf
+Topic hz check: /livox/lidar
+WARNING: topic [/livox/lidar] does not appear to be published yet
+Topic hz check: /cloud_registered
+WARNING: topic [/cloud_registered] does not appear to be published yet
+Topic hz check: /Odometry
+WARNING: topic [/Odometry] does not appear to be published yet
+Odometry position xyz: unavailable yet
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1784133068.155612371] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1784133068.178937689] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] [INFO] [1784133092.247420814] [fast_lio.preprocess]: CustomMsg exclusion removed 1795/6645 candidate points in scan 100
+--- replay still running: 2026-07-16 00:31:51 ---
+    PID     ELAPSED COMMAND         COMMAND
+  38776       00:51 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 bag play /home/seeed/ros2/bags/raw_livox_manual_003 --clock 100 --disable-keyboard-controls --topics /livox/lidar /livox/imu -r 0.5
+    PID     ELAPSED COMMAND         COMMAND
+  38696       00:53 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 launch fast_lio mapping.launch.py rviz:=false use_sim_time:=true config_path:=/tmp/fastlio_replay_raw_livox_manual_003_20260716_002906 config_file:=mid360_replay.yaml
+/Odometry
+/cloud_registered
+/cloud_registered_body
+/path
+/tf
+Topic hz check: /livox/lidar
+WARNING: topic [/livox/lidar] does not appear to be published yet
+Topic hz check: /cloud_registered
+WARNING: topic [/cloud_registered] does not appear to be published yet
+Topic hz check: /Odometry
+WARNING: topic [/Odometry] does not appear to be published yet
+Odometry position xyz: 0.6737096043207997 0.5577127499139951 0.04169798423162082
+[fastlio_mapping-1] [WARN] [1784133068.155612371] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1784133068.178937689] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] [INFO] [1784133092.247420814] [fast_lio.preprocess]: CustomMsg exclusion removed 1795/6645 candidate points in scan 100
+[fastlio_mapping-1] [INFO] [1784133112.259888504] [fast_lio.preprocess]: CustomMsg exclusion removed 1800/6610 candidate points in scan 200
+--- replay still running: 2026-07-16 00:32:26 ---
+    PID     ELAPSED COMMAND         COMMAND
+  38776       01:26 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 bag play /home/seeed/ros2/bags/raw_livox_manual_003 --clock 100 --disable-keyboard-controls --topics /livox/lidar /livox/imu -r 0.5
+    PID     ELAPSED COMMAND         COMMAND
+  38696       01:28 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 launch fast_lio mapping.launch.py rviz:=false use_sim_time:=true config_path:=/tmp/fastlio_replay_raw_livox_manual_003_20260716_002906 config_file:=mid360_replay.yaml
+/Odometry
+/cloud_registered
+/cloud_registered_body
+/path
+/tf
+Topic hz check: /livox/lidar
+Topic hz check: /cloud_registered
+WARNING: topic [/cloud_registered] does not appear to be published yet
+Topic hz check: /Odometry
+Odometry position xyz: 1.0130627816521858 1.0672578562809982 0.0749045790045793
+[fastlio_mapping-1] [INFO] [1784133068.178937689] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] [INFO] [1784133092.247420814] [fast_lio.preprocess]: CustomMsg exclusion removed 1795/6645 candidate points in scan 100
+[fastlio_mapping-1] [INFO] [1784133112.259888504] [fast_lio.preprocess]: CustomMsg exclusion removed 1800/6610 candidate points in scan 200
+[fastlio_mapping-1] [INFO] [1784133132.242787949] [fast_lio.preprocess]: CustomMsg exclusion removed 2153/6640 candidate points in scan 300
+[fastlio_mapping-1] [INFO] [1784133158.341828028] [fast_lio.preprocess]: CustomMsg exclusion removed 2060/6676 candidate points in scan 400
+--- replay still running: 2026-07-16 00:33:02 ---
+    PID     ELAPSED COMMAND         COMMAND
+  38776       02:02 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 bag play /home/seeed/ros2/bags/raw_livox_manual_003 --clock 100 --disable-keyboard-controls --topics /livox/lidar /livox/imu -r 0.5
+    PID     ELAPSED COMMAND         COMMAND
+  38696       02:04 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 launch fast_lio mapping.launch.py rviz:=false use_sim_time:=true config_path:=/tmp/fastlio_replay_raw_livox_manual_003_20260716_002906 config_file:=mid360_replay.yaml
+/Odometry
+/cloud_registered
+/cloud_registered_body
+/path
+/tf
+Topic hz check: /livox/lidar
+WARNING: topic [/livox/lidar] does not appear to be published yet
+average rate: 4.967
+	min: 0.200s max: 0.204s std dev: 0.00182s window: 5
+Topic hz check: /cloud_registered
+WARNING: topic [/cloud_registered] does not appear to be published yet
+Topic hz check: /Odometry
+WARNING: topic [/Odometry] does not appear to be published yet
+average rate: 1.664
+	min: 0.199s max: 1.800s std dev: 0.69245s window: 4
+Odometry position xyz: unavailable yet
+[fastlio_mapping-1] [INFO] [1784133112.259888504] [fast_lio.preprocess]: CustomMsg exclusion removed 1800/6610 candidate points in scan 200
+[fastlio_mapping-1] [INFO] [1784133132.242787949] [fast_lio.preprocess]: CustomMsg exclusion removed 2153/6640 candidate points in scan 300
+[fastlio_mapping-1] [INFO] [1784133158.341828028] [fast_lio.preprocess]: CustomMsg exclusion removed 2060/6676 candidate points in scan 400
+[fastlio_mapping-1] [INFO] [1784133179.650007721] [fast_lio.preprocess]: CustomMsg exclusion removed 2035/6643 candidate points in scan 500
+[fastlio_mapping-1] [INFO] [1784133200.853613450] [fast_lio.preprocess]: CustomMsg exclusion removed 2235/6645 candidate points in scan 600
+--- replay still running: 2026-07-16 00:33:37 ---
+    PID     ELAPSED COMMAND         COMMAND
+  38776       02:37 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 bag play /home/seeed/ros2/bags/raw_livox_manual_003 --clock 100 --disable-keyboard-controls --topics /livox/lidar /livox/imu -r 0.5
+    PID     ELAPSED COMMAND         COMMAND
+  38696       02:39 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 launch fast_lio mapping.launch.py rviz:=false use_sim_time:=true config_path:=/tmp/fastlio_replay_raw_livox_manual_003_20260716_002906 config_file:=mid360_replay.yaml
+/Odometry
+/cloud_registered
+/cloud_registered_body
+/path
+/tf
+Topic hz check: /livox/lidar
+WARNING: topic [/livox/lidar] does not appear to be published yet
+Topic hz check: /cloud_registered
+Topic hz check: /Odometry
+WARNING: topic [/Odometry] does not appear to be published yet
+Odometry position xyz: unavailable yet
+[fastlio_mapping-1] [INFO] [1784133132.242787949] [fast_lio.preprocess]: CustomMsg exclusion removed 2153/6640 candidate points in scan 300
+[fastlio_mapping-1] [INFO] [1784133158.341828028] [fast_lio.preprocess]: CustomMsg exclusion removed 2060/6676 candidate points in scan 400
+[fastlio_mapping-1] [INFO] [1784133179.650007721] [fast_lio.preprocess]: CustomMsg exclusion removed 2035/6643 candidate points in scan 500
+[fastlio_mapping-1] [INFO] [1784133200.853613450] [fast_lio.preprocess]: CustomMsg exclusion removed 2235/6645 candidate points in scan 600
+[fastlio_mapping-1] [INFO] [1784133230.492020466] [fast_lio.preprocess]: CustomMsg exclusion removed 2496/6667 candidate points in scan 700
+--- replay still running: 2026-07-16 00:34:13 ---
+    PID     ELAPSED COMMAND         COMMAND
+  38776       03:13 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 bag play /home/seeed/ros2/bags/raw_livox_manual_003 --clock 100 --disable-keyboard-controls --topics /livox/lidar /livox/imu -r 0.5
+    PID     ELAPSED COMMAND         COMMAND
+  38696       03:15 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 launch fast_lio mapping.launch.py rviz:=false use_sim_time:=true config_path:=/tmp/fastlio_replay_raw_livox_manual_003_20260716_002906 config_file:=mid360_replay.yaml
+/Odometry
+/cloud_registered
+/cloud_registered_body
+/path
+/tf
+Topic hz check: /livox/lidar
+WARNING: topic [/livox/lidar] does not appear to be published yet
+average rate: 4.999
+	min: 0.194s max: 0.205s std dev: 0.00364s window: 5
+Topic hz check: /cloud_registered
+Topic hz check: /Odometry
+WARNING: topic [/Odometry] does not appear to be published yet
+average rate: 4.926
+	min: 0.195s max: 0.220s std dev: 0.00891s window: 5
+Odometry position xyz: unavailable yet
+[fastlio_mapping-1] [INFO] [1784133179.650007721] [fast_lio.preprocess]: CustomMsg exclusion removed 2035/6643 candidate points in scan 500
+[fastlio_mapping-1] [INFO] [1784133200.853613450] [fast_lio.preprocess]: CustomMsg exclusion removed 2235/6645 candidate points in scan 600
+[fastlio_mapping-1] [INFO] [1784133230.492020466] [fast_lio.preprocess]: CustomMsg exclusion removed 2496/6667 candidate points in scan 700
+[fastlio_mapping-1] [INFO] [1784133250.654290501] [fast_lio.preprocess]: CustomMsg exclusion removed 2185/6675 candidate points in scan 800
+[fastlio_mapping-1] [INFO] [1784133272.569976618] [fast_lio.preprocess]: CustomMsg exclusion removed 2142/6646 candidate points in scan 900
+--- replay still running: 2026-07-16 00:34:49 ---
+    PID     ELAPSED COMMAND         COMMAND
+  38776       03:49 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 bag play /home/seeed/ros2/bags/raw_livox_manual_003 --clock 100 --disable-keyboard-controls --topics /livox/lidar /livox/imu -r 0.5
+    PID     ELAPSED COMMAND         COMMAND
+  38696       03:51 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 launch fast_lio mapping.launch.py rviz:=false use_sim_time:=true config_path:=/tmp/fastlio_replay_raw_livox_manual_003_20260716_002906 config_file:=mid360_replay.yaml
+/Odometry
+/cloud_registered
+/cloud_registered_body
+/path
+/tf
+Topic hz check: /livox/lidar
+WARNING: topic [/livox/lidar] does not appear to be published yet
+Topic hz check: /cloud_registered
+Topic hz check: /Odometry
+WARNING: topic [/Odometry] does not appear to be published yet
+average rate: 4.954
+	min: 0.182s max: 0.218s std dev: 0.01260s window: 5
+Odometry position xyz: unavailable yet
+[fastlio_mapping-1] [INFO] [1784133200.853613450] [fast_lio.preprocess]: CustomMsg exclusion removed 2235/6645 candidate points in scan 600
+[fastlio_mapping-1] [INFO] [1784133230.492020466] [fast_lio.preprocess]: CustomMsg exclusion removed 2496/6667 candidate points in scan 700
+[fastlio_mapping-1] [INFO] [1784133250.654290501] [fast_lio.preprocess]: CustomMsg exclusion removed 2185/6675 candidate points in scan 800
+[fastlio_mapping-1] [INFO] [1784133272.569976618] [fast_lio.preprocess]: CustomMsg exclusion removed 2142/6646 candidate points in scan 900
+[fastlio_mapping-1] [INFO] [1784133291.063154748] [fast_lio.preprocess]: CustomMsg exclusion removed 1952/6643 candidate points in scan 1000
+--- replay still running: 2026-07-16 00:35:25 ---
+    PID     ELAPSED COMMAND         COMMAND
+  38776       04:25 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 bag play /home/seeed/ros2/bags/raw_livox_manual_003 --clock 100 --disable-keyboard-controls --topics /livox/lidar /livox/imu -r 0.5
+    PID     ELAPSED COMMAND         COMMAND
+  38696       04:27 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 launch fast_lio mapping.launch.py rviz:=false use_sim_time:=true config_path:=/tmp/fastlio_replay_raw_livox_manual_003_20260716_002906 config_file:=mid360_replay.yaml
+/Odometry
+/cloud_registered
+/cloud_registered_body
+/path
+/tf
+Topic hz check: /livox/lidar
+WARNING: topic [/livox/lidar] does not appear to be published yet
+Topic hz check: /cloud_registered
+WARNING: topic [/cloud_registered] does not appear to be published yet
+average rate: 4.997
+	min: 0.180s max: 0.220s std dev: 0.01272s window: 5
+Topic hz check: /Odometry
+WARNING: topic [/Odometry] does not appear to be published yet
+Odometry position xyz: unavailable yet
+[fastlio_mapping-1] [INFO] [1784133250.654290501] [fast_lio.preprocess]: CustomMsg exclusion removed 2185/6675 candidate points in scan 800
+[fastlio_mapping-1] [INFO] [1784133272.569976618] [fast_lio.preprocess]: CustomMsg exclusion removed 2142/6646 candidate points in scan 900
+[fastlio_mapping-1] [INFO] [1784133291.063154748] [fast_lio.preprocess]: CustomMsg exclusion removed 1952/6643 candidate points in scan 1000
+[fastlio_mapping-1] [INFO] [1784133314.814738028] [fast_lio.preprocess]: CustomMsg exclusion removed 2004/6643 candidate points in scan 1100
+[fastlio_mapping-1] [INFO] [1784133336.054319459] [fast_lio.preprocess]: CustomMsg exclusion removed 1743/6645 candidate points in scan 1200
+--- replay still running: 2026-07-16 00:36:01 ---
+    PID     ELAPSED COMMAND         COMMAND
+  38776       05:01 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 bag play /home/seeed/ros2/bags/raw_livox_manual_003 --clock 100 --disable-keyboard-controls --topics /livox/lidar /livox/imu -r 0.5
+    PID     ELAPSED COMMAND         COMMAND
+  38696       05:03 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 launch fast_lio mapping.launch.py rviz:=false use_sim_time:=true config_path:=/tmp/fastlio_replay_raw_livox_manual_003_20260716_002906 config_file:=mid360_replay.yaml
+/Odometry
+/cloud_registered
+/cloud_registered_body
+/path
+/tf
+Topic hz check: /livox/lidar
+Topic hz check: /cloud_registered
+WARNING: topic [/cloud_registered] does not appear to be published yet
+Topic hz check: /Odometry
+WARNING: topic [/Odometry] does not appear to be published yet
+Odometry position xyz: unavailable yet
+[fastlio_mapping-1] [INFO] [1784133272.569976618] [fast_lio.preprocess]: CustomMsg exclusion removed 2142/6646 candidate points in scan 900
+[fastlio_mapping-1] [INFO] [1784133291.063154748] [fast_lio.preprocess]: CustomMsg exclusion removed 1952/6643 candidate points in scan 1000
+[fastlio_mapping-1] [INFO] [1784133314.814738028] [fast_lio.preprocess]: CustomMsg exclusion removed 2004/6643 candidate points in scan 1100
+[fastlio_mapping-1] [INFO] [1784133336.054319459] [fast_lio.preprocess]: CustomMsg exclusion removed 1743/6645 candidate points in scan 1200
+[fastlio_mapping-1] [INFO] [1784133362.730577479] [fast_lio.preprocess]: CustomMsg exclusion removed 1631/6643 candidate points in scan 1300
+--- replay still running: 2026-07-16 00:36:36 ---
+    PID     ELAPSED COMMAND         COMMAND
+  38776       05:36 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 bag play /home/seeed/ros2/bags/raw_livox_manual_003 --clock 100 --disable-keyboard-controls --topics /livox/lidar /livox/imu -r 0.5
+    PID     ELAPSED COMMAND         COMMAND
+  38696       05:39 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 launch fast_lio mapping.launch.py rviz:=false use_sim_time:=true config_path:=/tmp/fastlio_replay_raw_livox_manual_003_20260716_002906 config_file:=mid360_replay.yaml
+/Odometry
+/cloud_registered
+/cloud_registered_body
+/path
+/tf
+Topic hz check: /livox/lidar
+Topic hz check: /cloud_registered
+WARNING: topic [/cloud_registered] does not appear to be published yet
+average rate: 4.992
+	min: 0.198s max: 0.202s std dev: 0.00168s window: 5
+Topic hz check: /Odometry
+WARNING: topic [/Odometry] does not appear to be published yet
+Odometry position xyz: unavailable yet
+[fastlio_mapping-1] [INFO] [1784133314.814738028] [fast_lio.preprocess]: CustomMsg exclusion removed 2004/6643 candidate points in scan 1100
+[fastlio_mapping-1] [INFO] [1784133336.054319459] [fast_lio.preprocess]: CustomMsg exclusion removed 1743/6645 candidate points in scan 1200
+[fastlio_mapping-1] [INFO] [1784133362.730577479] [fast_lio.preprocess]: CustomMsg exclusion removed 1631/6643 candidate points in scan 1300
+[fastlio_mapping-1] [INFO] [1784133387.015495243] [fast_lio.preprocess]: CustomMsg exclusion removed 2156/6675 candidate points in scan 1400
+[fastlio_mapping-1] [INFO] [1784133407.858293868] [fast_lio.preprocess]: CustomMsg exclusion removed 2370/6644 candidate points in scan 1500
+--- replay still running: 2026-07-16 00:37:12 ---
+    PID     ELAPSED COMMAND         COMMAND
+  38776       06:12 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 bag play /home/seeed/ros2/bags/raw_livox_manual_003 --clock 100 --disable-keyboard-controls --topics /livox/lidar /livox/imu -r 0.5
+    PID     ELAPSED COMMAND         COMMAND
+  38696       06:14 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 launch fast_lio mapping.launch.py rviz:=false use_sim_time:=true config_path:=/tmp/fastlio_replay_raw_livox_manual_003_20260716_002906 config_file:=mid360_replay.yaml
+/Odometry
+/cloud_registered
+/cloud_registered_body
+/path
+/tf
+Topic hz check: /livox/lidar
+Topic hz check: /cloud_registered
+WARNING: topic [/cloud_registered] does not appear to be published yet
+average rate: 4.997
+	min: 0.195s max: 0.205s std dev: 0.00348s window: 5
+Topic hz check: /Odometry
+WARNING: topic [/Odometry] does not appear to be published yet
+Odometry position xyz: unavailable yet
+[fastlio_mapping-1] [INFO] [1784133362.730577479] [fast_lio.preprocess]: CustomMsg exclusion removed 1631/6643 candidate points in scan 1300
+[fastlio_mapping-1] [INFO] [1784133387.015495243] [fast_lio.preprocess]: CustomMsg exclusion removed 2156/6675 candidate points in scan 1400
+[fastlio_mapping-1] [INFO] [1784133407.858293868] [fast_lio.preprocess]: CustomMsg exclusion removed 2370/6644 candidate points in scan 1500
+[fastlio_mapping-1] [INFO] [1784133434.860126424] [fast_lio.preprocess]: CustomMsg exclusion removed 2174/6643 candidate points in scan 1600
+[fastlio_mapping-1] [INFO] [1784133453.005580366] [fast_lio.preprocess]: CustomMsg exclusion removed 2175/6707 candidate points in scan 1700
+--- replay still running: 2026-07-16 00:37:48 ---
+    PID     ELAPSED COMMAND         COMMAND
+  38776       06:48 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 bag play /home/seeed/ros2/bags/raw_livox_manual_003 --clock 100 --disable-keyboard-controls --topics /livox/lidar /livox/imu -r 0.5
+    PID     ELAPSED COMMAND         COMMAND
+  38696       06:50 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 launch fast_lio mapping.launch.py rviz:=false use_sim_time:=true config_path:=/tmp/fastlio_replay_raw_livox_manual_003_20260716_002906 config_file:=mid360_replay.yaml
+/Odometry
+/cloud_registered
+/cloud_registered_body
+/path
+/tf
+Topic hz check: /livox/lidar
+WARNING: topic [/livox/lidar] does not appear to be published yet
+Topic hz check: /cloud_registered
+WARNING: topic [/cloud_registered] does not appear to be published yet
+average rate: 5.004
+	min: 0.198s max: 0.202s std dev: 0.00157s window: 5
+Topic hz check: /Odometry
+WARNING: topic [/Odometry] does not appear to be published yet
+Odometry position xyz: unavailable yet
+[fastlio_mapping-1] [INFO] [1784133387.015495243] [fast_lio.preprocess]: CustomMsg exclusion removed 2156/6675 candidate points in scan 1400
+[fastlio_mapping-1] [INFO] [1784133407.858293868] [fast_lio.preprocess]: CustomMsg exclusion removed 2370/6644 candidate points in scan 1500
+[fastlio_mapping-1] [INFO] [1784133434.860126424] [fast_lio.preprocess]: CustomMsg exclusion removed 2174/6643 candidate points in scan 1600
+[fastlio_mapping-1] [INFO] [1784133453.005580366] [fast_lio.preprocess]: CustomMsg exclusion removed 2175/6707 candidate points in scan 1700
+[fastlio_mapping-1] [INFO] [1784133476.453341274] [fast_lio.preprocess]: CustomMsg exclusion removed 1861/6643 candidate points in scan 1800
+--- replay still running: 2026-07-16 00:38:24 ---
+    PID     ELAPSED COMMAND         COMMAND
+  38776       07:24 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 bag play /home/seeed/ros2/bags/raw_livox_manual_003 --clock 100 --disable-keyboard-controls --topics /livox/lidar /livox/imu -r 0.5
+    PID     ELAPSED COMMAND         COMMAND
+  38696       07:26 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 launch fast_lio mapping.launch.py rviz:=false use_sim_time:=true config_path:=/tmp/fastlio_replay_raw_livox_manual_003_20260716_002906 config_file:=mid360_replay.yaml
+/Odometry
+/cloud_registered
+/cloud_registered_body
+/path
+/tf
+Topic hz check: /livox/lidar
+WARNING: topic [/livox/lidar] does not appear to be published yet
+Topic hz check: /cloud_registered
+WARNING: topic [/cloud_registered] does not appear to be published yet
+average rate: 4.840
+	min: 0.184s max: 0.221s std dev: 0.01349s window: 5
+Topic hz check: /Odometry
+WARNING: topic [/Odometry] does not appear to be published yet
+Odometry position xyz: unavailable yet
+[fastlio_mapping-1] [INFO] [1784133434.860126424] [fast_lio.preprocess]: CustomMsg exclusion removed 2174/6643 candidate points in scan 1600
+[fastlio_mapping-1] [INFO] [1784133453.005580366] [fast_lio.preprocess]: CustomMsg exclusion removed 2175/6707 candidate points in scan 1700
+[fastlio_mapping-1] [INFO] [1784133476.453341274] [fast_lio.preprocess]: CustomMsg exclusion removed 1861/6643 candidate points in scan 1800
+[fastlio_mapping-1] [INFO] [1784133496.443973018] [fast_lio.preprocess]: CustomMsg exclusion removed 1570/6612 candidate points in scan 1900
+[fastlio_mapping-1] [INFO] [1784133519.096676553] [fast_lio.preprocess]: CustomMsg exclusion removed 2009/6642 candidate points in scan 2000
+--- replay still running: 2026-07-16 00:39:00 ---
+    PID     ELAPSED COMMAND         COMMAND
+  38776       08:00 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 bag play /home/seeed/ros2/bags/raw_livox_manual_003 --clock 100 --disable-keyboard-controls --topics /livox/lidar /livox/imu -r 0.5
+    PID     ELAPSED COMMAND         COMMAND
+  38696       08:02 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 launch fast_lio mapping.launch.py rviz:=false use_sim_time:=true config_path:=/tmp/fastlio_replay_raw_livox_manual_003_20260716_002906 config_file:=mid360_replay.yaml
+/Odometry
+/cloud_registered
+/cloud_registered_body
+/path
+/tf
+Topic hz check: /livox/lidar
+WARNING: topic [/livox/lidar] does not appear to be published yet
+Topic hz check: /cloud_registered
+WARNING: topic [/cloud_registered] does not appear to be published yet
+average rate: 5.394
+	min: 0.147s max: 0.204s std dev: 0.02081s window: 5
+Topic hz check: /Odometry
+WARNING: topic [/Odometry] does not appear to be published yet
+Odometry position xyz: 0.365784694599714 0.11006864961245201 -0.0032516518384088726
+[fastlio_mapping-1] [INFO] [1784133453.005580366] [fast_lio.preprocess]: CustomMsg exclusion removed 2175/6707 candidate points in scan 1700
+[fastlio_mapping-1] [INFO] [1784133476.453341274] [fast_lio.preprocess]: CustomMsg exclusion removed 1861/6643 candidate points in scan 1800
+[fastlio_mapping-1] [INFO] [1784133496.443973018] [fast_lio.preprocess]: CustomMsg exclusion removed 1570/6612 candidate points in scan 1900
+[fastlio_mapping-1] [INFO] [1784133519.096676553] [fast_lio.preprocess]: CustomMsg exclusion removed 2009/6642 candidate points in scan 2000
+[fastlio_mapping-1] [INFO] [1784133539.856566814] [fast_lio.preprocess]: CustomMsg exclusion removed 1963/6642 candidate points in scan 2100
+--- replay still running: 2026-07-16 00:39:35 ---
+    PID     ELAPSED COMMAND         COMMAND
+  38776       08:35 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 bag play /home/seeed/ros2/bags/raw_livox_manual_003 --clock 100 --disable-keyboard-controls --topics /livox/lidar /livox/imu -r 0.5
+    PID     ELAPSED COMMAND         COMMAND
+  38696       08:37 ros2            /usr/bin/python3 /opt/ros/humble/bin/ros2 launch fast_lio mapping.launch.py rviz:=false use_sim_time:=true config_path:=/tmp/fastlio_replay_raw_livox_manual_003_20260716_002906 config_file:=mid360_replay.yaml
+/Odometry
+/cloud_registered
+/cloud_registered_body
+/path
+/tf
+Topic hz check: /livox/lidar
+WARNING: topic [/livox/lidar] does not appear to be published yet
+Topic hz check: /cloud_registered
+WARNING: topic [/cloud_registered] does not appear to be published yet
+Topic hz check: /Odometry
+average rate: 5.017
+	min: 0.184s max: 0.216s std dev: 0.01029s window: 5
+Odometry position xyz: unavailable yet
+[fastlio_mapping-1] [INFO] [1784133496.443973018] [fast_lio.preprocess]: CustomMsg exclusion removed 1570/6612 candidate points in scan 1900
+[fastlio_mapping-1] [INFO] [1784133519.096676553] [fast_lio.preprocess]: CustomMsg exclusion removed 2009/6642 candidate points in scan 2000
+[fastlio_mapping-1] [INFO] [1784133539.856566814] [fast_lio.preprocess]: CustomMsg exclusion removed 1963/6642 candidate points in scan 2100
+[fastlio_mapping-1] [INFO] [1784133561.056659887] [fast_lio.preprocess]: CustomMsg exclusion removed 1951/6645 candidate points in scan 2200
+[fastlio_mapping-1] [INFO] [1784133585.432331774] [fast_lio.preprocess]: CustomMsg exclusion removed 1974/6644 candidate points in scan 2300
+Bag playback ended. Saving PCD...
+waiting for service to become available...
+requester: making request: std_srvs.srv.Trigger_Request()
+
+response:
+std_srvs.srv.Trigger_Response(success=True, message='Map saved. points=254044 source=accumulated_map_cloud path=/home/seeed/ros2/maps/replay/fastlio_map_manual_003_selfmask_v2.pcd')
+
+Downsample a cloud using pcl::VoxelGrid. For more information, use: pcl_voxel_grid -h
+Using a leaf size of: 0.080000, 0.080000, 0.080000
+Filtering data on field: z between: -inf ->inf
+> Loading /home/seeed/ros2/maps/replay/fastlio_map_manual_003_selfmask_v2_raw.pcd [done, 15.117 ms : 254044 points]
+Available dimensions: x y z intensity normal_x normal_y normal_z curvature
+> Computing [done, 82.6922 ms : 81882 points]
+> Saving /home/seeed/ros2/maps/replay/fastlio_map_manual_003_selfmask_v2_voxel_tmp.pcd [done, 66.6437 ms : 81882 points]
+Statistical Outlier Removal filtering of a point cloud. For more information, use: pcl_outlier_removal -h
+> Loading /home/seeed/ros2/maps/replay/fastlio_map_manual_003_selfmask_v2_voxel_tmp.pcd [done, 16.8383 ms : 81882 points]
+Available dimensions: x y z intensity normal_x normal_y normal_z curvature
+Computing filtered cloud from 81882 points with radius 0.180000, min_pts 3 ...[done, 240.606 ms : 78307 points, 3575 indices removed]
+> Saving /home/seeed/ros2/maps/replay/fastlio_map_manual_003_selfmask_v2_compressed_tmp.pcd [done, 59.9316 ms : 78307 points]
+Loaded a point cloud with 78307 points (total size is 2505824) and the following channels: x y z intensity normal_x normal_y normal_z curvature
+Saving file /home/seeed/ros2/maps/replay/fastlio_map_manual_003_selfmask_v2_binary_tmp.pcd as binary.
+Loaded a point cloud with 78307 points (total size is 2505824) and the following channels: x y z intensity normal_x normal_y normal_z curvature
+Saving file /home/seeed/ros2/maps/replay/fastlio_map_manual_003_selfmask_v2_validation_tmp.pcd as binary.
+Raw map retained: /home/seeed/ros2/maps/replay/fastlio_map_manual_003_selfmask_v2_raw.pcd
+Clean NDT-compatible binary map: /home/seeed/ros2/maps/replay/fastlio_map_manual_003_selfmask_v2.pcd
+Saved PCD size: 2509920 bytes
+Latest target file: /home/seeed/ros2/maps/replay/latest_raw_livox_manual_003_target.txt

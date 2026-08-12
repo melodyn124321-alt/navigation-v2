@@ -1,0 +1,13 @@
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1784172444.192734771] [rosbag2_recorder]: Press SPACE for pausing/resuming
+[INFO] [1784172444.196173540] [rosbag2_storage]: Opened database '/home/seeed/ros2/bags/raw_livox_rangeonly_calib_smoke_20260716/raw_livox_rangeonly_calib_smoke_20260716_0.db3' for READ_WRITE.
+[INFO] [1784172444.197432877] [rosbag2_recorder]: Listening for topics...
+[INFO] [1784172444.197454157] [rosbag2_recorder]: Event publisher thread: Starting
+[INFO] [1784172444.197752311] [rosbag2_recorder]: Recording...
+[INFO] [1784172445.503715440] [rosbag2_recorder]: Overriding subscription profile for /livox/imu
+[INFO] [1784172445.507676529] [rosbag2_recorder]: Subscribed to topic '/livox/imu'
+[INFO] [1784172445.508571982] [rosbag2_recorder]: Overriding subscription profile for /livox/lidar
+[INFO] [1784172445.511311560] [rosbag2_recorder]: Subscribed to topic '/livox/lidar'
+[INFO] [1784172445.511426732] [rosbag2_recorder]: All requested topics are subscribed. Stopping discovery...
+[INFO] [1784172464.627720661] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1784172464.629613586] [rosbag2_recorder]: Event publisher thread: Exiting
+[INFO] [1784172464.629788632] [rosbag2_recorder]: Recording stopped

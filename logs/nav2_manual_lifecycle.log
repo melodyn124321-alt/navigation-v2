@@ -1,0 +1,4 @@
+[INFO] [1783927837.778228710] [nav2_manual_lifecycle]: planner_server: current unconfigured [1]
+[INFO] [1783927837.779147780] [nav2_manual_lifecycle]: planner_server: configure
+[INFO] [1783927837.879926324] [nav2_manual_lifecycle]: planner_server: activate
+[ERROR] [1783927957.936304135] [nav2_manual_lifecycle]: service call timed out

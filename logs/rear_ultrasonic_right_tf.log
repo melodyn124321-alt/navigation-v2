@@ -1,0 +1,4 @@
+[INFO] [1786513114.008388243] [static_transform_publisher_VW0sqbmVWEJouxvH]: Spinning until stopped - publishing transform
+translation: ('-0.210000', '-0.180000', '0.545000')
+rotation: ('-0.000000', '0.000000', '1.000000', '-0.000000')
+from 'base_link' to 'rear_ultrasonic_right'

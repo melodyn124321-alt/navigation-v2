@@ -1,0 +1,176 @@
+[INFO] [launch]: All log files can be found below /home/seeed/.ros/log/2026-07-07-15-06-06-895303-seeed-14959
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [15034]
+[fastlio_mapping-1] [INFO] [1783407967.159747275] [laser_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] ~~~~/home/seeed/ros2/ws/src/slam/fast_lio/ file opened
+[fastlio_mapping-1] [INFO] [1783407967.172232386] [laser_mapping]: Node init finished.
+[fastlio_mapping-1] [WARN] [1783407974.457452960] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1783407974.657616616] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1783407974.857322529] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1783407975.057506121] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1783407975.257509196] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1783407975.461554696] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] No Effective Points!
+[fastlio_mapping-1] [INFO] [1783408316.241672772] [laser_mapping]: Saving map to /home/seeed/ros2/maps/replay/fastlio_map_manual_001.pcd...
+[fastlio_mapping-1] [INFO] [1783408316.268830453] [laser_mapping]: Map saved. points=182724 source=accumulated_map_cloud path=/home/seeed/ros2/maps/replay/fastlio_map_manual_001.pcd

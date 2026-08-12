@@ -1,0 +1,71 @@
+=== Nav2 lifecycle ===
+/map_server: active [3]
+/planner_server: active [3]
+/controller_server: active [3]
+/smoother_server: active [3]
+/behavior_server: active [3]
+/bt_navigator: active [3]
+/waypoint_follower: active [3]
+/velocity_smoother: active [3]
+/collision_monitor: active [3]
+=== Dynamic obstacle cloud ===
+data: ok received=5985 published=5985 age=0.144s points=5232->1304 frame=nav_lidar
+---
+=== Topic chain ===
+/nav_obstacle_cloud                    publishers=1 subscribers=3
+/local_costmap/costmap                 publishers=1 subscribers=0
+/global_costmap/costmap                publishers=1 subscribers=0
+/nav_goal_markers                      publishers=1 subscribers=0
+/dynamic_obstacle_slow_zone            publishers=1 subscribers=0
+/dynamic_obstacle_stop_zone            publishers=1 subscribers=0
+/cmd_vel_nav                           publishers=6 subscribers=1
+/cmd_vel_nav_smoothed                  publishers=1 subscribers=1
+/cmd_vel_nav_collision_safe            publishers=1 subscribers=1
+/cmd_vel                               publishers=1 subscribers=1
+=== Safety state ===
+data: disarmed
+---
+=== Vehicle geometry parameters ===
+local footprint: String value is: [[0.50, 0.08], [0.38, 0.27], [-0.38, 0.27], [-0.38, -0.27], [0.38, -0.27], [0.50, -0.08]]
+global footprint: String value is: [[0.50, 0.08], [0.38, 0.27], [-0.38, 0.27], [-0.38, -0.27], [0.38, -0.27], [0.50, -0.08]]
+rotation stop zone: Double values are: array('d', [0.62, 0.0, 0.573, 0.237, 0.438, 0.438, 0.237, 0.573, 0.0, 0.62, -0.237, 0.573, -0.438, 0.438, -0.573, 0.237, -0.62, 0.0, -0.573, -0.237, -0.438, -0.438, -0.237, -0.573, 0.0, -0.62, 0.237, -0.573, 0.438, -0.438, 0.573, -0.237])
+=== Navigation start cell ===
+map=360x359 resolution=0.050
+start world=(-0.652,-0.456) yaw=0.588 cell=(78, 118) cost=89 nearest_passable=(78, 118) nearest_world=(-0.6468599415129423, -0.43358991171062033) nearest_blocked=((77, 118), 99, 0.05000000074505806) blocked_component=(26982, (14, 18, 316, 343))
+=== Costmap samples ===
+map_load_time:
+  sec: 0
+  nanosec: 0
+resolution: 0.05000000074505806
+width: 120
+height: 120
+origin:
+  position:
+    x: -3.0500000003725294
+    y: -3.1500000003725295
+    z: 0.0
+  orientation:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+---
+map_load_time:
+  sec: 0
+  nanosec: 0
+resolution: 0.05000000074505806
+width: 360
+height: 359
+origin:
+  position:
+    x: -4.57186
+    y: -6.35859
+    z: 0.0
+  orientation:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+---
+RESULT: PASS - Nav2 dynamic avoidance data path is complete.
+This check does not arm or move the robot.

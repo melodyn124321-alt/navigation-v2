@@ -1,0 +1,5 @@
+[INFO] [1786513253.616101008] [nav2_manual_lifecycle]: map_server: current unconfigured [1]
+[INFO] [1786513253.617037746] [nav2_manual_lifecycle]: map_server: configure
+[INFO] [1786513254.065509219] [nav2_manual_lifecycle]: map_server: waiting 2.0s for TF and map callbacks before activation
+[INFO] [1786513256.068185244] [nav2_manual_lifecycle]: map_server: activate
+[INFO] [1786513256.164907277] [nav2_manual_lifecycle]: map_server: active [3]

@@ -1,0 +1,25 @@
+pcd=/home/seeed/ros2/maps/replay/fastlio_map_manual_002.pcd
+points=956987 sampled=120000
+reference_normal=(0.006000072,-0.718008616,0.696008352)
+ransac_inliers=19620 plane_offset=-0.751898 reference_error_deg=0.203520
+floor_peak_threshold=18060 floor_peak_points=150878 floor_local_points=152842 residual_p50=0.004826m residual_p99=0.039547m
+RESULT_NORMAL=0.007747933 -0.720148838 0.693776348
+RESULT_FLOOR_Z=-0.752083310
+RESULT_TILT_CORRECTION_DEG=46.070212
+RESULT_FLOOR_RESIDUAL_P99=0.039547061
+RESULT: PASS constrained floor estimate
+pcd=/home/seeed/ros2/maps/replay/fastlio_map_manual_002_level.pcd.new.20260801_153330
+points=956987 finite=956987
+x: min=-20.415 p01=-17.834 p05=-11.668 p50=0.302 p95=28.909 p99=38.889 max=53.584 span=73.999m
+y: min=-24.880 p01=-10.443 p05=-4.101 p50=11.556 p95=25.762 p99=27.773 max=61.746 span=86.626m
+z: min=-5.091 p01=-1.873 p05=-0.779 p50=2.814 p95=5.899 p99=16.915 max=23.840 span=28.930m
+dominant_planes:
+  1: kind=floor_or_ceiling sample_inliers=13167 center=(0.049,12.556,-0.751) normal=(-0.0002,0.0000,1.0000) tilt_to_map_z=0.009deg median_residual=0.0048m
+  2: kind=floor_or_ceiling sample_inliers=9606 center=(-0.794,13.379,4.137) normal=(-0.0323,0.0087,0.9994) tilt_to_map_z=1.918deg median_residual=0.0274m
+  3: kind=floor_or_ceiling sample_inliers=4275 center=(3.708,12.306,4.221) normal=(0.0158,-0.0019,0.9999) tilt_to_map_z=0.910deg median_residual=0.0177m
+  4: kind=floor_or_ceiling sample_inliers=2443 center=(-0.362,12.864,4.212) normal=(-0.0169,0.0141,0.9998) tilt_to_map_z=1.262deg median_residual=0.0299m
+  5: kind=floor_or_ceiling sample_inliers=1395 center=(-0.403,4.945,1.887) normal=(-0.0172,-0.0526,0.9985) tilt_to_map_z=3.171deg median_residual=0.0249m
+  6: kind=floor_or_ceiling sample_inliers=1324 center=(-0.339,11.818,3.839) normal=(0.0516,-0.0321,0.9982) tilt_to_map_z=3.483deg median_residual=0.0278m
+  7: kind=floor_or_ceiling sample_inliers=991 center=(2.710,11.551,3.389) normal=(-0.2248,0.0856,0.9706) tilt_to_map_z=13.919deg median_residual=0.0304m
+  8: kind=wall sample_inliers=2953 center=(-6.462,14.660,0.218) normal=(-0.9510,0.3085,0.0211) tilt_to_map_z=88.791deg median_residual=0.0179m
+RESULT: PASS level floor/ceiling plane tilt=0.009deg

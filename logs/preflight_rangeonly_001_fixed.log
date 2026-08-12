@@ -1,0 +1,16 @@
+/livox/lidar_timing: sensor_median_gap=0.099991s sensor_max_gap=0.101399s estimated_missing_frames=0 record_max_gap=0.104768s delivery_delay_p95=0.115644s delivery_delay_max=0.118493s
+/livox/imu_timing: sensor_median_gap=0.004947s sensor_max_gap=0.007544s estimated_missing_frames=0 record_max_gap=0.008561s delivery_delay_p95=0.000449s delivery_delay_max=0.004261s
+WARNING: initial IMU window is moving; searching the bag for a 6.0s stationary window.
+stationary_window_search: PASS start_offset=179.0s samples=1200 accel_std_max=0.00518 gyro_std_max=0.00276rad/s
+bag=/home/seeed/ros2/bags/raw_livox_rangeonly_001
+/livox/lidar: count=2000 span=199.896s average_hz=10.000 max_gap=0.101399s gaps_over_0.150s=0
+/livox/imu: count=40000 span=199.997s average_hz=199.998 max_gap=0.007544s gaps_over_0.050s=0
+sampled_points_per_lidar_frame: min=19968.000 p01=19968.000 p05=19968.000 p50=19968.000 p95=20064.000 p99=20064.000 max=20160.000
+sampled_range: min=0.200m p01=0.233m p05=0.754m p50=3.852m p95=8.935m p99=11.295m max=14.296m
+raw_elevation: min=-7.194deg p01=-4.986deg p05=-3.013deg p50=18.944deg p95=47.022deg p99=50.062deg max=52.491deg
+raw_azimuth_5deg_bins=72/72 coverage=100.0% sampled_points=193625
+selected_static_imu: samples=1200 accel_mean=(-0.0100,0.0037,0.9956)msg_units accel_std=(0.0051,0.0051,0.0052) norm=0.9957msg_units
+selected_static_gyro: mean=(-0.00235,0.00034,0.00190)rad/s std=(0.00276,0.00121,0.00187)
+gravity_tilt_estimate: roll=0.212deg pitch=0.573deg
+mount_calibration: expected_roll=-0.074deg expected_pitch=+0.527deg error=(0.286,0.046)deg limit=0.750deg
+RESULT: PASS continuity and calibrated mount pose

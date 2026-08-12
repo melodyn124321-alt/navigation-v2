@@ -1,0 +1,68 @@
+Chassis geometry: 0.720x0.500x0.345 m
+LiDAR mechanical height measurement: 0.495 m
+base_link -> LiDAR: xyz=(0.100,-0.110,0.749) m
+base_link -> LiDAR: rpy=(-0.801751898,-0.007094763,-1.570796327) rad
+Stopping ROS2 wrappers and nodes on this host...
+Remaining matching processes:
+   2652 sh              sh -c START_RANGER=true SUDO_PASSWORD=123456 ALLOW_MOTION=false /home/seeed/ros2/scripts/seeed_start_manual_002_nav_safe.sh /home/seeed/ros2/maps/replay/fastlio_map_manual_001_level.pcd /home/seeed/ros2/maps/replay/fastlio_map_manual_001_level_nav.yaml > /home/seeed/ros2/logs/nav_bootstrap_after_reboot.log 2>&1; printf "%s\\n" "$?" > /home/seeed/ros2/logs/nav_bootstrap_after_reboot.rc
+   2653 bash            bash /home/seeed/ros2/scripts/seeed_start_manual_002_nav_safe.sh /home/seeed/ros2/maps/replay/fastlio_map_manual_001_level.pcd /home/seeed/ros2/maps/replay/fastlio_map_manual_001_level_nav.yaml
+   2866 grep            grep -E livox|fastlio|pcd_ndt|map_server|planner_server|controller_server|smoother_server|behavior_server|bt_navigator|waypoint_follower|velocity_smooth|lifecycle_manager|ranger|map_camera_init_bridge|ros2 bag|rviz2
+Starting the two rear KS109 sensors...
+STARTED pid=2871 log=/home/seeed/ros2/logs/ks109_dual_range.log
+Both KS109 range topics are live.
+Starting Livox driver...
+LiDAR gravity roll/pitch startup check is removed.
+Static base_link -> LiDAR calibration remains in use for NDT and obstacle transforms.
+Starting Fast-LIO live odometry/cloud source...
+Starting chassis-forward Fast-LIO odometry...
+Starting PCD-NDT localization with PCD: /home/seeed/ros2/maps/replay/fastlio_map_manual_001_level.pcd
+Bringing up can0 at 500000 bps...
+3: can0: <NOARP,UP,LOWER_UP,ECHO> mtu 16 qdisc pfifo_fast state UP mode DEFAULT group default qlen 10
+    link/can  promiscuity 0 minmtu 0 maxmtu 0 
+    can state ERROR-ACTIVE (berr-counter tx 0 rx 0) restart-ms 0 
+	  bitrate 500000 sample-point 0.870 
+	  tq 20 prop-seg 43 phase-seg1 43 phase-seg2 13 sjw 1
+	  mttcan: tseg1 2..255 tseg2 0..127 sjw 1..127 brp 1..511 brp-inc 1
+	  mttcan: dtseg1 1..31 dtseg2 0..15 dsjw 1..15 dbrp 1..15 dbrp-inc 1
+	  clock 50000000 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 parentbus platform parentdev c310000.mttcan 
+Starting Ranger base driver with native odom TF...
+Starting low-overhead map->odom TF bridge...
+Nav2 is intentionally not started before initial localization.
+Set RViz 2D Pose Estimate first. After /relocalization_pose is stable, run:
+  /home/seeed/ros2/scripts/seeed_activate_nav2_after_initialpose.sh
+Verification:
+/fastlio_chassis_odometry
+/hn_nav_goal_console
+/hn_nav_operator_heartbeat
+/ks109_dual_range
+/laser_mapping
+/livox_lidar_publisher
+/map_odom_tf_bridge_cpp
+/pcd_ndt_localizer
+/ranger_base_node
+/rviz
+/transform_listener_impl_5948bb8eeac0
+--- important topics
+/Laser_map [sensor_msgs/msg/PointCloud2]
+/aligned_goal_status [std_msgs/msg/String]
+/cloud_registered [sensor_msgs/msg/PointCloud2]
+/cloud_registered_body [sensor_msgs/msg/PointCloud2]
+/cmd_vel [geometry_msgs/msg/Twist]
+/goal_pose [geometry_msgs/msg/PoseStamped]
+/map [nav_msgs/msg/OccupancyGrid]
+/map_cloud [sensor_msgs/msg/PointCloud2]
+/map_updates [map_msgs/msg/OccupancyGridUpdate]
+/nav_goal_markers [visualization_msgs/msg/MarkerArray]
+/nav_tf [tf2_msgs/msg/TFMessage]
+/plan [nav_msgs/msg/Path]
+/relocalization_markers [visualization_msgs/msg/MarkerArray]
+/relocalization_odom [nav_msgs/msg/Odometry]
+/relocalization_path [nav_msgs/msg/Path]
+/relocalization_pose [geometry_msgs/msg/PoseStamped]
+/rviz_goal_pose_bridge_status [std_msgs/msg/String]
+/tf [tf2_msgs/msg/TFMessage]
+/tf_static [tf2_msgs/msg/TFMessage]
+--- safety
+Nav2 is not started yet, so no navigation velocity is being generated.
+Ranger base is started, but /cmd_vel is still not bridged to Nav2.
+Use RViz 2D Pose Estimate first, activate Nav2, then send a Nav2 Goal only after /relocalization_pose is stable.

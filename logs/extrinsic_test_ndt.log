@@ -1,0 +1,62 @@
+[INFO] [launch]: All log files can be found below /home/seeed/.ros/log/2026-07-25-17-47-07-275720-seeed-11894
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [pcd_ndt_localizer-1]: process started with pid [11977]
+[pcd_ndt_localizer-1] [INFO] [1784972827.561366282] [pcd_ndt_localizer]: Loaded map /home/seeed/ros2/maps/replay/fastlio_map_manual_001.pcd raw=193028 filtered=13935 leaf=0.250
+[pcd_ndt_localizer-1] [INFO] [1784972827.565532489] [pcd_ndt_localizer]: PCD occupancy grid ready. raw=193028 kept=36100 occupied_cells=1583 size=173x200 res=0.100 z=[0.15, 1.20] min_points=3 min_z_span=0.15
+[pcd_ndt_localizer-1] [INFO] [1784972827.585629201] [pcd_ndt_localizer]: PCD NDT localization ready. map=/home/seeed/ros2/maps/replay/fastlio_map_manual_001.pcd points=13935 require_initial_pose=1 reject_occupied_pose=1
+[pcd_ndt_localizer-1] [WARN] [1784972829.674125211] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972831.724303664] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972833.800768906] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972835.801084809] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972837.943982261] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972840.214500325] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972842.241599895] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972844.253962214] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972846.634375099] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972848.704270860] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972850.723028639] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972852.797264565] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972854.800139394] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972856.880907423] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972858.920028802] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972861.225376284] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972863.452286548] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972865.537846117] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972867.546900207] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972869.573246730] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972871.650875944] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972873.669845026] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972875.759518800] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972877.850262111] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972880.031053428] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972882.091674473] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972884.192785077] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972886.205042401] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972888.270329477] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972890.413015659] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972892.426535678] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972894.538969957] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972896.693522550] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972898.731990085] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972900.743533403] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972902.840569387] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972904.878007578] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972906.976814208] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972909.243110638] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972911.271333603] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972913.306696499] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972915.456249419] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972917.491703901] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972919.499958671] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972921.879567722] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972923.892172385] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972926.059869957] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972928.382983199] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972930.402197824] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972932.459458222] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972934.764000463] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972936.787158857] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972938.861569252] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1784972940.907284337] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [INFO] [1784972942.852691902] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [pcd_ndt_localizer-1]: process has finished cleanly [pid 11977]

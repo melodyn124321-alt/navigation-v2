@@ -1,0 +1,710 @@
+[INFO] [launch]: All log files can be found below /home/seeed/.ros/log/2026-07-02-13-11-57-020352-seeed-15767
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [pcd_ndt_localizer-1]: process started with pid [15802]
+[pcd_ndt_localizer-1] [INFO] [1782969117.329583502] [pcd_ndt_localizer]: Loaded map /home/seeed/ros2/maps/replay/fastlio_map_from_raw_livox_20260702_113834.pcd raw=326503 filtered=12961 leaf=0.250
+[pcd_ndt_localizer-1] [INFO] [1782969117.334857054] [pcd_ndt_localizer]: PCD occupancy grid ready. raw=326503 kept=61628 size=189x176 res=0.100 z=[0.15, 1.20]
+[pcd_ndt_localizer-1] [INFO] [1782969117.353715382] [pcd_ndt_localizer]: PCD NDT localization ready. map=/home/seeed/ros2/maps/replay/fastlio_map_from_raw_livox_20260702_113834.pcd points=12961 require_initial_pose=1 reject_occupied_pose=1
+[pcd_ndt_localizer-1] [WARN] [1782969117.763435316] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969119.767642970] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969121.861411161] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969123.862213134] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969125.867711776] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969127.867742554] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969129.868923035] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969131.969558176] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969134.061168759] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969136.067013012] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969138.167407089] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969140.269217725] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969142.364681717] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969144.364848340] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969146.466698850] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969148.558280215] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969150.566332767] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969152.567749736] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969154.657519137] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969156.667769298] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969158.758319653] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969160.768441041] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969162.868830126] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969164.956369532] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969166.965315266] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969168.965321563] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969171.065234536] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969173.066977852] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969175.067623563] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969177.168797730] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969179.169706682] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969181.269327677] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969183.363470249] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969185.463190063] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969187.469389944] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969189.563813741] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969191.567413247] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969193.662447752] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969195.663502437] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969197.666818382] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969199.745124359] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969201.757689829] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969203.767590475] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969205.867895012] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969207.868130246] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969209.966718118] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969211.967664256] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969214.066408901] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969216.067289244] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969218.164288775] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969220.260487064] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969222.263417939] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969224.268397748] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969226.366344287] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969228.464848220] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969230.464969050] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969232.465365537] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969234.466512321] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969236.467881640] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969238.567367078] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969240.567428706] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969242.361361124] [pcd_ndt_localizer]: New subscription discovered on topic '/aligned_cloud', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY_QOS_POLICY
+[pcd_ndt_localizer-1] [WARN] [1782969242.667582391] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969244.667722581] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969246.668237568] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969248.767632411] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969250.868596043] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969252.967243310] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969255.066618504] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969257.168109866] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969259.262401626] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969261.268694823] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969263.368795482] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969265.469936944] [pcd_ndt_localizer]: Waiting for /initialpose before running NDT localization
+[pcd_ndt_localizer-1] [WARN] [1782969265.500745304] [pcd_ndt_localizer]: Initial pose reset from /initialpose
+[pcd_ndt_localizer-1] [WARN] [1782969265.615927786] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.5636 points=2260
+[pcd_ndt_localizer-1] [WARN] [1782969266.713184545] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.6191 points=2324
+[pcd_ndt_localizer-1] [WARN] [1782969267.800508044] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.5044 points=2258
+[pcd_ndt_localizer-1] [WARN] [1782969268.304366235] [pcd_ndt_localizer]: Initial pose reset from /initialpose
+[pcd_ndt_localizer-1] [WARN] [1782969268.429302485] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.74 1.74 -0.21) fitness=0.8124
+[pcd_ndt_localizer-1] [WARN] [1782969269.516425560] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.77 1.78 -0.24) fitness=0.8477
+[pcd_ndt_localizer-1] [WARN] [1782969270.528317827] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.78 1.76 -0.22) fitness=0.7932
+[pcd_ndt_localizer-1] [WARN] [1782969271.584600126] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.79 1.70 -0.18) fitness=0.8046
+[pcd_ndt_localizer-1] [WARN] [1782969272.606138028] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.79 1.78 -0.22) fitness=0.7997
+[pcd_ndt_localizer-1] [WARN] [1782969273.722985203] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.73 1.75 -0.21) fitness=0.8827
+[pcd_ndt_localizer-1] [WARN] [1782969274.794870648] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.72 1.70 -0.17) fitness=0.8154
+[pcd_ndt_localizer-1] [WARN] [1782969275.803723422] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.73 1.70 -0.18) fitness=0.8172
+[pcd_ndt_localizer-1] [WARN] [1782969276.828725024] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.76 1.75 -0.20) fitness=0.8522
+[pcd_ndt_localizer-1] [WARN] [1782969277.905333795] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.73 1.72 -0.21) fitness=0.8062
+[pcd_ndt_localizer-1] [WARN] [1782969278.913026050] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.78 1.69 -0.21) fitness=0.8076
+[pcd_ndt_localizer-1] [WARN] [1782969279.925925711] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.74 1.75 -0.20) fitness=0.8121
+[pcd_ndt_localizer-1] [WARN] [1782969281.005281486] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.68 1.73 -0.20) fitness=0.8553
+[pcd_ndt_localizer-1] [WARN] [1782969282.107240482] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.70 1.71 -0.19) fitness=0.8946
+[pcd_ndt_localizer-1] [WARN] [1782969283.229728455] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.76 1.78 -0.22) fitness=0.7952
+[pcd_ndt_localizer-1] [WARN] [1782969284.323006744] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.77 1.75 -0.21) fitness=0.8248
+[pcd_ndt_localizer-1] [WARN] [1782969285.410163837] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.71 1.70 -0.19) fitness=0.7706
+[pcd_ndt_localizer-1] [WARN] [1782969286.524618036] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.74 1.75 -0.20) fitness=0.8082
+[pcd_ndt_localizer-1] [WARN] [1782969287.603968115] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.74 1.73 -0.23) fitness=0.7946
+[pcd_ndt_localizer-1] [WARN] [1782969288.706790180] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.74 1.71 -0.15) fitness=0.7852
+[pcd_ndt_localizer-1] [WARN] [1782969289.717117723] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.77 1.70 -0.20) fitness=0.7882
+[pcd_ndt_localizer-1] [WARN] [1782969290.813921091] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.70 1.73 -0.17) fitness=0.7960
+[pcd_ndt_localizer-1] [WARN] [1782969291.909878030] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.74 1.69 -0.20) fitness=0.7696
+[pcd_ndt_localizer-1] [WARN] [1782969292.920517264] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.77 1.75 -0.23) fitness=0.7728
+[pcd_ndt_localizer-1] [WARN] [1782969293.922599730] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.77 1.79 -0.22) fitness=0.8237
+[pcd_ndt_localizer-1] [WARN] [1782969294.937186680] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.73 1.75 -0.21) fitness=0.8511
+[pcd_ndt_localizer-1] [WARN] [1782969296.022959310] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.74 1.75 -0.20) fitness=0.7587
+[pcd_ndt_localizer-1] [WARN] [1782969297.098208132] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.75 1.72 -0.15) fitness=0.7344
+[pcd_ndt_localizer-1] [WARN] [1782969298.126240363] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.74 1.75 -0.21) fitness=0.7542
+[pcd_ndt_localizer-1] [WARN] [1782969299.205553545] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.74 1.71 -0.15) fitness=0.7693
+[pcd_ndt_localizer-1] [WARN] [1782969300.207838387] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.77 1.71 -0.17) fitness=0.7718
+[pcd_ndt_localizer-1] [WARN] [1782969301.328910855] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.78 1.79 -0.23) fitness=0.8315
+[pcd_ndt_localizer-1] [WARN] [1782969302.427047484] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.74 1.77 -0.22) fitness=0.8329
+[pcd_ndt_localizer-1] [WARN] [1782969303.473678355] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.71 1.71 -0.20) fitness=0.8693
+[pcd_ndt_localizer-1] [WARN] [1782969304.506935114] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.78 1.76 -0.21) fitness=0.7830
+[pcd_ndt_localizer-1] [WARN] [1782969305.526150506] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.73 1.76 -0.21) fitness=0.7742
+[pcd_ndt_localizer-1] [WARN] [1782969306.624267038] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.78 1.75 -0.22) fitness=0.7715
+[pcd_ndt_localizer-1] [WARN] [1782969307.696089889] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.76 1.79 -0.23) fitness=0.8339
+[pcd_ndt_localizer-1] [WARN] [1782969308.706231409] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.75 1.78 -0.21) fitness=0.7849
+[pcd_ndt_localizer-1] [WARN] [1782969309.806076991] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.73 1.70 -0.18) fitness=0.7925
+[pcd_ndt_localizer-1] [WARN] [1782969310.913982223] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.74 1.77 -0.20) fitness=0.7563
+[pcd_ndt_localizer-1] [WARN] [1782969311.996504825] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-1.74 1.72 -0.21) fitness=0.7416
+[pcd_ndt_localizer-1] [WARN] [1782969312.905651416] [pcd_ndt_localizer]: Initial pose reset from /initialpose
+[pcd_ndt_localizer-1] [WARN] [1782969313.001137176] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.7960 points=2302
+[pcd_ndt_localizer-1] [WARN] [1782969314.111948816] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.8179 points=2269
+[pcd_ndt_localizer-1] [WARN] [1782969315.182299537] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.7305 points=2327
+[pcd_ndt_localizer-1] [WARN] [1782969316.199012118] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.8730 points=2252
+[pcd_ndt_localizer-1] [WARN] [1782969317.285591777] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.7060 points=2273
+[pcd_ndt_localizer-1] [WARN] [1782969318.371990695] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.9838 points=2345
+[pcd_ndt_localizer-1] [WARN] [1782969319.401998807] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.7411 points=2335
+[pcd_ndt_localizer-1] [WARN] [1782969320.471829416] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.7756 points=2297
+[pcd_ndt_localizer-1] [WARN] [1782969321.482140511] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.7484 points=2330
+[pcd_ndt_localizer-1] [WARN] [1782969322.505266641] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=2.0740 points=2312
+[pcd_ndt_localizer-1] [WARN] [1782969323.210604596] [pcd_ndt_localizer]: Initial pose reset from /initialpose
+[pcd_ndt_localizer-1] [WARN] [1782969323.615344369] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4305 points=2346
+[pcd_ndt_localizer-1] [WARN] [1782969324.706379660] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.3551 points=2241
+[pcd_ndt_localizer-1] [WARN] [1782969325.714244403] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4993 points=2303
+[pcd_ndt_localizer-1] [WARN] [1782969326.726705551] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4169 points=2328
+[pcd_ndt_localizer-1] [WARN] [1782969327.809442783] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.3254 points=2270
+[pcd_ndt_localizer-1] [WARN] [1782969328.903011404] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4248 points=2236
+[pcd_ndt_localizer-1] [WARN] [1782969329.007320391] [pcd_ndt_localizer]: Initial pose reset from /initialpose
+[pcd_ndt_localizer-1] [WARN] [1782969329.914230367] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.3991 points=2254
+[pcd_ndt_localizer-1] [WARN] [1782969331.014450370] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.5189 points=2318
+[pcd_ndt_localizer-1] [WARN] [1782969332.114587138] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4236 points=2317
+[pcd_ndt_localizer-1] [WARN] [1782969333.115237953] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4258 points=2345
+[pcd_ndt_localizer-1] [WARN] [1782969334.210552998] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.3374 points=2294
+[pcd_ndt_localizer-1] [WARN] [1782969334.910082542] [pcd_ndt_localizer]: Initial pose reset from /initialpose
+[pcd_ndt_localizer-1] [WARN] [1782969335.210816601] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.0737 points=2328
+[pcd_ndt_localizer-1] [WARN] [1782969335.310994480] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-3.76 -0.79 -0.04) fitness=0.9953
+[pcd_ndt_localizer-1] [WARN] [1782969336.216482522] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.0566 points=2310
+[pcd_ndt_localizer-1] [WARN] [1782969336.812960847] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-3.78 -0.95 -0.01) fitness=0.9003
+[pcd_ndt_localizer-1] [WARN] [1782969337.509022728] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.0517 points=2329
+[pcd_ndt_localizer-1] [WARN] [1782969338.510158967] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.1150 points=2344
+[pcd_ndt_localizer-1] [WARN] [1782969338.605537619] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-3.83 -0.93 -0.00) fitness=0.9790
+[pcd_ndt_localizer-1] [WARN] [1782969339.602621504] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.1314 points=2308
+[pcd_ndt_localizer-1] [WARN] [1782969340.606240127] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.0435 points=2365
+[pcd_ndt_localizer-1] [WARN] [1782969341.613727482] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.1233 points=2354
+[pcd_ndt_localizer-1] [WARN] [1782969342.625814057] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.0992 points=2265
+[pcd_ndt_localizer-1] [WARN] [1782969342.626130868] [pcd_ndt_localizer]: Initial pose reset from /initialpose
+[pcd_ndt_localizer-1] [INFO] [1782969342.702596816] [pcd_ndt_localizer]: NDT ok fitness=0.9526 pose=(-4.02 -1.20 -0.03)
+[pcd_ndt_localizer-1] [INFO] [1782969343.732505116] [pcd_ndt_localizer]: NDT ok fitness=0.8101 pose=(-3.90 -1.25 -0.21)
+[pcd_ndt_localizer-1] [INFO] [1782969344.815911042] [pcd_ndt_localizer]: NDT ok fitness=0.7808 pose=(-3.89 -1.28 -0.23)
+[pcd_ndt_localizer-1] [INFO] [1782969345.916242408] [pcd_ndt_localizer]: NDT ok fitness=0.7212 pose=(-4.01 -1.24 -0.25)
+[pcd_ndt_localizer-1] [INFO] [1782969347.007506571] [pcd_ndt_localizer]: NDT ok fitness=0.4501 pose=(-3.87 -1.38 -0.23)
+[pcd_ndt_localizer-1] [INFO] [1782969348.089943505] [pcd_ndt_localizer]: NDT ok fitness=0.4433 pose=(-3.77 -1.48 -0.23)
+[pcd_ndt_localizer-1] [WARN] [1782969348.249874602] [pcd_ndt_localizer]: Initial pose reset from /initialpose
+[pcd_ndt_localizer-1] [INFO] [1782969349.136771006] [pcd_ndt_localizer]: NDT ok fitness=0.6225 pose=(-3.69 -1.49 -0.25)
+[pcd_ndt_localizer-1] [INFO] [1782969350.213602481] [pcd_ndt_localizer]: NDT ok fitness=0.5325 pose=(-3.66 -1.33 -0.24)
+[pcd_ndt_localizer-1] [INFO] [1782969351.222396438] [pcd_ndt_localizer]: NDT ok fitness=0.4800 pose=(-3.65 -1.19 -0.24)
+[pcd_ndt_localizer-1] [WARN] [1782969351.713848920] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-3.65 -1.06 -0.25) fitness=0.4440
+[pcd_ndt_localizer-1] [INFO] [1782969352.310163240] [pcd_ndt_localizer]: NDT ok fitness=0.4734 pose=(-3.58 -1.16 -0.25)
+[pcd_ndt_localizer-1] [INFO] [1782969353.398244612] [pcd_ndt_localizer]: NDT ok fitness=0.4084 pose=(-3.56 -1.13 -0.23)
+[pcd_ndt_localizer-1] [WARN] [1782969353.502665251] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-3.57 -1.06 -0.24) fitness=0.4466
+[pcd_ndt_localizer-1] [INFO] [1782969354.398631707] [pcd_ndt_localizer]: NDT ok fitness=0.2429 pose=(-3.87 -1.30 -0.24)
+[pcd_ndt_localizer-1] [INFO] [1782969355.407003635] [pcd_ndt_localizer]: NDT ok fitness=0.1774 pose=(-4.05 -1.07 -0.26)
+[pcd_ndt_localizer-1] [WARN] [1782969355.810697038] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-4.18 -1.00 -0.24) fitness=0.1193
+[pcd_ndt_localizer-1] [INFO] [1782969356.505697093] [pcd_ndt_localizer]: NDT ok fitness=0.1328 pose=(-4.06 -0.99 -0.24)
+[pcd_ndt_localizer-1] [INFO] [1782969357.529595792] [pcd_ndt_localizer]: NDT ok fitness=0.0118 pose=(-4.37 -0.73 -0.25)
+[pcd_ndt_localizer-1] [WARN] [1782969357.597567035] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-4.42 -0.64 -0.24) fitness=0.0113
+[pcd_ndt_localizer-1] [WARN] [1782969358.603585191] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-4.43 -0.64 -0.25) fitness=0.0112
+[pcd_ndt_localizer-1] [WARN] [1782969359.606245959] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-4.43 -0.64 -0.24) fitness=0.0114
+[pcd_ndt_localizer-1] [WARN] [1782969360.615229298] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-4.42 -0.65 -0.25) fitness=0.0118
+[pcd_ndt_localizer-1] [INFO] [1782969361.537620444] [pcd_ndt_localizer]: NDT ok fitness=0.0120 pose=(-4.38 -0.71 -0.26)
+[pcd_ndt_localizer-1] [WARN] [1782969361.624883955] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-4.40 -0.69 -0.28) fitness=0.0103
+[pcd_ndt_localizer-1] [WARN] [1782969362.711827947] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-4.41 -0.69 -0.25) fitness=0.0098
+[pcd_ndt_localizer-1] [WARN] [1782969363.716484715] [pcd_ndt_localizer]: NDT rejected: pose overlaps occupied PCD grid cell pose=(-4.41 -0.69 -0.24) fitness=0.0101
+[pcd_ndt_localizer-1] [WARN] [1782969364.115235111] [pcd_ndt_localizer]: Initial pose reset from /initialpose
+[pcd_ndt_localizer-1] [WARN] [1782969364.208140724] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9141 points=2356
+[pcd_ndt_localizer-1] [WARN] [1782969365.213531564] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4393 points=2340
+[pcd_ndt_localizer-1] [WARN] [1782969366.303860081] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1379 points=2294
+[pcd_ndt_localizer-1] [WARN] [1782969367.315105925] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9852 points=2310
+[pcd_ndt_localizer-1] [WARN] [1782969368.409224323] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0805 points=2304
+[pcd_ndt_localizer-1] [WARN] [1782969369.433710209] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3054 points=2342
+[pcd_ndt_localizer-1] [WARN] [1782969370.511447313] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1162 points=2274
+[pcd_ndt_localizer-1] [WARN] [1782969371.628567059] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2819 points=2373
+[pcd_ndt_localizer-1] [WARN] [1782969372.702739824] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2792 points=2256
+[pcd_ndt_localizer-1] [WARN] [1782969373.702935553] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1902 points=2286
+[pcd_ndt_localizer-1] [WARN] [1782969374.713179477] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1867 points=2380
+[pcd_ndt_localizer-1] [WARN] [1782969375.796361651] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0368 points=2297
+[pcd_ndt_localizer-1] [WARN] [1782969376.812412834] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0119 points=2305
+[pcd_ndt_localizer-1] [WARN] [1782969377.825389454] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3393 points=2283
+[pcd_ndt_localizer-1] [WARN] [1782969378.914546541] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1509 points=2353
+[pcd_ndt_localizer-1] [WARN] [1782969379.916387123] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1847 points=2274
+[pcd_ndt_localizer-1] [WARN] [1782969381.029662009] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1502 points=2331
+[pcd_ndt_localizer-1] [WARN] [1782969382.110834615] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3783 points=2236
+[pcd_ndt_localizer-1] [WARN] [1782969383.206865523] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3622 points=2303
+[pcd_ndt_localizer-1] [WARN] [1782969384.312120280] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5005 points=2373
+[pcd_ndt_localizer-1] [WARN] [1782969385.407328985] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.6254 points=2284
+[pcd_ndt_localizer-1] [WARN] [1782969386.410350469] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2204 points=2297
+[pcd_ndt_localizer-1] [WARN] [1782969387.512061367] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2047 points=2260
+[pcd_ndt_localizer-1] [WARN] [1782969388.612481920] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2936 points=2381
+[pcd_ndt_localizer-1] [WARN] [1782969389.706507356] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2542 points=2255
+[pcd_ndt_localizer-1] [WARN] [1782969390.810951942] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2055 points=2331
+[pcd_ndt_localizer-1] [WARN] [1782969391.831110489] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1976 points=2280
+[pcd_ndt_localizer-1] [WARN] [1782969392.912299096] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.6690 points=2331
+[pcd_ndt_localizer-1] [WARN] [1782969393.991052648] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2689 points=2335
+[pcd_ndt_localizer-1] [WARN] [1782969395.008725739] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2882 points=2302
+[pcd_ndt_localizer-1] [WARN] [1782969396.015728759] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0839 points=2292
+[pcd_ndt_localizer-1] [WARN] [1782969397.109727985] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0042 points=2335
+[pcd_ndt_localizer-1] [WARN] [1782969398.110624633] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.6170 points=2325
+[pcd_ndt_localizer-1] [WARN] [1782969399.111667205] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4543 points=2294
+[pcd_ndt_localizer-1] [WARN] [1782969400.231521087] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1220 points=2361
+[pcd_ndt_localizer-1] [WARN] [1782969401.309746526] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3773 points=2302
+[pcd_ndt_localizer-1] [WARN] [1782969402.329828431] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.6708 points=2357
+[pcd_ndt_localizer-1] [WARN] [1782969403.409892457] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0732 points=2286
+[pcd_ndt_localizer-1] [WARN] [1782969404.510511608] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5134 points=2307
+[pcd_ndt_localizer-1] [WARN] [1782969405.607455218] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1369 points=2336
+[pcd_ndt_localizer-1] [WARN] [1782969406.629235897] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0643 points=2300
+[pcd_ndt_localizer-1] [WARN] [1782969407.712876838] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0052 points=2380
+[pcd_ndt_localizer-1] [WARN] [1782969408.723516807] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1910 points=2305
+[pcd_ndt_localizer-1] [WARN] [1782969409.821549443] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1266 points=2324
+[pcd_ndt_localizer-1] [WARN] [1782969410.909712290] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1666 points=2293
+[pcd_ndt_localizer-1] [WARN] [1782969411.999231500] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8869 points=2331
+[pcd_ndt_localizer-1] [WARN] [1782969413.102065795] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2168 points=2319
+[pcd_ndt_localizer-1] [WARN] [1782969414.103565374] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0215 points=2375
+[pcd_ndt_localizer-1] [WARN] [1782969415.109195165] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2849 points=2321
+[pcd_ndt_localizer-1] [WARN] [1782969416.111932864] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5792 points=2246
+[pcd_ndt_localizer-1] [WARN] [1782969417.207576368] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1782 points=2300
+[pcd_ndt_localizer-1] [WARN] [1782969418.211963879] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2314 points=2309
+[pcd_ndt_localizer-1] [WARN] [1782969419.314942531] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4731 points=2373
+[pcd_ndt_localizer-1] [WARN] [1782969420.410634612] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3787 points=2244
+[pcd_ndt_localizer-1] [WARN] [1782969421.503715601] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2068 points=2337
+[pcd_ndt_localizer-1] [WARN] [1782969422.510170955] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5221 points=2281
+[pcd_ndt_localizer-1] [WARN] [1782969423.601823162] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2337 points=2363
+[pcd_ndt_localizer-1] [WARN] [1782969424.610798661] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1510 points=2275
+[pcd_ndt_localizer-1] [WARN] [1782969425.711374323] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8915 points=2330
+[pcd_ndt_localizer-1] [WARN] [1782969426.719320157] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0694 points=2274
+[pcd_ndt_localizer-1] [WARN] [1782969427.807051950] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3013 points=2346
+[pcd_ndt_localizer-1] [WARN] [1782969428.817417254] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2822 points=2359
+[pcd_ndt_localizer-1] [WARN] [1782969429.821870304] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5709 points=2255
+[pcd_ndt_localizer-1] [WARN] [1782969430.906120641] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0539 points=2351
+[pcd_ndt_localizer-1] [WARN] [1782969431.918758338] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2533 points=2303
+[pcd_ndt_localizer-1] [WARN] [1782969433.006392848] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1798 points=2264
+[pcd_ndt_localizer-1] [WARN] [1782969434.009290871] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3148 points=2302
+[pcd_ndt_localizer-1] [WARN] [1782969435.128356344] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1513 points=2362
+[pcd_ndt_localizer-1] [WARN] [1782969436.199453874] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4775 points=2257
+[pcd_ndt_localizer-1] [WARN] [1782969437.208145972] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2022 points=2362
+[pcd_ndt_localizer-1] [WARN] [1782969438.314644513] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1668 points=2247
+[pcd_ndt_localizer-1] [WARN] [1782969439.403445108] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3627 points=2361
+[pcd_ndt_localizer-1] [WARN] [1782969440.424351359] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.6825 points=2331
+[pcd_ndt_localizer-1] [WARN] [1782969441.520581058] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0125 points=2336
+[pcd_ndt_localizer-1] [WARN] [1782969442.608407669] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3419 points=2294
+[pcd_ndt_localizer-1] [WARN] [1782969443.705027748] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3125 points=2295
+[pcd_ndt_localizer-1] [WARN] [1782969444.705955373] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3153 points=2290
+[pcd_ndt_localizer-1] [WARN] [1782969445.806931432] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9856 points=2302
+[pcd_ndt_localizer-1] [WARN] [1782969446.807305438] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1138 points=2306
+[pcd_ndt_localizer-1] [WARN] [1782969447.885459387] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1756 points=2339
+[pcd_ndt_localizer-1] [WARN] [1782969448.913121759] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3551 points=2304
+[pcd_ndt_localizer-1] [WARN] [1782969450.003345632] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9963 points=2357
+[pcd_ndt_localizer-1] [WARN] [1782969451.004625332] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2663 points=2369
+[pcd_ndt_localizer-1] [WARN] [1782969452.008490267] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2858 points=2337
+[pcd_ndt_localizer-1] [WARN] [1782969453.106482038] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0124 points=2325
+[pcd_ndt_localizer-1] [WARN] [1782969454.201633654] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3278 points=2316
+[pcd_ndt_localizer-1] [WARN] [1782969455.208393274] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0305 points=2324
+[pcd_ndt_localizer-1] [WARN] [1782969456.209427397] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2258 points=2309
+[pcd_ndt_localizer-1] [WARN] [1782969457.211360430] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0650 points=2239
+[pcd_ndt_localizer-1] [WARN] [1782969458.311168643] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2566 points=2298
+[pcd_ndt_localizer-1] [WARN] [1782969459.411871350] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8017 points=2321
+[pcd_ndt_localizer-1] [WARN] [1782969460.502553413] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3007 points=2379
+[pcd_ndt_localizer-1] [WARN] [1782969461.514462767] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4241 points=2292
+[pcd_ndt_localizer-1] [WARN] [1782969462.526278102] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2200 points=2262
+[pcd_ndt_localizer-1] [WARN] [1782969463.608320272] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3566 points=2236
+[pcd_ndt_localizer-1] [WARN] [1782969464.612060562] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1833 points=2308
+[pcd_ndt_localizer-1] [WARN] [1782969465.683341682] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1539 points=2314
+[pcd_ndt_localizer-1] [WARN] [1782969466.704191547] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1260 points=2268
+[pcd_ndt_localizer-1] [WARN] [1782969467.798315098] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2040 points=2360
+[pcd_ndt_localizer-1] [WARN] [1782969468.806674289] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.7391 points=2246
+[pcd_ndt_localizer-1] [WARN] [1782969469.909822194] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1169 points=2359
+[pcd_ndt_localizer-1] [WARN] [1782969470.999082292] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2403 points=2314
+[pcd_ndt_localizer-1] [WARN] [1782969472.004703316] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9883 points=2336
+[pcd_ndt_localizer-1] [WARN] [1782969473.103690799] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2288 points=2335
+[pcd_ndt_localizer-1] [WARN] [1782969474.106109575] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9137 points=2381
+[pcd_ndt_localizer-1] [WARN] [1782969475.123122325] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4592 points=2331
+[pcd_ndt_localizer-1] [WARN] [1782969476.210909991] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0063 points=2367
+[pcd_ndt_localizer-1] [WARN] [1782969477.307829184] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9580 points=2279
+[pcd_ndt_localizer-1] [WARN] [1782969478.310474815] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2729 points=2345
+[pcd_ndt_localizer-1] [WARN] [1782969479.416305367] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4952 points=2252
+[pcd_ndt_localizer-1] [WARN] [1782969480.526308596] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1143 points=2332
+[pcd_ndt_localizer-1] [WARN] [1782969481.604806076] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2462 points=2292
+[pcd_ndt_localizer-1] [WARN] [1782969482.605402106] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0428 points=2303
+[pcd_ndt_localizer-1] [WARN] [1782969483.607759120] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0765 points=2331
+[pcd_ndt_localizer-1] [WARN] [1782969484.705900048] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4517 points=2280
+[pcd_ndt_localizer-1] [WARN] [1782969485.710011646] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3071 points=2342
+[pcd_ndt_localizer-1] [WARN] [1782969486.811229985] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0145 points=2316
+[pcd_ndt_localizer-1] [WARN] [1782969487.812283214] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2465 points=2350
+[pcd_ndt_localizer-1] [WARN] [1782969488.905763543] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1822 points=2286
+[pcd_ndt_localizer-1] [WARN] [1782969489.908786339] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8172 points=2360
+[pcd_ndt_localizer-1] [WARN] [1782969490.913746477] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2757 points=2361
+[pcd_ndt_localizer-1] [WARN] [1782969492.012572547] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0561 points=2271
+[pcd_ndt_localizer-1] [WARN] [1782969493.104485370] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1156 points=2275
+[pcd_ndt_localizer-1] [WARN] [1782969494.132232162] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9398 points=2324
+[pcd_ndt_localizer-1] [WARN] [1782969495.207282203] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2430 points=2319
+[pcd_ndt_localizer-1] [WARN] [1782969496.311563904] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0555 points=2363
+[pcd_ndt_localizer-1] [WARN] [1782969497.313190463] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5946 points=2319
+[pcd_ndt_localizer-1] [WARN] [1782969498.401694536] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1335 points=2353
+[pcd_ndt_localizer-1] [WARN] [1782969499.401922618] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2187 points=2351
+[pcd_ndt_localizer-1] [WARN] [1782969500.410888901] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3569 points=2316
+[pcd_ndt_localizer-1] [WARN] [1782969501.411171353] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5049 points=2290
+[pcd_ndt_localizer-1] [WARN] [1782969502.414399211] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.7997 points=2245
+[pcd_ndt_localizer-1] [WARN] [1782969503.494611498] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2931 points=2268
+[pcd_ndt_localizer-1] [WARN] [1782969504.510376528] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1445 points=2318
+[pcd_ndt_localizer-1] [WARN] [1782969505.593896473] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3807 points=2307
+[pcd_ndt_localizer-1] [WARN] [1782969506.597071146] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5219 points=2294
+[pcd_ndt_localizer-1] [WARN] [1782969507.698808061] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5530 points=2309
+[pcd_ndt_localizer-1] [WARN] [1782969508.708521728] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3415 points=2319
+[pcd_ndt_localizer-1] [WARN] [1782969509.806034316] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9914 points=2336
+[pcd_ndt_localizer-1] [WARN] [1782969510.906920932] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5046 points=2254
+[pcd_ndt_localizer-1] [WARN] [1782969511.910030035] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0108 points=2263
+[pcd_ndt_localizer-1] [WARN] [1782969513.018053328] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3633 points=2305
+[pcd_ndt_localizer-1] [WARN] [1782969514.100392820] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3140 points=2306
+[pcd_ndt_localizer-1] [WARN] [1782969515.105942929] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2000 points=2294
+[pcd_ndt_localizer-1] [WARN] [1782969516.203899499] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0614 points=2300
+[pcd_ndt_localizer-1] [WARN] [1782969517.287920804] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8091 points=2326
+[pcd_ndt_localizer-1] [WARN] [1782969518.318698509] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1686 points=2344
+[pcd_ndt_localizer-1] [WARN] [1782969519.323363949] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2161 points=2332
+[pcd_ndt_localizer-1] [WARN] [1782969520.404012890] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0929 points=2342
+[pcd_ndt_localizer-1] [WARN] [1782969521.404197963] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1831 points=2340
+[pcd_ndt_localizer-1] [WARN] [1782969522.408068690] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2375 points=2263
+[pcd_ndt_localizer-1] [WARN] [1782969523.503940649] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9731 points=2319
+[pcd_ndt_localizer-1] [WARN] [1782969524.609415348] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.6232 points=2292
+[pcd_ndt_localizer-1] [WARN] [1782969525.708802012] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5578 points=2280
+[pcd_ndt_localizer-1] [WARN] [1782969526.800766293] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.5441 points=2367
+[pcd_ndt_localizer-1] [WARN] [1782969527.807866948] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2642 points=2274
+[pcd_ndt_localizer-1] [WARN] [1782969528.906031397] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1982 points=2340
+[pcd_ndt_localizer-1] [WARN] [1782969529.908578881] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2707 points=2381
+[pcd_ndt_localizer-1] [WARN] [1782969530.998641949] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2743 points=2279
+[pcd_ndt_localizer-1] [WARN] [1782969532.010145946] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9957 points=2341
+[pcd_ndt_localizer-1] [WARN] [1782969533.108949615] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3500 points=2300
+[pcd_ndt_localizer-1] [WARN] [1782969534.109060605] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.7016 points=2336
+[pcd_ndt_localizer-1] [WARN] [1782969535.211016471] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3310 points=2298
+[pcd_ndt_localizer-1] [WARN] [1782969536.311033140] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2438 points=2287
+[pcd_ndt_localizer-1] [WARN] [1782969537.407630722] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.7283 points=2345
+[pcd_ndt_localizer-1] [WARN] [1782969538.496161260] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1845 points=2272
+[pcd_ndt_localizer-1] [WARN] [1782969539.504436769] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0524 points=2370
+[pcd_ndt_localizer-1] [WARN] [1782969540.597295479] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1914 points=2285
+[pcd_ndt_localizer-1] [WARN] [1782969541.598568298] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2296 points=2247
+[pcd_ndt_localizer-1] [WARN] [1782969542.607232716] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1797 points=2281
+[pcd_ndt_localizer-1] [WARN] [1782969543.610467198] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2449 points=2330
+[pcd_ndt_localizer-1] [WARN] [1782969544.629727284] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4650 points=2252
+[pcd_ndt_localizer-1] [WARN] [1782969545.707368097] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4306 points=2335
+[pcd_ndt_localizer-1] [WARN] [1782969546.710585171] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9415 points=2268
+[pcd_ndt_localizer-1] [WARN] [1782969547.808188641] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0132 points=2338
+[pcd_ndt_localizer-1] [WARN] [1782969548.902558279] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3730 points=2253
+[pcd_ndt_localizer-1] [WARN] [1782969549.911195336] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1716 points=2265
+[pcd_ndt_localizer-1] [WARN] [1782969551.018716981] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3147 points=2369
+[pcd_ndt_localizer-1] [WARN] [1782969552.099017399] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8906 points=2342
+[pcd_ndt_localizer-1] [WARN] [1782969553.106321805] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2522 points=2309
+[pcd_ndt_localizer-1] [WARN] [1782969554.200316263] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2623 points=2354
+[pcd_ndt_localizer-1] [WARN] [1782969555.204075915] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2229 points=2317
+[pcd_ndt_localizer-1] [WARN] [1782969556.303519220] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9334 points=2348
+[pcd_ndt_localizer-1] [WARN] [1782969557.396194436] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5539 points=2285
+[pcd_ndt_localizer-1] [WARN] [1782969558.493249441] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1898 points=2305
+[pcd_ndt_localizer-1] [WARN] [1782969559.496907425] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5045 points=2245
+[pcd_ndt_localizer-1] [WARN] [1782969560.595008160] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0921 points=2347
+[pcd_ndt_localizer-1] [WARN] [1782969561.598752195] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1152 points=2253
+[pcd_ndt_localizer-1] [WARN] [1782969562.599678059] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0255 points=2240
+[pcd_ndt_localizer-1] [WARN] [1782969563.617227338] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0756 points=2314
+[pcd_ndt_localizer-1] [WARN] [1782969564.706126656] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3548 points=2253
+[pcd_ndt_localizer-1] [WARN] [1782969565.709521784] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2801 points=2255
+[pcd_ndt_localizer-1] [WARN] [1782969566.805881951] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9423 points=2271
+[pcd_ndt_localizer-1] [WARN] [1782969567.808478429] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3027 points=2250
+[pcd_ndt_localizer-1] [WARN] [1782969568.822945561] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1959 points=2286
+[pcd_ndt_localizer-1] [WARN] [1782969569.905466370] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3454 points=2257
+[pcd_ndt_localizer-1] [WARN] [1782969570.907812184] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2600 points=2254
+[pcd_ndt_localizer-1] [WARN] [1782969571.998108923] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8985 points=2311
+[pcd_ndt_localizer-1] [WARN] [1782969573.121584202] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9682 points=2349
+[pcd_ndt_localizer-1] [WARN] [1782969574.205578435] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4956 points=2255
+[pcd_ndt_localizer-1] [WARN] [1782969575.209936282] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1105 points=2286
+[pcd_ndt_localizer-1] [WARN] [1782969576.211525783] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0169 points=2301
+[pcd_ndt_localizer-1] [WARN] [1782969577.301765689] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1386 points=2330
+[pcd_ndt_localizer-1] [WARN] [1782969578.400493323] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4227 points=2302
+[pcd_ndt_localizer-1] [WARN] [1782969579.506057690] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9698 points=2383
+[pcd_ndt_localizer-1] [WARN] [1782969580.604449602] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1668 points=2300
+[pcd_ndt_localizer-1] [WARN] [1782969581.700507999] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4020 points=2287
+[pcd_ndt_localizer-1] [WARN] [1782969582.703699696] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4676 points=2244
+[pcd_ndt_localizer-1] [WARN] [1782969583.808148058] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2633 points=2315
+[pcd_ndt_localizer-1] [WARN] [1782969584.906656134] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1105 points=2340
+[pcd_ndt_localizer-1] [WARN] [1782969586.010455708] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1088 points=2288
+[pcd_ndt_localizer-1] [WARN] [1782969587.080745820] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.8055 points=2312
+[pcd_ndt_localizer-1] [WARN] [1782969588.108189721] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4063 points=2281
+[pcd_ndt_localizer-1] [WARN] [1782969589.113965181] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1162 points=2323
+[pcd_ndt_localizer-1] [WARN] [1782969590.129063150] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1007 points=2342
+[pcd_ndt_localizer-1] [WARN] [1782969591.204474066] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3982 points=2251
+[pcd_ndt_localizer-1] [WARN] [1782969592.212015951] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0242 points=2266
+[pcd_ndt_localizer-1] [WARN] [1782969593.285877730] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5497 points=2230
+[pcd_ndt_localizer-1] [WARN] [1782969594.294721033] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8396 points=2339
+[pcd_ndt_localizer-1] [WARN] [1782969595.316808634] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1220 points=2330
+[pcd_ndt_localizer-1] [WARN] [1782969596.390941589] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2728 points=2323
+[pcd_ndt_localizer-1] [WARN] [1782969597.398848350] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.5271 points=2334
+[pcd_ndt_localizer-1] [WARN] [1782969598.515162983] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2413 points=2242
+[pcd_ndt_localizer-1] [WARN] [1782969599.526474429] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1646 points=2327
+[pcd_ndt_localizer-1] [WARN] [1782969600.600713244] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4438 points=2285
+[pcd_ndt_localizer-1] [WARN] [1782969601.603574627] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1804 points=2260
+[pcd_ndt_localizer-1] [WARN] [1782969602.622111009] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0423 points=2313
+[pcd_ndt_localizer-1] [WARN] [1782969603.625171342] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2837 points=2281
+[pcd_ndt_localizer-1] [WARN] [1782969604.706141254] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0933 points=2319
+[pcd_ndt_localizer-1] [WARN] [1782969605.811053119] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1722 points=2270
+[pcd_ndt_localizer-1] [WARN] [1782969606.905479432] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9519 points=2305
+[pcd_ndt_localizer-1] [WARN] [1782969608.005440322] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0626 points=2337
+[pcd_ndt_localizer-1] [WARN] [1782969609.092065807] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4900 points=2266
+[pcd_ndt_localizer-1] [WARN] [1782969610.098092476] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2864 points=2314
+[pcd_ndt_localizer-1] [WARN] [1782969611.111696892] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3788 points=2321
+[pcd_ndt_localizer-1] [WARN] [1782969612.206874300] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2751 points=2271
+[pcd_ndt_localizer-1] [WARN] [1782969613.207071789] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3088 points=2314
+[pcd_ndt_localizer-1] [WARN] [1782969614.299733725] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4960 points=2298
+[pcd_ndt_localizer-1] [WARN] [1782969615.305263161] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4644 points=2276
+[pcd_ndt_localizer-1] [WARN] [1782969616.307800469] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9291 points=2333
+[pcd_ndt_localizer-1] [WARN] [1782969617.312507991] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3037 points=2309
+[pcd_ndt_localizer-1] [WARN] [1782969618.314146614] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3216 points=2265
+[pcd_ndt_localizer-1] [WARN] [1782969619.404086286] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2491 points=2357
+[pcd_ndt_localizer-1] [WARN] [1782969620.499083209] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3982 points=2261
+[pcd_ndt_localizer-1] [WARN] [1782969621.499187351] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1589 points=2290
+[pcd_ndt_localizer-1] [WARN] [1782969622.514351401] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3932 points=2309
+[pcd_ndt_localizer-1] [WARN] [1782969623.946304700] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1685 points=2353
+[pcd_ndt_localizer-1] [WARN] [1782969624.992598616] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0747 points=2347
+[pcd_ndt_localizer-1] [WARN] [1782969625.994062897] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1771 points=2358
+[pcd_ndt_localizer-1] [WARN] [1782969627.103909450] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9330 points=2277
+[pcd_ndt_localizer-1] [WARN] [1782969628.189121609] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1386 points=2266
+[pcd_ndt_localizer-1] [WARN] [1782969629.294048003] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8619 points=2364
+[pcd_ndt_localizer-1] [WARN] [1782969630.294808070] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5385 points=2352
+[pcd_ndt_localizer-1] [WARN] [1782969631.393496440] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0071 points=2299
+[pcd_ndt_localizer-1] [WARN] [1782969632.393988786] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4327 points=2339
+[pcd_ndt_localizer-1] [WARN] [1782969633.397817688] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2364 points=2326
+[pcd_ndt_localizer-1] [WARN] [1782969634.404065707] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3220 points=2254
+[pcd_ndt_localizer-1] [WARN] [1782969635.405975763] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2051 points=2303
+[pcd_ndt_localizer-1] [WARN] [1782969636.505699910] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1387 points=2263
+[pcd_ndt_localizer-1] [WARN] [1782969637.598902439] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3573 points=2297
+[pcd_ndt_localizer-1] [WARN] [1782969638.699571768] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9904 points=2382
+[pcd_ndt_localizer-1] [WARN] [1782969639.708136662] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2225 points=2323
+[pcd_ndt_localizer-1] [WARN] [1782969640.792042700] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3014 points=2265
+[pcd_ndt_localizer-1] [WARN] [1782969641.806559209] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1585 points=2322
+[pcd_ndt_localizer-1] [WARN] [1782969642.900509954] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1124 points=2254
+[pcd_ndt_localizer-1] [WARN] [1782969643.909453965] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1728 points=2339
+[pcd_ndt_localizer-1] [WARN] [1782969644.930214259] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0175 points=2335
+[pcd_ndt_localizer-1] [WARN] [1782969646.010239628] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3990 points=2308
+[pcd_ndt_localizer-1] [WARN] [1782969647.106225894] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3234 points=2233
+[pcd_ndt_localizer-1] [WARN] [1782969648.208638608] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2102 points=2358
+[pcd_ndt_localizer-1] [WARN] [1782969649.211786271] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4099 points=2333
+[pcd_ndt_localizer-1] [WARN] [1782969650.310233481] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3026 points=2355
+[pcd_ndt_localizer-1] [WARN] [1782969651.425094659] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2913 points=2280
+[pcd_ndt_localizer-1] [WARN] [1782969652.505627180] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3313 points=2272
+[pcd_ndt_localizer-1] [WARN] [1782969653.508648504] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2482 points=2245
+[pcd_ndt_localizer-1] [WARN] [1782969654.607093089] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1222 points=2343
+[pcd_ndt_localizer-1] [WARN] [1782969655.629446491] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1121 points=2302
+[pcd_ndt_localizer-1] [WARN] [1782969656.710619993] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8772 points=2312
+[pcd_ndt_localizer-1] [WARN] [1782969657.801129411] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1795 points=2274
+[pcd_ndt_localizer-1] [WARN] [1782969658.803810084] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1504 points=2331
+[pcd_ndt_localizer-1] [WARN] [1782969659.808356961] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1998 points=2344
+[pcd_ndt_localizer-1] [WARN] [1782969660.822540499] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2137 points=2324
+[pcd_ndt_localizer-1] [WARN] [1782969661.913542574] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1933 points=2315
+[pcd_ndt_localizer-1] [WARN] [1782969663.021827188] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2310 points=2286
+[pcd_ndt_localizer-1] [WARN] [1782969664.097244952] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3186 points=2328
+[pcd_ndt_localizer-1] [WARN] [1782969665.108138753] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2752 points=2277
+[pcd_ndt_localizer-1] [WARN] [1782969666.208274209] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9412 points=2312
+[pcd_ndt_localizer-1] [WARN] [1782969667.305319966] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3942 points=2350
+[pcd_ndt_localizer-1] [WARN] [1782969668.400752134] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0209 points=2286
+[pcd_ndt_localizer-1] [WARN] [1782969669.405710129] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1787 points=2339
+[pcd_ndt_localizer-1] [WARN] [1782969670.407921442] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4152 points=2355
+[pcd_ndt_localizer-1] [WARN] [1782969671.501682069] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2021 points=2261
+[pcd_ndt_localizer-1] [WARN] [1782969672.607812246] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2378 points=2310
+[pcd_ndt_localizer-1] [WARN] [1782969673.703672556] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0009 points=2303
+[pcd_ndt_localizer-1] [WARN] [1782969674.704241769] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1192 points=2349
+[pcd_ndt_localizer-1] [WARN] [1782969675.806252357] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5377 points=2286
+[pcd_ndt_localizer-1] [WARN] [1782969676.811270161] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.5707 points=2339
+[pcd_ndt_localizer-1] [WARN] [1782969677.902742298] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0004 points=2281
+[pcd_ndt_localizer-1] [WARN] [1782969678.997435403] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3385 points=2298
+[pcd_ndt_localizer-1] [WARN] [1782969680.095702191] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2182 points=2337
+[pcd_ndt_localizer-1] [WARN] [1782969681.099344463] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9641 points=2343
+[pcd_ndt_localizer-1] [WARN] [1782969682.190598673] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5224 points=2325
+[pcd_ndt_localizer-1] [WARN] [1782969683.206238483] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0241 points=2309
+[pcd_ndt_localizer-1] [WARN] [1782969684.302076968] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4826 points=2346
+[pcd_ndt_localizer-1] [WARN] [1782969685.470200595] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5258 points=2274
+[pcd_ndt_localizer-1] [WARN] [1782969686.492167617] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.7953 points=2333
+[pcd_ndt_localizer-1] [WARN] [1782969687.513210448] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.6434 points=2259
+[pcd_ndt_localizer-1] [WARN] [1782969688.608656089] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2953 points=2406
+[pcd_ndt_localizer-1] [WARN] [1782969689.625873134] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9645 points=2356
+[pcd_ndt_localizer-1] [WARN] [1782969690.630802551] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3565 points=2313
+[pcd_ndt_localizer-1] [WARN] [1782969691.728925942] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9366 points=2312
+[pcd_ndt_localizer-1] [WARN] [1782969692.803968975] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9939 points=2297
+[pcd_ndt_localizer-1] [WARN] [1782969693.804319396] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9323 points=2362
+[pcd_ndt_localizer-1] [WARN] [1782969694.821620956] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1458 points=2304
+[pcd_ndt_localizer-1] [WARN] [1782969695.906734072] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3704 points=2312
+[pcd_ndt_localizer-1] [WARN] [1782969696.924317016] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9748 points=2364
+[pcd_ndt_localizer-1] [WARN] [1782969698.006092362] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2132 points=2346
+[pcd_ndt_localizer-1] [WARN] [1782969699.007251481] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1342 points=2337
+[pcd_ndt_localizer-1] [WARN] [1782969700.008610832] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9990 points=2334
+[pcd_ndt_localizer-1] [WARN] [1782969701.098540935] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3231 points=2264
+[pcd_ndt_localizer-1] [WARN] [1782969702.169865480] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.7427 points=2312
+[pcd_ndt_localizer-1] [WARN] [1782969703.191992571] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1577 points=2299
+[pcd_ndt_localizer-1] [WARN] [1782969704.222757763] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0297 points=2296
+[pcd_ndt_localizer-1] [WARN] [1782969705.304250251] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0812 points=2303
+[pcd_ndt_localizer-1] [WARN] [1782969706.304261974] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2760 points=2366
+[pcd_ndt_localizer-1] [WARN] [1782969707.406973737] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8818 points=2259
+[pcd_ndt_localizer-1] [WARN] [1782969708.425199646] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0498 points=2364
+[pcd_ndt_localizer-1] [WARN] [1782969709.525802893] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1158 points=2284
+[pcd_ndt_localizer-1] [WARN] [1782969710.601846310] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0229 points=2321
+[pcd_ndt_localizer-1] [WARN] [1782969711.701402483] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3293 points=2285
+[pcd_ndt_localizer-1] [WARN] [1782969712.816698459] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3983 points=2271
+[pcd_ndt_localizer-1] [WARN] [1782969713.898873817] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1532 points=2346
+[pcd_ndt_localizer-1] [WARN] [1782969715.023278853] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2401 points=2290
+[pcd_ndt_localizer-1] [WARN] [1782969716.121726351] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4176 points=2263
+[pcd_ndt_localizer-1] [WARN] [1782969717.208530306] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.8226 points=2356
+[pcd_ndt_localizer-1] [WARN] [1782969718.211437642] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1720 points=2305
+[pcd_ndt_localizer-1] [WARN] [1782969719.309787409] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0735 points=2350
+[pcd_ndt_localizer-1] [WARN] [1782969720.393764521] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4354 points=2273
+[pcd_ndt_localizer-1] [WARN] [1782969721.403837495] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0299 points=2295
+[pcd_ndt_localizer-1] [WARN] [1782969722.410488824] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0590 points=2315
+[pcd_ndt_localizer-1] [WARN] [1782969723.427551143] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2750 points=2283
+[pcd_ndt_localizer-1] [WARN] [1782969724.526707496] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8655 points=2327
+[pcd_ndt_localizer-1] [WARN] [1782969725.606526074] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1758 points=2256
+[pcd_ndt_localizer-1] [WARN] [1782969726.708672251] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8893 points=2296
+[pcd_ndt_localizer-1] [WARN] [1782969727.815513810] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0490 points=2370
+[pcd_ndt_localizer-1] [WARN] [1782969728.908830071] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4497 points=2265
+[pcd_ndt_localizer-1] [WARN] [1782969730.009262272] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1658 points=2360
+[pcd_ndt_localizer-1] [WARN] [1782969731.108007795] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0810 points=2284
+[pcd_ndt_localizer-1] [WARN] [1782969732.201274390] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2294 points=2271
+[pcd_ndt_localizer-1] [WARN] [1782969733.205766865] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1199 points=2298
+[pcd_ndt_localizer-1] [WARN] [1782969734.208137512] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2040 points=2326
+[pcd_ndt_localizer-1] [WARN] [1782969735.320580980] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4312 points=2241
+[pcd_ndt_localizer-1] [WARN] [1782969736.404956057] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8105 points=2272
+[pcd_ndt_localizer-1] [WARN] [1782969737.492482499] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1491 points=2359
+[pcd_ndt_localizer-1] [WARN] [1782969738.502369900] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4259 points=2261
+[pcd_ndt_localizer-1] [WARN] [1782969739.512765573] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3755 points=2289
+[pcd_ndt_localizer-1] [WARN] [1782969740.611508664] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3525 points=2347
+[pcd_ndt_localizer-1] [WARN] [1782969741.627743661] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4127 points=2314
+[pcd_ndt_localizer-1] [WARN] [1782969742.699457786] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9927 points=2307
+[pcd_ndt_localizer-1] [WARN] [1782969743.703439685] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4059 points=2301
+[pcd_ndt_localizer-1] [WARN] [1782969744.712106854] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2258 points=2281
+[pcd_ndt_localizer-1] [WARN] [1782969745.720113683] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5921 points=2275
+[pcd_ndt_localizer-1] [WARN] [1782969746.804390324] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.6855 points=2285
+[pcd_ndt_localizer-1] [WARN] [1782969747.804607814] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3669 points=2311
+[pcd_ndt_localizer-1] [WARN] [1782969748.830690135] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0048 points=2346
+[pcd_ndt_localizer-1] [WARN] [1782969749.908532074] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1053 points=2317
+[pcd_ndt_localizer-1] [WARN] [1782969751.009297662] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1847 points=2326
+[pcd_ndt_localizer-1] [WARN] [1782969752.125311837] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1917 points=2246
+[pcd_ndt_localizer-1] [WARN] [1782969753.224256055] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3860 points=2264
+[pcd_ndt_localizer-1] [WARN] [1782969754.224526602] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3254 points=2313
+[pcd_ndt_localizer-1] [WARN] [1782969755.307495010] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1639 points=2267
+[pcd_ndt_localizer-1] [WARN] [1782969756.311612593] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0192 points=2289
+[pcd_ndt_localizer-1] [WARN] [1782969757.403992343] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2284 points=2294
+[pcd_ndt_localizer-1] [WARN] [1782969758.406466737] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2078 points=2248
+[pcd_ndt_localizer-1] [WARN] [1782969759.434587940] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1458 points=2310
+[pcd_ndt_localizer-1] [WARN] [1782969760.511993577] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5044 points=2278
+[pcd_ndt_localizer-1] [WARN] [1782969761.612312463] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.7880 points=2355
+[pcd_ndt_localizer-1] [WARN] [1782969762.708434286] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2443 points=2327
+[pcd_ndt_localizer-1] [WARN] [1782969763.808667185] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4485 points=2252
+[pcd_ndt_localizer-1] [WARN] [1782969764.827661918] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2739 points=2295
+[pcd_ndt_localizer-1] [WARN] [1782969765.927157450] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4572 points=2271
+[pcd_ndt_localizer-1] [WARN] [1782969767.013857017] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.7110 points=2348
+[pcd_ndt_localizer-1] [WARN] [1782969768.127938042] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1676 points=2308
+[pcd_ndt_localizer-1] [WARN] [1782969769.209194970] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3719 points=2299
+[pcd_ndt_localizer-1] [WARN] [1782969770.226446352] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2123 points=2277
+[pcd_ndt_localizer-1] [WARN] [1782969771.309819445] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1769 points=2337
+[pcd_ndt_localizer-1] [WARN] [1782969772.410157883] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.7632 points=2319
+[pcd_ndt_localizer-1] [WARN] [1782969773.492081777] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1175 points=2302
+[pcd_ndt_localizer-1] [WARN] [1782969774.525083841] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2425 points=2358
+[pcd_ndt_localizer-1] [WARN] [1782969775.610942422] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3176 points=2260
+[pcd_ndt_localizer-1] [WARN] [1782969776.612452465] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0004 points=2292
+[pcd_ndt_localizer-1] [WARN] [1782969777.782151759] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4884 points=2233
+[pcd_ndt_localizer-1] [WARN] [1782969778.810175775] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1348 points=2336
+[pcd_ndt_localizer-1] [WARN] [1782969779.910268062] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2116 points=2252
+[pcd_ndt_localizer-1] [WARN] [1782969781.008964271] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1843 points=2342
+[pcd_ndt_localizer-1] [WARN] [1782969782.125699781] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2237 points=2303
+[pcd_ndt_localizer-1] [WARN] [1782969783.208655228] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5713 points=2267
+[pcd_ndt_localizer-1] [WARN] [1782969784.362807750] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0864 points=2326
+[pcd_ndt_localizer-1] [WARN] [1782969785.399602800] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9314 points=2301
+[pcd_ndt_localizer-1] [WARN] [1782969786.425036781] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8782 points=2358
+[pcd_ndt_localizer-1] [WARN] [1782969787.516202732] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3221 points=2307
+[pcd_ndt_localizer-1] [WARN] [1782969788.605566514] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2416 points=2306
+[pcd_ndt_localizer-1] [WARN] [1782969789.609231506] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5006 points=2288
+[pcd_ndt_localizer-1] [WARN] [1782969790.712622107] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2363 points=2362
+[pcd_ndt_localizer-1] [WARN] [1782969791.826289774] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.7395 points=2335
+[pcd_ndt_localizer-1] [WARN] [1782969792.911161219] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3919 points=2270
+[pcd_ndt_localizer-1] [WARN] [1782969794.007757649] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2193 points=2313
+[pcd_ndt_localizer-1] [WARN] [1782969795.103126936] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3981 points=2281
+[pcd_ndt_localizer-1] [WARN] [1782969796.106129891] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0824 points=2314
+[pcd_ndt_localizer-1] [WARN] [1782969797.117491611] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2088 points=2261
+[pcd_ndt_localizer-1] [WARN] [1782969798.204712411] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1684 points=2357
+[pcd_ndt_localizer-1] [WARN] [1782969799.299810233] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2011 points=2288
+[pcd_ndt_localizer-1] [WARN] [1782969800.304713281] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9916 points=2319
+[pcd_ndt_localizer-1] [WARN] [1782969801.417149773] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5445 points=2278
+[pcd_ndt_localizer-1] [WARN] [1782969802.498486576] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0193 points=2312
+[pcd_ndt_localizer-1] [WARN] [1782969803.505451259] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2999 points=2290
+[pcd_ndt_localizer-1] [WARN] [1782969804.506590442] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4720 points=2274
+[pcd_ndt_localizer-1] [WARN] [1782969805.608735115] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3254 points=2336
+[pcd_ndt_localizer-1] [WARN] [1782969806.706420348] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9849 points=2330
+[pcd_ndt_localizer-1] [WARN] [1782969807.811218130] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4482 points=2311
+[pcd_ndt_localizer-1] [WARN] [1782969808.907703068] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1678 points=2303
+[pcd_ndt_localizer-1] [WARN] [1782969810.023018116] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0448 points=2340
+[pcd_ndt_localizer-1] [WARN] [1782969811.103471179] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4276 points=2273
+[pcd_ndt_localizer-1] [WARN] [1782969812.211650382] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3271 points=2317
+[pcd_ndt_localizer-1] [WARN] [1782969813.211780540] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3924 points=2287
+[pcd_ndt_localizer-1] [WARN] [1782969814.212919756] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0015 points=2303
+[pcd_ndt_localizer-1] [WARN] [1782969815.312406999] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3845 points=2340
+[pcd_ndt_localizer-1] [WARN] [1782969816.409022181] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0546 points=2313
+[pcd_ndt_localizer-1] [WARN] [1782969817.410225975] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9400 points=2254
+[pcd_ndt_localizer-1] [WARN] [1782969818.416315877] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3619 points=2247
+[pcd_ndt_localizer-1] [WARN] [1782969819.511490597] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2543 points=2355
+[pcd_ndt_localizer-1] [WARN] [1782969820.610337596] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5505 points=2328
+[pcd_ndt_localizer-1] [WARN] [1782969821.684274897] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1429 points=2358
+[pcd_ndt_localizer-1] [WARN] [1782969822.711127963] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4184 points=2356
+[pcd_ndt_localizer-1] [WARN] [1782969823.711948224] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3558 points=2329
+[pcd_ndt_localizer-1] [WARN] [1782969824.731715079] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1351 points=2303
+[pcd_ndt_localizer-1] [WARN] [1782969825.810218575] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4343 points=2308
+[pcd_ndt_localizer-1] [WARN] [1782969826.910301037] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8927 points=2259
+[pcd_ndt_localizer-1] [WARN] [1782969827.914270423] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4180 points=2350
+[pcd_ndt_localizer-1] [WARN] [1782969829.011245297] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1894 points=2270
+[pcd_ndt_localizer-1] [WARN] [1782969830.129604412] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0075 points=2350
+[pcd_ndt_localizer-1] [WARN] [1782969831.135917393] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2869 points=2332
+[pcd_ndt_localizer-1] [WARN] [1782969832.211959210] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8413 points=2279
+[pcd_ndt_localizer-1] [WARN] [1782969833.276589876] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2661 points=2294
+[pcd_ndt_localizer-1] [WARN] [1782969834.304025937] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1686 points=2308
+[pcd_ndt_localizer-1] [WARN] [1782969835.400723650] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1135 points=2282
+[pcd_ndt_localizer-1] [WARN] [1782969836.404928116] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9648 points=2254
+[pcd_ndt_localizer-1] [WARN] [1782969837.504010642] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1399 points=2332
+[pcd_ndt_localizer-1] [WARN] [1782969838.505751765] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4015 points=2247
+[pcd_ndt_localizer-1] [WARN] [1782969839.605590283] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2311 points=2340
+[pcd_ndt_localizer-1] [WARN] [1782969840.608632471] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1635 points=2312
+[pcd_ndt_localizer-1] [WARN] [1782969841.710921309] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3493 points=2321
+[pcd_ndt_localizer-1] [WARN] [1782969842.800313347] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2674 points=2305
+[pcd_ndt_localizer-1] [WARN] [1782969843.908177820] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5404 points=2289
+[pcd_ndt_localizer-1] [WARN] [1782969844.909794618] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2073 points=2273
+[pcd_ndt_localizer-1] [WARN] [1782969845.915302422] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1890 points=2362
+[pcd_ndt_localizer-1] [WARN] [1782969846.996611416] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3458 points=2243
+[pcd_ndt_localizer-1] [WARN] [1782969847.997259063] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8864 points=2337
+[pcd_ndt_localizer-1] [WARN] [1782969849.013392713] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2677 points=2323
+[pcd_ndt_localizer-1] [WARN] [1782969850.022677790] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0675 points=2351
+[pcd_ndt_localizer-1] [WARN] [1782969851.099173126] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1678 points=2299
+[pcd_ndt_localizer-1] [WARN] [1782969852.113651618] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0474 points=2341
+[pcd_ndt_localizer-1] [WARN] [1782969853.226371031] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1762 points=2341
+[pcd_ndt_localizer-1] [WARN] [1782969854.311426705] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5373 points=2300
+[pcd_ndt_localizer-1] [WARN] [1782969855.405600402] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1557 points=2329
+[pcd_ndt_localizer-1] [WARN] [1782969856.503625070] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.8876 points=2274
+[pcd_ndt_localizer-1] [WARN] [1782969857.507723676] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2337 points=2375
+[pcd_ndt_localizer-1] [WARN] [1782969858.508057457] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2483 points=2333
+[pcd_ndt_localizer-1] [WARN] [1782969859.604339061] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4057 points=2268
+[pcd_ndt_localizer-1] [WARN] [1782969860.604812687] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1846 points=2343
+[pcd_ndt_localizer-1] [WARN] [1782969861.713436736] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1249 points=2265
+[pcd_ndt_localizer-1] [WARN] [1782969862.720498958] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0445 points=2324
+[pcd_ndt_localizer-1] [WARN] [1782969863.796463268] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5187 points=2286
+[pcd_ndt_localizer-1] [WARN] [1782969864.797169701] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9688 points=2324
+[pcd_ndt_localizer-1] [WARN] [1782969865.879552650] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0352 points=2321
+[pcd_ndt_localizer-1] [WARN] [1782969866.909642845] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.7166 points=2359
+[pcd_ndt_localizer-1] [WARN] [1782969867.912666056] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4594 points=2372
+[pcd_ndt_localizer-1] [WARN] [1782969869.010113234] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0626 points=2290
+[pcd_ndt_localizer-1] [WARN] [1782969870.021847798] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1699 points=2287
+[pcd_ndt_localizer-1] [WARN] [1782969871.112614440] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1667 points=2316
+[pcd_ndt_localizer-1] [WARN] [1782969872.210928110] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1018 points=2312
+[pcd_ndt_localizer-1] [WARN] [1782969873.312885640] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1169 points=2329
+[pcd_ndt_localizer-1] [WARN] [1782969874.408763135] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2771 points=2291
+[pcd_ndt_localizer-1] [WARN] [1782969875.526418547] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0553 points=2296
+[pcd_ndt_localizer-1] [WARN] [1782969876.612236006] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1306 points=2302
+[pcd_ndt_localizer-1] [WARN] [1782969877.707191935] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1158 points=2250
+[pcd_ndt_localizer-1] [WARN] [1782969878.811537671] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1902 points=2355
+[pcd_ndt_localizer-1] [WARN] [1782969879.898633891] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2715 points=2302
+[pcd_ndt_localizer-1] [WARN] [1782969880.903232450] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0595 points=2342
+[pcd_ndt_localizer-1] [WARN] [1782969881.904990373] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3677 points=2328
+[pcd_ndt_localizer-1] [WARN] [1782969882.908407773] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1218 points=2259
+[pcd_ndt_localizer-1] [WARN] [1782969883.984033417] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1358 points=2322
+[pcd_ndt_localizer-1] [WARN] [1782969884.991371007] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5239 points=2297
+[pcd_ndt_localizer-1] [WARN] [1782969885.994621785] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2720 points=2263
+[pcd_ndt_localizer-1] [WARN] [1782969887.000297649] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9017 points=2303
+[pcd_ndt_localizer-1] [WARN] [1782969888.100489304] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.4567 points=2259
+[pcd_ndt_localizer-1] [WARN] [1782969889.182871475] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2790 points=2353
+[pcd_ndt_localizer-1] [WARN] [1782969890.292205703] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2963 points=2379
+[pcd_ndt_localizer-1] [WARN] [1782969891.404698052] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3038 points=2281
+[pcd_ndt_localizer-1] [WARN] [1782969892.492368589] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1160 points=2292
+[pcd_ndt_localizer-1] [WARN] [1782969893.501644893] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5287 points=2255
+[pcd_ndt_localizer-1] [WARN] [1782969894.608839914] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0022 points=2347
+[pcd_ndt_localizer-1] [WARN] [1782969895.720861367] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9623 points=2303
+[pcd_ndt_localizer-1] [WARN] [1782969896.803150703] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.9893 points=2256
+[pcd_ndt_localizer-1] [WARN] [1782969897.805650303] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2096 points=2329
+[pcd_ndt_localizer-1] [WARN] [1782969898.908943692] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3323 points=2330
+[pcd_ndt_localizer-1] [WARN] [1782969899.926812631] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5619 points=2280
+[pcd_ndt_localizer-1] [WARN] [1782969901.007253938] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1720 points=2329
+[pcd_ndt_localizer-1] [WARN] [1782969902.104907525] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2848 points=2304
+[pcd_ndt_localizer-1] [WARN] [1782969903.106047400] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=4.6471 points=2291
+[pcd_ndt_localizer-1] [WARN] [1782969904.114919882] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.0460 points=2307
+[pcd_ndt_localizer-1] [WARN] [1782969905.205708826] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3707 points=2344
+[pcd_ndt_localizer-1] [WARN] [1782969906.300924637] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1524 points=2257
+[pcd_ndt_localizer-1] [WARN] [1782969907.403342989] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.1162 points=2340
+[pcd_ndt_localizer-1] [WARN] [1782969908.404079139] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.3396 points=2281
+[pcd_ndt_localizer-1] [WARN] [1782969909.504785434] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.2748 points=2338
+[pcd_ndt_localizer-1] [WARN] [1782969910.622844078] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=5.5450 points=2313
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

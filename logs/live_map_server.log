@@ -1,0 +1,26 @@
+[INFO] [1785823769.634396600] [map_server]: 
+	map_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1785823769.634752196] [map_server]: Creating
+[INFO] [1785823773.700543284] [map_server]: Configuring
+[INFO] [1785823773.700828702] [map_io]: Loading yaml file: /home/seeed/ros2/maps/replay/fastlio_map_manual_002_level_nav.yaml
+[INFO] [1785823773.701545879] [map_io]: resolution: 0.05
+[INFO] [1785823773.701595480] [map_io]: origin[0]: -20.7788
+[INFO] [1785823773.701617945] [map_io]: origin[1]: -17.616
+[INFO] [1785823773.701634298] [map_io]: origin[2]: 0
+[INFO] [1785823773.701649850] [map_io]: free_thresh: 0.25
+[INFO] [1785823773.701664763] [map_io]: occupied_thresh: 0.65
+[INFO] [1785823773.701681659] [map_io]: mode: trinary
+[INFO] [1785823773.701699388] [map_io]: negate: 0
+[INFO] [1785823773.702331954] [map_io]: Loading image_file: /home/seeed/ros2/maps/replay/fastlio_map_manual_002_level_nav.yaml.pgm
+[INFO] [1785823774.036546583] [map_io]: Read map /home/seeed/ros2/maps/replay/fastlio_map_manual_002_level_nav.yaml.pgm: 1431 X 1042 map @ 0.05 m/cell
+[INFO] [1785823778.590881878] [map_server]: Activating
+[INFO] [1785823778.592645715] [map_server]: Creating bond (map_server) to lifecycle manager.
+[INFO] [1785825199.200656907] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1785825199.200930356] [map_server]: Running Nav2 LifecycleNode rcl preshutdown (map_server)
+[INFO] [1785825199.201160732] [map_server]: Deactivating
+[INFO] [1785825199.201257152] [map_server]: Destroying bond (map_server) to lifecycle manager.
+[INFO] [1785825199.211598953] [map_server]: Cleaning up
+[INFO] [1785825199.212009783] [map_server]: Destroying bond (map_server) to lifecycle manager.
+[INFO] [1785825199.215880958] [map_server]: Destroying

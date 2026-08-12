@@ -1,0 +1,5 @@
+[INFO] [1786513177.024362366] [nav2_manual_lifecycle]: smoother_server: current unconfigured [1]
+[INFO] [1786513177.025302689] [nav2_manual_lifecycle]: smoother_server: configure
+[INFO] [1786513177.155702466] [nav2_manual_lifecycle]: smoother_server: waiting 4.0s for TF and map callbacks before activation
+[INFO] [1786513181.159910378] [nav2_manual_lifecycle]: smoother_server: activate
+[INFO] [1786513181.217350750] [nav2_manual_lifecycle]: smoother_server: active [3]

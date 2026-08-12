@@ -1,0 +1,8 @@
+[INFO] [launch]: All log files can be found below /home/seeed/.ros/log/2026-07-15-14-47-07-561843-seeed-19981
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [20016]
+[fastlio_mapping-1] [INFO] [1784098027.814670092] [laser_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] [INFO] [1784098027.815056409] [laser_mapping]: LiDAR exclusion box enabled=true x=[-0.500,-0.020] y=[-0.220,0.220] z=[-0.050,0.450]
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] ~~~~/home/seeed/ros2/ws/src/slam/fast_lio/ file opened
+[fastlio_mapping-1] [INFO] [1784098027.828210956] [laser_mapping]: Node init finished.

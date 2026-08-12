@@ -1,0 +1,624 @@
+Waiting for an action server to become available...
+Sending goal:
+     pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: map
+  pose:
+    position:
+      x: -0.3725
+      y: -0.263
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.398
+      w: 0.917
+behavior_tree: ''
+
+Goal accepted with ID: 9e48fed15b81452598e60d6f76860beb
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 0
+  nanosec: 311852011
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 4
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 0
+  nanosec: 516231835
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 4
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 0
+  nanosec: 720398787
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 4
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 0
+  nanosec: 925653808
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 4
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 1
+  nanosec: 129724725
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 4
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 1
+  nanosec: 334103684
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 4
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 1
+  nanosec: 538926211
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 4
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 1
+  nanosec: 743973577
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 4
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 1
+  nanosec: 948801640
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 4
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 2
+  nanosec: 153213784
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 4
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 2
+  nanosec: 358035479
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 4
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 2
+  nanosec: 770571575
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 8
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 2
+  nanosec: 975066346
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 8
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 3
+  nanosec: 178710496
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 8
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 3
+  nanosec: 382300916
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 8
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 3
+  nanosec: 588975634
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 8
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 3
+  nanosec: 793343297
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 8
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 3
+  nanosec: 997663343
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 8
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 4
+  nanosec: 201798518
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 8
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 4
+  nanosec: 406171557
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 8
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 4
+  nanosec: 610527955
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 8
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 4
+  nanosec: 814907619
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 8
+distance_remaining: 0.0
+
+Feedback:
+    current_pose:
+  header:
+    stamp:
+      sec: 0
+      nanosec: 0
+    frame_id: base_link
+  pose:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+navigation_time:
+  sec: 5
+  nanosec: 224573408
+estimated_time_remaining:
+  sec: 0
+  nanosec: 0
+number_of_recoveries: 9
+distance_remaining: 0.0
+
+Result:
+    result: {}
+
+Goal finished with status: ABORTED

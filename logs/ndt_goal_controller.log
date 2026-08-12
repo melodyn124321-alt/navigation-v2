@@ -1,0 +1,578 @@
+[INFO] [1783904203.070688665] [ndt_goal_controller]: ready: /goal_pose -> /cmd_vel_nav_smoothed, limits=(0.08 m/s, 0.25 rad/s)
+[INFO] [1783904275.623909771] [ndt_goal_controller]: goal accepted x=0.41 y=1.24
+[INFO] [1783904275.643113274] [ndt_goal_controller]: tracking distance=0.94 heading_error=-0.41
+[INFO] [1783904275.732903665] [ndt_goal_controller]: tracking distance=0.95 heading_error=-0.41
+[INFO] [1783904275.782937884] [ndt_goal_controller]: tracking distance=0.95 heading_error=-0.42
+[INFO] [1783904275.832969574] [ndt_goal_controller]: tracking distance=0.94 heading_error=-0.41
+[INFO] [1783904276.132898301] [ndt_goal_controller]: tracking distance=0.95 heading_error=-0.41
+[INFO] [1783904277.083082138] [ndt_goal_controller]: tracking distance=0.94 heading_error=-0.41
+[INFO] [1783904277.133390926] [ndt_goal_controller]: tracking distance=0.94 heading_error=-0.42
+[INFO] [1783904277.333096586] [ndt_goal_controller]: tracking distance=0.94 heading_error=-0.41
+[INFO] [1783904277.383413375] [ndt_goal_controller]: tracking distance=0.95 heading_error=-0.41
+[INFO] [1783904277.433085437] [ndt_goal_controller]: tracking distance=0.94 heading_error=-0.41
+[INFO] [1783904277.536253436] [ndt_goal_controller]: tracking distance=0.95 heading_error=-0.41
+[INFO] [1783904277.682829284] [ndt_goal_controller]: tracking distance=0.94 heading_error=-0.42
+[INFO] [1783904277.732817966] [ndt_goal_controller]: tracking distance=0.97 heading_error=-0.44
+[INFO] [1783904278.182819844] [ndt_goal_controller]: tracking distance=0.97 heading_error=-0.40
+[INFO] [1783904278.232846831] [ndt_goal_controller]: tracking distance=0.95 heading_error=-0.37
+[INFO] [1783904278.332806976] [ndt_goal_controller]: tracking distance=0.96 heading_error=-0.38
+[INFO] [1783904278.382669221] [ndt_goal_controller]: tracking distance=0.95 heading_error=-0.37
+[INFO] [1783904278.432749106] [ndt_goal_controller]: tracking distance=1.04 heading_error=-0.39
+[INFO] [1783904278.532802343] [ndt_goal_controller]: tracking distance=1.10 heading_error=-0.28
+[INFO] [1783904278.582756591] [ndt_goal_controller]: tracking distance=1.02 heading_error=-0.24
+[INFO] [1783904278.634550902] [ndt_goal_controller]: tracking distance=0.98 heading_error=-0.21
+[INFO] [1783904278.739695448] [ndt_goal_controller]: tracking distance=0.97 heading_error=-0.19
+[INFO] [1783904278.832810465] [ndt_goal_controller]: tracking distance=0.95 heading_error=-0.16
+[INFO] [1783904278.932826196] [ndt_goal_controller]: tracking distance=0.96 heading_error=-0.14
+[INFO] [1783904279.033110129] [ndt_goal_controller]: tracking distance=0.96 heading_error=-0.12
+[INFO] [1783904279.835188850] [ndt_goal_controller]: tracking distance=0.95 heading_error=-0.08
+[INFO] [1783904279.936343244] [ndt_goal_controller]: tracking distance=0.96 heading_error=-0.04
+[INFO] [1783904279.982809469] [ndt_goal_controller]: tracking distance=0.96 heading_error=-0.06
+[INFO] [1783904280.035655528] [ndt_goal_controller]: tracking distance=0.96 heading_error=-0.01
+[INFO] [1783904280.085807191] [ndt_goal_controller]: tracking distance=0.94 heading_error=-0.02
+[INFO] [1783904280.134977220] [ndt_goal_controller]: tracking distance=0.95 heading_error=0.03
+[INFO] [1783904280.184883082] [ndt_goal_controller]: tracking distance=0.94 heading_error=0.02
+[INFO] [1783904280.233694571] [ndt_goal_controller]: tracking distance=1.01 heading_error=0.09
+[INFO] [1783904280.332831425] [ndt_goal_controller]: tracking distance=1.04 heading_error=0.13
+[INFO] [1783904280.382315609] [ndt_goal_controller]: tracking distance=1.01 heading_error=0.15
+[INFO] [1783904280.532779430] [ndt_goal_controller]: tracking distance=0.99 heading_error=0.16
+[INFO] [1783904280.582667436] [ndt_goal_controller]: tracking distance=0.98 heading_error=0.15
+[INFO] [1783904280.732597222] [ndt_goal_controller]: tracking distance=0.97 heading_error=0.12
+[INFO] [1783904280.832643739] [ndt_goal_controller]: tracking distance=0.96 heading_error=0.14
+[INFO] [1783904280.932810772] [ndt_goal_controller]: tracking distance=0.95 heading_error=0.13
+[INFO] [1783904280.982634871] [ndt_goal_controller]: tracking distance=0.94 heading_error=0.13
+[INFO] [1783904281.082617546] [ndt_goal_controller]: tracking distance=0.95 heading_error=0.13
+[INFO] [1783904281.232938545] [ndt_goal_controller]: tracking distance=0.94 heading_error=0.15
+[INFO] [1783904281.382690182] [ndt_goal_controller]: tracking distance=0.92 heading_error=0.17
+[INFO] [1783904282.132886716] [ndt_goal_controller]: tracking distance=0.92 heading_error=0.19
+[INFO] [1783904282.185744712] [ndt_goal_controller]: tracking distance=0.92 heading_error=0.18
+[INFO] [1783904282.332866402] [ndt_goal_controller]: tracking distance=0.90 heading_error=0.19
+[INFO] [1783904282.382860460] [ndt_goal_controller]: tracking distance=0.91 heading_error=0.19
+[INFO] [1783904282.432910359] [ndt_goal_controller]: tracking distance=0.92 heading_error=0.29
+[INFO] [1783904282.482845182] [ndt_goal_controller]: tracking distance=0.93 heading_error=0.21
+[INFO] [1783904282.532832071] [ndt_goal_controller]: tracking distance=0.87 heading_error=0.17
+[INFO] [1783904282.632549553] [ndt_goal_controller]: tracking distance=0.90 heading_error=0.15
+[INFO] [1783904282.685015855] [ndt_goal_controller]: tracking distance=0.89 heading_error=0.15
+[INFO] [1783904282.782582383] [ndt_goal_controller]: tracking distance=0.79 heading_error=0.14
+[INFO] [1783904283.082800944] [ndt_goal_controller]: tracking distance=0.76 heading_error=0.15
+[INFO] [1783904283.182800547] [ndt_goal_controller]: tracking distance=0.79 heading_error=0.16
+[INFO] [1783904283.232837998] [ndt_goal_controller]: tracking distance=0.85 heading_error=0.15
+[INFO] [1783904283.282641329] [ndt_goal_controller]: tracking distance=0.81 heading_error=0.13
+[INFO] [1783904283.532612576] [ndt_goal_controller]: tracking distance=0.78 heading_error=0.14
+[INFO] [1783904283.632786873] [ndt_goal_controller]: tracking distance=0.79 heading_error=0.13
+[INFO] [1783904283.683269331] [ndt_goal_controller]: tracking distance=0.84 heading_error=0.05
+[INFO] [1783904283.832856482] [ndt_goal_controller]: tracking distance=0.87 heading_error=0.10
+[INFO] [1783904283.882777481] [ndt_goal_controller]: tracking distance=0.84 heading_error=0.12
+[INFO] [1783904284.132692758] [ndt_goal_controller]: tracking distance=0.85 heading_error=0.10
+[INFO] [1783904284.232854862] [ndt_goal_controller]: tracking distance=0.85 heading_error=0.08
+[INFO] [1783904284.332625818] [ndt_goal_controller]: tracking distance=0.88 heading_error=0.08
+[INFO] [1783904284.432694191] [ndt_goal_controller]: tracking distance=0.87 heading_error=0.09
+[INFO] [1783904285.332848065] [ndt_goal_controller]: tracking distance=0.86 heading_error=0.13
+[INFO] [1783904285.382806281] [ndt_goal_controller]: tracking distance=0.84 heading_error=0.03
+[INFO] [1783904285.432706608] [ndt_goal_controller]: tracking distance=0.82 heading_error=0.06
+[INFO] [1783904285.532846984] [ndt_goal_controller]: tracking distance=0.82 heading_error=0.02
+[INFO] [1783904285.582780143] [ndt_goal_controller]: tracking distance=0.80 heading_error=-0.01
+[INFO] [1783904285.632630259] [ndt_goal_controller]: tracking distance=0.78 heading_error=-0.02
+[INFO] [1783904285.682637533] [ndt_goal_controller]: tracking distance=0.78 heading_error=-0.00
+[INFO] [1783904285.782732340] [ndt_goal_controller]: tracking distance=0.77 heading_error=-0.03
+[INFO] [1783904285.832751326] [ndt_goal_controller]: tracking distance=0.75 heading_error=-0.02
+[INFO] [1783904285.882715558] [ndt_goal_controller]: tracking distance=0.69 heading_error=-0.08
+[INFO] [1783904286.082804432] [ndt_goal_controller]: tracking distance=0.71 heading_error=-0.03
+[INFO] [1783904286.183323157] [ndt_goal_controller]: tracking distance=0.75 heading_error=0.01
+[INFO] [1783904286.332669499] [ndt_goal_controller]: tracking distance=0.72 heading_error=0.04
+[INFO] [1783904286.432787186] [ndt_goal_controller]: tracking distance=0.72 heading_error=-0.00
+[INFO] [1783904286.732771435] [ndt_goal_controller]: tracking distance=0.73 heading_error=-0.02
+[INFO] [1783904286.782771189] [ndt_goal_controller]: tracking distance=0.72 heading_error=-0.01
+[INFO] [1783904286.882660548] [ndt_goal_controller]: tracking distance=0.73 heading_error=-0.01
+[INFO] [1783904286.932780882] [ndt_goal_controller]: tracking distance=0.68 heading_error=-0.08
+[INFO] [1783904287.032847112] [ndt_goal_controller]: tracking distance=0.68 heading_error=-0.07
+[INFO] [1783904287.132830074] [ndt_goal_controller]: tracking distance=0.69 heading_error=-0.03
+[INFO] [1783904287.283063903] [ndt_goal_controller]: tracking distance=0.67 heading_error=-0.02
+[INFO] [1783904287.382831050] [ndt_goal_controller]: tracking distance=0.67 heading_error=-0.04
+[INFO] [1783904288.133023521] [ndt_goal_controller]: tracking distance=0.65 heading_error=-0.03
+[INFO] [1783904288.232867279] [ndt_goal_controller]: tracking distance=0.64 heading_error=-0.03
+[INFO] [1783904288.732842094] [ndt_goal_controller]: tracking distance=0.56 heading_error=-0.08
+[INFO] [1783904288.832813888] [ndt_goal_controller]: tracking distance=0.57 heading_error=-0.04
+[INFO] [1783904288.882799369] [ndt_goal_controller]: tracking distance=0.59 heading_error=-0.02
+[INFO] [1783904288.932840276] [ndt_goal_controller]: tracking distance=0.57 heading_error=-0.01
+[INFO] [1783904288.982931809] [ndt_goal_controller]: tracking distance=0.57 heading_error=-0.02
+[INFO] [1783904289.032835047] [ndt_goal_controller]: tracking distance=0.57 heading_error=-0.01
+[INFO] [1783904289.082677131] [ndt_goal_controller]: tracking distance=0.54 heading_error=0.03
+[INFO] [1783904289.132771352] [ndt_goal_controller]: tracking distance=0.54 heading_error=0.01
+[INFO] [1783904289.182749249] [ndt_goal_controller]: tracking distance=0.54 heading_error=-0.01
+[INFO] [1783904289.232630246] [ndt_goal_controller]: tracking distance=0.54 heading_error=0.00
+[INFO] [1783904289.284995745] [ndt_goal_controller]: tracking distance=0.53 heading_error=0.00
+[INFO] [1783904289.382738631] [ndt_goal_controller]: tracking distance=0.48 heading_error=-0.05
+[INFO] [1783904289.635111496] [ndt_goal_controller]: tracking distance=0.48 heading_error=-0.00
+[INFO] [1783904289.684470491] [ndt_goal_controller]: tracking distance=0.49 heading_error=0.00
+[INFO] [1783904289.734838034] [ndt_goal_controller]: tracking distance=0.49 heading_error=0.04
+[INFO] [1783904289.932823955] [ndt_goal_controller]: tracking distance=0.48 heading_error=0.04
+[INFO] [1783904289.983412465] [ndt_goal_controller]: tracking distance=0.48 heading_error=0.02
+[INFO] [1783904290.133110819] [ndt_goal_controller]: tracking distance=0.47 heading_error=0.03
+[INFO] [1783904290.182487832] [ndt_goal_controller]: tracking distance=0.46 heading_error=0.05
+[INFO] [1783904290.333076745] [ndt_goal_controller]: tracking distance=0.45 heading_error=0.06
+[INFO] [1783904290.633247816] [ndt_goal_controller]: tracking distance=0.44 heading_error=0.09
+[INFO] [1783904291.283023165] [ndt_goal_controller]: tracking distance=0.41 heading_error=0.11
+[INFO] [1783904291.383678343] [ndt_goal_controller]: tracking distance=0.40 heading_error=0.15
+[INFO] [1783904291.433593037] [ndt_goal_controller]: tracking distance=0.42 heading_error=0.08
+[INFO] [1783904291.532982124] [ndt_goal_controller]: tracking distance=0.38 heading_error=0.10
+[INFO] [1783904291.632954558] [ndt_goal_controller]: tracking distance=0.37 heading_error=0.08
+[INFO] [1783904291.732942865] [ndt_goal_controller]: tracking distance=0.36 heading_error=0.09
+[INFO] [1783904291.782712467] [ndt_goal_controller]: tracking distance=0.35 heading_error=0.10
+[INFO] [1783904291.982849918] [ndt_goal_controller]: tracking distance=0.33 heading_error=0.07
+[INFO] [1783904292.083388355] [ndt_goal_controller]: tracking distance=0.33 heading_error=0.09
+[INFO] [1783904292.233247291] [ndt_goal_controller]: tracking distance=0.31 heading_error=0.10
+[INFO] [1783904292.333134506] [ndt_goal_controller]: tracking distance=0.31 heading_error=0.11
+[INFO] [1783904292.434061213] [ndt_goal_controller]: tracking distance=0.30 heading_error=0.11
+[INFO] [1783904292.536022099] [ndt_goal_controller]: tracking distance=0.29 heading_error=0.15
+[INFO] [1783904292.734909940] [ndt_goal_controller]: tracking distance=0.28 heading_error=0.21
+[INFO] [1783904292.784384619] [ndt_goal_controller]: tracking distance=0.28 heading_error=0.19
+[INFO] [1783904292.884615911] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.17
+[INFO] [1783904293.232923632] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.19
+[INFO] [1783904293.332901474] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.18
+[INFO] [1783904293.482877150] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.19
+[INFO] [1783904293.582919187] [ndt_goal_controller]: tracking distance=0.24 heading_error=0.19
+[INFO] [1783904293.682703167] [ndt_goal_controller]: tracking distance=0.22 heading_error=0.24
+[INFO] [1783904293.732931600] [ndt_goal_controller]: tracking distance=0.22 heading_error=0.26
+[INFO] [1783904293.882679908] [ndt_goal_controller]: tracking distance=0.21 heading_error=0.28
+[INFO] [1783904293.932861684] [ndt_goal_controller]: tracking distance=0.21 heading_error=0.27
+[INFO] [1783904294.035782251] [ndt_goal_controller]: tracking distance=0.19 heading_error=0.36
+[INFO] [1783904294.132736342] [ndt_goal_controller]: tracking distance=0.20 heading_error=0.31
+[INFO] [1783904295.032913545] [ndt_goal_controller]: tracking distance=0.19 heading_error=0.30
+[INFO] [1783904295.082740749] [ndt_goal_controller]: tracking distance=0.18 heading_error=0.34
+[INFO] [1783904295.182679518] [ndt_goal_controller]: tracking distance=0.18 heading_error=0.37
+[INFO] [1783904295.234570504] [ndt_goal_controller]: tracking distance=0.18 heading_error=0.33
+[INFO] [1783904295.283696884] [ndt_goal_controller]: tracking distance=0.19 heading_error=0.29
+[INFO] [1783904295.382612194] [ndt_goal_controller]: tracking distance=0.18 heading_error=0.35
+[INFO] [1783904295.432552330] [ndt_goal_controller]: tracking distance=0.18 heading_error=0.33
+[INFO] [1783904295.482522098] [ndt_goal_controller]: tracking distance=0.20 heading_error=0.24
+[INFO] [1783904295.682719423] [ndt_goal_controller]: tracking distance=0.18 heading_error=0.26
+[INFO] [1783904295.732742122] [ndt_goal_controller]: rotating to target distance=0.19 heading_error=0.47
+[INFO] [1783904295.782607951] [ndt_goal_controller]: tracking distance=0.19 heading_error=0.35
+[INFO] [1783904295.882634659] [ndt_goal_controller]: tracking distance=0.18 heading_error=0.34
+[INFO] [1783904296.032548221] [ndt_goal_controller]: tracking distance=0.16 heading_error=0.28
+[INFO] [1783904296.132586257] [ndt_goal_controller]: tracking distance=0.17 heading_error=0.25
+[INFO] [1783904296.332570455] [ndt_goal_controller]: tracking distance=0.20 heading_error=0.37
+[INFO] [1783904297.182792642] [ndt_goal_controller]: tracking distance=0.21 heading_error=0.34
+[INFO] [1783904297.232911887] [ndt_goal_controller]: tracking distance=0.21 heading_error=0.35
+[INFO] [1783904297.282783445] [ndt_goal_controller]: rotating to target distance=0.29 heading_error=0.58
+[INFO] [1783904297.382615618] [ndt_goal_controller]: rotating to target distance=0.26 heading_error=0.52
+[INFO] [1783904297.482604789] [ndt_goal_controller]: rotating to target distance=0.27 heading_error=0.52
+[INFO] [1783904297.534362522] [ndt_goal_controller]: tracking distance=0.27 heading_error=0.19
+[INFO] [1783904297.585797845] [ndt_goal_controller]: tracking distance=0.24 heading_error=0.22
+[INFO] [1783904297.682359923] [ndt_goal_controller]: rotating to target distance=0.29 heading_error=0.45
+[INFO] [1783904297.782758036] [ndt_goal_controller]: tracking distance=0.29 heading_error=0.40
+[INFO] [1783904297.882459613] [ndt_goal_controller]: rotating to target distance=0.26 heading_error=0.53
+[INFO] [1783904297.982838493] [ndt_goal_controller]: rotating to target distance=0.27 heading_error=0.51
+[INFO] [1783904298.032850567] [ndt_goal_controller]: tracking distance=0.29 heading_error=0.17
+[INFO] [1783904298.182697022] [ndt_goal_controller]: tracking distance=0.29 heading_error=0.21
+[INFO] [1783904298.284352010] [ndt_goal_controller]: tracking distance=0.30 heading_error=0.27
+[INFO] [1783904298.332731548] [ndt_goal_controller]: tracking distance=0.24 heading_error=0.23
+[INFO] [1783904298.432583242] [ndt_goal_controller]: tracking distance=0.22 heading_error=0.33
+[INFO] [1783904298.482552403] [ndt_goal_controller]: rotating to target distance=0.25 heading_error=0.51
+[INFO] [1783904298.682687134] [ndt_goal_controller]: tracking distance=0.29 heading_error=0.08
+[INFO] [1783904298.732570724] [ndt_goal_controller]: tracking distance=0.29 heading_error=0.06
+[INFO] [1783904299.034851019] [ndt_goal_controller]: tracking distance=0.27 heading_error=0.03
+[INFO] [1783904299.082750861] [ndt_goal_controller]: tracking distance=0.23 heading_error=0.26
+[INFO] [1783904299.135598712] [ndt_goal_controller]: tracking distance=0.24 heading_error=0.31
+[INFO] [1783904299.184500060] [ndt_goal_controller]: tracking distance=0.24 heading_error=0.18
+[INFO] [1783904299.235923286] [ndt_goal_controller]: tracking distance=0.24 heading_error=0.27
+[INFO] [1783904299.284951742] [ndt_goal_controller]: tracking distance=0.24 heading_error=0.23
+[INFO] [1783904299.535851405] [ndt_goal_controller]: tracking distance=0.25 heading_error=0.28
+[INFO] [1783904299.682851043] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.33
+[INFO] [1783904299.782557773] [ndt_goal_controller]: tracking distance=0.24 heading_error=0.35
+[INFO] [1783904299.933828277] [ndt_goal_controller]: tracking distance=0.23 heading_error=0.18
+[INFO] [1783904299.983368111] [ndt_goal_controller]: tracking distance=0.24 heading_error=0.22
+[INFO] [1783904300.082663626] [ndt_goal_controller]: tracking distance=0.24 heading_error=0.40
+[INFO] [1783904300.382769543] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.20
+[INFO] [1783904300.432758384] [ndt_goal_controller]: tracking distance=0.25 heading_error=0.27
+[INFO] [1783904300.532785796] [ndt_goal_controller]: tracking distance=0.25 heading_error=0.29
+[INFO] [1783904300.633056129] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.21
+[INFO] [1783904300.832666874] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.19
+[INFO] [1783904300.932691022] [ndt_goal_controller]: tracking distance=0.25 heading_error=0.20
+[INFO] [1783904300.986234928] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.18
+[INFO] [1783904301.132792856] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.20
+[INFO] [1783904301.182651997] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.19
+[INFO] [1783904301.782973083] [ndt_goal_controller]: tracking distance=0.25 heading_error=0.19
+[INFO] [1783904301.832983429] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.19
+[INFO] [1783904302.132682708] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.18
+[INFO] [1783904302.184773797] [ndt_goal_controller]: tracking distance=0.27 heading_error=0.19
+[INFO] [1783904302.235090489] [ndt_goal_controller]: tracking distance=0.14 heading_error=0.10
+[INFO] [1783904302.283592496] [ndt_goal_controller]: tracking distance=0.20 heading_error=0.27
+[INFO] [1783904302.332776061] [ndt_goal_controller]: tracking distance=0.20 heading_error=0.14
+[INFO] [1783904302.382711749] [ndt_goal_controller]: tracking distance=0.22 heading_error=0.25
+[INFO] [1783904302.432471046] [ndt_goal_controller]: tracking distance=0.23 heading_error=0.20
+[INFO] [1783904302.534750215] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.20
+[INFO] [1783904302.582670954] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.16
+[INFO] [1783904303.382599553] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.11
+[INFO] [1783904303.482880382] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.12
+[INFO] [1783904303.635501172] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.11
+[INFO] [1783904303.734625225] [ndt_goal_controller]: tracking distance=0.30 heading_error=-0.15
+[INFO] [1783904303.832698235] [ndt_goal_controller]: tracking distance=0.27 heading_error=-0.11
+[INFO] [1783904303.882633378] [ndt_goal_controller]: tracking distance=0.24 heading_error=0.10
+[INFO] [1783904303.932699118] [ndt_goal_controller]: tracking distance=0.24 heading_error=0.16
+[INFO] [1783904303.982767738] [ndt_goal_controller]: tracking distance=0.27 heading_error=0.14
+[INFO] [1783904304.032789860] [ndt_goal_controller]: tracking distance=0.27 heading_error=0.13
+[INFO] [1783904304.732829612] [ndt_goal_controller]: tracking distance=0.27 heading_error=0.15
+[INFO] [1783904304.782752531] [ndt_goal_controller]: tracking distance=0.27 heading_error=0.13
+[INFO] [1783904304.882776359] [ndt_goal_controller]: tracking distance=0.27 heading_error=0.14
+[INFO] [1783904305.032547740] [ndt_goal_controller]: tracking distance=0.27 heading_error=0.12
+[INFO] [1783904305.082771469] [ndt_goal_controller]: tracking distance=0.27 heading_error=0.13
+[INFO] [1783904305.233563941] [ndt_goal_controller]: tracking distance=0.27 heading_error=0.14
+[INFO] [1783904305.282784724] [ndt_goal_controller]: tracking distance=0.31 heading_error=-0.08
+[INFO] [1783904305.382758918] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.09
+[INFO] [1783904305.432716558] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.12
+[INFO] [1783904305.482702871] [ndt_goal_controller]: tracking distance=0.27 heading_error=0.07
+[INFO] [1783904305.533063565] [ndt_goal_controller]: tracking distance=0.27 heading_error=0.10
+[INFO] [1783904305.582540517] [ndt_goal_controller]: tracking distance=0.25 heading_error=0.12
+[INFO] [1783904305.832689914] [ndt_goal_controller]: tracking distance=0.26 heading_error=0.10
+[INFO] [1783904306.084388612] [ndt_goal_controller]: tracking distance=0.24 heading_error=0.18
+[INFO] [1783904306.382794439] [ndt_goal_controller]: tracking distance=0.23 heading_error=0.06
+[INFO] [1783904306.482679255] [ndt_goal_controller]: tracking distance=0.27 heading_error=-0.04
+[INFO] [1783904306.586103839] [ndt_goal_controller]: tracking distance=0.23 heading_error=-0.05
+[INFO] [1783904306.632766006] [ndt_goal_controller]: tracking distance=0.25 heading_error=0.27
+[INFO] [1783904306.682529496] [ndt_goal_controller]: tracking distance=0.23 heading_error=0.17
+[INFO] [1783904306.782637903] [ndt_goal_controller]: tracking distance=0.22 heading_error=0.10
+[INFO] [1783904307.082737420] [ndt_goal_controller]: tracking distance=0.21 heading_error=-0.04
+[INFO] [1783904307.134776187] [ndt_goal_controller]: tracking distance=0.22 heading_error=0.02
+[INFO] [1783904307.634484273] [ndt_goal_controller]: tracking distance=0.21 heading_error=0.08
+[INFO] [1783904307.732766153] [ndt_goal_controller]: tracking distance=0.21 heading_error=0.11
+[INFO] [1783904308.232766409] [ndt_goal_controller]: tracking distance=0.21 heading_error=0.10
+[INFO] [1783904308.282637135] [ndt_goal_controller]: tracking distance=0.21 heading_error=0.41
+[INFO] [1783904308.332664281] [ndt_goal_controller]: tracking distance=0.17 heading_error=0.19
+[INFO] [1783904308.382642242] [ndt_goal_controller]: tracking distance=0.15 heading_error=0.22
+[INFO] [1783904308.482937567] [ndt_goal_controller]: tracking distance=0.15 heading_error=0.20
+[INFO] [1783904309.032593821] [ndt_goal_controller]: tracking distance=0.14 heading_error=-0.03
+[INFO] [1783904309.132586480] [ndt_goal_controller]: tracking distance=0.15 heading_error=0.17
+[INFO] [1783904309.182565401] [ndt_goal_controller]: tracking distance=0.15 heading_error=0.21
+[INFO] [1783904309.282359749] [ndt_goal_controller]: tracking distance=0.15 heading_error=0.20
+[INFO] [1783904309.382426907] [ndt_goal_controller]: tracking distance=0.20 heading_error=-0.05
+[INFO] [1783904309.432436645] [ndt_goal_controller]: tracking distance=0.17 heading_error=0.17
+[INFO] [1783904309.482200582] [ndt_goal_controller]: tracking distance=0.16 heading_error=0.36
+[INFO] [1783904309.932271199] [ndt_goal_controller]: rotating to target distance=0.13 heading_error=0.45
+[INFO] [1783904309.982198118] [ndt_goal_controller]: tracking distance=0.12 heading_error=0.40
+[INFO] [1783904310.232271448] [ndt_goal_controller]: rotating to target distance=0.12 heading_error=0.50
+[INFO] [1783904310.282182751] [ndt_goal_controller]: rotating to target distance=0.12 heading_error=0.52
+[INFO] [1783904310.332201705] [ndt_goal_controller]: rotating to target distance=0.12 heading_error=0.48
+[INFO] [1783904310.536095828] [ndt_goal_controller]: rotating to target distance=0.12 heading_error=0.50
+[INFO] [1783904310.584255103] [ndt_goal_controller]: rotating to target distance=0.12 heading_error=0.49
+[INFO] [1783904310.682808161] [ndt_goal_controller]: rotating to target distance=0.13 heading_error=1.43
+[INFO] [1783904310.782788884] [ndt_goal_controller]: tracking distance=0.13 heading_error=-0.03
+[INFO] [1783904310.832694074] [ndt_goal_controller]: tracking distance=0.12 heading_error=0.42
+[INFO] [1783904310.934202401] [ndt_goal_controller]: rotating to target distance=0.11 heading_error=0.54
+[INFO] [1783904310.982595315] [ndt_goal_controller]: tracking distance=0.11 heading_error=0.45
+[INFO] [1783904311.282781779] [ndt_goal_controller]: tracking distance=0.10 heading_error=0.43
+[INFO] [1783904311.382692547] [ndt_goal_controller]: rotating to target distance=0.10 heading_error=0.46
+[INFO] [1783904311.432644555] [ndt_goal_controller]: rotating to target distance=0.10 heading_error=0.45
+[INFO] [1783904311.682680925] [ndt_goal_controller]: tracking distance=0.10 heading_error=0.43
+[INFO] [1783904311.732742088] [ndt_goal_controller]: rotating to target distance=0.15 heading_error=1.07
+[INFO] [1783904311.782693040] [ndt_goal_controller]: tracking distance=0.16 heading_error=-0.22
+[INFO] [1783904311.832782621] [ndt_goal_controller]: tracking distance=0.15 heading_error=-0.20
+[INFO] [1783904311.882713764] [ndt_goal_controller]: tracking distance=0.13 heading_error=-0.19
+[INFO] [1783904311.932750511] [ndt_goal_controller]: rotating to target distance=0.13 heading_error=0.56
+[INFO] [1783904311.982641781] [ndt_goal_controller]: tracking distance=0.18 heading_error=0.07
+[INFO] [1783904312.082649704] [ndt_goal_controller]: tracking distance=0.18 heading_error=0.10
+[INFO] [1783904312.532918472] [ndt_goal_controller]: rotating to target distance=0.13 heading_error=0.91
+[INFO] [1783904312.585746770] [ndt_goal_controller]: rotating to target distance=0.09 heading_error=0.84
+[INFO] [1783904312.632801463] [ndt_goal_controller]: rotating to target distance=0.17 heading_error=0.93
+[INFO] [1783904312.682806433] [ndt_goal_controller]: rotating to target distance=0.13 heading_error=0.67
+[INFO] [1783904312.732664998] [ndt_goal_controller]: rotating to target distance=0.14 heading_error=0.76
+[INFO] [1783904313.032998283] [ndt_goal_controller]: rotating to target distance=0.27 heading_error=1.30
+[INFO] [1783904313.132765942] [ndt_goal_controller]: rotating to target distance=0.27 heading_error=1.24
+[INFO] [1783904313.182783456] [ndt_goal_controller]: rotating to target distance=0.19 heading_error=1.05
+[INFO] [1783904313.232701543] [ndt_goal_controller]: rotating to target distance=0.15 heading_error=0.68
+[INFO] [1783904313.282642094] [ndt_goal_controller]: rotating to target distance=0.19 heading_error=0.81
+[INFO] [1783904313.382671043] [ndt_goal_controller]: rotating to target distance=0.18 heading_error=0.88
+[INFO] [1783904313.432623435] [ndt_goal_controller]: rotating to target distance=0.16 heading_error=0.82
+[INFO] [1783904313.833973125] [ndt_goal_controller]: rotating to target distance=0.15 heading_error=0.68
+[INFO] [1783904313.883125810] [ndt_goal_controller]: rotating to target distance=0.18 heading_error=0.81
+[INFO] [1783904313.932604490] [ndt_goal_controller]: rotating to target distance=0.17 heading_error=0.76
+[INFO] [1783904314.132808599] [ndt_goal_controller]: rotating to target distance=0.17 heading_error=0.77
+[INFO] [1783904314.183226191] [ndt_goal_controller]: rotating to target distance=0.09 heading_error=1.14
+[INFO] [1783904314.283471371] [ndt_goal_controller]: rotating to target distance=0.12 heading_error=2.94
+[INFO] [1783904314.335346548] [ndt_goal_controller]: rotating to target distance=0.09 heading_error=2.13
+[INFO] [1783904314.486677182] [ndt_goal_controller]: aligning final heading error=-2.54
+[INFO] [1783904314.534179923] [ndt_goal_controller]: aligning final heading error=-2.55
+[INFO] [1783904314.634232328] [ndt_goal_controller]: aligning final heading error=-2.56
+[INFO] [1783904314.682967046] [ndt_goal_controller]: aligning final heading error=-2.57
+[INFO] [1783904314.782831285] [ndt_goal_controller]: aligning final heading error=-2.58
+[INFO] [1783904314.932984247] [ndt_goal_controller]: aligning final heading error=-2.59
+[INFO] [1783904315.333517398] [ndt_goal_controller]: aligning final heading error=-2.60
+[INFO] [1783904315.383186644] [ndt_goal_controller]: aligning final heading error=-2.61
+[INFO] [1783904315.483006849] [ndt_goal_controller]: aligning final heading error=-2.62
+[INFO] [1783904315.533270196] [ndt_goal_controller]: aligning final heading error=-2.64
+[INFO] [1783904315.583453059] [ndt_goal_controller]: aligning final heading error=-2.66
+[INFO] [1783904315.633246342] [ndt_goal_controller]: aligning final heading error=-2.68
+[INFO] [1783904315.682993159] [ndt_goal_controller]: aligning final heading error=-2.70
+[INFO] [1783904315.733251417] [ndt_goal_controller]: aligning final heading error=-2.71
+[INFO] [1783904315.782966169] [ndt_goal_controller]: aligning final heading error=-2.72
+[INFO] [1783904315.833526198] [ndt_goal_controller]: aligning final heading error=-2.73
+[INFO] [1783904315.883003406] [ndt_goal_controller]: aligning final heading error=-2.74
+[INFO] [1783904315.983633814] [ndt_goal_controller]: aligning final heading error=-2.75
+[INFO] [1783904316.136895778] [ndt_goal_controller]: aligning final heading error=-2.78
+[INFO] [1783904316.183675518] [ndt_goal_controller]: aligning final heading error=-2.80
+[INFO] [1783904316.237624527] [ndt_goal_controller]: aligning final heading error=-2.83
+[INFO] [1783904316.283481035] [ndt_goal_controller]: aligning final heading error=-2.85
+[INFO] [1783904316.333438963] [ndt_goal_controller]: aligning final heading error=-2.86
+[INFO] [1783904316.383599298] [ndt_goal_controller]: aligning final heading error=-2.88
+[INFO] [1783904316.433126363] [ndt_goal_controller]: aligning final heading error=-2.90
+[INFO] [1783904316.482933406] [ndt_goal_controller]: aligning final heading error=-2.92
+[INFO] [1783904316.533388056] [ndt_goal_controller]: aligning final heading error=-2.93
+[INFO] [1783904316.582998900] [ndt_goal_controller]: aligning final heading error=-2.94
+[INFO] [1783904316.634715864] [ndt_goal_controller]: aligning final heading error=-2.93
+[INFO] [1783904316.733248409] [ndt_goal_controller]: aligning final heading error=-2.91
+[INFO] [1783904316.783180160] [ndt_goal_controller]: aligning final heading error=-2.90
+[INFO] [1783904316.832878432] [ndt_goal_controller]: aligning final heading error=-2.89
+[INFO] [1783904316.882887018] [ndt_goal_controller]: aligning final heading error=-2.88
+[INFO] [1783904316.932944949] [ndt_goal_controller]: aligning final heading error=-2.86
+[INFO] [1783904316.982771641] [ndt_goal_controller]: aligning final heading error=-2.84
+[INFO] [1783904317.032961097] [ndt_goal_controller]: aligning final heading error=-2.82
+[INFO] [1783904317.082982867] [ndt_goal_controller]: aligning final heading error=-2.81
+[INFO] [1783904317.133091233] [ndt_goal_controller]: aligning final heading error=-2.80
+[INFO] [1783904317.182705405] [ndt_goal_controller]: aligning final heading error=-2.79
+[INFO] [1783904317.235089144] [ndt_goal_controller]: aligning final heading error=-2.78
+[INFO] [1783904317.282819540] [ndt_goal_controller]: aligning final heading error=-2.77
+[INFO] [1783904317.332949922] [ndt_goal_controller]: aligning final heading error=-2.75
+[INFO] [1783904317.382914091] [ndt_goal_controller]: aligning final heading error=-2.74
+[INFO] [1783904317.432943061] [ndt_goal_controller]: aligning final heading error=-2.73
+[INFO] [1783904317.533095406] [ndt_goal_controller]: aligning final heading error=-2.72
+[INFO] [1783904317.632941051] [ndt_goal_controller]: aligning final heading error=-2.71
+[INFO] [1783904317.782834165] [ndt_goal_controller]: aligning final heading error=-2.69
+[INFO] [1783904317.834442805] [ndt_goal_controller]: aligning final heading error=-2.67
+[INFO] [1783904317.882905994] [ndt_goal_controller]: aligning final heading error=-2.66
+[INFO] [1783904317.932990391] [ndt_goal_controller]: aligning final heading error=-2.65
+[INFO] [1783904317.982804986] [ndt_goal_controller]: aligning final heading error=-2.64
+[INFO] [1783904318.132948956] [ndt_goal_controller]: aligning final heading error=-2.63
+[INFO] [1783904318.533134319] [ndt_goal_controller]: aligning final heading error=-2.62
+[INFO] [1783904318.633024894] [ndt_goal_controller]: aligning final heading error=-2.61
+[INFO] [1783904318.733086132] [ndt_goal_controller]: aligning final heading error=-2.60
+[INFO] [1783904318.783046940] [ndt_goal_controller]: aligning final heading error=-2.59
+[INFO] [1783904318.833050597] [ndt_goal_controller]: aligning final heading error=-2.57
+[INFO] [1783904318.882950956] [ndt_goal_controller]: aligning final heading error=-2.55
+[INFO] [1783904318.932918580] [ndt_goal_controller]: aligning final heading error=-2.52
+[INFO] [1783904318.982988160] [ndt_goal_controller]: aligning final heading error=-2.50
+[INFO] [1783904319.032995562] [ndt_goal_controller]: aligning final heading error=-2.48
+[INFO] [1783904319.082844878] [ndt_goal_controller]: aligning final heading error=-2.46
+[INFO] [1783904319.132738516] [ndt_goal_controller]: aligning final heading error=-2.44
+[INFO] [1783904319.182777535] [ndt_goal_controller]: aligning final heading error=-2.42
+[INFO] [1783904319.232947599] [ndt_goal_controller]: aligning final heading error=-2.41
+[INFO] [1783904319.282868054] [ndt_goal_controller]: aligning final heading error=-2.40
+[INFO] [1783904319.335990282] [ndt_goal_controller]: aligning final heading error=-2.39
+[INFO] [1783904319.382888874] [ndt_goal_controller]: aligning final heading error=-2.38
+[INFO] [1783904319.433062873] [ndt_goal_controller]: aligning final heading error=-2.37
+[INFO] [1783904319.482812762] [ndt_goal_controller]: aligning final heading error=-2.36
+[INFO] [1783904319.532726497] [ndt_goal_controller]: aligning final heading error=-2.35
+[INFO] [1783904319.582717226] [ndt_goal_controller]: aligning final heading error=-2.33
+[INFO] [1783904319.633011486] [ndt_goal_controller]: aligning final heading error=-2.32
+[INFO] [1783904319.682945893] [ndt_goal_controller]: aligning final heading error=-2.31
+[INFO] [1783904319.732953167] [ndt_goal_controller]: aligning final heading error=-2.30
+[INFO] [1783904319.782769042] [ndt_goal_controller]: aligning final heading error=-2.29
+[INFO] [1783904319.882824103] [ndt_goal_controller]: aligning final heading error=-2.28
+[INFO] [1783904320.083005364] [ndt_goal_controller]: aligning final heading error=-2.27
+[INFO] [1783904320.182869634] [ndt_goal_controller]: aligning final heading error=-2.26
+[INFO] [1783904320.232923758] [ndt_goal_controller]: aligning final heading error=-2.25
+[INFO] [1783904320.283121886] [ndt_goal_controller]: aligning final heading error=-2.24
+[INFO] [1783904320.335936680] [ndt_goal_controller]: aligning final heading error=-2.23
+[INFO] [1783904320.383825225] [ndt_goal_controller]: aligning final heading error=-2.20
+[INFO] [1783904320.433639085] [ndt_goal_controller]: aligning final heading error=-2.18
+[INFO] [1783904320.483179207] [ndt_goal_controller]: aligning final heading error=-2.15
+[INFO] [1783904320.533065420] [ndt_goal_controller]: aligning final heading error=-2.14
+[INFO] [1783904320.582891696] [ndt_goal_controller]: aligning final heading error=-2.13
+[INFO] [1783904320.632974044] [ndt_goal_controller]: aligning final heading error=-2.12
+[INFO] [1783904320.682787968] [ndt_goal_controller]: aligning final heading error=-2.11
+[INFO] [1783904320.732967631] [ndt_goal_controller]: aligning final heading error=-2.10
+[INFO] [1783904320.783042875] [ndt_goal_controller]: aligning final heading error=-2.09
+[INFO] [1783904320.832998244] [ndt_goal_controller]: aligning final heading error=-2.08
+[INFO] [1783904320.933057337] [ndt_goal_controller]: aligning final heading error=-2.07
+[INFO] [1783904320.982670933] [ndt_goal_controller]: aligning final heading error=-2.06
+[INFO] [1783904321.032961577] [ndt_goal_controller]: aligning final heading error=-2.05
+[INFO] [1783904321.082804397] [ndt_goal_controller]: aligning final heading error=-2.04
+[INFO] [1783904321.132949275] [ndt_goal_controller]: aligning final heading error=-2.03
+[INFO] [1783904321.232987440] [ndt_goal_controller]: aligning final heading error=-2.02
+[INFO] [1783904321.383111217] [ndt_goal_controller]: aligning final heading error=-2.01
+[INFO] [1783904321.482866268] [ndt_goal_controller]: aligning final heading error=-2.00
+[INFO] [1783904321.582837294] [ndt_goal_controller]: aligning final heading error=-1.99
+[INFO] [1783904321.832984227] [ndt_goal_controller]: aligning final heading error=-1.98
+[INFO] [1783904322.133015326] [ndt_goal_controller]: aligning final heading error=-1.96
+[INFO] [1783904322.182817600] [ndt_goal_controller]: aligning final heading error=-1.94
+[INFO] [1783904322.233036210] [ndt_goal_controller]: aligning final heading error=-1.92
+[INFO] [1783904322.283011834] [ndt_goal_controller]: aligning final heading error=-1.91
+[INFO] [1783904322.332966562] [ndt_goal_controller]: aligning final heading error=-1.89
+[INFO] [1783904322.382857384] [ndt_goal_controller]: aligning final heading error=-1.88
+[INFO] [1783904322.433030712] [ndt_goal_controller]: aligning final heading error=-1.87
+[INFO] [1783904322.483008673] [ndt_goal_controller]: aligning final heading error=-1.86
+[INFO] [1783904322.533000586] [ndt_goal_controller]: aligning final heading error=-1.84
+[INFO] [1783904322.582964210] [ndt_goal_controller]: aligning final heading error=-1.82
+[INFO] [1783904322.633015038] [ndt_goal_controller]: aligning final heading error=-1.81
+[INFO] [1783904322.682826369] [ndt_goal_controller]: aligning final heading error=-1.79
+[INFO] [1783904322.732914925] [ndt_goal_controller]: aligning final heading error=-1.77
+[INFO] [1783904322.782969241] [ndt_goal_controller]: aligning final heading error=-1.76
+[INFO] [1783904322.832991491] [ndt_goal_controller]: aligning final heading error=-1.74
+[INFO] [1783904322.882987213] [ndt_goal_controller]: aligning final heading error=-1.72
+[INFO] [1783904322.932961525] [ndt_goal_controller]: aligning final heading error=-1.71
+[INFO] [1783904322.982828378] [ndt_goal_controller]: aligning final heading error=-1.70
+[INFO] [1783904323.083109559] [ndt_goal_controller]: aligning final heading error=-1.68
+[INFO] [1783904323.133276870] [ndt_goal_controller]: aligning final heading error=-1.66
+[INFO] [1783904323.183496920] [ndt_goal_controller]: aligning final heading error=-1.65
+[INFO] [1783904323.233337212] [ndt_goal_controller]: aligning final heading error=-1.64
+[INFO] [1783904323.283070716] [ndt_goal_controller]: aligning final heading error=-1.63
+[INFO] [1783904323.386105591] [ndt_goal_controller]: aligning final heading error=-1.62
+[INFO] [1783904323.483025249] [ndt_goal_controller]: aligning final heading error=-1.61
+[INFO] [1783904323.535411580] [ndt_goal_controller]: aligning final heading error=-1.60
+[INFO] [1783904323.586454249] [ndt_goal_controller]: aligning final heading error=-1.58
+[INFO] [1783904323.683007047] [ndt_goal_controller]: aligning final heading error=-1.57
+[INFO] [1783904323.733626022] [ndt_goal_controller]: aligning final heading error=-1.56
+[INFO] [1783904323.783048827] [ndt_goal_controller]: aligning final heading error=-1.55
+[INFO] [1783904323.837001580] [ndt_goal_controller]: aligning final heading error=-1.53
+[INFO] [1783904323.886495908] [ndt_goal_controller]: aligning final heading error=-1.52
+[INFO] [1783904323.934011417] [ndt_goal_controller]: aligning final heading error=-1.51
+[INFO] [1783904323.985325935] [ndt_goal_controller]: aligning final heading error=-1.50
+[INFO] [1783904324.035618659] [ndt_goal_controller]: aligning final heading error=-1.48
+[INFO] [1783904324.083638761] [ndt_goal_controller]: aligning final heading error=-1.47
+[INFO] [1783904324.133635123] [ndt_goal_controller]: aligning final heading error=-1.46
+[INFO] [1783904324.182896995] [ndt_goal_controller]: aligning final heading error=-1.44
+[INFO] [1783904324.233412382] [ndt_goal_controller]: aligning final heading error=-1.43
+[INFO] [1783904324.283190656] [ndt_goal_controller]: aligning final heading error=-1.42
+[INFO] [1783904324.333321390] [ndt_goal_controller]: aligning final heading error=-1.41
+[INFO] [1783904324.383587265] [ndt_goal_controller]: aligning final heading error=-1.40
+[INFO] [1783904324.433391428] [ndt_goal_controller]: aligning final heading error=-1.39
+[INFO] [1783904324.483030337] [ndt_goal_controller]: aligning final heading error=-1.38
+[INFO] [1783904324.533354390] [ndt_goal_controller]: aligning final heading error=-1.37
+[INFO] [1783904324.583053813] [ndt_goal_controller]: aligning final heading error=-1.36
+[INFO] [1783904324.641848651] [ndt_goal_controller]: aligning final heading error=-1.35
+[INFO] [1783904324.682796032] [ndt_goal_controller]: aligning final heading error=-1.34
+[INFO] [1783904324.732973807] [ndt_goal_controller]: aligning final heading error=-1.33
+[INFO] [1783904324.782792755] [ndt_goal_controller]: aligning final heading error=-1.32
+[INFO] [1783904324.882738788] [ndt_goal_controller]: aligning final heading error=-1.30
+[INFO] [1783904324.982571953] [ndt_goal_controller]: aligning final heading error=-1.29
+[INFO] [1783904325.083012852] [ndt_goal_controller]: aligning final heading error=-1.28
+[INFO] [1783904325.133011005] [ndt_goal_controller]: aligning final heading error=-1.27
+[INFO] [1783904325.182808448] [ndt_goal_controller]: aligning final heading error=-1.26
+[INFO] [1783904325.232943310] [ndt_goal_controller]: aligning final heading error=-1.25
+[INFO] [1783904325.282933143] [ndt_goal_controller]: aligning final heading error=-1.24
+[INFO] [1783904325.333055685] [ndt_goal_controller]: aligning final heading error=-1.23
+[INFO] [1783904325.483926496] [ndt_goal_controller]: aligning final heading error=-1.22
+[INFO] [1783904325.532772322] [ndt_goal_controller]: aligning final heading error=-1.21
+[INFO] [1783904325.635524819] [ndt_goal_controller]: aligning final heading error=-1.19
+[INFO] [1783904325.683080201] [ndt_goal_controller]: aligning final heading error=-1.17
+[INFO] [1783904325.733249529] [ndt_goal_controller]: aligning final heading error=-1.16
+[INFO] [1783904325.783545868] [ndt_goal_controller]: aligning final heading error=-1.14
+[INFO] [1783904325.833060741] [ndt_goal_controller]: aligning final heading error=-1.12
+[INFO] [1783904325.882802534] [ndt_goal_controller]: aligning final heading error=-1.11
+[INFO] [1783904325.932610409] [ndt_goal_controller]: aligning final heading error=-1.10
+[INFO] [1783904325.982978975] [ndt_goal_controller]: aligning final heading error=-1.09
+[INFO] [1783904326.035098801] [ndt_goal_controller]: aligning final heading error=-1.08
+[INFO] [1783904326.133020413] [ndt_goal_controller]: aligning final heading error=-1.07
+[INFO] [1783904326.182711805] [ndt_goal_controller]: aligning final heading error=-1.06
+[INFO] [1783904326.232599778] [ndt_goal_controller]: aligning final heading error=-1.05
+[INFO] [1783904326.282870293] [ndt_goal_controller]: aligning final heading error=-1.04
+[INFO] [1783904326.382966476] [ndt_goal_controller]: aligning final heading error=-1.03
+[INFO] [1783904326.433442661] [ndt_goal_controller]: aligning final heading error=-1.02
+[INFO] [1783904326.532917127] [ndt_goal_controller]: aligning final heading error=-1.00
+[INFO] [1783904326.582796332] [ndt_goal_controller]: aligning final heading error=-0.99
+[INFO] [1783904326.632880153] [ndt_goal_controller]: aligning final heading error=-0.98
+[INFO] [1783904326.682734589] [ndt_goal_controller]: aligning final heading error=-0.97
+[INFO] [1783904326.832953538] [ndt_goal_controller]: aligning final heading error=-0.96
+[INFO] [1783904327.183142827] [ndt_goal_controller]: aligning final heading error=-0.95
+[INFO] [1783904327.333059045] [ndt_goal_controller]: aligning final heading error=-0.94
+[INFO] [1783904327.387014038] [ndt_goal_controller]: aligning final heading error=-0.93
+[INFO] [1783904327.432998198] [ndt_goal_controller]: aligning final heading error=-0.91
+[INFO] [1783904327.486000326] [ndt_goal_controller]: aligning final heading error=-0.90
+[INFO] [1783904327.533489274] [ndt_goal_controller]: aligning final heading error=-0.88
+[INFO] [1783904327.582862542] [ndt_goal_controller]: aligning final heading error=-0.86
+[INFO] [1783904327.633336264] [ndt_goal_controller]: aligning final heading error=-0.84
+[INFO] [1783904327.683235630] [ndt_goal_controller]: aligning final heading error=-0.83
+[INFO] [1783904327.733112820] [ndt_goal_controller]: aligning final heading error=-0.81
+[INFO] [1783904327.783353253] [ndt_goal_controller]: aligning final heading error=-0.79
+[INFO] [1783904327.833088550] [ndt_goal_controller]: aligning final heading error=-0.78
+[INFO] [1783904327.883105712] [ndt_goal_controller]: aligning final heading error=-0.77
+[INFO] [1783904327.933548489] [ndt_goal_controller]: aligning final heading error=-0.76
+[INFO] [1783904328.033219089] [ndt_goal_controller]: aligning final heading error=-0.74
+[INFO] [1783904328.086516363] [ndt_goal_controller]: aligning final heading error=-0.73
+[INFO] [1783904328.133316327] [ndt_goal_controller]: aligning final heading error=-0.72
+[INFO] [1783904328.183588922] [ndt_goal_controller]: aligning final heading error=-0.70
+[INFO] [1783904328.233080595] [ndt_goal_controller]: aligning final heading error=-0.69
+[INFO] [1783904328.283094173] [ndt_goal_controller]: aligning final heading error=-0.68
+[INFO] [1783904328.333230923] [ndt_goal_controller]: aligning final heading error=-0.66
+[INFO] [1783904328.383031342] [ndt_goal_controller]: aligning final heading error=-0.64
+[INFO] [1783904328.433223902] [ndt_goal_controller]: aligning final heading error=-0.63
+[INFO] [1783904328.482940894] [ndt_goal_controller]: aligning final heading error=-0.62
+[INFO] [1783904328.582925648] [ndt_goal_controller]: aligning final heading error=-0.61
+[INFO] [1783904328.633839545] [ndt_goal_controller]: aligning final heading error=-0.60
+[INFO] [1783904328.682961413] [ndt_goal_controller]: aligning final heading error=-0.58
+[INFO] [1783904328.732942126] [ndt_goal_controller]: aligning final heading error=-0.57
+[INFO] [1783904328.782718224] [ndt_goal_controller]: aligning final heading error=-0.56
+[INFO] [1783904328.882558237] [ndt_goal_controller]: aligning final heading error=-0.55
+[INFO] [1783904329.033003369] [ndt_goal_controller]: aligning final heading error=-0.54
+[INFO] [1783904329.082911568] [ndt_goal_controller]: aligning final heading error=-0.53
+[INFO] [1783904329.185003402] [ndt_goal_controller]: aligning final heading error=-0.52
+[INFO] [1783904329.285903548] [ndt_goal_controller]: aligning final heading error=-0.51
+[INFO] [1783904329.332998627] [ndt_goal_controller]: aligning final heading error=-0.50
+[INFO] [1783904329.382639136] [ndt_goal_controller]: aligning final heading error=-0.49
+[INFO] [1783904329.432629641] [ndt_goal_controller]: aligning final heading error=-0.47
+[INFO] [1783904329.482675445] [ndt_goal_controller]: aligning final heading error=-0.45
+[INFO] [1783904329.532621020] [ndt_goal_controller]: aligning final heading error=-0.44
+[INFO] [1783904329.582900111] [ndt_goal_controller]: aligning final heading error=-0.42
+[INFO] [1783904329.683031783] [ndt_goal_controller]: aligning final heading error=-0.41
+[INFO] [1783904329.733189814] [ndt_goal_controller]: aligning final heading error=-0.40
+[INFO] [1783904329.983074114] [ndt_goal_controller]: aligning final heading error=-0.39
+[INFO] [1783904330.283049979] [ndt_goal_controller]: aligning final heading error=-0.38
+[INFO] [1783904330.332910368] [ndt_goal_controller]: aligning final heading error=-0.37
+[INFO] [1783904330.383061199] [ndt_goal_controller]: aligning final heading error=-0.36
+[INFO] [1783904330.435826710] [ndt_goal_controller]: aligning final heading error=-0.34
+[INFO] [1783904330.482930749] [ndt_goal_controller]: aligning final heading error=-0.33
+[INFO] [1783904330.535188020] [ndt_goal_controller]: aligning final heading error=-0.32
+[INFO] [1783904330.582933201] [ndt_goal_controller]: aligning final heading error=-0.31
+[INFO] [1783904330.682887970] [ndt_goal_controller]: aligning final heading error=-0.28
+[INFO] [1783904330.733034545] [ndt_goal_controller]: aligning final heading error=-0.25
+[INFO] [1783904330.782839188] [ndt_goal_controller]: aligning final heading error=-0.23
+[INFO] [1783904330.832999747] [ndt_goal_controller]: aligning final heading error=-0.21
+[INFO] [1783904330.882916650] [ndt_goal_controller]: aligning final heading error=-0.19
+[INFO] [1783904330.932927924] [ndt_goal_controller]: aligning final heading error=-0.18
+[INFO] [1783904330.982990175] [ndt_goal_controller]: aligning final heading error=-0.17
+[INFO] [1783904331.033185776] [ndt_goal_controller]: aligning final heading error=-0.16
+[INFO] [1783904331.083085494] [ndt_goal_controller]: aligning final heading error=-0.15
+[INFO] [1783904331.135964161] [ndt_goal_controller]: aligning final heading error=-0.14
+[INFO] [1783904331.182895778] [ndt_goal_controller]: aligning final heading error=-0.13
+[INFO] [1783904331.232906732] [ndt_goal_controller]: aligning final heading error=-0.12
+[INFO] [1783904331.282854996] [ndt_goal_controller]: aligning final heading error=-0.11
+[INFO] [1783904331.333009507] [ndt_goal_controller]: aligning final heading error=-0.10
+[INFO] [1783904331.382832679] [ndt_goal_controller]: aligning final heading error=-0.09
+[INFO] [1783904331.433003862] [ndt_goal_controller]: stabilizing final heading error=-0.08 stable=0.00/0.60s
+[INFO] [1783904331.482820185] [ndt_goal_controller]: stabilizing final heading error=-0.07 stable=0.05/0.60s
+[INFO] [1783904331.532993897] [ndt_goal_controller]: stabilizing final heading error=-0.07 stable=0.10/0.60s
+[INFO] [1783904331.582886319] [ndt_goal_controller]: stabilizing final heading error=-0.06 stable=0.15/0.60s
+[INFO] [1783904331.633041406] [ndt_goal_controller]: stabilizing final heading error=-0.06 stable=0.20/0.60s
+[INFO] [1783904331.682824160] [ndt_goal_controller]: stabilizing final heading error=-0.06 stable=0.25/0.60s
+[INFO] [1783904331.732952686] [ndt_goal_controller]: stabilizing final heading error=-0.06 stable=0.30/0.60s
+[INFO] [1783904331.782877205] [ndt_goal_controller]: stabilizing final heading error=-0.06 stable=0.35/0.60s
+[INFO] [1783904331.832970402] [ndt_goal_controller]: stabilizing final heading error=-0.06 stable=0.40/0.60s
+[INFO] [1783904331.882878824] [ndt_goal_controller]: stabilizing final heading error=-0.05 stable=0.45/0.60s
+[INFO] [1783904331.933031671] [ndt_goal_controller]: stabilizing final heading error=-0.05 stable=0.50/0.60s
+[INFO] [1783904331.983403373] [ndt_goal_controller]: stabilizing final heading error=-0.05 stable=0.55/0.60s
+[INFO] [1783904332.042789367] [ndt_goal_controller]: goal reached: position 0.08 m and heading 0.08 rad
+Traceback (most recent call last):
+  File "/home/seeed/ros2/scripts/ndt_goal_controller.py", line 414, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 808, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 797, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 780, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 681, in _wait_for_ready_callbacks
+    raise ExternalShutdownException()
+rclpy.executors.ExternalShutdownException
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seeed/ros2/scripts/ndt_goal_controller.py", line 425, in <module>
+    main()
+  File "/home/seeed/ros2/scripts/ndt_goal_controller.py", line 418, in main
+    node.cmd_pub.publish(Twist())
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/publisher.py", line 70, in publish
+    self.__publisher.publish(msg)
+rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:389

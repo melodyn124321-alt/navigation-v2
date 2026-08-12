@@ -1,0 +1,281 @@
+[INFO] [launch]: All log files can be found below /home/seeed/.ros/log/2026-07-02-16-56-34-288163-seeed-7239
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [pcd_ndt_localizer-1]: process started with pid [7273]
+[pcd_ndt_localizer-1] [INFO] [1782982594.692334289] [pcd_ndt_localizer]: Loaded map /home/seeed/ros2/maps/in/fastlio_map_from_raw_livox_094631_20260629_133011.pcd raw=782936 filtered=14168 leaf=0.250
+[pcd_ndt_localizer-1] [INFO] [1782982594.703348391] [pcd_ndt_localizer]: PCD occupancy grid ready. raw=782936 kept=145345 occupied_cells=1994 size=174x190 res=0.100 z=[0.15, 1.20] min_points=3 min_z_span=0.15
+[pcd_ndt_localizer-1] [INFO] [1782982594.725148011] [pcd_ndt_localizer]: PCD NDT localization ready. map=/home/seeed/ros2/maps/in/fastlio_map_from_raw_livox_094631_20260629_133011.pcd points=14168 require_initial_pose=1 reject_occupied_pose=1
+[pcd_ndt_localizer-1] [WARN] [1782982647.856821233] [pcd_ndt_localizer]: Initial pose reset from /initialpose. Waiting for /cloud_registered_body and /Odometry before NDT updates.
+[pcd_ndt_localizer-1] [WARN] [1782982668.863750807] [pcd_ndt_localizer]: New subscription discovered on topic '/aligned_cloud', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY_QOS_POLICY
+[pcd_ndt_localizer-1] [WARN] [1782982685.734972899] [pcd_ndt_localizer]: Initial pose reset from /initialpose. Waiting for /cloud_registered_body and /Odometry before NDT updates.
+[pcd_ndt_localizer-1] [WARN] [1782982698.536608094] [pcd_ndt_localizer]: Initial pose reset from /initialpose. Waiting for /cloud_registered_body and /Odometry before NDT updates.
+[pcd_ndt_localizer-1] [WARN] [1782982877.503551555] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4565 points=2330
+[pcd_ndt_localizer-1] [WARN] [1782982878.575060915] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4733 points=2351
+[pcd_ndt_localizer-1] [WARN] [1782982879.602504135] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.2941 points=2268
+[pcd_ndt_localizer-1] [WARN] [1782982880.720181459] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4673 points=2346
+[pcd_ndt_localizer-1] [WARN] [1782982881.793078189] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.7761 points=2290
+[pcd_ndt_localizer-1] [WARN] [1782982882.910930750] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.5158 points=2282
+[pcd_ndt_localizer-1] [WARN] [1782982883.998951695] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4801 points=2347
+[pcd_ndt_localizer-1] [WARN] [1782982885.099131802] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.5000 points=2261
+[pcd_ndt_localizer-1] [WARN] [1782982886.182130063] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.3820 points=2384
+[pcd_ndt_localizer-1] [WARN] [1782982887.190127846] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.5017 points=2320
+[pcd_ndt_localizer-1] [WARN] [1782982888.288967944] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4183 points=2330
+[pcd_ndt_localizer-1] [WARN] [1782982889.305997913] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4790 points=2313
+[pcd_ndt_localizer-1] [WARN] [1782982890.393678527] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4668 points=2380
+[pcd_ndt_localizer-1] [WARN] [1782982891.487151481] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4327 points=2249
+[pcd_ndt_localizer-1] [WARN] [1782982892.488001747] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4480 points=2329
+[pcd_ndt_localizer-1] [WARN] [1782982893.592367936] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4422 points=2279
+[pcd_ndt_localizer-1] [WARN] [1782982894.595128149] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4545 points=2321
+[pcd_ndt_localizer-1] [WARN] [1782982895.600889800] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4948 points=2378
+[pcd_ndt_localizer-1] [WARN] [1782982896.606452308] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4692 points=2328
+[pcd_ndt_localizer-1] [WARN] [1782982897.703884298] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4913 points=2315
+[pcd_ndt_localizer-1] [WARN] [1782982898.705735714] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.3530 points=2334
+[pcd_ndt_localizer-1] [WARN] [1782982899.712269805] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.5341 points=2288
+[pcd_ndt_localizer-1] [WARN] [1782982900.801107895] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4680 points=2342
+[pcd_ndt_localizer-1] [WARN] [1782982901.893874107] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.2257 points=2256
+[pcd_ndt_localizer-1] [WARN] [1782982902.994368240] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.5311 points=2297
+[pcd_ndt_localizer-1] [WARN] [1782982904.001637138] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4604 points=2273
+[pcd_ndt_localizer-1] [WARN] [1782982905.094386261] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.5413 points=2308
+[pcd_ndt_localizer-1] [WARN] [1782982906.094563482] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.5576 points=2304
+[pcd_ndt_localizer-1] [WARN] [1782982907.194951948] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.3718 points=2399
+[pcd_ndt_localizer-1] [WARN] [1782982908.196454042] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.3937 points=2346
+[pcd_ndt_localizer-1] [WARN] [1782982909.295018770] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4528 points=2311
+[pcd_ndt_localizer-1] [WARN] [1782982910.394814418] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4075 points=2265
+[pcd_ndt_localizer-1] [WARN] [1782982911.395209405] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4130 points=2277
+[pcd_ndt_localizer-1] [WARN] [1782982912.491857114] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4297 points=2287
+[pcd_ndt_localizer-1] [WARN] [1782982913.590573496] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.5486 points=2342
+[pcd_ndt_localizer-1] [WARN] [1782982913.750609513] [pcd_ndt_localizer]: New subscription discovered on topic '/relocalization_path', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY_QOS_POLICY
+[pcd_ndt_localizer-1] [WARN] [1782982913.793721382] [pcd_ndt_localizer]: New subscription discovered on topic '/aligned_cloud', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY_QOS_POLICY
+[pcd_ndt_localizer-1] [WARN] [1782982913.793873291] [pcd_ndt_localizer]: New subscription discovered on topic '/relocalization_markers', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY_QOS_POLICY
+[pcd_ndt_localizer-1] [WARN] [1782982914.616316440] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4718 points=2345
+[pcd_ndt_localizer-1] [WARN] [1782982915.687728260] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4699 points=2353
+[pcd_ndt_localizer-1] [WARN] [1782982916.703456684] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4635 points=2394
+[pcd_ndt_localizer-1] [WARN] [1782982917.788951055] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.3997 points=2295
+[pcd_ndt_localizer-1] [WARN] [1782982918.789989902] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4326 points=2337
+[pcd_ndt_localizer-1] [WARN] [1782982919.796892388] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.5517 points=2337
+[pcd_ndt_localizer-1] [WARN] [1782982920.911776952] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4579 points=2352
+[pcd_ndt_localizer-1] [WARN] [1782982921.985645489] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4471 points=2257
+[pcd_ndt_localizer-1] [WARN] [1782982922.994291421] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.3095 points=2320
+[pcd_ndt_localizer-1] [WARN] [1782982924.093666191] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4248 points=2274
+[pcd_ndt_localizer-1] [WARN] [1782982924.391283544] [pcd_ndt_localizer]: Initial pose reset from /initialpose. Waiting for /cloud_registered_body and /Odometry before NDT updates.
+[pcd_ndt_localizer-1] [WARN] [1782982925.100385087] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.3894 points=2329
+[pcd_ndt_localizer-1] [WARN] [1782982926.102913101] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.3183 points=2385
+[pcd_ndt_localizer-1] [WARN] [1782982927.103667172] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4744 points=2371
+[pcd_ndt_localizer-1] [WARN] [1782982928.201229181] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.2704 points=2322
+[pcd_ndt_localizer-1] [WARN] [1782982929.305766448] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4231 points=2282
+[pcd_ndt_localizer-1] [WARN] [1782982930.396464948] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4781 points=2330
+[pcd_ndt_localizer-1] [WARN] [1782982931.397357135] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.3434 points=2300
+[pcd_ndt_localizer-1] [WARN] [1782982932.487552035] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.4757 points=2352
+[pcd_ndt_localizer-1] [WARN] [1782982932.540484114] [pcd_ndt_localizer]: Initial pose reset from /initialpose. Waiting for /cloud_registered_body and /Odometry before NDT updates.
+[pcd_ndt_localizer-1] [WARN] [1782982933.591918513] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.2512 points=2317
+[pcd_ndt_localizer-1] [WARN] [1782982934.595401148] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.2454 points=2361
+[pcd_ndt_localizer-1] [WARN] [1782982935.595604034] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.0981 points=2343
+[pcd_ndt_localizer-1] [WARN] [1782982936.681734808] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.2382 points=2276
+[pcd_ndt_localizer-1] [WARN] [1782982937.701694468] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.2740 points=2383
+[pcd_ndt_localizer-1] [WARN] [1782982938.793443145] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.2061 points=2296
+[pcd_ndt_localizer-1] [WARN] [1782982939.796778223] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.2761 points=2298
+[pcd_ndt_localizer-1] [WARN] [1782982940.876346745] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.3259 points=2293
+[pcd_ndt_localizer-1] [WARN] [1782982941.888586069] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.2405 points=2332
+[pcd_ndt_localizer-1] [WARN] [1782982942.891970910] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.3065 points=2361
+[pcd_ndt_localizer-1] [WARN] [1782982943.944470014] [pcd_ndt_localizer]: Initial pose reset from /initialpose. Waiting for /cloud_registered_body and /Odometry before NDT updates.
+[pcd_ndt_localizer-1] [WARN] [1782982943.984514491] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=6.8892 points=2342
+[pcd_ndt_localizer-1] [WARN] [1782982944.986066603] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=6.6695 points=2395
+[pcd_ndt_localizer-1] [WARN] [1782982946.009537924] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=6.4600 points=2365
+[pcd_ndt_localizer-1] [WARN] [1782982947.071930808] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=7.1581 points=2334
+[pcd_ndt_localizer-1] [WARN] [1782982948.090631580] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=6.6213 points=2355
+[pcd_ndt_localizer-1] [WARN] [1782982949.101726357] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=6.8700 points=2287
+[pcd_ndt_localizer-1] [WARN] [1782982950.262095472] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=6.4796 points=2303
+[pcd_ndt_localizer-1] [WARN] [1782982951.295524543] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=6.9650 points=2296
+[pcd_ndt_localizer-1] [WARN] [1782982952.406532219] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=6.9029 points=2274
+[pcd_ndt_localizer-1] [WARN] [1782982953.488491919] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=6.7265 points=2310
+[pcd_ndt_localizer-1] [WARN] [1782982953.919167970] [pcd_ndt_localizer]: Initial pose reset from /initialpose. Waiting for /cloud_registered_body and /Odometry before NDT updates.
+[pcd_ndt_localizer-1] [WARN] [1782982954.586762879] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.2455 points=2316
+[pcd_ndt_localizer-1] [WARN] [1782982955.596394825] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.1985 points=2385
+[pcd_ndt_localizer-1] [WARN] [1782982956.692810527] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.2849 points=2288
+[pcd_ndt_localizer-1] [WARN] [1782982957.787301594] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.3283 points=2344
+[pcd_ndt_localizer-1] [WARN] [1782982958.882659887] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.2915 points=2334
+[pcd_ndt_localizer-1] [WARN] [1782982960.005115919] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.2953 points=2279
+[pcd_ndt_localizer-1] [WARN] [1782982961.100402017] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.2473 points=2380
+[pcd_ndt_localizer-1] [WARN] [1782982962.181202834] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.2657 points=2294
+[pcd_ndt_localizer-1] [WARN] [1782982962.688713179] [pcd_ndt_localizer]: Initial pose reset from /initialpose. Waiting for /cloud_registered_body and /Odometry before NDT updates.
+[pcd_ndt_localizer-1] [WARN] [1782982963.187739964] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.6398 points=2362
+[pcd_ndt_localizer-1] [WARN] [1782982964.193114435] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.7710 points=2334
+[pcd_ndt_localizer-1] [WARN] [1782982965.296333580] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.7196 points=2367
+[pcd_ndt_localizer-1] [WARN] [1782982966.388827848] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.6731 points=2279
+[pcd_ndt_localizer-1] [WARN] [1782982967.293229546] [pcd_ndt_localizer]: Initial pose reset from /initialpose. Waiting for /cloud_registered_body and /Odometry before NDT updates.
+[pcd_ndt_localizer-1] [WARN] [1782982967.389535037] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.0768 points=2311
+[pcd_ndt_localizer-1] [INFO] [1782982967.576768541] [pcd_ndt_localizer]: NDT ok fitness=0.9861 pose=(0.52 -0.64 -0.08)
+[pcd_ndt_localizer-1] [WARN] [1782982968.511920091] [pcd_ndt_localizer]: NDT rejected: converged=1 fitness=1.0428 points=2259
+[pcd_ndt_localizer-1] [INFO] [1782982968.584768213] [pcd_ndt_localizer]: NDT ok fitness=0.9891 pose=(0.52 -0.68 -0.20)
+[pcd_ndt_localizer-1] [INFO] [1782982969.621143487] [pcd_ndt_localizer]: NDT ok fitness=0.5883 pose=(0.52 -0.59 -0.13)
+[pcd_ndt_localizer-1] [INFO] [1782982970.675954759] [pcd_ndt_localizer]: NDT ok fitness=0.5769 pose=(0.45 -0.61 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782982971.711188910] [pcd_ndt_localizer]: NDT ok fitness=0.6722 pose=(0.51 -0.60 -0.14)
+[pcd_ndt_localizer-1] [INFO] [1782982972.844958318] [pcd_ndt_localizer]: NDT ok fitness=0.6368 pose=(0.48 -0.60 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982973.883474235] [pcd_ndt_localizer]: NDT ok fitness=0.3988 pose=(0.31 -0.54 -0.17)
+[pcd_ndt_localizer-1] [INFO] [1782982974.897319209] [pcd_ndt_localizer]: NDT ok fitness=0.3289 pose=(0.21 -0.58 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982975.901495466] [pcd_ndt_localizer]: NDT ok fitness=0.0170 pose=(0.19 -0.21 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982976.991643453] [pcd_ndt_localizer]: NDT ok fitness=0.0115 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982978.104761179] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982979.192640423] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782982980.197862121] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.25 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982981.306213522] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982982.397137789] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982983.469702349] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982984.477446109] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982985.506559686] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.25 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782982986.586539837] [pcd_ndt_localizer]: NDT ok fitness=0.0117 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982987.598624820] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782982988.719602630] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982989.812892283] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982990.883118978] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982991.905058732] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982993.003354684] [pcd_ndt_localizer]: NDT ok fitness=0.0115 pose=(0.25 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982994.081663583] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982995.178769642] [pcd_ndt_localizer]: NDT ok fitness=0.0109 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982996.195621046] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.25 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982997.280085656] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982998.336410703] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782982999.353089877] [pcd_ndt_localizer]: NDT ok fitness=0.0110 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983000.564573446] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.25 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983001.589848279] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983002.693836153] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983003.696456361] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983004.798222982] [pcd_ndt_localizer]: NDT ok fitness=0.0115 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983005.854481915] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983006.875937845] [pcd_ndt_localizer]: NDT ok fitness=0.0116 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983007.893721117] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983008.894874273] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983009.991158802] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983011.091327293] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983012.272528896] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983013.298861522] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983014.393556115] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983015.498373902] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983016.593384344] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983017.661020975] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983018.697918026] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.11 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983019.821690963] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983020.895357925] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983021.901627336] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983022.983113837] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983023.989079334] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.25 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983025.001482087] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983026.007478657] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983027.077375902] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983028.095680022] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983029.102537867] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.25 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983030.185810440] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983031.201940573] [pcd_ndt_localizer]: NDT ok fitness=0.0115 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983032.395476287] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983033.583958277] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983034.671018936] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983035.695847995] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983036.806206595] [pcd_ndt_localizer]: NDT ok fitness=0.0109 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983037.893435099] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983038.906370573] [pcd_ndt_localizer]: NDT ok fitness=0.0116 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983039.988760527] [pcd_ndt_localizer]: NDT ok fitness=0.0115 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983040.995943757] [pcd_ndt_localizer]: NDT ok fitness=0.0117 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983041.996742277] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983043.012460493] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.25 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983044.092196444] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.25 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983045.299736915] [pcd_ndt_localizer]: NDT ok fitness=0.0116 pose=(0.25 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983046.487552036] [pcd_ndt_localizer]: NDT ok fitness=0.0116 pose=(0.25 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983047.586988983] [pcd_ndt_localizer]: NDT ok fitness=0.0115 pose=(0.25 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983048.595457150] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983049.596498430] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983050.682728535] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983051.791976444] [pcd_ndt_localizer]: NDT ok fitness=0.0115 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983052.806923244] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983053.831293121] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983054.975124666] [pcd_ndt_localizer]: NDT ok fitness=0.0110 pose=(0.25 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983055.992578296] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983057.015740359] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.25 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983058.087182741] [pcd_ndt_localizer]: NDT ok fitness=0.0116 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983059.089705090] [pcd_ndt_localizer]: NDT ok fitness=0.0110 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983060.420524531] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.11 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983061.492928574] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983062.544702792] [pcd_ndt_localizer]: NDT ok fitness=0.0109 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983063.580930862] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983064.582322296] [pcd_ndt_localizer]: NDT ok fitness=0.0115 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983065.590545303] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983066.641971766] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983067.776667410] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983068.804315821] [pcd_ndt_localizer]: NDT ok fitness=0.0109 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983070.244773776] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983071.584473045] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983072.625014881] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983073.676661351] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983074.699688434] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983075.769221540] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983076.778052054] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983077.965538812] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983079.152314605] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983080.164444389] [pcd_ndt_localizer]: NDT ok fitness=0.0115 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983081.180212719] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983082.191732020] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983083.290703450] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983084.302163997] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983085.319647644] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983086.322476627] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983087.404496650] [pcd_ndt_localizer]: NDT ok fitness=0.0115 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983088.496808256] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983089.508974330] [pcd_ndt_localizer]: NDT ok fitness=0.0115 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983090.588641639] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983091.605976897] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983092.690231741] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983093.715240710] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983094.865793360] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983095.885797597] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983096.889274568] [pcd_ndt_localizer]: NDT ok fitness=0.0117 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983097.890553487] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983098.998526189] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983100.103021790] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983101.163365362] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983102.277880891] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.25 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983103.302500088] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983104.407907974] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983105.592454673] [pcd_ndt_localizer]: NDT ok fitness=0.0109 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983106.697731866] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983107.787116758] [pcd_ndt_localizer]: NDT ok fitness=0.0110 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983108.862187604] [pcd_ndt_localizer]: NDT ok fitness=0.0110 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983109.878436076] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983110.893472191] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983111.992867506] [pcd_ndt_localizer]: NDT ok fitness=0.0115 pose=(0.25 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983113.011191499] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983114.023087964] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983115.090237028] [pcd_ndt_localizer]: NDT ok fitness=0.0116 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983116.121291145] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983117.168596487] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983118.197307715] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983119.210836775] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983120.290831039] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983121.402850554] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983122.477886583] [pcd_ndt_localizer]: NDT ok fitness=0.0116 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983123.489248503] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983124.510627440] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983125.521394590] [pcd_ndt_localizer]: NDT ok fitness=0.0115 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983126.587057111] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983127.590501857] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983128.680601107] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983129.785724280] [pcd_ndt_localizer]: NDT ok fitness=0.0115 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983130.908871245] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983131.972561993] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983132.981107922] [pcd_ndt_localizer]: NDT ok fitness=0.0115 pose=(0.25 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983134.059183822] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983135.097404370] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983136.099980801] [pcd_ndt_localizer]: NDT ok fitness=0.0116 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983137.176702419] [pcd_ndt_localizer]: NDT ok fitness=0.0115 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983138.191828680] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983139.212433352] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.11 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983140.328903502] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983141.382584563] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983142.403854631] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983143.476568572] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983144.585851170] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983145.588880416] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.25 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983146.596954778] [pcd_ndt_localizer]: NDT ok fitness=0.0114 pose=(0.26 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983147.604998131] [pcd_ndt_localizer]: NDT ok fitness=0.0110 pose=(0.26 -0.12 -0.17)
+[pcd_ndt_localizer-1] [INFO] [1782983148.795327250] [pcd_ndt_localizer]: NDT ok fitness=0.0112 pose=(0.25 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983149.797708924] [pcd_ndt_localizer]: NDT ok fitness=0.0115 pose=(0.26 -0.12 -0.15)
+[pcd_ndt_localizer-1] [INFO] [1782983150.827611389] [pcd_ndt_localizer]: NDT ok fitness=0.0111 pose=(0.25 -0.12 -0.16)
+[pcd_ndt_localizer-1] [INFO] [1782983152.008383603] [pcd_ndt_localizer]: NDT ok fitness=0.0113 pose=(0.26 -0.12 -0.16)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

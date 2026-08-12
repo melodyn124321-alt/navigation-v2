@@ -1,0 +1,5 @@
+[INFO] [1784966232.939577221] [static_transform_publisher_OzmSpt7Pw6OzxPp3]: Spinning until stopped - publishing transform
+translation: ('0.890000', '-0.050000', '0.730000')
+rotation: ('-0.019703', '-0.000026', '0.999806', '-0.000001')
+from 'base_link' to 'nav_lidar'
+[INFO] [1784966358.956999083] [rclcpp]: signal_handler(SIGINT/SIGTERM)

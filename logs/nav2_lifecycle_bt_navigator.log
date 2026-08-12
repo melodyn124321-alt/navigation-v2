@@ -1,0 +1,5 @@
+[INFO] [1786513209.098409762] [nav2_manual_lifecycle]: bt_navigator: current unconfigured [1]
+[INFO] [1786513209.099476905] [nav2_manual_lifecycle]: bt_navigator: configure
+[INFO] [1786513209.721705933] [nav2_manual_lifecycle]: bt_navigator: waiting 8.0s for TF and map callbacks before activation
+[INFO] [1786513217.727949549] [nav2_manual_lifecycle]: bt_navigator: activate
+[INFO] [1786513218.407407646] [nav2_manual_lifecycle]: bt_navigator: active [3]

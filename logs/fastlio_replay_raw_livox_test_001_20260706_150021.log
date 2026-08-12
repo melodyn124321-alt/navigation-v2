@@ -1,0 +1,21 @@
+[INFO] [launch]: All log files can be found below /home/seeed/.ros/log/2026-07-06-15-00-26-889386-seeed-24141
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [24176]
+[fastlio_mapping-1] [INFO] [1783321227.145523505] [laser_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] ~~~~/home/seeed/ros2/ws/src/slam/fast_lio/ file opened
+[fastlio_mapping-1] [INFO] [1783321227.158052275] [laser_mapping]: Node init finished.
+[fastlio_mapping-1] [WARN] [1783321234.455612392] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1783321234.655441101] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1783321234.855452663] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1783321235.055443680] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1783321235.255665073] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1783321235.459442639] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] [INFO] [1783321456.263561627] [laser_mapping]: Saving map to /home/seeed/ros2/maps/replay/fastlio_map_from_raw_livox_test_001_20260706_150021.pcd...
+[fastlio_mapping-1] [INFO] [1783321456.283711879] [laser_mapping]: Map saved. points=110923 source=accumulated_map_cloud path=/home/seeed/ros2/maps/replay/fastlio_map_from_raw_livox_test_001_20260706_150021.pcd

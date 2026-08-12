@@ -1,0 +1,15 @@
+pcd=/home/seeed/ros2/maps/replay/fastlio_map_manual_001_level_groundsafe_20260729.pcd.new.20260729_210017
+points=226661 finite=226661
+x: min=-10.247 p01=-9.545 p05=-8.506 p50=-2.830 p95=2.054 p99=2.638 max=3.563 span=13.810m
+y: min=-11.836 p01=-11.323 p05=-10.039 p50=-2.032 p95=3.355 p99=4.018 max=4.214 span=16.050m
+z: min=-1.572 p01=-0.768 p05=-0.757 p50=2.077 p95=5.072 p99=5.091 max=5.139 span=6.711m
+dominant_planes:
+  1: kind=floor_or_ceiling sample_inliers=17292 center=(-3.208,-2.823,5.060) normal=(-0.0027,-0.0004,1.0000) tilt_to_map_z=0.159deg median_residual=0.0096m
+  2: kind=wall sample_inliers=7330 center=(1.500,-3.302,2.318) normal=(0.9673,-0.2537,0.0001) tilt_to_map_z=89.996deg median_residual=0.0165m
+  3: kind=wall sample_inliers=7916 center=(-1.471,2.953,2.093) normal=(-0.2534,-0.9674,0.0023) tilt_to_map_z=89.870deg median_residual=0.0120m
+  4: kind=wall sample_inliers=5803 center=(-8.014,-1.432,2.407) normal=(0.9671,-0.2534,0.0211) tilt_to_map_z=88.791deg median_residual=0.0178m
+  5: kind=floor_or_ceiling sample_inliers=4811 center=(-1.824,-2.259,-0.693) normal=(0.0231,-0.0126,0.9997) tilt_to_map_z=1.507deg median_residual=0.0227m
+  6: kind=floor_or_ceiling sample_inliers=5641 center=(-3.369,-1.078,-0.758) normal=(-0.0012,0.0012,1.0000) tilt_to_map_z=0.095deg median_residual=0.0050m
+  7: kind=floor_or_ceiling sample_inliers=1896 center=(-3.341,-1.772,-0.126) normal=(-0.0249,0.0413,0.9988) tilt_to_map_z=2.763deg median_residual=0.0298m
+  8: kind=floor_or_ceiling sample_inliers=1558 center=(-3.268,-1.977,-0.237) normal=(0.0737,-0.0001,0.9973) tilt_to_map_z=4.224deg median_residual=0.0288m
+RESULT: PASS level floor/ceiling plane tilt=0.095deg

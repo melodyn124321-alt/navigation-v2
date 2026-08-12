@@ -1,0 +1,143 @@
+=== Nav2 lifecycle ===
+[INFO] [1785374988.657898081] [nav2_manual_lifecycle]: waiting for map_server/get_state
+/map_server: active [3]
+/planner_server: active [3]
+/controller_server: active [3]
+/smoother_server: active [3]
+/behavior_server: active [3]
+/bt_navigator: active [3]
+/waypoint_follower: active [3]
+/velocity_smoother: active [3]
+/collision_monitor: active [3]
+=== Dynamic obstacle cloud ===
+data: ok received=9592 published=9592 age=0.035s points=4495->375 frame=base_link test_injection=False
+---
+base_point=(0.5500, -0.0800, 0.3000)
+base_point=(0.5500, -0.0400, 0.3000)
+base_point=(0.5500, 0.0000, 0.3000)
+base_point=(0.5500, 0.0400, 0.3000)
+base_point=(0.5500, 0.0800, 0.3000)
+OBSTACLE_TRANSFORM PASS output cloud is in base_link
+=== Topic chain ===
+/nav_obstacle_cloud                    publishers=1 subscribers=5
+/local_costmap/costmap                 publishers=1 subscribers=0
+/global_costmap/costmap                publishers=1 subscribers=1
+/nav_goal_markers                      publishers=2 subscribers=1
+/nav_obstacle_alarm                    publishers=1 subscribers=0
+/nav_obstacle_alarm_status             publishers=1 subscribers=0
+/nav_obstacle_alarm_markers            publishers=1 subscribers=1
+/aligned_goal_status                   publishers=1 subscribers=1
+/aligned_goal_approach_pose            publishers=1 subscribers=1
+/dynamic_obstacle_slow_zone            publishers=1 subscribers=1
+/dynamic_obstacle_stop_zone            publishers=1 subscribers=1
+/cmd_vel_nav                           publishers=2 subscribers=1
+/cmd_vel_nav_smoothed                  publishers=1 subscribers=1
+/cmd_vel_nav_collision_safe            publishers=1 subscribers=1
+/cmd_vel                               publishers=1 subscribers=1
+/nav_reverse_path_policy               publishers=1 subscribers=0
+=== Direction-aligned goal adapter ===
+/compute_path_through_poses
+/compute_path_to_pose
+/follow_path
+/follow_waypoints
+/navigate_through_poses
+/navigate_to_pose
+/navigate_to_pose_raw
+/smooth_path
+/wait
+=== Safety state ===
+data: disarmed
+---
+arm service: std_srvs/srv/SetBool
+=== Vehicle geometry parameters ===
+local footprint: String value is: [[-0.38, 0.27], [0.38, 0.27], [0.38, -0.27], [-0.38, -0.27]]
+global footprint: String value is: [[-0.38, 0.27], [0.38, 0.27], [0.38, -0.27], [-0.38, -0.27]]
+rotation stop zone: Double values are: array('d', [0.6, 0.0, 0.554, 0.23, 0.424, 0.424, 0.23, 0.554, 0.0, 0.6, -0.23, 0.554, -0.424, 0.424, -0.554, 0.23, -0.6, 0.0, -0.554, -0.23, -0.424, -0.424, -0.23, -0.554, 0.0, -0.6, 0.23, -0.554, 0.424, -0.424, 0.554, -0.23])
+=== No-spin arrival policy ===
+yaw tolerance: Double value is: 0.17
+rotate to heading: Boolean value is: False
+allow reversing: Boolean value is: True
+progress radius: Double value is: 0.01
+progress allowance: Double value is: 120.0
+adapter progress timeout: Double value is: 45.0
+adapter progress displacement: Double value is: 0.03
+BT XML: String value is: /home/seeed/ros2/nav2/navigate_to_pose_no_spin.xml
+behavior plugins: String values are: ['wait']
+planner plugin: String value is: nav2_smac_planner/SmacPlannerHybrid
+motion model: String value is: DUBIN
+minimum turning radius: Double value is: 0.45
+collision source timeout: Double value is: 1.5
+slow-zone ratio: Double value is: 0.5
+slow-zone max points: Integer value is: 10
+reverse straight only: Boolean value is: True
+reverse plan topic: String value is: /plan
+reverse plan timeout: Double value is: 3.0
+straight lateral limit: Double value is: 0.1
+straight heading limit: Double value is: 0.12
+straight confirmations: Integer value is: 2
+reverse penalty: Double value is: 2.5
+non-straight penalty: Double value is: 1.6
+=== LiDAR mounting transform ===
+[INFO] [1785375131.488818080] [tf2_echo]: Waiting for transform base_link ->  nav_lidar: Invalid frame ID "base_link" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1785375133.444729274] [tf2_echo]: Waiting for transform base_link ->  nav_lidar: Invalid frame ID "nav_lidar" passed to canTransform argument source_frame - frame does not exist
+At time 0.0
+- Translation: [0.100, -0.110, 0.749]
+- Rotation: in Quaternion (xyzw) [-0.278, 0.274, -0.652, 0.650]
+- Rotation: in RPY (radian) [-0.802, -0.007, -1.571]
+- Rotation: in RPY (degree) [-45.937, -0.406, -90.000]
+- Matrix:
+ -0.000  0.695  0.719  0.100
+ -1.000 -0.005  0.005 -0.110
+  0.007 -0.719  0.695  0.749
+  0.000  0.000  0.000  1.000
+At time 0.0
+- Translation: [0.100, -0.110, 0.749]
+- Rotation: in Quaternion (xyzw) [-0.278, 0.274, -0.652, 0.650]
+- Rotation: in RPY (radian) [-0.802, -0.007, -1.571]
+- Rotation: in RPY (degree) [-45.937, -0.406, -90.000]
+- Matrix:
+ -0.000  0.695  0.719  0.100
+ -1.000 -0.005  0.005 -0.110
+  0.007 -0.719  0.695  0.749
+  0.000  0.000  0.000  1.000
+[INFO] [1785375136.052547110] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+=== Navigation start cell ===
+map=302x355 resolution=0.050
+start world=(-0.240,-0.997) yaw=-0.449 cell=(220, 230) cost=0 nearest_passable=(220, 230) nearest_world=(-0.23099983571469807, -0.9935998282641165) nearest_blocked=((239, 228), 99, 0.9552486729614542) blocked_component=(27442, (35, 37, 288, 339))
+=== Costmap samples ===
+map_load_time:
+  sec: 0
+  nanosec: 0
+resolution: 0.05000000074505806
+width: 120
+height: 120
+origin:
+  position:
+    x: -2.9500000003725293
+    y: -2.9500000003725293
+    z: 0.0
+  orientation:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+---
+map_load_time:
+  sec: 0
+  nanosec: 0
+resolution: 0.05000000074505806
+width: 302
+height: 355
+origin:
+  position:
+    x: -11.256
+    y: -12.5186
+    z: 0.0
+  orientation:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+---
+RESULT: PASS - Nav2 dynamic avoidance data path is complete.
+This check does not arm or move the robot.

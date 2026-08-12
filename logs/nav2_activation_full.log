@@ -1,0 +1,191 @@
+Chassis geometry: 0.720x0.500x0.345 m
+base_link -> nav_lidar: xyz=(0.100,-0.110,0.749)
+base_link -> nav_lidar: rpy=(-0.801751898,-0.007094763,-1.570796327) rad
+base_link -> rear sonars: x=-0.210m y=(0.18,-0.18)m z=0.545m yaw=3.141592654rad
+Rear sonar compact safety: sensor_to_tail=0.15m hard_stop<=0.22m reverse_full_clear>=0.35m turn_allow>0.25m minimum_tail_clearance=0.02m
+Rear sonar maneuver guards: left turn=both sensors, right turn=both sensors, reverse=both sensors; speed taper active between stop and clear.
+Navigation speed profile: START<=0.08m/s for 0.30m; CRUISE<=0.40m/s; APPROACH inside 0.80m down to 0.05m/s.
+[1/11] Checking live NDT localization...
+NDT fitness=0.08248695003276905 is within the 0.18 limit.
+Checking persistent localization marker and consecutive healthy samples...
+LOCALIZATION_STABILITY PASS recent_fitness=[0.08234824994247725, 0.08299673606410841, 0.08297536683315554, 0.08297536683315554, 0.08296896277586067] marker='LOCALIZED  score=0.082' healthy_streak=27/5 max_healthy_streak=27 bad_samples=0 sample_age=0.04s marker_samples=27 marker_lifetime=0.00s tf_successes=281 position_span=0.008m/0.080m yaw_span=0.000rad/0.080rad elapsed=4.01s
+[2/11] Checking stable map -> odom -> base_link TF...
+[INFO] [1786513104.289090810] [nav_tf_readiness_check]: waiting for map->base_link and odom->base_link: "map" passed to lookupTransform argument target_frame does not exist. 
+[INFO] [1786513106.344810919] [nav_tf_readiness_check]: waiting for map->base_link and odom->base_link: Could not find a connection between 'map' and 'base_link' because they are not part of the same tree.Tf has two or more unconnected trees.
+[INFO] [1786513108.067750857] [nav_tf_readiness_check]: TF READY: 12 consecutive samples for map->base_link and odom->base_link
+[3/11] Stopping the old navigation-only processes...
+[4/11] Starting the DISARMED final motion gate first...
+Starting rear ultrasonic transforms and checking live range topics...
+/ultrasonic/sensor_1/range has a live sensor_msgs/msg/Range message.
+/ultrasonic/sensor_2/range has a live sensor_msgs/msg/Range message.
+/ultrasonic/min_range has a live std_msgs/msg/Float32 message.
+/ultrasonic/healthy has a live std_msgs/msg/Bool message.
+Motion gate is visible in the ROS graph (attempt 1).
+[5/11] Starting the chassis-oriented dynamic obstacle cloud...
+[INFO] [1786513147.501400716] [tf2_echo]: Waiting for transform base_link ->  nav_lidar: Invalid frame ID "base_link" passed to canTransform argument target_frame - frame does not exist
+At time 0.0
+- Translation: [0.100, -0.110, 0.749]
+- Rotation: in Quaternion (xyzw) [-0.278, 0.274, -0.652, 0.650]
+- Rotation: in RPY (radian) [-0.802, -0.007, -1.571]
+- Rotation: in RPY (degree) [-45.937, -0.406, -90.000]
+- Matrix:
+ -0.000  0.695  0.719  0.100
+ -1.000 -0.005  0.005 -0.110
+  0.007 -0.719  0.695  0.749
+  0.000  0.000  0.000  1.000
+At time 0.0
+- Translation: [0.100, -0.110, 0.749]
+- Rotation: in Quaternion (xyzw) [-0.278, 0.274, -0.652, 0.650]
+- Rotation: in RPY (radian) [-0.802, -0.007, -1.571]
+- Rotation: in RPY (degree) [-45.937, -0.406, -90.000]
+- Matrix:
+ -0.000  0.695  0.719  0.100
+ -1.000 -0.005  0.005 -0.110
+  0.007 -0.719  0.695  0.749
+  0.000  0.000  0.000  1.000
+[INFO] [1786513150.105127298] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+data: ok received=19 published=19 age=0.031s points=5934->989 viz=70 viz_frame=map frame=base_link test_injection=False
+---
+[6/11] Starting and activating map_server...
+  /map_server: active [3]
+[7/11] Starting and activating Nav2 nodes one at a time...
+Starting /controller_server (attempt 1/3)...
+  /controller_server: active [3]
+Starting /smoother_server (attempt 1/3)...
+  /smoother_server: active [3]
+Starting /planner_server (attempt 1/3)...
+  /planner_server: active [3]
+Starting /behavior_server (attempt 1/3)...
+  /behavior_server: active [3]
+Waiting for Nav2 actions: /follow_path, /compute_path_to_pose, /compute_path_through_poses, /drive_on_heading
+/follow_path: READY
+/compute_path_to_pose: READY
+/compute_path_through_poses: READY
+/drive_on_heading: READY
+NAV2_ACTIONS_READY consecutive=3
+Starting /bt_navigator (attempt 1/3)...
+  /bt_navigator: active [3]
+Starting /waypoint_follower (attempt 1/3)...
+  /waypoint_follower: active [3]
+Starting /velocity_smoother (attempt 1/3)...
+  /velocity_smoother: active [3]
+Velocity smoother endpoints are visible.
+Starting /collision_monitor (attempt 1/3)...
+  /collision_monitor: active [3]
+[8/11] All managed Nav2 nodes reached active [3].
+Refreshing the static map after the planner subscription is live...
+map=1200x1098 resolution=0.050
+start world=(1.645,-3.038) yaw=-2.753 cell=(316, 664) cost=0 nearest_passable=(316, 664) nearest_world=(1.6258002358108765, -3.035599504908916) nearest_blocked=None blocked_component=None
+Waiting for the HN map-frame local costmap (1/12)...
+data: READY received=10 published=9 error=none
+---
+Motion gate is visible in the ROS graph (attempt 1).
+waiting for service to become available...
+requester: making request: std_srvs.srv.SetBool_Request(data=True)
+
+response:
+std_srvs.srv.SetBool_Response(success=True, message='armed')
+waiting for service to become available...
+requester: making request: std_srvs.srv.SetBool_Request(data=False)
+
+response:
+std_srvs.srv.SetBool_Response(success=True, message='disarmed')
+TERMINAL_TEST_GOAL distance=0.120m speed=0.030m/s physical_gate=DISARMED
+TERMINAL_TEST_ACCEPTED
+TERMINAL_PRE_GATE_NONZERO=YES
+TERMINAL_PRE_GATE_SAMPLE linear.x=0.030 angular.z=0.000
+TERMINAL_PHYSICAL_NONZERO=NO
+TERMINAL_SPIN_PRE_GATE_NONZERO=YES
+TERMINAL_SPIN_SAMPLE angular.z=0.010
+TERMINAL_SPIN_PHYSICAL_NONZERO=NO
+TERMINAL_TEST_PASS drive_on_heading and bounded spin generated collision-checked pre-gate commands while physical /cmd_vel remained zero
+[9/11] Starting the persistent Nav2 goal marker...
+Goal adapter is visible as /aligned_navigate_to_pose action server.
+/goal_pose_relay ready: publishers=1 subscribers=1
+/goal_pose_relay is isolated to rviz_goal_pose_bridge.
+/rviz_goal_pose_bridge_status ready: publishers=1 subscribers=1
+[10/11] Starting the 60-second persistent-obstacle alarm...
+/nav_goal_markers ready: publishers=2 subscribers=1
+/nav_obstacle_alarm ready: publishers=1 subscribers=0
+/nav_obstacle_alarm_markers ready: publishers=1 subscribers=1
+/cmd_vel_nav_smoothed ready: publishers=1 subscribers=2
+/cmd_vel_nav_collision_safe ready: publishers=1 subscribers=1
+/cmd_vel ready: publishers=1 subscribers=2
+Velocity chain endpoints are connected.
+[11/11] Verifying lifecycle, obstacle layers, goal marker, alarm, and velocity isolation...
+[INFO] [1786513338.767891390] [nav2_manual_lifecycle]: waiting for map_server/get_state
+/map_server: active [3]
+/planner_server: active [3]
+/controller_server: active [3]
+/smoother_server: active [3]
+/behavior_server: active [3]
+/bt_navigator: active [3]
+/waypoint_follower: active [3]
+/velocity_smoother: active [3]
+/collision_monitor: active [3]
+[INFO] [1786513342.701521047] [nav_tf_readiness_check]: waiting for map->base_link and odom->base_link: "map" passed to lookupTransform argument target_frame does not exist. 
+[INFO] [1786513344.868503885] [nav_tf_readiness_check]: waiting for map->base_link and odom->base_link: Lookup would require extrapolation at time 1786513342.864415, but only time 1786513343.419947 is in the buffer, when looking up transform from frame [base_link] to frame [map]
+[INFO] [1786513346.000319022] [nav_tf_readiness_check]: TF READY: 5 consecutive samples for map->base_link and odom->base_link
+Waiting for Nav2 actions: /follow_path, /compute_path_to_pose, /compute_path_through_poses, /drive_on_heading
+/follow_path: READY
+/compute_path_to_pose: READY
+/compute_path_through_poses: READY
+/drive_on_heading: READY
+NAV2_ACTIONS_READY consecutive=3
+--- /nav_obstacle_cloud
+Type: sensor_msgs/msg/PointCloud2
+Publisher count: 1
+Subscription count: 4
+--- /local_costmap/costmap
+Type: nav_msgs/msg/OccupancyGrid
+Publisher count: 1
+Subscription count: 1
+--- /hn_local_costmap
+Type: nav_msgs/msg/OccupancyGrid
+Publisher count: 1
+Subscription count: 1
+--- /global_costmap/costmap
+Type: nav_msgs/msg/OccupancyGrid
+Publisher count: 1
+Subscription count: 1
+--- /goal_pose
+Type: geometry_msgs/msg/PoseStamped
+Publisher count: 1
+Subscription count: 2
+--- /rviz_goal_pose_bridge_status
+Type: std_msgs/msg/String
+Publisher count: 1
+Subscription count: 1
+--- /nav_goal_markers
+Type: visualization_msgs/msg/MarkerArray
+Publisher count: 2
+Subscription count: 1
+--- /nav_obstacle_alarm
+Type: std_msgs/msg/Bool
+Publisher count: 1
+Subscription count: 0
+--- /nav_obstacle_alarm_markers
+Type: visualization_msgs/msg/MarkerArray
+Publisher count: 1
+Subscription count: 1
+--- /cmd_vel_nav_collision_safe
+Type: geometry_msgs/msg/Twist
+Publisher count: 1
+Subscription count: 1
+--- /cmd_vel
+Type: geometry_msgs/msg/Twist
+Publisher count: 1
+Subscription count: 2
+--- dynamic obstacle status
+data: ok received=2252 published=2252 age=0.057s points=5888->982 viz=73 viz_frame=map frame=base_link test_injection=False
+---
+--- motion gate status
+data: disarmed
+---
+--- persistent obstacle alarm status
+data: IDLE no active navigation goal
+---
+
+Nav2 dynamic avoidance is ACTIVE, but physical motion remains DISARMED.
+Velocity chain: Nav2 -> smoother -> collision monitor -> safety gate -> /cmd_vel
+Only arm after checking the local/global costmaps in hn RViz.

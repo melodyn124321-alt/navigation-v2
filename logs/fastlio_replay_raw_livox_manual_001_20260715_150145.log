@@ -1,0 +1,28 @@
+[INFO] [launch]: All log files can be found below /home/seeed/.ros/log/2026-07-15-15-01-52-283113-seeed-21300
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [21375]
+[fastlio_mapping-1] [INFO] [1784098912.543450722] [laser_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] [INFO] [1784098912.543791565] [laser_mapping]: LiDAR exclusion box enabled=true x=[-0.500,-0.020] y=[-0.220,0.220] z=[-0.050,0.450]
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] ~~~~/home/seeed/ros2/ws/src/slam/fast_lio/ file opened
+[fastlio_mapping-1] [INFO] [1784098912.556193574] [laser_mapping]: Node init finished.
+[fastlio_mapping-1] [WARN] [1784098920.794209574] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784098920.812951377] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784098920.833019847] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784098920.852995738] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784098920.873169299] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784098921.373287240] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [WARN] [1784098921.392957489] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1784098921.413174668] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1784098921.436547440] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] [INFO] [1784099369.679081703] [laser_mapping]: Saving map to /home/seeed/ros2/maps/replay/fastlio_map_manual_001.pcd...
+[fastlio_mapping-1] [INFO] [1784099369.710924162] [laser_mapping]: Map saved. points=211640 source=accumulated_map_cloud path=/home/seeed/ros2/maps/replay/fastlio_map_manual_001.pcd

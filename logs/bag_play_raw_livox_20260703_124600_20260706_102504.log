@@ -1,0 +1,8 @@
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1783304716.624180063] [rosbag2_storage]: Opened database '/home/seeed/ros2/bags/raw_livox_20260703_124600/raw_livox_20260703_124600_0.db3' for READ_ONLY.
+[INFO] [1783304716.624326788] [rosbag2_player]: Set rate to 0.5
+[INFO] [1783304716.634492693] [rosbag2_player]: Adding keyboard callbacks.
+[INFO] [1783304716.634635578] [rosbag2_player]: Press SPACE for Pause/Resume
+[INFO] [1783304716.634672155] [rosbag2_player]: Press CURSOR_RIGHT for Play Next Message
+[INFO] [1783304716.634695260] [rosbag2_player]: Press CURSOR_UP for Increase Rate 10%
+[INFO] [1783304716.634713821] [rosbag2_player]: Press CURSOR_DOWN for Decrease Rate 10%
+[INFO] [1783304716.635630523] [rosbag2_storage]: Opened database '/home/seeed/ros2/bags/raw_livox_20260703_124600/raw_livox_20260703_124600_0.db3' for READ_ONLY.

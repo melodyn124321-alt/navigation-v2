@@ -1,0 +1,9 @@
+TERMINAL_TEST_GOAL distance=0.120m speed=0.030m/s physical_gate=DISARMED
+TERMINAL_TEST_ACCEPTED
+TERMINAL_PRE_GATE_NONZERO=YES
+TERMINAL_PRE_GATE_SAMPLE linear.x=0.030 angular.z=0.000
+TERMINAL_PHYSICAL_NONZERO=NO
+TERMINAL_SPIN_PRE_GATE_NONZERO=YES
+TERMINAL_SPIN_SAMPLE angular.z=0.010
+TERMINAL_SPIN_PHYSICAL_NONZERO=NO
+TERMINAL_TEST_PASS drive_on_heading and bounded spin generated collision-checked pre-gate commands while physical /cmd_vel remained zero

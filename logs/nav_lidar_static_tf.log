@@ -1,0 +1,4 @@
+[INFO] [1786513145.471926495] [static_transform_publisher_idBavPqdQ3cN7N9Y]: Spinning until stopped - publishing transform
+translation: ('0.100000', '-0.110000', '0.749000')
+rotation: ('-0.278239', '0.273619', '-0.652022', '0.650064')
+from 'base_link' to 'nav_lidar'

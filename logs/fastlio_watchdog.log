@@ -1,0 +1,6 @@
+[INFO] [1785144361.078715990] [fastlio_live_watchdog]: armed: jump=0.75m speed=3.00m/s abs=100.0m NoEffective=40/10.0s grace=12.0s session_gap=2.0s dry_run=False
+[INFO] [1785144671.857051349] [fastlio_live_watchdog]: new FAST-LIO session detected (odometry silence 2.188s); odometry baseline cleared and 12.0s startup grace restarted
+[INFO] [1785144703.041083130] [fastlio_live_watchdog]: new FAST-LIO session detected (odometry silence 2.437s); odometry baseline cleared and 12.0s startup grace restarted
+[INFO] [1785144705.616495580] [fastlio_live_watchdog]: new FAST-LIO session detected (odometry silence 2.575s); odometry baseline cleared and 12.0s startup grace restarted
+[INFO] [1785144709.772905525] [fastlio_live_watchdog]: new FAST-LIO session detected (odometry silence 2.792s); odometry baseline cleared and 12.0s startup grace restarted
+[INFO] [1785144711.957366610] [fastlio_live_watchdog]: new FAST-LIO session detected (odometry silence 2.184s); odometry baseline cleared and 12.0s startup grace restarted
