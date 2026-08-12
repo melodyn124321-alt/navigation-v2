@@ -18,3 +18,4 @@
 [fastlio_mapping-1] [WARN] [1786512941.950057249] [laser_mapping]: No point, skip this scan!
 [fastlio_mapping-1] 
 [fastlio_mapping-1] [INFO] [1786512942.055134675] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] Too few input point cloud!

@@ -14,3 +14,4 @@
 [WARN] [1786513711.495152069] [nav_motion_safety_gate]: motion blocked: no active navigation goal
 [WARN] [1786513737.473394090] [nav_motion_safety_gate]: motion gate DISARMED
 [WARN] [1786513737.488498861] [nav_motion_safety_gate]: motion blocked: disarmed
+[ERROR] [1786516107.894283741] [nav_motion_safety_gate]: NDT runtime safety block after sustained poor fitness: fitness=0.250 threshold=0.220 mode=normal hold=2.00s

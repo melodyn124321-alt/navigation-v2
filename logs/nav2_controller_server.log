@@ -29,3 +29,13 @@
 [INFO] [1786513172.423817350] [controller_server]: Activating controller: FollowPath of type regulated_pure_pursuit_controller::RegulatedPurePursuitController
 [INFO] [1786513172.423980684] [controller_server]: Creating bond (controller_server) to lifecycle manager.
 [INFO] [1786513399.893063880] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[WARN] [1786514895.418386846] [local_costmap.local_costmap]: The /nav_obstacle_cloud observation buffer has not been updated for 1.52 seconds, and it should be updated every 1.50 seconds.
+[WARN] [1786515073.018327862] [local_costmap.local_costmap]: The /nav_obstacle_cloud observation buffer has not been updated for 1.68 seconds, and it should be updated every 1.50 seconds.
+[WARN] [1786515075.034837167] [local_costmap.local_costmap]: The /nav_obstacle_cloud observation buffer has not been updated for 3.69 seconds, and it should be updated every 1.50 seconds.
+[WARN] [1786515076.641714553] [local_costmap.local_costmap]: The /nav_obstacle_cloud observation buffer has not been updated for 1.54 seconds, and it should be updated every 1.50 seconds.
+[WARN] [1786515076.842615776] [local_costmap.local_costmap]: The /nav_obstacle_cloud observation buffer has not been updated for 1.74 seconds, and it should be updated every 1.50 seconds.
+[WARN] [1786515077.043985693] [local_costmap.local_costmap]: The /nav_obstacle_cloud observation buffer has not been updated for 1.94 seconds, and it should be updated every 1.50 seconds.
+[WARN] [1786515077.244708348] [local_costmap.local_costmap]: The /nav_obstacle_cloud observation buffer has not been updated for 2.14 seconds, and it should be updated every 1.50 seconds.
+[WARN] [1786519671.478396059] [local_costmap.local_costmap]: The /nav_obstacle_cloud observation buffer has not been updated for 1.76 seconds, and it should be updated every 1.50 seconds.
+[WARN] [1786519671.514679401] [local_costmap.local_costmap]: The /nav_obstacle_cloud observation buffer has not been updated for 1.80 seconds, and it should be updated every 1.50 seconds.
+[WARN] [1786537809.066397163] [local_costmap.local_costmap]: The /nav_obstacle_cloud observation buffer has not been updated for 2.26 seconds, and it should be updated every 1.50 seconds.

@@ -30,3 +30,7 @@
 [INFO] [1786513191.904356630] [planner_server]: Activating plugin GridBased of type NavfnPlanner
 [INFO] [1786513191.920833072] [planner_server]: Creating bond (planner_server) to lifecycle manager.
 [INFO] [1786513405.793020709] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[INFO] [1786514930.339144933] [global_costmap.global_costmap]: Message Filter dropping message: frame 'base_link' at time 1786514929.331 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[WARN] [1786515076.726737525] [global_costmap.global_costmap]: The /nav_obstacle_cloud observation buffer has not been updated for 1.51 seconds, and it should be updated every 1.50 seconds.
+[WARN] [1786537809.093747593] [global_costmap.global_costmap]: The /nav_obstacle_cloud observation buffer has not been updated for 2.29 seconds, and it should be updated every 1.50 seconds.
+[WARN] [1786537809.155837106] [global_costmap.global_costmap]: The /nav_obstacle_cloud observation buffer has not been updated for 2.35 seconds, and it should be updated every 1.50 seconds.

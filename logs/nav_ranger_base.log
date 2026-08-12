@@ -11,3 +11,39 @@
 [ranger_base_node-1]  publish_odom_tf: 1
 [ranger_base_node-1] [0m
 [ranger_base_node-1] Start listening to port: can0
+[ranger_base_node-1] [33m[WARN] [1786516085.455702954] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516086.455721265] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516087.455716246] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516088.456574173] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516089.455820422] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516090.455720840] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516091.455721166] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516092.455704403] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516093.455718522] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516094.455871589] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516095.455708581] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516096.455709867] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516097.456060318] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516098.455717399] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516099.455742334] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516100.455715107] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516101.455706696] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516102.455702158] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516103.455703956] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516104.455739131] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516105.455679071] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516106.455710406] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516107.455701515] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516108.456862750] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516109.457972910] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516110.497835286] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516111.497829595] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516112.499668712] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516113.497874857] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516114.497846286] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516115.497833043] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516116.497834553] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516117.497848095] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516118.497837637] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516119.497835082] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
+[ranger_base_node-1] [33m[WARN] [1786516120.497787374] [ranger_base_node]: Ranger control_mode=3 is not CAN; requesting CAN command mode[0m
