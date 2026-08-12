@@ -1,0 +1,139 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROS_ROOT="${ROS_ROOT:-/home/seeed/ros2}"
+ROS_ENV="${ROS_ENV:-${ROS_ROOT}/use_ros_env.sh}"
+NAV_FASTDDS_PROFILE="${NAV_FASTDDS_PROFILE:-${ROS_ROOT}/fastrtps_profile.xml}"
+ADAPTER="${ADAPTER:-${ROS_ROOT}/scripts/aligned_nav_goal_adapter.py}"
+DISARM="${DISARM:-${ROS_ROOT}/scripts/seeed_disarm_nav_motion.sh}"
+LOG="${ROS_ROOT}/logs/aligned_nav_goal_adapter.log"
+
+for path in "${ROS_ENV}" "${ADAPTER}" "${DISARM}" "${NAV_FASTDDS_PROFILE}"; do
+  if [[ ! -r "${path}" ]]; then
+    echo "Required file is missing: ${path}" >&2
+    exit 1
+  fi
+done
+
+echo "Disarming motion before refreshing the RViz goal action server..."
+"${DISARM}"
+
+adapter_pids="$(
+  ps -eo pid=,comm=,args= | awk '
+    $2 == "python3" &&
+    /aligned_nav_goal_adapter.py/ &&
+    $0 !~ /awk/ {print $1}
+  '
+)"
+if [[ -n "${adapter_pids}" ]]; then
+  # shellcheck disable=SC2086
+  kill ${adapter_pids} 2>/dev/null || true
+fi
+for _ in $(seq 1 20); do
+  remaining="$(
+    ps -eo pid=,comm=,args= | awk '
+      $2 == "python3" &&
+      /aligned_nav_goal_adapter.py/ &&
+      $0 !~ /awk/ {print $1}
+    '
+  )"
+  [[ -z "${remaining}" ]] && break
+  sleep 0.25
+done
+if [[ -n "${remaining:-}" ]]; then
+  echo "Old aligned goal adapter did not stop: ${remaining}" >&2
+  exit 1
+fi
+
+setsid -f "${ROS_ENV}" env \
+  FASTRTPS_DEFAULT_PROFILES_FILE="${NAV_FASTDDS_PROFILE}" \
+  python3 "${ADAPTER}" --ros-args \
+  -p approach_distance:=0.70 \
+  -p use_final_approach_route:=false \
+  -p outer_action_name:=/aligned_navigate_to_pose \
+  -p direct_reverse_plan_topic:=/direct_reverse_plan \
+  -p min_approach_distance:=0.45 \
+  -p approach_step:=0.05 \
+  -p maximum_cost:=90 \
+  -p feedback_period:=0.20 \
+  -p progress_timeout:=45.0 \
+  -p progress_min_displacement:=0.03 \
+  -p small_spin_min_angle:=0.08 \
+  -p small_spin_max_angle:=0.52 \
+  -p direct_alignment_max_angle:=3.141593 \
+  -p automatic_reverse_enabled:=false \
+  -p final_alignment_max_angle:=3.141593 \
+  -p small_spin_timeout:=12.0 \
+  -p small_spin_effective_min_angular_speed:=0.020 \
+  -p small_spin_timeout_factor:=1.50 \
+  -p small_spin_timeout_margin:=5.0 \
+  -p use_map_yaw_spin:=true \
+  -p map_spin_command_topic:=/cmd_vel_nav \
+  -p map_spin_angular_speed:=0.18 \
+  -p final_map_spin_angular_speed:=0.06 \
+  -p map_spin_yaw_tolerance:=0.08 \
+  -p final_map_spin_yaw_tolerance:=0.035 \
+  -p map_spin_max_position_drift:=0.15 \
+  -p straight_reverse_speed:=0.06 \
+  -p reverse_time_allowance_factor:=3.0 \
+  -p use_terminal_handoff:=false \
+  -p terminal_handoff_distance:=0.35 \
+  -p terminal_position_tolerance:=0.05 \
+  -p final_alignment_position_tolerance:=0.08 \
+  -p final_pose_confirmations:=3 \
+  -p final_pose_confirmation_period:=0.15 \
+  -p final_position_correction_cycles:=3 \
+  -p final_position_correction_max_distance:=0.20 \
+  -p final_position_correction_alignment_limit:=1.047198 \
+  -p final_position_micro_reverse_enabled:=true \
+  -p final_position_micro_reverse_min_distance:=0.05 \
+  -p final_position_micro_reverse_max_distance:=0.12 \
+  -p final_position_micro_reverse_lateral_margin:=0.004 \
+  -p final_position_micro_reverse_alignment_limit:=0.12 \
+  -p terminal_forward_speed:=0.04 \
+  -p terminal_time_allowance_factor:=3.0 \
+  -p terminal_alignment_max_angle:=0.52 \
+  -p terminal_bearing_yaw_tolerance:=0.035 \
+  -p policy_block_timeout:=6.0 \
+  -p stale_command_abort_timeout:=15.0 \
+  -p collision_block_abort_timeout:=3.0 \
+  -p localization_block_abort_timeout:=3.0 \
+  -p degraded_localization_block_abort_timeout:=6.0 \
+  -p turn_clearance_forward_enabled:=true \
+  -p turn_clearance_forward_distance:=0.30 \
+  -p turn_clearance_permission_wait:=2.50 \
+  >"${LOG}" 2>&1 < /dev/null
+
+for attempt in $(seq 1 15); do
+  nodes="$(
+    timeout 8 "${ROS_ENV}" env \
+      FASTRTPS_DEFAULT_PROFILES_FILE="${NAV_FASTDDS_PROFILE}" \
+      ROS2CLI_DISABLE_DAEMON=1 \
+      ros2 node list 2>/dev/null || true
+  )"
+  action_info="$(
+    timeout 8 "${ROS_ENV}" env \
+      FASTRTPS_DEFAULT_PROFILES_FILE="${NAV_FASTDDS_PROFILE}" \
+      ROS2CLI_DISABLE_DAEMON=1 \
+      ros2 action info /aligned_navigate_to_pose 2>/dev/null || true
+  )"
+  status_info="$(
+    timeout 8 "${ROS_ENV}" env \
+      FASTRTPS_DEFAULT_PROFILES_FILE="${NAV_FASTDDS_PROFILE}" \
+      ROS2CLI_DISABLE_DAEMON=1 \
+      ros2 topic info /aligned_goal_status 2>/dev/null || true
+  )"
+  if grep -qx '/aligned_nav_goal_adapter' <<<"${nodes}" \
+    && grep -q 'Action servers: [1-9]' <<<"${action_info}" \
+    && grep -q 'Publisher count: [1-9]' <<<"${status_info}"; then
+    echo "SEEED_GOAL_ADAPTER_READY attempt=${attempt}"
+    printf '%s\n' "${action_info}"
+    echo "Motion remains DISARMED."
+    exit 0
+  fi
+  sleep 1
+done
+
+echo "Goal adapter failed to become ready on seeed." >&2
+tail -100 "${LOG}" >&2 || true
+exit 1

@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROS_ROOT="${ROS_ROOT:-/home/seeed/ros2}"
+ROS_ENV="${ROS_ENV:-${ROS_ROOT}/use_ros_env.sh}"
+NAV_FASTDDS_PROFILE="${NAV_FASTDDS_PROFILE:-${ROS_ROOT}/fastrtps_profile.xml}"
+ADAPTER="${ADAPTER:-${ROS_ROOT}/scripts/aligned_nav_goal_adapter.py}"
+DISARM="${DISARM:-${ROS_ROOT}/scripts/seeed_disarm_nav_motion.sh}"
+LOG="${ROS_ROOT}/logs/aligned_nav_goal_adapter.log"
+
+for path in "${ROS_ENV}" "${ADAPTER}" "${DISARM}" "${NAV_FASTDDS_PROFILE}"; do
+  if [[ ! -r "${path}" ]]; then
+    echo "Required file is missing: ${path}" >&2
+    exit 1
+  fi
+done
+
+echo "Disarming motion before refreshing the RViz goal action server..."
+"${DISARM}"
+
+adapter_pids="$(
+  ps -eo pid=,comm=,args= | awk '
+    $2 == "python3" &&
+    /aligned_nav_goal_adapter.py/ &&
+    $0 !~ /awk/ {print $1}
+  '
+)"
+if [[ -n "${adapter_pids}" ]]; then
+  # shellcheck disable=SC2086
+  kill ${adapter_pids} 2>/dev/null || true
+fi
+for _ in $(seq 1 20); do
+  remaining="$(
+    ps -eo pid=,comm=,args= | awk '
+      $2 == "python3" &&
+      /aligned_nav_goal_adapter.py/ &&
+      $0 !~ /awk/ {print $1}
+    '
+  )"
+  [[ -z "${remaining}" ]] && break
+  sleep 0.25
+done
+if [[ -n "${remaining:-}" ]]; then
+  echo "Old aligned goal adapter did not stop: ${remaining}" >&2
+  exit 1
+fi
+
+setsid -f "${ROS_ENV}" env \
+  FASTRTPS_DEFAULT_PROFILES_FILE="${NAV_FASTDDS_PROFILE}" \
+  python3 "${ADAPTER}" --ros-args \
+  -p approach_distance:=0.70 \
+  -p min_approach_distance:=0.45 \
+  -p approach_step:=0.05 \
+  -p maximum_cost:=90 \
+  -p feedback_period:=0.20 \
+  -p progress_timeout:=45.0 \
+  -p progress_min_displacement:=0.03 \
+  -p small_spin_min_angle:=0.08 \
+  -p small_spin_max_angle:=0.52 \
+  -p direct_alignment_max_angle:=1.57 \
+  -p final_alignment_max_angle:=3.14 \
+  -p small_spin_timeout:=12.0 \
+  >"${LOG}" 2>&1 < /dev/null
+
+for attempt in $(seq 1 15); do
+  nodes="$(
+    timeout 8 "${ROS_ENV}" env \
+      FASTRTPS_DEFAULT_PROFILES_FILE="${NAV_FASTDDS_PROFILE}" \
+      ROS2CLI_DISABLE_DAEMON=1 \
+      ros2 node list 2>/dev/null || true
+  )"
+  action_info="$(
+    timeout 8 "${ROS_ENV}" env \
+      FASTRTPS_DEFAULT_PROFILES_FILE="${NAV_FASTDDS_PROFILE}" \
+      ROS2CLI_DISABLE_DAEMON=1 \
+      ros2 action info /navigate_to_pose 2>/dev/null || true
+  )"
+  status_info="$(
+    timeout 8 "${ROS_ENV}" env \
+      FASTRTPS_DEFAULT_PROFILES_FILE="${NAV_FASTDDS_PROFILE}" \
+      ROS2CLI_DISABLE_DAEMON=1 \
+      ros2 topic info /aligned_goal_status 2>/dev/null || true
+  )"
+  if grep -qx '/aligned_nav_goal_adapter' <<<"${nodes}" \
+    && grep -q 'Action servers: [1-9]' <<<"${action_info}" \
+    && grep -q 'Publisher count: [1-9]' <<<"${status_info}"; then
+    echo "SEEED_GOAL_ADAPTER_READY attempt=${attempt}"
+    printf '%s\n' "${action_info}"
+    echo "Motion remains DISARMED."
+    exit 0
+  fi
+  sleep 1
+done
+
+echo "Goal adapter failed to become ready on seeed." >&2
+tail -100 "${LOG}" >&2 || true
+exit 1

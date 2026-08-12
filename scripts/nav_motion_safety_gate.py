@@ -1,0 +1,1756 @@
+#!/usr/bin/env python3
+"""Last safety gate between Nav2 and the Ranger base.
+
+The gate starts disarmed and continually publishes a zero command until all
+localization and chassis checks are healthy and an operator explicitly arms it.
+"""
+
+import math
+import re
+import time
+from dataclasses import dataclass
+
+import rclpy
+from geometry_msgs.msg import PoseStamped, Twist
+from nav_msgs.msg import Odometry, Path
+from ranger_msgs.msg import SystemState
+from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
+from rclpy.duration import Duration
+from rclpy.executors import ExternalShutdownException, MultiThreadedExecutor
+from rclpy.node import Node
+from rclpy.qos import QoSProfile, ReliabilityPolicy
+from sensor_msgs.msg import Range
+from std_msgs.msg import Bool, String
+from std_srvs.srv import SetBool
+
+
+# Floating-point reconstruction of a Path can make an intended 0.050 m
+# terminal segment evaluate a few micrometres below 0.050 m.  Keep the policy
+# boundary fail-closed for materially short paths, while accepting that
+# numeric representation error.  One millimetre is well below both the map
+# resolution and the chassis motion accuracy.
+STRAIGHT_PATH_LENGTH_EPSILON_M = 0.001
+
+
+def path_meets_minimum_length(path_length, minimum_length):
+    return (
+        float(path_length) + STRAIGHT_PATH_LENGTH_EPSILON_M
+        >= float(minimum_length)
+    )
+
+
+@dataclass
+class UltrasonicLatch:
+    """Fail-safe hysteresis for one intermittent ultrasonic sensor."""
+
+    blocked: bool = False
+    last_blocked_sec: float = -math.inf
+    clear_count: int = 0
+    clear_kind: str = ""
+
+    def update(
+            self, value, now_sec, stop_distance, clear_distance,
+            hold_sec, finite_clear_samples, no_echo_clear_samples):
+        finite_clear_samples = max(1, int(finite_clear_samples))
+        no_echo_clear_samples = max(
+            finite_clear_samples, int(no_echo_clear_samples))
+
+        if not math.isfinite(value):
+            if not (math.isinf(value) and value > 0.0):
+                self.blocked = True
+                self.last_blocked_sec = now_sec
+                self.clear_count = 0
+                self.clear_kind = ""
+                return
+            clear_kind = "no_echo"
+            required_samples = no_echo_clear_samples
+        elif value <= stop_distance:
+            self.blocked = True
+            self.last_blocked_sec = now_sec
+            self.clear_count = 0
+            self.clear_kind = ""
+            return
+        elif value >= clear_distance:
+            clear_kind = "finite"
+            required_samples = finite_clear_samples
+        else:
+            # Stay in the current hysteresis state between stop and clear.
+            self.clear_count = 0
+            self.clear_kind = ""
+            return
+
+        if not self.blocked:
+            return
+        if now_sec - self.last_blocked_sec < hold_sec:
+            self.clear_count = 0
+            self.clear_kind = ""
+            return
+        if self.clear_kind != clear_kind:
+            self.clear_count = 0
+            self.clear_kind = clear_kind
+        self.clear_count += 1
+        if self.clear_count >= required_samples:
+            self.blocked = False
+            self.clear_count = 0
+            self.clear_kind = ""
+
+
+@dataclass
+class FitnessHysteresis:
+    """Block only sustained poor NDT fitness and require a stable recovery."""
+
+    blocked: bool = True
+    bad_since_sec: float | None = None
+    clear_count: int = 0
+
+    def update(
+            self, value, now_sec, block_threshold, clear_threshold,
+            bad_hold_sec, clear_samples):
+        clear_samples = max(1, int(clear_samples))
+        if not math.isfinite(value):
+            self.blocked = True
+            self.bad_since_sec = now_sec
+            self.clear_count = 0
+            return
+
+        if self.blocked:
+            self.bad_since_sec = None
+            if value <= clear_threshold:
+                self.clear_count += 1
+                if self.clear_count >= clear_samples:
+                    self.blocked = False
+                    self.clear_count = 0
+            else:
+                self.clear_count = 0
+            return
+
+        self.clear_count = 0
+        if value <= block_threshold:
+            self.bad_since_sec = None
+            return
+        if self.bad_since_sec is None:
+            self.bad_since_sec = now_sec
+            return
+        if now_sec - self.bad_since_sec >= bad_hold_sec:
+            self.blocked = True
+            self.clear_count = 0
+
+
+@dataclass(frozen=True)
+class SpeedProfileDecision:
+    state: str
+    cap: float
+
+
+def compute_speed_profile(
+        traveled, remaining, start_distance, start_speed,
+        approach_distance, approach_min_speed, cruise_speed):
+    """Return the lowest applicable start/approach/cruise speed cap."""
+    limits = []
+    if traveled < start_distance:
+        limits.append(("START", start_speed))
+    if math.isfinite(remaining) and remaining <= approach_distance:
+        ratio = max(0.0, min(1.0, remaining / approach_distance))
+        approach_cap = (
+            approach_min_speed
+            + (cruise_speed - approach_min_speed) * ratio
+        )
+        limits.append(("APPROACH", approach_cap))
+    if not limits:
+        return SpeedProfileDecision("CRUISE", cruise_speed)
+    state, cap = min(limits, key=lambda item: item[1])
+    if len(limits) == 2:
+        state = "START_APPROACH"
+    return SpeedProfileDecision(state, cap)
+
+
+def select_runtime_fitness_thresholds(
+        goal_active, remaining_path, terminal_distance,
+        normal_block, normal_clear, terminal_block, terminal_clear,
+        degraded_recovery=False):
+    """Use a bounded degraded-localization envelope only near the goal.
+
+    The global plan length is reset to infinity for every new goal.  Therefore
+    a terminal window cannot leak from a completed/previous goal into a new
+    long route.  LiDAR collision checking, chassis odometry, ultrasonic
+    guards, localization freshness and the final strict pose check remain
+    active while this window is selected.
+    """
+    terminal = (
+        bool(goal_active)
+        and math.isfinite(remaining_path)
+        and 0.0 <= remaining_path <= terminal_distance
+    )
+    if terminal:
+        return terminal_block, terminal_clear, "terminal"
+    if degraded_recovery and goal_active:
+        return terminal_block, terminal_clear, "degraded_recovery"
+    return normal_block, normal_clear, "normal"
+
+
+class NavMotionSafetyGate(Node):
+    def __init__(self):
+        super().__init__("nav_motion_safety_gate")
+        self.input_topic = self.declare_parameter(
+            "input_topic", "/cmd_vel_nav_smoothed").value
+        self.pre_collision_topic = self.declare_parameter(
+            "pre_collision_topic", "/cmd_vel_nav_smoothed").value
+        self.output_topic = self.declare_parameter("output_topic", "/cmd_vel").value
+        self.arm_service = self.declare_parameter(
+            "arm_service", "/set_nav_motion_enabled").value
+        # max_fitness remains the strict startup/readiness baseline. Runtime
+        # motion uses a higher sustained-failure threshold so normal NDT score
+        # jitter while rotating cannot repeatedly zero an otherwise safe turn.
+        self.max_fitness = float(self.declare_parameter("max_fitness", 0.18).value)
+        self.fitness_block_threshold = float(self.declare_parameter(
+            "fitness_block_threshold", 0.22).value)
+        self.fitness_clear_threshold = float(self.declare_parameter(
+            "fitness_clear_threshold", 0.18).value)
+        self.fitness_bad_hold_sec = float(self.declare_parameter(
+            "fitness_bad_hold_sec", 2.0).value)
+        self.fitness_clear_samples_required = max(
+            1, int(self.declare_parameter(
+                "fitness_clear_samples_required", 3).value))
+        self.terminal_fitness_distance = float(self.declare_parameter(
+            "terminal_fitness_distance", 0.20).value)
+        self.terminal_fitness_block_threshold = float(
+            self.declare_parameter(
+                "terminal_fitness_block_threshold", 0.35).value)
+        self.terminal_fitness_clear_threshold = float(
+            self.declare_parameter(
+                "terminal_fitness_clear_threshold", 0.32).value)
+        self.degraded_fitness_recovery_enabled = bool(
+            self.declare_parameter(
+                "degraded_fitness_recovery_enabled", True).value)
+        self.degraded_fitness_max_travel = float(
+            self.declare_parameter(
+                "degraded_fitness_max_travel", 0.50).value)
+        self.degraded_fitness_max_linear = float(
+            self.declare_parameter(
+                "degraded_fitness_max_linear", 0.08).value)
+        self.degraded_fitness_max_angular = float(
+            self.declare_parameter(
+                "degraded_fitness_max_angular", 0.08).value)
+        self.degraded_fitness_max_rotation = float(
+            self.declare_parameter(
+                "degraded_fitness_max_rotation", math.radians(45.0)).value)
+        self.degraded_fitness_clear_samples_required = max(
+            1, int(self.declare_parameter(
+                "degraded_fitness_clear_samples_required", 2).value))
+        self.localization_timeout = float(
+            self.declare_parameter("localization_timeout", 0.50).value)
+        self.odom_timeout = float(
+            self.declare_parameter("odom_timeout", 0.30).value)
+        self.chassis_timeout = float(
+            self.declare_parameter("chassis_timeout", 1.00).value)
+        self.command_timeout = float(
+            self.declare_parameter("command_timeout", 0.30).value)
+        self.pre_collision_timeout = float(
+            self.declare_parameter("pre_collision_timeout", 0.30).value)
+        self.obstacle_status_timeout = float(
+            self.declare_parameter("obstacle_status_timeout", 0.50).value)
+        self.max_obstacle_age = float(
+            self.declare_parameter("max_obstacle_age", 1.00).value)
+        self.max_linear = float(self.declare_parameter("max_linear", 0.40).value)
+        self.max_angular = float(self.declare_parameter("max_angular", 0.18).value)
+        self.speed_profile_enabled = bool(self.declare_parameter(
+            "speed_profile_enabled", True).value)
+        self.start_slow_distance = float(self.declare_parameter(
+            "start_slow_distance", 0.30).value)
+        self.start_max_linear = float(self.declare_parameter(
+            "start_max_linear", 0.08).value)
+        self.approach_slow_distance = float(self.declare_parameter(
+            "approach_slow_distance", 0.80).value)
+        self.approach_min_linear = float(self.declare_parameter(
+            "approach_min_linear", 0.05).value)
+        self.speed_profile_plan_topic = str(self.declare_parameter(
+            "speed_profile_plan_topic", "/plan").value)
+        self.minimum_linear_for_turn = float(self.declare_parameter(
+            "minimum_linear_for_turn", 0.012).value)
+        self.max_motion_curvature = float(self.declare_parameter(
+            "max_motion_curvature", 2.25).value)
+        self.curvature_slack = float(self.declare_parameter(
+            "curvature_slack", 0.015).value)
+        self.allow_small_in_place_rotation = bool(self.declare_parameter(
+            "allow_small_in_place_rotation", True).value)
+        self.max_in_place_rotation = float(self.declare_parameter(
+            # A nearly opposite target needs about 180 degrees before any
+            # translation can reset this budget.  Keep enough bounded margin
+            # for closed-loop skid/overshoot correction without permitting an
+            # unbounded spin.
+            "max_in_place_rotation", 5.24).value)
+        self.max_in_place_angular = float(self.declare_parameter(
+            "max_in_place_angular", 0.12).value)
+        self.small_spin_reset_distance = float(self.declare_parameter(
+            "small_spin_reset_distance", 0.05).value)
+        self.reverse_straight_only = bool(self.declare_parameter(
+            "reverse_straight_only", True).value)
+        self.max_reverse_angular = float(self.declare_parameter(
+            "max_reverse_angular", 0.015).value)
+        self.plan_topic = str(self.declare_parameter(
+            "plan_topic", "/direct_reverse_plan").value)
+        self.plan_timeout = float(self.declare_parameter(
+            "plan_timeout", 3.0).value)
+        self.straight_path_min_length = float(self.declare_parameter(
+            "straight_path_min_length", 0.05).value)
+        self.straight_path_max_lateral_error = float(self.declare_parameter(
+            "straight_path_max_lateral_error", 0.10).value)
+        self.straight_path_max_heading_span = float(self.declare_parameter(
+            "straight_path_max_heading_span", 0.12).value)
+        self.straight_path_max_length_ratio = float(self.declare_parameter(
+            "straight_path_max_length_ratio", 1.03).value)
+        self.straight_path_confirmations_required = max(
+            1, int(self.declare_parameter(
+                "straight_path_confirmations_required", 2).value))
+        self.ultrasonic_enabled = bool(self.declare_parameter(
+            "ultrasonic_enabled", True).value)
+        self.ultrasonic_motion_direction = str(self.declare_parameter(
+            "ultrasonic_motion_direction", "reverse").value).lower()
+        self.ultrasonic_timeout = float(self.declare_parameter(
+            "ultrasonic_timeout", 0.75).value)
+        self.ultrasonic_stop_distance = float(self.declare_parameter(
+            "ultrasonic_stop_distance", 0.22).value)
+        self.ultrasonic_clear_distance = float(self.declare_parameter(
+            "ultrasonic_clear_distance", 0.35).value)
+        self.ultrasonic_turn_allow_distance = float(
+            self.declare_parameter(
+                "ultrasonic_turn_allow_distance", 0.25).value)
+        self.ultrasonic_self_echo_enabled = bool(self.declare_parameter(
+            "ultrasonic_self_echo_enabled", True).value)
+        self.ultrasonic_self_echo_min_distance = float(
+            self.declare_parameter(
+                "ultrasonic_self_echo_min_distance", 0.08).value)
+        self.ultrasonic_self_echo_max_distance = float(
+            self.declare_parameter(
+                "ultrasonic_self_echo_max_distance", 0.12).value)
+        self.ultrasonic_sensor_to_rear_edge = float(self.declare_parameter(
+            "ultrasonic_sensor_to_rear_edge", 0.15).value)
+        self.ultrasonic_required_tail_clearance = float(
+            self.declare_parameter(
+                "ultrasonic_required_tail_clearance", 0.02).value)
+        self.ultrasonic_braking_margin = float(self.declare_parameter(
+            "ultrasonic_braking_margin", 0.0).value)
+        self.ultrasonic_noise_margin = float(self.declare_parameter(
+            "ultrasonic_noise_margin", 0.0).value)
+        self.ultrasonic_block_hold_sec = float(self.declare_parameter(
+            "ultrasonic_block_hold_sec", 1.50).value)
+        self.ultrasonic_clear_samples_required = max(
+            1, int(self.declare_parameter(
+                "ultrasonic_clear_samples_required", 3).value))
+        self.ultrasonic_no_echo_clear_samples_required = max(
+            self.ultrasonic_clear_samples_required,
+            int(self.declare_parameter(
+                "ultrasonic_no_echo_clear_samples_required", 8).value))
+        self.ultrasonic_turn_guard_enabled = bool(self.declare_parameter(
+            "ultrasonic_turn_guard_enabled", True).value)
+        self.ultrasonic_reverse_speed_taper_enabled = bool(
+            self.declare_parameter(
+                "ultrasonic_reverse_speed_taper_enabled", True).value)
+        self.operator_heartbeat_required = bool(self.declare_parameter(
+            "operator_heartbeat_required", True).value)
+        self.operator_heartbeat_timeout = float(self.declare_parameter(
+            "operator_heartbeat_timeout", 3.0).value)
+        self.goal_lease_required = bool(self.declare_parameter(
+            "goal_lease_required", True).value)
+        self.goal_lease_timeout = float(self.declare_parameter(
+            "goal_lease_timeout", 0.75).value)
+
+        required_stop_distance = (
+            self.ultrasonic_sensor_to_rear_edge
+            + self.ultrasonic_required_tail_clearance
+            + self.ultrasonic_braking_margin
+            + self.ultrasonic_noise_margin
+        )
+        if self.ultrasonic_stop_distance + 1.0e-6 < required_stop_distance:
+            raise ValueError(
+                "ultrasonic_stop_distance is smaller than the measured "
+                "rear-setback + tail-clearance + braking/noise margins: "
+                f"{self.ultrasonic_stop_distance:.3f} < "
+                f"{required_stop_distance:.3f} m")
+        if self.ultrasonic_clear_distance <= self.ultrasonic_stop_distance:
+            raise ValueError(
+                "ultrasonic_clear_distance must exceed "
+                "ultrasonic_stop_distance")
+        if self.ultrasonic_turn_allow_distance <= self.ultrasonic_stop_distance:
+            raise ValueError(
+                "ultrasonic_turn_allow_distance must exceed the hard-stop "
+                "distance")
+        if self.ultrasonic_self_echo_enabled and not (
+                0.0 <= self.ultrasonic_self_echo_min_distance
+                < self.ultrasonic_self_echo_max_distance
+                <= self.ultrasonic_stop_distance):
+            raise ValueError(
+                "ultrasonic self-echo band must be ordered and remain inside "
+                "the blocked stop range")
+        if not (
+                0.0 < self.approach_min_linear
+                <= self.start_max_linear
+                < self.max_linear
+                and self.start_slow_distance > 0.0
+                and self.approach_slow_distance > self.start_slow_distance):
+            raise ValueError(
+                "speed profile must satisfy 0 < approach_min <= start_max "
+                "< max_linear and approach_distance > start_distance > 0")
+        if not (
+                0.0 < self.max_fitness
+                <= self.fitness_clear_threshold
+                < self.fitness_block_threshold
+                and self.fitness_bad_hold_sec >= 0.0):
+            raise ValueError(
+                "NDT fitness thresholds must satisfy 0 < startup <= clear "
+                "< block and bad_hold_sec >= 0")
+        if not (
+                self.terminal_fitness_distance > 0.0
+                and self.fitness_block_threshold
+                <= self.terminal_fitness_clear_threshold
+                < self.terminal_fitness_block_threshold
+                and self.degraded_fitness_max_travel > 0.0
+                and 0.0 < self.degraded_fitness_max_linear
+                <= self.start_max_linear
+                and 0.0 < self.degraded_fitness_max_angular
+                <= self.max_in_place_angular
+                and 0.0 < self.degraded_fitness_max_rotation
+                <= self.max_in_place_rotation):
+            raise ValueError(
+                "terminal NDT thresholds must satisfy normal block <= "
+                "terminal clear < terminal block and distance > 0")
+
+        sensor_qos = QoSProfile(depth=10, reliability=ReliabilityPolicy.BEST_EFFORT)
+        reliable_qos = QoSProfile(
+            depth=10, reliability=ReliabilityPolicy.RELIABLE)
+        # The 50 Hz output loop must not starve 50 Hz Ranger feedback. Separate
+        # callback groups plus a multi-threaded executor keep the chassis
+        # heartbeat observable even while the command publisher is busy.
+        self.input_group = MutuallyExclusiveCallbackGroup()
+        self.localization_group = MutuallyExclusiveCallbackGroup()
+        self.odom_group = MutuallyExclusiveCallbackGroup()
+        self.chassis_state_group = MutuallyExclusiveCallbackGroup()
+        self.operator_group = MutuallyExclusiveCallbackGroup()
+        self.timer_group = MutuallyExclusiveCallbackGroup()
+        self.pub = self.create_publisher(Twist, self.output_topic, 10)
+        self.ready_pub = self.create_publisher(Bool, "/nav_motion_ready", 1)
+        self.armed_pub = self.create_publisher(Bool, "/nav_motion_armed", 1)
+        self.status_pub = self.create_publisher(String, "/nav_motion_status", 1)
+        self.ultrasonic_status_pub = self.create_publisher(
+            String, "/rear_ultrasonic_safety_status", 1)
+        self.ultrasonic_reverse_allowed_pub = self.create_publisher(
+            Bool, "/rear_ultrasonic_reverse_allowed", 1)
+        self.ultrasonic_left_turn_allowed_pub = self.create_publisher(
+            Bool, "/rear_ultrasonic_left_turn_allowed", 1)
+        self.ultrasonic_right_turn_allowed_pub = self.create_publisher(
+            Bool, "/rear_ultrasonic_right_turn_allowed", 1)
+        self.operator_link_status_pub = self.create_publisher(
+            String, "/hn_nav_operator_link_status", 1)
+        self.path_policy_pub = self.create_publisher(
+            String, "/nav_reverse_path_policy", 1)
+        self.speed_profile_pub = self.create_publisher(
+            String, "/nav_speed_profile_status", 1)
+        self.create_subscription(
+            Twist, self.input_topic, self.on_command, 10,
+            callback_group=self.input_group)
+        self.create_subscription(
+            Twist, self.pre_collision_topic, self.on_pre_collision_command, 10,
+            callback_group=self.input_group)
+        self.create_subscription(Path, self.plan_topic, self.on_plan, 10)
+        self.create_subscription(
+            Path, self.speed_profile_plan_topic, self.on_speed_profile_plan, 10)
+        self.localization_odom_subscription = self.create_subscription(
+            Odometry,
+            "/relocalization_odom",
+            self.on_localization,
+            sensor_qos,
+            callback_group=self.localization_group,
+        )
+        # The TF bridge already consumes this independent NDT pose stream.
+        # Accept it as a localization heartbeat as well, so losing one
+        # best-effort odometry sample cannot suppress otherwise healthy motion.
+        self.localization_pose_subscription = self.create_subscription(
+            PoseStamped,
+            "/relocalization_pose",
+            self.on_localization_pose,
+            sensor_qos,
+            callback_group=self.localization_group,
+        )
+        # Ranger publishes /odom RELIABLE. Use a matching reliable reader so
+        # chassis freshness cannot intermittently disappear during navigation.
+        self.odom_subscription = self.create_subscription(
+            Odometry, "/odom", self.on_odom, reliable_qos,
+            callback_group=self.odom_group)
+        self.system_state_subscription = self.create_subscription(
+            SystemState, "/system_state", self.on_system_state, reliable_qos,
+            callback_group=self.chassis_state_group)
+        self.create_subscription(
+            String, "/nav_obstacle_cloud_status", self.on_obstacle_status, 10)
+        self.create_subscription(
+            Bool, "/ultrasonic/healthy", self.on_ultrasonic_health, 10)
+        self.operator_heartbeat_subscription = self.create_subscription(
+            Bool,
+            "/hn_nav_operator_heartbeat",
+            self.on_operator_heartbeat,
+            # The HN operator heartbeat is published RELIABLE.  Matching the
+            # writer QoS is important across the Wi-Fi FastDDS link: a
+            # BEST_EFFORT reader could be discovered but receive no sustained
+            # samples, leaving the physical motion gate in STALE state.
+            reliable_qos,
+            callback_group=self.operator_group,
+        )
+        self.goal_active_subscription = self.create_subscription(
+            Bool,
+            "/aligned_goal_active",
+            self.on_goal_active,
+            reliable_qos,
+        )
+        self.create_subscription(
+            Range,
+            "/ultrasonic/sensor_1/range",
+            lambda msg: self.on_ultrasonic_range(0, msg),
+            sensor_qos,
+        )
+        self.create_subscription(
+            Range,
+            "/ultrasonic/sensor_2/range",
+            lambda msg: self.on_ultrasonic_range(1, msg),
+            sensor_qos,
+        )
+        self.create_service(SetBool, self.arm_service, self.on_set_arm)
+
+        self.last_command = None
+        self.last_command_time = None
+        self.last_pre_collision_command = None
+        self.last_pre_collision_command_time = None
+        self.last_plan_time = None
+        self.plan_is_straight = False
+        self.straight_path_confirmations = 0
+        self.plan_metrics = "waiting for path"
+        self.last_path_policy = None
+        self.last_localization_time = None
+        self.last_fitness = math.inf
+        self.fitness_hysteresis = FitnessHysteresis()
+        self.terminal_fitness_window = False
+        self.fitness_threshold_mode = "normal"
+        self.degraded_recovery_mode = False
+        self.degraded_recovery_attempted = False
+        self.degraded_recovery_traveled = 0.0
+        self.degraded_recovery_rotated = 0.0
+        self.degraded_recovery_last_yaw = None
+        self.degraded_healthy_count = 0
+        self.last_odom_time = None
+        self.odom_x = None
+        self.odom_y = None
+        self.odom_yaw = None
+        self.spin_active = False
+        self.spin_last_yaw = None
+        self.spin_origin_x = None
+        self.spin_origin_y = None
+        self.spin_accumulated = 0.0
+        self.spin_limit_reached = False
+        self.last_system_time = None
+        self.system_state_count = 0
+        self.last_obstacle_status_time = None
+        self.last_obstacle_age = math.inf
+        self.last_ultrasonic_health_time = None
+        self.ultrasonic_healthy = False
+        self.last_operator_heartbeat_time = None
+        self.operator_present = False
+        self.last_goal_lease_time = None
+        self.goal_active = False
+        self.goal_traveled = 0.0
+        self.profile_last_odom = None
+        self.speed_plan_remaining = math.inf
+        self.last_speed_plan_time = None
+        self.speed_profile_state = "IDLE"
+        self.speed_profile_cap = self.start_max_linear
+        self.speed_profile_requested = 0.0
+        self.speed_profile_output = 0.0
+        self.last_ultrasonic_times = [None, None]
+        self.ultrasonic_ranges = [math.nan, math.nan]
+        self.ultrasonic_min_ranges = [math.nan, math.nan]
+        self.ultrasonic_max_ranges = [math.nan, math.nan]
+        self.ultrasonic_latches = [UltrasonicLatch(), UltrasonicLatch()]
+        self.ultrasonic_turn_latches = [
+            UltrasonicLatch(), UltrasonicLatch()]
+        self.system_error = None
+        self.vehicle_state = None
+        self.control_mode = None
+        self.armed = False
+        self.last_status = "starting"
+        # AgileX requires motion frames at >= 50 Hz.  This includes zero-speed
+        # hold frames while disarmed; a 10 Hz final gate lets the chassis drop
+        # out of commanded mode and makes ROS commands appear to be ignored.
+        self.create_timer(
+            0.02, self.tick, callback_group=self.timer_group)
+        self.create_timer(
+            1.0, self.publish_status_heartbeat,
+            callback_group=self.timer_group)
+        self.get_logger().info(
+            "motion gate starts DISARMED: "
+            f"fitness_startup<={self.max_fitness:.3f} "
+            f"runtime_block>{self.fitness_block_threshold:.3f} for "
+            f"{self.fitness_bad_hold_sec:.2f}s "
+            f"clear<={self.fitness_clear_threshold:.3f}x"
+            f"{self.fitness_clear_samples_required}, "
+            f"terminal_fitness<={self.terminal_fitness_distance:.2f}m:"
+            f"block>{self.terminal_fitness_block_threshold:.3f}/"
+            f"clear<={self.terminal_fitness_clear_threshold:.3f}, "
+            f"degraded_recovery<={self.degraded_fitness_max_travel:.2f}m@"
+            f"{self.degraded_fitness_max_linear:.2f}m/s,"
+            f"{math.degrees(self.degraded_fitness_max_rotation):.1f}deg@"
+            f"{self.degraded_fitness_max_angular:.2f}rad/s, "
+            f"localization<={self.localization_timeout:.2f}s, "
+            f"cmd<={self.command_timeout:.2f}s, "
+            f"obstacle_age<={self.max_obstacle_age:.2f}s, "
+            f"rear_sonar={self.ultrasonic_motion_direction} "
+            f"stop<={self.ultrasonic_stop_distance:.2f}m "
+            f"clear>={self.ultrasonic_clear_distance:.2f}m, "
+            f"turn_allow>{self.ultrasonic_turn_allow_distance:.2f}m, "
+            f"self_echo=[{self.ultrasonic_self_echo_min_distance:.2f},"
+            f"{self.ultrasonic_self_echo_max_distance:.2f}]m "
+            f"sensor_to_tail={self.ultrasonic_sensor_to_rear_edge:.2f}m "
+            f"tail_clearance>={self.ultrasonic_required_tail_clearance:.2f}m "
+            f"hold={self.ultrasonic_block_hold_sec:.2f}s "
+            f"clear_samples={self.ultrasonic_clear_samples_required}/"
+            f"{self.ultrasonic_no_echo_clear_samples_required}, "
+            f"turn_guard={self.ultrasonic_turn_guard_enabled}, "
+            f"reverse_speed_taper="
+            f"{self.ultrasonic_reverse_speed_taper_enabled}, "
+            f"operator_heartbeat<={self.operator_heartbeat_timeout:.2f}s, "
+            f"goal_lease<={self.goal_lease_timeout:.2f}s, "
+            f"limits=({self.max_linear:.2f} m/s, {self.max_angular:.2f} rad/s), "
+            f"speed_profile=(start<={self.start_max_linear:.3f}m/s for "
+            f"{self.start_slow_distance:.2f}m, cruise<={self.max_linear:.3f}m/s, "
+            f"approach={self.approach_slow_distance:.2f}m to "
+            f"{self.approach_min_linear:.3f}m/s), "
+            f"small_spin<={math.degrees(self.max_in_place_rotation):.1f}deg "
+            f"at<={self.max_in_place_angular:.2f}rad/s "
+            f"reset_after={self.small_spin_reset_distance:.2f}m, "
+            f"curvature<={self.max_motion_curvature:.2f} 1/m, "
+            f"reverse_straight_only={self.reverse_straight_only} "
+            f"reverse_angular<={self.max_reverse_angular:.3f}rad/s "
+            f"plan={self.plan_topic} timeout={self.plan_timeout:.1f}s "
+            f"straight_limits=(lateral<={self.straight_path_max_lateral_error:.2f}m, "
+            f"heading_span<={self.straight_path_max_heading_span:.2f}rad, "
+            f"length_ratio<={self.straight_path_max_length_ratio:.2f}, "
+            f"confirmations={self.straight_path_confirmations_required})")
+
+    def on_command(self, msg):
+        self.last_command = msg
+        self.last_command_time = self.get_clock().now()
+
+    def on_pre_collision_command(self, msg):
+        self.last_pre_collision_command = msg
+        self.last_pre_collision_command_time = self.get_clock().now()
+
+    @staticmethod
+    def command_magnitude(command):
+        if command is None:
+            return 0.0
+        return max(
+            abs(float(command.linear.x)),
+            abs(float(command.linear.y)),
+            abs(float(command.angular.z)),
+        )
+
+    def collision_monitor_block_reason(self):
+        """Explain a nonzero command suppressed by Collision Monitor."""
+        if (
+                self.elapsed(self.last_pre_collision_command_time)
+                > self.pre_collision_timeout
+                or self.command_magnitude(self.last_pre_collision_command)
+                <= 0.001):
+            return None
+        safe_fresh = self.elapsed(self.last_command_time) <= self.command_timeout
+        safe_magnitude = self.command_magnitude(self.last_command)
+        if safe_fresh and safe_magnitude > 0.001:
+            return None
+        raw = self.last_pre_collision_command
+        safe = self.last_command
+        safe_age = self.elapsed(self.last_command_time)
+        return (
+            "LiDAR collision monitor blocked command "
+            f"requested=(x={float(raw.linear.x):+.3f},"
+            f"z={float(raw.angular.z):+.3f}) "
+            f"safe=(x={float(safe.linear.x) if safe else 0.0:+.3f},"
+            f"z={float(safe.angular.z) if safe else 0.0:+.3f}) "
+            f"safe_age={safe_age:.3f}s"
+        )
+
+    @staticmethod
+    def wrap(angle):
+        return math.atan2(math.sin(angle), math.cos(angle))
+
+    def classify_plan(self, msg):
+        points = []
+        for pose in msg.poses:
+            point = (float(pose.pose.position.x), float(pose.pose.position.y))
+            if not points or math.hypot(
+                    point[0] - points[-1][0],
+                    point[1] - points[-1][1]) >= 0.01:
+                points.append(point)
+        if len(points) < 2:
+            return False, "points<2"
+
+        segment_lengths = []
+        headings = []
+        for first, second in zip(points, points[1:]):
+            dx = second[0] - first[0]
+            dy = second[1] - first[1]
+            length = math.hypot(dx, dy)
+            if length < 1.0e-6:
+                continue
+            segment_lengths.append(length)
+            headings.append(math.atan2(dy, dx))
+        path_length = sum(segment_lengths)
+        if (
+                not path_meets_minimum_length(
+                    path_length, self.straight_path_min_length)
+                or not headings):
+            return False, (
+                f"length={path_length:.3f}m<"
+                f"{self.straight_path_min_length:.3f}m")
+
+        start = points[0]
+        end = points[-1]
+        chord_x = end[0] - start[0]
+        chord_y = end[1] - start[1]
+        chord_length = math.hypot(chord_x, chord_y)
+        if chord_length < 1.0e-6:
+            return False, "zero chord"
+        max_lateral = max(
+            abs(chord_x * (start[1] - point[1])
+                - (start[0] - point[0]) * chord_y) / chord_length
+            for point in points
+        )
+        base_heading = headings[0]
+        relative_headings = [
+            self.wrap(heading - base_heading) for heading in headings]
+        heading_span = max(relative_headings) - min(relative_headings)
+        length_ratio = path_length / chord_length
+        straight = (
+            max_lateral <= self.straight_path_max_lateral_error
+            and heading_span <= self.straight_path_max_heading_span
+            and length_ratio <= self.straight_path_max_length_ratio
+        )
+        metrics = (
+            f"points={len(points)} length={path_length:.3f}m "
+            f"lateral={max_lateral:.3f}m heading_span={heading_span:.3f}rad "
+            f"length_ratio={length_ratio:.3f}")
+        return straight, metrics
+
+    def publish_path_policy(self):
+        confirmed = (
+            self.plan_is_straight
+            and self.straight_path_confirmations
+            >= self.straight_path_confirmations_required
+        )
+        age = self.elapsed(self.last_plan_time)
+        state = "STRAIGHT_REVERSE_ALLOWED" if confirmed else "FORWARD_ONLY"
+        text = (
+            f"{state} confirmations={self.straight_path_confirmations}/"
+            f"{self.straight_path_confirmations_required} age={age:.3f}s "
+            f"{self.plan_metrics}")
+        self.path_policy_pub.publish(String(data=text))
+        if text.split(" age=", 1)[0] != self.last_path_policy:
+            self.get_logger().info(text)
+            self.last_path_policy = text.split(" age=", 1)[0]
+
+    def on_plan(self, msg):
+        straight, metrics = self.classify_plan(msg)
+        self.last_plan_time = self.get_clock().now()
+        self.plan_is_straight = straight
+        self.plan_metrics = metrics
+        if straight:
+            self.straight_path_confirmations = min(
+                self.straight_path_confirmations + 1,
+                self.straight_path_confirmations_required)
+        else:
+            self.straight_path_confirmations = 0
+        self.publish_path_policy()
+
+    @staticmethod
+    def path_length(msg):
+        return sum(
+            math.hypot(
+                float(second.pose.position.x - first.pose.position.x),
+                float(second.pose.position.y - first.pose.position.y),
+            )
+            for first, second in zip(msg.poses, msg.poses[1:])
+        )
+
+    def on_speed_profile_plan(self, msg):
+        if len(msg.poses) < 2:
+            return
+        self.speed_plan_remaining = self.path_length(msg)
+        self.last_speed_plan_time = self.get_clock().now()
+
+    def start_degraded_recovery(self, context):
+        """Start the single bounded localization-recovery attempt for a goal."""
+        self.degraded_recovery_mode = True
+        self.degraded_recovery_attempted = True
+        self.degraded_recovery_traveled = 0.0
+        self.degraded_recovery_rotated = 0.0
+        self.degraded_recovery_last_yaw = self.odom_yaw
+        self.degraded_healthy_count = 0
+        # Keep a blocked hysteresis blocked until it receives the configured
+        # consecutive samples under the recovery clear threshold.  Only reset
+        # its old hold timer so the new goal is judged from fresh samples.
+        self.fitness_hysteresis.bad_since = None
+        self.fitness_hysteresis.clear_count = 0
+        self.get_logger().warn(
+            f"{context}: entering one bounded degraded-localization recovery "
+            f"fitness={self.last_fitness:.3f} "
+            f"linear<={self.degraded_fitness_max_linear:.2f}m/s "
+            f"angular<={self.degraded_fitness_max_angular:.2f}rad/s "
+            f"travel<={self.degraded_fitness_max_travel:.2f}m "
+            f"rotation<={math.degrees(self.degraded_fitness_max_rotation):.1f}deg")
+
+    def degraded_recovery_is_eligible(self):
+        return (
+            self.degraded_fitness_recovery_enabled
+            and self.armed
+            and self.goal_active
+            and not self.degraded_recovery_mode
+            and not self.degraded_recovery_attempted
+            and self.fitness_hysteresis.blocked
+            and math.isfinite(self.last_fitness)
+            and self.last_fitness <= self.terminal_fitness_clear_threshold
+            and self.elapsed(self.last_localization_time)
+            <= self.localization_timeout
+        )
+
+    def on_localization(self, msg):
+        self.last_localization_time = self.get_clock().now()
+        self.last_fitness = float(msg.pose.covariance[0])
+        # A robot may finish one goal in a feature-poor patch and remain armed.
+        # Previously only a fresh arm service could enter the already-bounded
+        # recovery mode, so the next goal was guaranteed to abort before its
+        # first alignment step.  Start one bounded attempt automatically as
+        # soon as a recoverable sample is seen for that new active goal.
+        if self.degraded_recovery_is_eligible():
+            self.start_degraded_recovery("new active goal")
+        block_threshold, clear_threshold, threshold_mode = (
+            select_runtime_fitness_thresholds(
+                self.goal_active,
+                self.speed_plan_remaining,
+                self.terminal_fitness_distance,
+                self.fitness_block_threshold,
+                self.fitness_clear_threshold,
+                self.terminal_fitness_block_threshold,
+                self.terminal_fitness_clear_threshold,
+                self.degraded_recovery_mode,
+            )
+        )
+        terminal_window = threshold_mode == "terminal"
+        if terminal_window != self.terminal_fitness_window:
+            self.terminal_fitness_window = terminal_window
+            self.get_logger().info(
+                "NDT terminal convergence window "
+                f"{'enabled' if terminal_window else 'disabled'}: "
+                f"remaining={self.speed_plan_remaining:.3f}m "
+                f"block>{block_threshold:.3f} "
+                f"clear<={clear_threshold:.3f}")
+        if threshold_mode != self.fitness_threshold_mode:
+            self.fitness_threshold_mode = threshold_mode
+            self.get_logger().info(
+                f"NDT runtime threshold mode={threshold_mode} "
+                f"fitness={self.last_fitness:.3f} "
+                f"remaining={self.speed_plan_remaining:.3f}m")
+        was_blocked = self.fitness_hysteresis.blocked
+        clear_samples_required = (
+            self.degraded_fitness_clear_samples_required
+            if threshold_mode == "degraded_recovery"
+            else self.fitness_clear_samples_required
+        )
+        self.fitness_hysteresis.update(
+            self.last_fitness,
+            time.monotonic(),
+            block_threshold,
+            clear_threshold,
+            self.fitness_bad_hold_sec,
+            clear_samples_required,
+        )
+        if self.fitness_hysteresis.blocked != was_blocked:
+            if self.fitness_hysteresis.blocked:
+                self.get_logger().error(
+                    "NDT runtime safety block after sustained poor fitness: "
+                    f"fitness={self.last_fitness:.3f} "
+                    f"threshold={block_threshold:.3f} "
+                    f"mode={threshold_mode} "
+                    f"hold={self.fitness_bad_hold_sec:.2f}s")
+            else:
+                self.get_logger().info(
+                    "NDT runtime safety recovered after consecutive healthy "
+                    f"samples: fitness={self.last_fitness:.3f} "
+                    f"clear<={clear_threshold:.3f} "
+                    f"mode={threshold_mode} "
+                    f"samples={clear_samples_required}")
+        if self.degraded_recovery_mode:
+            if self.last_fitness <= self.fitness_clear_threshold:
+                self.degraded_healthy_count += 1
+                if self.degraded_healthy_count >= self.fitness_clear_samples_required:
+                    self.degraded_recovery_mode = False
+                    self.degraded_recovery_traveled = 0.0
+                    self.degraded_recovery_rotated = 0.0
+                    self.degraded_recovery_last_yaw = None
+                    self.degraded_healthy_count = 0
+                    self.get_logger().info(
+                        "NDT degraded recovery completed after consecutive "
+                        f"strict samples fitness={self.last_fitness:.3f}")
+            else:
+                self.degraded_healthy_count = 0
+
+    def on_localization_pose(self, _msg):
+        # Fitness is still validated from /relocalization_odom. This second
+        # NDT output only refreshes the shared localization heartbeat.
+        self.last_localization_time = self.get_clock().now()
+
+    def reset_small_spin_budget(self):
+        self.spin_active = False
+        self.spin_last_yaw = self.odom_yaw
+        self.spin_origin_x = self.odom_x
+        self.spin_origin_y = self.odom_y
+        self.spin_accumulated = 0.0
+        self.spin_limit_reached = False
+
+    def on_odom(self, msg):
+        self.last_odom_time = self.get_clock().now()
+        position = msg.pose.pose.position
+        orientation = msg.pose.pose.orientation
+        yaw = math.atan2(
+            2.0 * (orientation.w * orientation.z
+                   + orientation.x * orientation.y),
+            1.0 - 2.0 * (orientation.y * orientation.y
+                         + orientation.z * orientation.z),
+        )
+        self.odom_x = float(position.x)
+        self.odom_y = float(position.y)
+        self.odom_yaw = yaw
+        if self.degraded_recovery_mode:
+            if self.degraded_recovery_last_yaw is not None:
+                self.degraded_recovery_rotated += abs(
+                    self.wrap(yaw - self.degraded_recovery_last_yaw))
+            self.degraded_recovery_last_yaw = yaw
+        current = (self.odom_x, self.odom_y)
+        if self.goal_active and self.profile_last_odom is not None:
+            step = math.hypot(
+                current[0] - self.profile_last_odom[0],
+                current[1] - self.profile_last_odom[1],
+            )
+            # Ignore an odometry reset/jump instead of accidentally entering
+            # cruise speed immediately after a localization discontinuity.
+            if step <= 0.25:
+                self.goal_traveled += step
+                if self.degraded_recovery_mode:
+                    self.degraded_recovery_traveled += step
+        self.profile_last_odom = current
+        # Count only yaw produced by an actual in-place command.  Previously
+        # spin_active remained set during a short curved translation, so route
+        # steering was added to the in-place safety budget and a harmless
+        # final 5-10 degree alignment could be rejected as 250+ degrees.
+        if (
+                self.spin_active
+                and self.spin_last_yaw is not None
+                and self.small_spin_requested()):
+            self.spin_accumulated += abs(
+                self.wrap(yaw - self.spin_last_yaw))
+            if self.spin_accumulated >= self.max_in_place_rotation:
+                self.spin_limit_reached = True
+        self.spin_last_yaw = yaw
+        if (
+                self.spin_active
+                and self.spin_origin_x is not None
+                and math.hypot(
+                    self.odom_x - self.spin_origin_x,
+                    self.odom_y - self.spin_origin_y,
+                ) >= self.small_spin_reset_distance):
+            self.get_logger().info(
+                "small-spin budget reset after "
+                f"{self.small_spin_reset_distance:.2f}m translation")
+            self.reset_small_spin_budget()
+
+    def on_system_state(self, msg):
+        # Chassis freshness is a local receive-time property. Use a monotonic
+        # clock so a host time correction cannot turn a live 50 Hz stream into
+        # an apparent stale state for the entire goal.
+        self.last_system_time = time.monotonic()
+        self.system_state_count += 1
+        self.system_error = int(msg.error_code)
+        self.vehicle_state = int(msg.vehicle_state)
+        self.control_mode = int(msg.control_mode)
+
+    def on_obstacle_status(self, msg):
+        match = re.search(r"age=([0-9.]+)s", msg.data)
+        self.last_obstacle_status_time = self.get_clock().now()
+        self.last_obstacle_age = float(match.group(1)) if match else math.inf
+
+    def on_ultrasonic_health(self, msg):
+        self.last_ultrasonic_health_time = self.get_clock().now()
+        self.ultrasonic_healthy = bool(msg.data)
+
+    def on_operator_heartbeat(self, msg):
+        self.last_operator_heartbeat_time = self.get_clock().now()
+        self.operator_present = bool(msg.data)
+
+    def on_goal_active(self, msg):
+        self.last_goal_lease_time = self.get_clock().now()
+        active = bool(msg.data)
+        if active and not self.goal_active:
+            # A completed/aborted goal must never donate its accumulated yaw
+            # to the next RViz goal.  Each accepted goal gets one independent,
+            # still-bounded in-place rotation budget.
+            self.reset_small_spin_budget()
+            self.goal_traveled = 0.0
+            self.profile_last_odom = (
+                (self.odom_x, self.odom_y)
+                if self.odom_x is not None and self.odom_y is not None
+                else None
+            )
+            self.speed_plan_remaining = math.inf
+            self.last_speed_plan_time = None
+            # Each accepted RViz goal receives at most one bounded recovery.
+            # Preserve a mode deliberately entered by the arm service, but do
+            # not inherit an exhausted attempt from the preceding goal.
+            self.degraded_recovery_attempted = self.degraded_recovery_mode
+            self.degraded_recovery_traveled = 0.0
+            self.degraded_recovery_rotated = 0.0
+            self.degraded_recovery_last_yaw = self.odom_yaw
+            if (
+                    not self.degraded_recovery_mode
+                    and self.degraded_fitness_recovery_enabled
+                    and self.armed
+                    and self.fitness_hysteresis.blocked
+                    and math.isfinite(self.last_fitness)
+                    and self.last_fitness
+                    <= self.terminal_fitness_clear_threshold
+                    and self.elapsed(self.last_localization_time)
+                    <= self.localization_timeout):
+                self.start_degraded_recovery("new goal rising edge")
+        elif not active:
+            self.speed_profile_state = "IDLE"
+            self.speed_profile_cap = self.start_max_linear
+            self.degraded_recovery_mode = False
+            self.degraded_recovery_attempted = False
+            self.degraded_recovery_traveled = 0.0
+            self.degraded_recovery_rotated = 0.0
+            self.degraded_recovery_last_yaw = None
+            self.degraded_healthy_count = 0
+        self.goal_active = active
+
+    def on_ultrasonic_range(self, index, msg):
+        value = float(msg.range)
+        now = self.get_clock().now()
+        self.last_ultrasonic_times[index] = now
+        self.ultrasonic_ranges[index] = value
+        self.ultrasonic_min_ranges[index] = float(msg.min_range)
+        self.ultrasonic_max_ranges[index] = float(msg.max_range)
+        # The sensors sit 0.15 m inboard of the tail. Returns in the calibrated
+        # 0.08-0.12 m window are therefore the vehicle itself, not reachable
+        # external obstacles. Ignore those samples for latch state: they must
+        # neither create a false stop nor clear a previously confirmed block.
+        if self.is_ultrasonic_self_echo(value):
+            return
+        self.ultrasonic_latches[index].update(
+            value,
+            now.nanoseconds / 1e9,
+            self.ultrasonic_stop_distance,
+            self.ultrasonic_clear_distance,
+            self.ultrasonic_block_hold_sec,
+            self.ultrasonic_clear_samples_required,
+            self.ultrasonic_no_echo_clear_samples_required,
+        )
+        self.ultrasonic_turn_latches[index].update(
+            value,
+            now.nanoseconds / 1e9,
+            self.ultrasonic_turn_allow_distance,
+            self.ultrasonic_turn_allow_distance,
+            self.ultrasonic_block_hold_sec,
+            self.ultrasonic_clear_samples_required,
+            self.ultrasonic_no_echo_clear_samples_required,
+        )
+
+    def is_ultrasonic_self_echo(self, value):
+        return (
+            self.ultrasonic_self_echo_enabled
+            and math.isfinite(value)
+            and self.ultrasonic_self_echo_min_distance
+            <= value <= self.ultrasonic_self_echo_max_distance
+        )
+
+    def classify_ultrasonic(self, index):
+        value = self.ultrasonic_ranges[index]
+        latch = self.ultrasonic_latches[index]
+        if math.isnan(value) or (math.isinf(value) and value < 0.0):
+            return "INVALID"
+        if math.isinf(value) and value > 0.0:
+            return "NO_ECHO_CLEAR" if not latch.blocked else "NO_ECHO_HELD"
+        if self.is_ultrasonic_self_echo(value):
+            return "SELF_ECHO"
+        if value < self.ultrasonic_self_echo_min_distance:
+            return "OBSTACLE_NEAR"
+        if value <= self.ultrasonic_stop_distance:
+            return "OBSTACLE"
+        if value < self.ultrasonic_clear_distance:
+            return "HYSTERESIS_BLOCKED" if latch.blocked else "HYSTERESIS_CLEAR"
+        return "CLEAR" if not latch.blocked else "CLEAR_PENDING"
+
+    def classify_turn_ultrasonic(self, index):
+        value = self.ultrasonic_ranges[index]
+        latch = self.ultrasonic_turn_latches[index]
+        if math.isnan(value) or (math.isinf(value) and value < 0.0):
+            return "INVALID"
+        if math.isinf(value) and value > 0.0:
+            return "NO_ECHO_CLEAR" if not latch.blocked else "NO_ECHO_HELD"
+        if self.is_ultrasonic_self_echo(value):
+            return "SELF_ECHO"
+        if value <= self.ultrasonic_turn_allow_distance:
+            return "TURN_TOO_CLOSE"
+        return "TURN_CLEAR" if not latch.blocked else "TURN_CLEAR_PENDING"
+
+    def rear_reverse_allowed(self):
+        return self.ultrasonic_sensor_allowed(
+            0, self.ultrasonic_latches) and self.ultrasonic_sensor_allowed(
+                1, self.ultrasonic_latches)
+
+    def ultrasonic_sensor_allowed(self, index, latches):
+        if not self.ultrasonic_enabled or not self.ultrasonic_healthy:
+            return False
+        if self.elapsed(self.last_ultrasonic_health_time) > self.ultrasonic_timeout:
+            return False
+        stamp = self.last_ultrasonic_times[index]
+        return (
+            self.elapsed(stamp) <= self.ultrasonic_timeout
+            and not latches[index].blocked
+        )
+
+    def rear_left_turn_allowed(self):
+        # Turning in a narrow aisle is permitted only when both rear sectors
+        # are clear; either rear corner may sweep toward nearby structure.
+        return self.rear_turn_allowed()
+
+    def rear_right_turn_allowed(self):
+        return self.rear_turn_allowed()
+
+    def rear_turn_allowed(self):
+        return self.ultrasonic_sensor_allowed(
+            0, self.ultrasonic_turn_latches) and \
+            self.ultrasonic_sensor_allowed(
+                1, self.ultrasonic_turn_latches)
+
+    def ultrasonic_blocking_sides(self, latches):
+        if not self.ultrasonic_enabled:
+            return ("LEFT", "RIGHT")
+        if (
+                not self.ultrasonic_healthy
+                or self.elapsed(self.last_ultrasonic_health_time)
+                > self.ultrasonic_timeout):
+            return ("LEFT", "RIGHT")
+        blocked = []
+        for index, name in enumerate(("LEFT", "RIGHT")):
+            if (
+                    self.elapsed(self.last_ultrasonic_times[index])
+                    > self.ultrasonic_timeout
+                    or latches[index].blocked):
+                blocked.append(name)
+        return tuple(blocked)
+
+    def rear_reverse_speed_scale(self):
+        """Linearly taper reverse speed between hard-stop and clear ranges."""
+        if not self.rear_reverse_allowed():
+            return 0.0
+        if not self.ultrasonic_reverse_speed_taper_enabled:
+            return 1.0
+        span = self.ultrasonic_clear_distance - self.ultrasonic_stop_distance
+        if span <= 1.0e-6:
+            return 0.0
+        scale = 1.0
+        for value in self.ultrasonic_ranges:
+            if self.is_ultrasonic_self_echo(value):
+                continue
+            if math.isinf(value) and value > 0.0:
+                continue
+            if not math.isfinite(value):
+                return 0.0
+            scale = min(
+                scale,
+                max(0.0, min(
+                    1.0,
+                    (value - self.ultrasonic_stop_distance) / span,
+                )),
+            )
+        return scale
+
+    @staticmethod
+    def guarded_ultrasonic_indices(
+            linear_x, angular_z, motion_direction, turn_guard_enabled):
+        indices = set()
+        if motion_direction == "reverse" and linear_x < -0.001:
+            indices.update((0, 1))
+        elif motion_direction == "forward" and linear_x > 0.001:
+            indices.update((0, 1))
+        elif motion_direction not in ("reverse", "forward"):
+            if abs(linear_x) > 0.001:
+                indices.update((0, 1))
+
+        if turn_guard_enabled:
+            # Narrow-space policy: every left/right turn checks both rear
+            # ultrasonic sectors. A single blocked corner stops either turn.
+            if abs(angular_z) > 0.001:
+                indices.update((0, 1))
+        return tuple(sorted(indices))
+
+    def guarded_ultrasonic_sensors(self):
+        if not self.ultrasonic_enabled or self.last_command is None:
+            return ()
+        linear_x = float(self.last_command.linear.x)
+        angular_z = float(self.last_command.angular.z)
+        return self.guarded_ultrasonic_indices(
+            linear_x,
+            angular_z,
+            self.ultrasonic_motion_direction,
+            self.ultrasonic_turn_guard_enabled,
+        )
+
+    def reverse_path_reason(self):
+        if not self.reverse_straight_only or self.last_command is None:
+            return None
+        if float(self.last_command.linear.x) >= -0.001:
+            return None
+        if abs(float(self.last_command.angular.z)) > self.max_reverse_angular:
+            return (
+                "reverse prohibited: angular command "
+                f"{float(self.last_command.angular.z):+.3f}rad/s exceeds "
+                f"{self.max_reverse_angular:.3f}rad/s"
+            )
+        plan_age = self.elapsed(self.last_plan_time)
+        if plan_age > self.plan_timeout:
+            return "reverse prohibited: stale or missing plan"
+        if not self.plan_is_straight:
+            return f"reverse prohibited: curved path {self.plan_metrics}"
+        if (
+            self.straight_path_confirmations
+            < self.straight_path_confirmations_required
+        ):
+            return (
+                "reverse prohibited: straight path awaiting confirmation "
+                f"{self.straight_path_confirmations}/"
+                f"{self.straight_path_confirmations_required}")
+        return None
+
+    def arm_prerequisite_reason(self):
+        if self.operator_heartbeat_required:
+            if self.elapsed(
+                    self.last_operator_heartbeat_time
+            ) > self.operator_heartbeat_timeout:
+                return "stale HN operator heartbeat"
+            if not self.operator_present:
+                return "HN operator/RViz unavailable"
+        if self.elapsed(self.last_system_time) > self.chassis_timeout:
+            return "stale chassis state"
+        if self.system_state_count < 3:
+            return "chassis state warming"
+        if self.system_error != 0:
+            return f"chassis error_code={self.system_error}"
+        if self.vehicle_state != int(SystemState.VEHICLE_STATE_NORMAL):
+            return "chassis vehicle_state is not NORMAL"
+        if self.control_mode != int(SystemState.CONTROL_MODE_CAN):
+            return "chassis control_mode is not CAN"
+        if self.elapsed(self.last_localization_time) > self.localization_timeout:
+            return "stale localization"
+        if not math.isfinite(self.last_fitness):
+            return f"invalid NDT fitness={self.last_fitness}"
+        if self.fitness_hysteresis.blocked and not (
+                self.degraded_fitness_recovery_enabled
+                and math.isfinite(self.last_fitness)
+                and self.last_fitness
+                <= self.terminal_fitness_clear_threshold):
+            return "NDT fitness has not completed healthy hysteresis"
+        if self.elapsed(self.last_odom_time) > self.odom_timeout:
+            return "stale odometry"
+        if self.elapsed(
+                self.last_obstacle_status_time
+        ) > self.obstacle_status_timeout:
+            return "stale obstacle status"
+        if self.last_obstacle_age > self.max_obstacle_age:
+            return f"stale obstacle cloud age={self.last_obstacle_age:.3f}s"
+        if self.elapsed(
+                self.last_ultrasonic_health_time
+        ) > self.ultrasonic_timeout:
+            return "stale rear ultrasonic health"
+        if not self.ultrasonic_healthy:
+            return "rear ultrasonic unhealthy"
+        if any(
+                self.elapsed(stamp) > self.ultrasonic_timeout
+                for stamp in self.last_ultrasonic_times):
+            return "stale rear ultrasonic range"
+        return None
+
+    def on_set_arm(self, request, response):
+        requested = bool(request.data)
+        if not requested:
+            self.degraded_recovery_mode = False
+            self.degraded_recovery_attempted = False
+            self.degraded_recovery_traveled = 0.0
+            self.degraded_recovery_rotated = 0.0
+            self.degraded_recovery_last_yaw = None
+            self.degraded_healthy_count = 0
+        if requested:
+            prerequisite = self.arm_prerequisite_reason()
+            if prerequisite is not None:
+                self.armed = False
+                self.reset_small_spin_budget()
+                response.success = False
+                response.message = f"arming refused: {prerequisite}"
+                self.armed_pub.publish(Bool(data=False))
+                self.get_logger().error(response.message)
+                return response
+            if (
+                    self.fitness_hysteresis.blocked
+                    and self.last_fitness > self.max_fitness):
+                self.start_degraded_recovery("arming")
+        if requested != self.armed:
+            self.armed = requested
+            self.reset_small_spin_budget()
+            self.get_logger().warn(
+                f"motion gate {'ARMED' if self.armed else 'DISARMED'}")
+        response.success = True
+        response.message = (
+            "armed_degraded_localization_recovery"
+            if self.armed and self.degraded_recovery_mode
+            else ("armed" if self.armed else "disarmed")
+        )
+        self.armed_pub.publish(Bool(data=self.armed))
+        return response
+
+    def elapsed(self, stamp):
+        if stamp is None:
+            return math.inf
+        if isinstance(stamp, float):
+            return max(0.0, time.monotonic() - stamp)
+        return max(
+            0.0,
+            (self.get_clock().now() - stamp).nanoseconds / 1e9,
+        )
+
+    def reason(self):
+        if not self.armed:
+            return "disarmed"
+        if self.operator_heartbeat_required:
+            if (
+                self.elapsed(self.last_operator_heartbeat_time)
+                > self.operator_heartbeat_timeout
+            ):
+                return "stale HN operator heartbeat"
+            if not self.operator_present:
+                return "HN operator/RViz unavailable"
+        if self.goal_lease_required:
+            if self.elapsed(self.last_goal_lease_time) > self.goal_lease_timeout:
+                return "stale navigation goal lease"
+            if not self.goal_active:
+                return "no active navigation goal"
+        if self.elapsed(self.last_system_time) > self.chassis_timeout:
+            return "stale chassis state"
+        if self.system_state_count < 3:
+            return "chassis state warming"
+        if self.system_error != 0:
+            return f"chassis error_code={self.system_error}"
+        if self.vehicle_state != int(SystemState.VEHICLE_STATE_NORMAL):
+            return f"chassis vehicle_state={self.vehicle_state} is not NORMAL"
+        if self.control_mode != int(SystemState.CONTROL_MODE_CAN):
+            return f"chassis control_mode={self.control_mode} is not CAN"
+        if self.elapsed(self.last_localization_time) > self.localization_timeout:
+            return "stale localization"
+        if self.elapsed(self.last_odom_time) > self.odom_timeout:
+            return "stale odometry"
+        if self.elapsed(self.last_obstacle_status_time) > self.obstacle_status_timeout:
+            return "stale obstacle status"
+        if self.last_obstacle_age > self.max_obstacle_age:
+            return f"stale obstacle cloud age={self.last_obstacle_age:.3f}s"
+        if not math.isfinite(self.last_fitness):
+            return f"invalid NDT fitness={self.last_fitness}"
+        if self.fitness_hysteresis.blocked:
+            block_threshold, clear_threshold, threshold_mode = (
+                select_runtime_fitness_thresholds(
+                    self.goal_active,
+                    self.speed_plan_remaining,
+                    self.terminal_fitness_distance,
+                    self.fitness_block_threshold,
+                    self.fitness_clear_threshold,
+                    self.terminal_fitness_block_threshold,
+                    self.terminal_fitness_clear_threshold,
+                    self.degraded_recovery_mode,
+                )
+            )
+            return (
+                f"sustained bad NDT fitness={self.last_fitness:.3f} "
+                f"block>{block_threshold:.3f} "
+                f"clear<={clear_threshold:.3f} "
+                f"mode={threshold_mode} "
+                f"samples={self.fitness_hysteresis.clear_count}/"
+                f"{self.degraded_fitness_clear_samples_required if threshold_mode == 'degraded_recovery' else self.fitness_clear_samples_required}")
+        if (
+                self.degraded_recovery_mode
+                and self.degraded_recovery_traveled
+                >= self.degraded_fitness_max_travel):
+            return (
+                "degraded localization recovery distance exhausted "
+                f"{self.degraded_recovery_traveled:.3f}m/"
+                f"{self.degraded_fitness_max_travel:.3f}m")
+        if (
+                self.degraded_recovery_mode
+                and self.degraded_recovery_rotated
+                >= self.degraded_fitness_max_rotation):
+            return (
+                "degraded localization recovery rotation exhausted "
+                f"{math.degrees(self.degraded_recovery_rotated):.1f}deg/"
+                f"{math.degrees(self.degraded_fitness_max_rotation):.1f}deg")
+        collision_reason = self.collision_monitor_block_reason()
+        if collision_reason is not None:
+            return collision_reason
+        if self.elapsed(self.last_command_time) > self.command_timeout:
+            return "stale navigation command"
+        if self.small_spin_requested():
+            if not self.allow_small_in_place_rotation:
+                return "in-place rotation prohibited"
+            if self.spin_limit_reached:
+                return (
+                    "small in-place rotation limit reached "
+                    f"{math.degrees(self.spin_accumulated):.1f}deg/"
+                    f"{math.degrees(self.max_in_place_rotation):.1f}deg"
+                )
+        reverse_reason = self.reverse_path_reason()
+        if reverse_reason is not None:
+            return reverse_reason
+        guarded_sensors = self.guarded_ultrasonic_sensors()
+        if guarded_sensors:
+            turning = (
+                self.last_command is not None
+                and abs(float(self.last_command.angular.z)) > 0.001
+            )
+            active_latches = (
+                self.ultrasonic_turn_latches
+                if turning else self.ultrasonic_latches
+            )
+            classifier = (
+                self.classify_turn_ultrasonic
+                if turning else self.classify_ultrasonic
+            )
+            if (
+                self.elapsed(self.last_ultrasonic_health_time)
+                > self.ultrasonic_timeout
+            ):
+                return "stale rear ultrasonic health: both sides blocked"
+            if not self.ultrasonic_healthy:
+                return "rear ultrasonic unhealthy: both sides blocked"
+            failed_indices = [
+                index for index in guarded_sensors
+                if (
+                    self.elapsed(self.last_ultrasonic_times[index])
+                    > self.ultrasonic_timeout
+                    or active_latches[index].blocked
+                )
+            ]
+            if len(failed_indices) >= 2:
+                return (
+                    "rear ultrasonic blocked both sides "
+                    f"left={self.format_distance(self.ultrasonic_ranges[0])}m "
+                    f"right={self.format_distance(self.ultrasonic_ranges[1])}m "
+                    "classifications=["
+                    f"{classifier(0)},{classifier(1)}]"
+                )
+            for index in guarded_sensors:
+                side = "left" if index == 0 else "right"
+                stamp = self.last_ultrasonic_times[index]
+                if self.elapsed(stamp) > self.ultrasonic_timeout:
+                    return (
+                        f"stale rear ultrasonic {side} "
+                        f"sensor_{index + 1}")
+                latch = active_latches[index]
+                if latch.blocked:
+                    value = self.ultrasonic_ranges[index]
+                    tail_clearance = (
+                        value - self.ultrasonic_sensor_to_rear_edge
+                        if math.isfinite(value) else value
+                    )
+                    condition = (
+                        "self-echo" if self.is_ultrasonic_self_echo(value)
+                        else (
+                            (
+                                "turn-clear-pending"
+                                if turning and math.isfinite(value)
+                                and value > self.ultrasonic_turn_allow_distance
+                                else "turn-distance"
+                            ) if turning
+                            else "blocked"
+                        )
+                    )
+                    return (
+                        f"rear ultrasonic {condition} {side} "
+                        f"sensor_{index + 1} "
+                        f"raw={value:.3f}m "
+                        f"tail_clearance={tail_clearance:.3f}m "
+                        + (
+                            f"turn_requires>{self.ultrasonic_turn_allow_distance:.3f}m "
+                            if turning else ""
+                        )
+                        + f"clear_count={latch.clear_count}"
+                    )
+        return "ready"
+
+    def small_spin_requested(self):
+        if self.last_command is None:
+            return False
+        return (
+            abs(float(self.last_command.linear.x))
+            < self.minimum_linear_for_turn
+            and abs(float(self.last_command.angular.z)) > 0.001
+        )
+
+    def publish_status(self, reason):
+        ready = reason == "ready"
+        self.ready_pub.publish(Bool(data=ready))
+        if reason != self.last_status:
+            self.status_pub.publish(String(data=reason))
+            self.get_logger().warn(f"motion blocked: {reason}") if not ready else \
+                self.get_logger().info("motion gate ready")
+            self.last_status = reason
+
+    def publish_status_heartbeat(self):
+        reason = self.reason()
+        self.armed_pub.publish(Bool(data=self.armed))
+        self.ready_pub.publish(Bool(data=reason == "ready"))
+        self.status_pub.publish(String(data=reason))
+        self.publish_ultrasonic_status()
+        self.publish_operator_link_status()
+        self.publish_path_policy()
+        self.publish_speed_profile_status()
+
+    def current_speed_profile(self):
+        if not self.speed_profile_enabled or not self.goal_active:
+            return SpeedProfileDecision("IDLE", self.start_max_linear)
+        decision = compute_speed_profile(
+            self.goal_traveled,
+            self.speed_plan_remaining,
+            self.start_slow_distance,
+            self.start_max_linear,
+            self.approach_slow_distance,
+            self.approach_min_linear,
+            self.max_linear,
+        )
+        if (
+                self.degraded_recovery_mode
+                and decision.cap > self.degraded_fitness_max_linear):
+            return SpeedProfileDecision(
+                "NDT_DEGRADED_RECOVERY", self.degraded_fitness_max_linear)
+        return decision
+
+    def publish_speed_profile_status(self):
+        remaining = (
+            f"{self.speed_plan_remaining:.3f}"
+            if math.isfinite(self.speed_plan_remaining) else "inf"
+        )
+        self.speed_profile_pub.publish(String(data=(
+            f"state={self.speed_profile_state} "
+            f"cap_mps={self.speed_profile_cap:.3f} "
+            f"requested_mps={self.speed_profile_requested:.3f} "
+            f"output_mps={self.speed_profile_output:.3f} "
+            f"traveled_m={self.goal_traveled:.3f} "
+            f"remaining_path_m={remaining} "
+            f"start_zone_m={self.start_slow_distance:.3f} "
+            f"approach_zone_m={self.approach_slow_distance:.3f} "
+            f"cruise_mps={self.max_linear:.3f} "
+            f"approach_min_mps={self.approach_min_linear:.3f}"
+        )))
+
+    def publish_operator_link_status(self):
+        age = self.elapsed(self.last_operator_heartbeat_time)
+        if age > self.operator_heartbeat_timeout:
+            state = "STALE"
+        elif not self.operator_present:
+            state = "UNAVAILABLE"
+        else:
+            state = "READY"
+        self.operator_link_status_pub.publish(String(data=(
+            f"state={state} present={str(self.operator_present).lower()} "
+            f"age_s={age:.3f} "
+            f"timeout_s={self.operator_heartbeat_timeout:.3f}"
+        )))
+
+    @staticmethod
+    def format_distance(value):
+        if math.isinf(value):
+            return "+inf" if value > 0.0 else "-inf"
+        if math.isnan(value):
+            return "nan"
+        return f"{value:.3f}"
+
+    def publish_ultrasonic_status(self):
+        ages = [
+            self.elapsed(stamp) for stamp in self.last_ultrasonic_times
+        ]
+        fresh = [
+            age <= self.ultrasonic_timeout for age in ages
+        ]
+        tail_clearances = [
+            (
+                value - self.ultrasonic_sensor_to_rear_edge
+                if math.isfinite(value) else value
+            )
+            for value in self.ultrasonic_ranges
+        ]
+        blocked = [
+            latch.blocked for latch in self.ultrasonic_latches
+        ]
+        turn_blocked = [
+            latch.blocked for latch in self.ultrasonic_turn_latches
+        ]
+        classifications = [
+            self.classify_ultrasonic(index) for index in range(2)
+        ]
+        turn_classifications = [
+            self.classify_turn_ultrasonic(index) for index in range(2)
+        ]
+        reverse_allowed = self.rear_reverse_allowed()
+        left_turn_allowed = self.rear_left_turn_allowed()
+        right_turn_allowed = self.rear_right_turn_allowed()
+        reverse_speed_scale = self.rear_reverse_speed_scale()
+        reverse_blocking_sides = self.ultrasonic_blocking_sides(
+            self.ultrasonic_latches)
+        turn_blocking_sides = self.ultrasonic_blocking_sides(
+            self.ultrasonic_turn_latches)
+        blocking_sides = tuple(sorted(set(
+            reverse_blocking_sides + turn_blocking_sides)))
+        state = (
+            "CLEAR" if reverse_allowed
+            else ("TURN_ONLY" if left_turn_allowed else "BLOCKED")
+        )
+        self.ultrasonic_reverse_allowed_pub.publish(
+            Bool(data=reverse_allowed))
+        self.ultrasonic_left_turn_allowed_pub.publish(
+            Bool(data=left_turn_allowed))
+        self.ultrasonic_right_turn_allowed_pub.publish(
+            Bool(data=right_turn_allowed))
+        self.ultrasonic_status_pub.publish(String(data=(
+            f"state={state} healthy={str(self.ultrasonic_healthy).lower()} "
+            f"reverse_allowed={str(reverse_allowed).lower()} "
+            f"left_turn_allowed={str(left_turn_allowed).lower()} "
+            f"right_turn_allowed={str(right_turn_allowed).lower()} "
+            f"reverse_speed_scale={reverse_speed_scale:.3f} "
+            "blocking_sides=["
+            f"{','.join(blocking_sides) if blocking_sides else 'NONE'}] "
+            "reverse_blocking_sides=["
+            f"{','.join(reverse_blocking_sides) if reverse_blocking_sides else 'NONE'}] "
+            "turn_blocking_sides=["
+            f"{','.join(turn_blocking_sides) if turn_blocking_sides else 'NONE'}] "
+            f"blocked=[{str(blocked[0]).lower()},"
+            f"{str(blocked[1]).lower()}] "
+            f"turn_blocked=[{str(turn_blocked[0]).lower()},"
+            f"{str(turn_blocked[1]).lower()}] "
+            f"classification=[{classifications[0]},{classifications[1]}] "
+            "turn_classification=["
+            f"{turn_classifications[0]},{turn_classifications[1]}] "
+            "raw_m=["
+            f"{self.format_distance(self.ultrasonic_ranges[0])},"
+            f"{self.format_distance(self.ultrasonic_ranges[1])}] "
+            "tail_clearance_m=["
+            f"{self.format_distance(tail_clearances[0])},"
+            f"{self.format_distance(tail_clearances[1])}] "
+            f"age_s=[{ages[0]:.3f},{ages[1]:.3f}] "
+            f"fresh=[{str(fresh[0]).lower()},{str(fresh[1]).lower()}] "
+            "clear_count=["
+            f"{self.ultrasonic_latches[0].clear_count},"
+            f"{self.ultrasonic_latches[1].clear_count}] "
+            f"stop_m={self.ultrasonic_stop_distance:.3f} "
+            f"clear_m={self.ultrasonic_clear_distance:.3f} "
+            f"turn_allow_m={self.ultrasonic_turn_allow_distance:.3f} "
+            "detect_m=["
+            f"{self.format_distance(self.ultrasonic_min_ranges[0])},"
+            f"{self.format_distance(self.ultrasonic_max_ranges[0])}] "
+            "self_echo_m=["
+            f"{self.ultrasonic_self_echo_min_distance:.3f},"
+            f"{self.ultrasonic_self_echo_max_distance:.3f}] "
+            f"sensor_to_tail_m={self.ultrasonic_sensor_to_rear_edge:.3f} "
+            "turn_guard=[left:both,right:both,reverse:both]"
+        )))
+
+    def tick(self):
+        reason = self.reason()
+        self.publish_status(reason)
+        decision = self.current_speed_profile()
+        self.speed_profile_state = decision.state
+        self.speed_profile_cap = decision.cap
+        self.speed_profile_requested = (
+            float(self.last_command.linear.x)
+            if self.last_command is not None else 0.0
+        )
+        if reason != "ready" or self.last_command is None:
+            self.speed_profile_output = 0.0
+            self.pub.publish(Twist())
+            return
+        out = Twist()
+        out.linear.x = max(-self.max_linear, min(self.max_linear, self.last_command.linear.x))
+        out.angular.z = max(-self.max_angular, min(self.max_angular, self.last_command.angular.z))
+        if self.degraded_recovery_mode:
+            out.angular.z = max(
+                -self.degraded_fitness_max_angular,
+                min(self.degraded_fitness_max_angular, out.angular.z),
+            )
+        if out.linear.x < -0.001:
+            out.linear.x *= self.rear_reverse_speed_scale()
+        if self.speed_profile_enabled:
+            out.linear.x = math.copysign(
+                min(abs(out.linear.x), decision.cap), out.linear.x)
+        if abs(out.linear.x) < self.minimum_linear_for_turn:
+            out.linear.x = 0.0
+            if abs(out.angular.z) <= 0.001:
+                out.angular.z = 0.0
+            else:
+                if not self.spin_active:
+                    self.spin_active = True
+                    self.spin_last_yaw = self.odom_yaw
+                    self.spin_origin_x = self.odom_x
+                    self.spin_origin_y = self.odom_y
+                    self.spin_accumulated = 0.0
+                    self.spin_limit_reached = False
+                    self.get_logger().info(
+                        "bounded small in-place rotation started")
+                out.angular.z = max(
+                    -self.max_in_place_angular,
+                    min(self.max_in_place_angular, out.angular.z),
+                )
+        else:
+            angular_limit = min(
+                self.max_angular,
+                abs(out.linear.x) * self.max_motion_curvature
+                + self.curvature_slack,
+            )
+            out.angular.z = max(
+                -angular_limit, min(angular_limit, out.angular.z))
+        self.speed_profile_output = float(out.linear.x)
+        self.pub.publish(out)
+
+
+def main():
+    rclpy.init()
+    node = NavMotionSafetyGate()
+    executor = MultiThreadedExecutor(num_threads=6)
+    executor.add_node(node)
+    try:
+        executor.spin()
+    except (KeyboardInterrupt, ExternalShutdownException):
+        pass
+    except RuntimeError:
+        # Humble may raise RCLError (a RuntimeError subclass) when SIGTERM
+        # invalidates the context while the executor is rebuilding its wait set.
+        if rclpy.ok():
+            raise
+    finally:
+        if rclpy.ok():
+            node.pub.publish(Twist())
+        executor.remove_node(node)
+        executor.shutdown(timeout_sec=1.0)
+        node.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
+
+
+if __name__ == "__main__":
+    main()

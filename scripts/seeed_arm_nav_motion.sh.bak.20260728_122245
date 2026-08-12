@@ -1,0 +1,123 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROS_ROOT="${ROS_ROOT:-/home/seeed/ros2}"
+ROS_ENV="${ROS_ENV:-${ROS_ROOT}/use_ros_env.sh}"
+MAX_FITNESS="${MAX_FITNESS:-0.10}"
+NAV_FASTDDS_PROFILE="${NAV_FASTDDS_PROFILE:-${ROS_ROOT}/fastrtps_profile.xml}"
+COSTMAP_INSPECTOR="${COSTMAP_INSPECTOR:-${ROS_ROOT}/scripts/inspect_nav_goal_costmap.py}"
+NAV2_LIFECYCLE="${NAV2_LIFECYCLE:-${ROS_ROOT}/scripts/nav2_manual_lifecycle.py}"
+
+run_ros() {
+  "${ROS_ENV}" env FASTRTPS_DEFAULT_PROFILES_FILE="${NAV_FASTDDS_PROFILE}" "$@"
+}
+
+required_lifecycle_nodes=(
+  map_server planner_server controller_server smoother_server behavior_server
+  bt_navigator waypoint_follower velocity_smoother collision_monitor
+)
+
+nodes="$(run_ros ros2 node list)"
+if [[ "${nodes}" != *$'\n/nav_motion_safety_gate'* && "${nodes}" != '/nav_motion_safety_gate'* ]]; then
+  echo "Safety gate is not running; refusing to arm." >&2
+  exit 1
+fi
+if [[ "${nodes}" != *$'\n/nav_obstacle_block_alarm'* \
+  && "${nodes}" != '/nav_obstacle_block_alarm'* ]]; then
+  echo "Persistent-obstacle alarm is not running; refusing to arm." >&2
+  exit 1
+fi
+
+if [[ ! -r "${NAV2_LIFECYCLE}" ]]; then
+  echo "Lifecycle checker is missing: ${NAV2_LIFECYCLE}; refusing to arm." >&2
+  exit 1
+fi
+if ! lifecycle_output="$(timeout 60 "${ROS_ENV}" env \
+  FASTRTPS_DEFAULT_PROFILES_FILE="${NAV_FASTDDS_PROFILE}" \
+  ROS2CLI_DISABLE_DAEMON=1 \
+  python3 "${NAV2_LIFECYCLE}" --check-only --timeout 12 \
+  "${required_lifecycle_nodes[@]}" 2>&1)"; then
+  printf '%s\n' "${lifecycle_output:-no lifecycle output}" >&2
+  echo "At least one Nav2 lifecycle node is not active; refusing to arm." >&2
+  exit 1
+fi
+printf '%s\n' "${lifecycle_output}"
+
+if ! obstacle_status="$(timeout 8 "${ROS_ENV}" env FASTRTPS_DEFAULT_PROFILES_FILE="${NAV_FASTDDS_PROFILE}" ros2 topic echo --once \
+  /nav_obstacle_cloud_status)" || ! grep -q 'data: ok received=' <<<"${obstacle_status}"; then
+  echo "Dynamic obstacle cloud is not fresh; refusing to arm." >&2
+  printf '%s\n' "${obstacle_status:-no status}" >&2
+  exit 1
+fi
+obstacle_age="$(sed -n 's/.*age=\([0-9.]*\)s.*/\1/p' <<<"${obstacle_status}" | head -n 1)"
+if [[ -z "${obstacle_age}" ]] \
+  || ! awk -v age="${obstacle_age}" 'BEGIN {exit !(age <= 1.00)}'; then
+  echo "Dynamic obstacle cloud age=${obstacle_age:-missing}s exceeds 1.00 s; refusing to arm." >&2
+  exit 1
+fi
+
+for topic in /nav_obstacle_cloud /local_costmap/costmap \
+  /global_costmap/costmap /nav_obstacle_alarm_status \
+  /cmd_vel_nav_collision_safe; do
+  topic_info="$(timeout 8 "${ROS_ENV}" env FASTRTPS_DEFAULT_PROFILES_FILE="${NAV_FASTDDS_PROFILE}" ros2 topic info "${topic}" 2>/dev/null || true)"
+  if ! grep -q 'Publisher count: [1-9]' <<<"${topic_info}"; then
+    echo "Required dynamic-avoidance topic ${topic} has no publisher; refusing to arm." >&2
+    exit 1
+  fi
+done
+
+if [[ ! -r "${COSTMAP_INSPECTOR}" ]]; then
+  echo "Costmap inspector is missing: ${COSTMAP_INSPECTOR}; refusing to arm." >&2
+  exit 1
+fi
+if ! start_check="$(timeout 25 "${ROS_ENV}" env \
+  FASTRTPS_DEFAULT_PROFILES_FILE="${NAV_FASTDDS_PROFILE}" \
+  python3 "${COSTMAP_INSPECTOR}" --require-start-passable --timeout 18 2>&1)"; then
+  printf '%s\n' "${start_check}" >&2
+  echo "The current Nav2 start cell is blocked; refusing to arm." >&2
+  echo "Correct the 2D Pose Estimate or place the stopped robot in free space." >&2
+  exit 1
+fi
+printf '%s\n' "${start_check}"
+
+if ! localization="$(timeout 25 "${ROS_ENV}" env FASTRTPS_DEFAULT_PROFILES_FILE="${NAV_FASTDDS_PROFILE}" ros2 topic echo --once \
+  /relocalization_odom --qos-reliability best_effort)"; then
+  echo "No fresh /relocalization_odom within 25 seconds; refusing to arm." >&2
+  echo "Set RViz 2D Pose Estimate and wait for NDT localization first." >&2
+  exit 1
+fi
+fitness="$(printf '%s\n' "${localization}" | awk '/covariance:/{found=1; next} found && /^  - /{print $2; exit}')"
+if [[ -z "${fitness}" ]] || ! awk -v value="${fitness}" -v limit="${MAX_FITNESS}" 'BEGIN { exit !(value <= limit) }'; then
+  echo "NDT fitness is not safe to arm: ${fitness:-missing} (limit ${MAX_FITNESS})" >&2
+  exit 1
+fi
+
+if ! state="$(timeout 12 "${ROS_ENV}" env FASTRTPS_DEFAULT_PROFILES_FILE="${NAV_FASTDDS_PROFILE}" ros2 topic echo --once \
+  /system_state --qos-reliability reliable)"; then
+  echo "No /system_state within 12 seconds; refusing to arm." >&2
+  echo "Check ranger_base_node, can0, and the chassis emergency stop." >&2
+  exit 1
+fi
+error_code="$(printf '%s\n' "${state}" | awk '/^error_code:/{print $2; exit}')"
+if [[ "${error_code}" != "0" ]]; then
+  echo "Ranger reports error_code=${error_code:-missing}; refusing to arm." >&2
+  exit 1
+fi
+
+if ! service_info="$(timeout 8 "${ROS_ENV}" env \
+  FASTRTPS_DEFAULT_PROFILES_FILE="${NAV_FASTDDS_PROFILE}" \
+  ros2 service type /set_nav_motion_enabled 2>/dev/null)" \
+  || [[ "${service_info}" != "std_srvs/srv/SetBool" ]]; then
+  echo "Safety service /set_nav_motion_enabled is unavailable; refusing to arm." >&2
+  exit 1
+fi
+
+echo "Arming Nav2 dynamic avoidance: NDT fitness=${fitness}, Ranger error_code=0"
+arm_response="$(run_ros ros2 service call /set_nav_motion_enabled \
+  std_srvs/srv/SetBool '{data: true}')"
+printf '%s\n' "${arm_response}"
+if ! grep -Eq 'success=(True|true)' <<<"${arm_response}"; then
+  echo "Motion gate did not confirm arming; refusing to continue." >&2
+  exit 1
+fi
+echo "Armed. The gate still publishes zero until Nav2 sends a fresh collision-checked command."

@@ -1,0 +1,206 @@
+#!/usr/bin/env python3
+"""Check Livox bag completeness, timestamp continuity, and static IMU pose."""
+
+import argparse
+import glob
+import math
+import os
+import sqlite3
+import statistics
+import sys
+
+from rclpy.serialization import deserialize_message
+from rosidl_runtime_py.utilities import get_message
+
+
+def stamp_seconds(message):
+    stamp = message.header.stamp
+    return float(stamp.sec) + float(stamp.nanosec) * 1e-9
+
+
+def percentile(values, ratio):
+    if not values:
+        return float("nan")
+    ordered = sorted(values)
+    index = round((len(ordered) - 1) * ratio)
+    return ordered[max(0, min(index, len(ordered) - 1))]
+
+
+def continuity(name, stamps, minimum_rate, maximum_gap):
+    failures = []
+    if len(stamps) < 2:
+        return failures + [f"{name}: fewer than two messages"]
+    deltas = [b - a for a, b in zip(stamps, stamps[1:])]
+    nonpositive = sum(delta <= 0.0 for delta in deltas)
+    positive = [delta for delta in deltas if delta > 0.0]
+    duration = stamps[-1] - stamps[0]
+    rate = (len(stamps) - 1) / duration if duration > 0.0 else 0.0
+    maximum = max(positive, default=float("inf"))
+    p99 = percentile(positive, 0.99)
+    gap_count = sum(delta > maximum_gap for delta in positive)
+    print(
+        f"{name}_continuity: messages={len(stamps)} duration={duration:.3f}s "
+        f"rate={rate:.3f}Hz gap_p99={p99:.6f}s max_gap={maximum:.6f}s "
+        f"gaps_over_{maximum_gap:.3f}s={gap_count} nonpositive={nonpositive}"
+    )
+    if rate < minimum_rate:
+        failures.append(
+            f"{name}: rate {rate:.3f} Hz is below {minimum_rate:.3f} Hz")
+    if maximum > maximum_gap:
+        failures.append(
+            f"{name}: maximum header gap {maximum:.6f}s exceeds {maximum_gap:.6f}s")
+    if nonpositive:
+        failures.append(f"{name}: {nonpositive} non-monotonic header intervals")
+    return failures
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("bag_path")
+    parser.add_argument("--lidar-topic", default="/livox/lidar")
+    parser.add_argument("--imu-topic", default="/livox/imu")
+    parser.add_argument("--minimum-lidar-rate", type=float, default=8.0)
+    parser.add_argument("--minimum-imu-rate", type=float, default=180.0)
+    parser.add_argument("--maximum-lidar-gap", type=float, default=0.25)
+    parser.add_argument("--maximum-imu-gap", type=float, default=0.05)
+    parser.add_argument("--stationary-window", type=float, default=8.0)
+    parser.add_argument("--minimum-stationary-samples", type=int, default=800)
+    parser.add_argument("--expected-roll", type=float, required=True)
+    parser.add_argument("--expected-pitch", type=float, required=True)
+    parser.add_argument("--max-angle-error", type=float, default=0.75)
+    parser.add_argument("--max-gyro-std", type=float, default=0.03)
+    args = parser.parse_args()
+
+    metadata = os.path.join(args.bag_path, "metadata.yaml")
+    databases = sorted(glob.glob(os.path.join(args.bag_path, "*.db3")))
+    if not os.path.isfile(metadata) or os.path.getsize(metadata) == 0:
+        print(f"RESULT: FAIL missing bag metadata: {metadata}", file=sys.stderr)
+        return 2
+    if not databases:
+        print(f"RESULT: FAIL no sqlite3 database in {args.bag_path}", file=sys.stderr)
+        return 2
+
+    topic_names = (args.lidar_topic, args.imu_topic)
+    stamps = {name: [] for name in topic_names}
+    storage_lag = {name: [] for name in topic_names}
+    imu_samples = []
+    lidar_points = []
+    failures = []
+
+    for database in databases:
+        connection = sqlite3.connect(
+            f"file:{database}?mode=ro&immutable=1", uri=True)
+        try:
+            quick_check = connection.execute("PRAGMA quick_check").fetchone()[0]
+            if quick_check != "ok":
+                failures.append(f"{os.path.basename(database)}: quick_check={quick_check}")
+                continue
+            topic_rows = connection.execute(
+                "SELECT id, name, type FROM topics").fetchall()
+            topics = {
+                name: (topic_id, get_message(type_name))
+                for topic_id, name, type_name in topic_rows
+                if name in topic_names
+            }
+            for name in topic_names:
+                if name not in topics:
+                    failures.append(
+                        f"{os.path.basename(database)}: missing topic {name}")
+                    continue
+                topic_id, message_type = topics[name]
+                rows = connection.execute(
+                    "SELECT timestamp, data FROM messages "
+                    "WHERE topic_id=? ORDER BY timestamp", (topic_id,))
+                for database_stamp, data in rows:
+                    message = deserialize_message(data, message_type)
+                    header_stamp = stamp_seconds(message)
+                    stamps[name].append(header_stamp)
+                    storage_lag[name].append(
+                        database_stamp * 1e-9 - header_stamp)
+                    if name == args.imu_topic:
+                        if (
+                            not imu_samples
+                            or header_stamp - imu_samples[0][0]
+                            <= args.stationary_window
+                        ):
+                            imu_samples.append((
+                                header_stamp,
+                                float(message.linear_acceleration.x),
+                                float(message.linear_acceleration.y),
+                                float(message.linear_acceleration.z),
+                                float(message.angular_velocity.x),
+                                float(message.angular_velocity.y),
+                                float(message.angular_velocity.z),
+                            ))
+                    else:
+                        declared = int(message.point_num)
+                        actual = len(message.points)
+                        lidar_points.append((declared, actual))
+                        if declared != actual:
+                            failures.append(
+                                f"lidar point_num mismatch: declared={declared} actual={actual}")
+        finally:
+            connection.close()
+
+    failures.extend(continuity(
+        "lidar", stamps[args.lidar_topic],
+        args.minimum_lidar_rate, args.maximum_lidar_gap))
+    failures.extend(continuity(
+        "imu", stamps[args.imu_topic],
+        args.minimum_imu_rate, args.maximum_imu_gap))
+
+    for name in topic_names:
+        label = "lidar" if name == args.lidar_topic else "imu"
+        lags = storage_lag[name]
+        print(
+            f"{label}_storage_lag: p50={percentile(lags, 0.50):.6f}s "
+            f"p99={percentile(lags, 0.99):.6f}s "
+            f"max={max(lags, default=float('nan')):.6f}s")
+    if lidar_points:
+        actual = [count for _, count in lidar_points]
+        print(
+            f"lidar_payload: scans={len(actual)} "
+            f"points_min={min(actual)} points_median={percentile(actual, 0.50):.0f} "
+            f"points_max={max(actual)}")
+
+    if len(imu_samples) < args.minimum_stationary_samples:
+        failures.append(
+            f"stationary IMU window has {len(imu_samples)} samples; "
+            f"need {args.minimum_stationary_samples}")
+    else:
+        columns = list(zip(*(sample[1:] for sample in imu_samples)))
+        means = [statistics.fmean(column) for column in columns]
+        stddev = [statistics.pstdev(column) for column in columns]
+        ax, ay, az = means[:3]
+        roll = math.degrees(math.atan2(ay, az))
+        pitch = math.degrees(math.atan2(-ax, math.hypot(ay, az)))
+        roll_error = abs(roll - args.expected_roll)
+        pitch_error = abs(pitch - args.expected_pitch)
+        print(
+            f"stationary_imu: samples={len(imu_samples)} "
+            f"accel_mean=({ax:.5f},{ay:.5f},{az:.5f}) "
+            f"accel_std=({stddev[0]:.5f},{stddev[1]:.5f},{stddev[2]:.5f})")
+        print(
+            f"gravity_tilt: roll={roll:+.3f}deg pitch={pitch:+.3f}deg "
+            f"expected=({args.expected_roll:+.3f},{args.expected_pitch:+.3f})deg "
+            f"error=({roll_error:.3f},{pitch_error:.3f})deg "
+            f"gyro_std=({stddev[3]:.5f},{stddev[4]:.5f},{stddev[5]:.5f})rad/s")
+        if max(stddev[3:]) > args.max_gyro_std:
+            failures.append("chassis moved during the stationary IMU window")
+        if (
+            roll_error > args.max_angle_error
+            or pitch_error > args.max_angle_error
+        ):
+            failures.append("LiDAR mounting pose differs from calibration")
+
+    if failures:
+        for failure in failures:
+            print(f"FAIL: {failure}", file=sys.stderr)
+        print(f"RESULT: FAIL ({len(failures)} checks)", file=sys.stderr)
+        return 4
+    print("RESULT: PASS bag continuity and calibrated LiDAR mounting pose")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
