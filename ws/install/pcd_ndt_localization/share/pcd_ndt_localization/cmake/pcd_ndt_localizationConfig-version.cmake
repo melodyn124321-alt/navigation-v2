@@ -1,0 +1,1 @@
+/home/seeed/ros2/ws/build/pcd_ndt_localization/ament_cmake_core/pcd_ndt_localizationConfig-version.cmake

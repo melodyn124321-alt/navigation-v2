@@ -1,0 +1,1 @@
+/home/seeed/ros2/ws/build/ranger_base/ament_cmake_core/ranger_baseConfig.cmake
